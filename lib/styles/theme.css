@@ -22864,12 +22864,3 @@ body.background-settings-workplace-background-image.theme-dark.is-frameless:is(.
 .workspace-tab-header-inner-icon img {
     margin: auto
 }
-
-code.is-loaded {
-    font-size: 15px;
-    font-weight: normal;
-}
-
-span.token.comment {
-    color: aquamarine;
-}
