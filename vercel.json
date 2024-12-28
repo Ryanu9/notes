@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/(.*)", 
-      "destination": "https://notes-ryanu9s-projects.vercel.app/40-obsidian/home.html",
-      "permanent": true
-    }
-  ]
-}
