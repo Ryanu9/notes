@@ -1,14 +1,8 @@
 {
   "redirects": [
     {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "note.c1trus.top"
-        }
-      ],
-      "destination": "https://note.c1trus.top/40-obsidian/home.html",
+      "source": "/(.*)", 
+      "destination": "https://notes-ryanu9s-projects.vercel.app/40-obsidian/home.html",
       "permanent": true
     }
   ]
