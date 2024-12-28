@@ -1,7 +1,13 @@
 {
   "redirects": [
     {
-      "source": "/(.*)", 
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "note.c1trus.top"
+        }
+      ],
       "destination": "https://note.c1trus.top/40-obsidian/home.html",
       "permanent": true
     }
