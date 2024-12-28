@@ -1,0 +1,88 @@
+/*实时编辑*/
+.markdown-source-view span.cm-inline-code {
+    padding: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+span.cm-hmd-codeblock.cm-quote {
+    color: white;
+}
+
+.theme-light .markdown-source-view span.cm-inline-code {
+    color: black;
+    background-color: #f6f1c6;
+    border-color: #a5a2a7;
+}
+
+div.HyperMD-codeblock.HyperMD-codeblock-bg.cm-line {
+    background-color: rgba(71, 44, 94, 0.853);
+}
+
+.theme-light .markdown-source-view span.code-block-flair {
+    color: rgb(226, 149, 49);
+    font-size: 18px;
+}
+
+.theme-light .markdown-source-view span.cm-formatting.cm-formatting-code-block.cm-hmd-codeblock {
+    color: rgb(229, 192, 100);
+    font-size: 16px;
+}
+
+.theme-light .markdown-source-view span.cm-hmd-codeblock {
+    font-size: 0.8rem;
+
+    font-weight: normal;
+    line-height: 1;
+    /* 设置为 1.5 倍行高 */
+    /* 如果需要，可以根据需求调整行间距的比例 */
+}
+
+.theme-dark .markdown-source-view span.cm-inline-code {
+    color: black;
+    background-color: #f6f1c6;
+    border-color: #7c7575
+}
+
+
+
+/*阅读模式*/
+div p code {
+    padding: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+span.token {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+code.is-loaded {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+span.cm-comment.cm-hmd-codeblock {
+    color: aquamarine;
+}
+
+
+
+.theme-light div p code {
+    color: black;
+    background-color: #f6f1c6;
+    border-color: #a7a2a2;
+}
+
+.theme-dark div p code {
+    color: black;
+    background-color: #f6f1c6;
+    border-color: #7c7575
+}
