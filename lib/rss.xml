@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[C1trus ]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://www.c1trus.top/</link><image><url>https://www.c1trus.top/lib/media/favicon.png</url><title>C1trus </title><link>https://www.c1trus.top/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 30 Dec 2024 15:52:15 GMT</lastBuildDate><atom:link href="https://www.c1trus.top/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 30 Dec 2024 15:52:10 GMT</pubDate><copyright><![CDATA[C1trus]]></copyright><ttl>60</ttl><dc:creator>C1trus</dc:creator><item><title><![CDATA[19.rubies]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[C1trus ]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://www.c1trus.top/</link><image><url>https://www.c1trus.top/lib/media/favicon.png</url><title>C1trus </title><link>https://www.c1trus.top/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Wed, 01 Jan 2025 14:25:09 GMT</lastBuildDate><atom:link href="https://www.c1trus.top/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 01 Jan 2025 14:25:09 GMT</pubDate><copyright><![CDATA[C1trus]]></copyright><ttl>60</ttl><dc:creator>C1trus</dc:creator><item><title><![CDATA[19.rubies]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -212,15 +212,7 @@ rescue
 end 
 <br>开启监听等待一会 成功反弹shell提权root<br>很离谱这个root.txt可能有不可见字符<br>直接读取不了<br>cat \*root.txt\*
 pyth0N&gt;r00bi35
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/19.rubies.html</link><guid isPermaLink="false">24-渗透/HMV/19.rubies.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Mon, 30 Dec 2024 14:54:39 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Drawing 2024-12-24 15.53.06]]></title><description><![CDATA[ 
- 
-  
-  
-  
-    
-    
-  
-  ]]></description><link>https://www.c1trus.top/excalidraw/drawing-2024-12-24-15.53.06.excalidraw.html</link><guid isPermaLink="false">Excalidraw/Drawing 2024-12-24 15.53.06.excalidraw.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 05:44:52 GMT</pubDate></item><item><title><![CDATA[Misc]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/19.rubies.html</link><guid isPermaLink="false">24-渗透/HMV/19.rubies.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Mon, 30 Dec 2024 14:54:39 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Misc]]></title><description><![CDATA[ 
  <br><br>hashcat破解就行了<br>$6$xyz$ZGQOqL77wiYAgPxsNEv2Kz3INjzK4JdG29RbaHaW5lrkH8bA8W7kC3GK4CctGrFO7.E2va7kSgF3eQXNWYQee.:reddragon
 
 Session..........: hashcat
