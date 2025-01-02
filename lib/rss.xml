@@ -1,4 +1,146 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[C1trus ]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://www.c1trus.top/</link><image><url>https://www.c1trus.top/lib/media/favicon.png</url><title>C1trus </title><link>https://www.c1trus.top/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Thu, 02 Jan 2025 09:38:00 GMT</lastBuildDate><atom:link href="https://www.c1trus.top/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 02 Jan 2025 09:37:59 GMT</pubDate><copyright><![CDATA[C1trus]]></copyright><ttl>60</ttl><dc:creator>C1trus</dc:creator><item><title><![CDATA[43.p4l4nc4]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[C1trus ]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://www.c1trus.top/</link><image><url>https://www.c1trus.top/lib/media/favicon.png</url><title>C1trus </title><link>https://www.c1trus.top/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Thu, 02 Jan 2025 11:35:38 GMT</lastBuildDate><atom:link href="https://www.c1trus.top/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 02 Jan 2025 11:35:37 GMT</pubDate><copyright><![CDATA[C1trus]]></copyright><ttl>60</ttl><dc:creator>C1trus</dc:creator><item><title><![CDATA[challenges-Misc]]></title><description><![CDATA[ 
+ <br><br>hashcat破解就行了<br>$6$xyz$ZGQOqL77wiYAgPxsNEv2Kz3INjzK4JdG29RbaHaW5lrkH8bA8W7kC3GK4CctGrFO7.E2va7kSgF3eQXNWYQee.:reddragon
+
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 1800 (sha512crypt $6$, SHA512 (Unix))
+Hash.Target......: $6$xyz$ZGQOqL77wiYAgPxsNEv2Kz3INjzK4JdG29RbaHaW5lrk...WYQee.
+Time.Started.....: Tue Dec 24 22:18:28 2024 (1 sec)
+Time.Estimated...: Tue Dec 24 22:18:29 2024 (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:    53686 H/s (14.63ms) @ Accel:1024 Loops:128 Thr:32 Vec:1
+Speed.#2.........:      804 H/s (7.84ms) @ Accel:32 Loops:64 Thr:16 Vec:1
+Speed.#*.........:    54490 H/s
+Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
+Progress.........: 32768/14344387 (0.23%)
+Rejected.........: 0/32768 (0.00%)
+Restore.Point....: 0/14344387 (0.00%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:4992-5000
+Restore.Sub.#2...: Salt:0 Amplifier:0-1 Iteration:4800-4864
+Candidate.Engine.: Device Generator
+Candidates.#1....: diego -&gt; keepout1
+Candidates.#2....: 123456 -&gt; fuckyou1
+Hardware.Mon.#1..: Temp: 51c Util: 99% Core:2535MHz Mem:8000MHz Bus:8
+Hardware.Mon.#2..: N/A
+
+HMV{reddragon}
+<br><br>zip2john 008.zip
+008.zip/flag.txt:$zip2$*0*3*0*751e06905814ebe63a63c72e8755d887*d807*e*25e3c7613e997071cd21a2163883*ba4cf18e59493b2515da*$/zip2$:flag.txt:008.zip:008.zip
+
+john 008 --wordlist=/usr/share/wordlists/rockyou.txt
+survivor         (008.zip/flag.txt)
+
+HMV{cromiphi}
+
+<br><br><img alt="assets/Pasted image 20241224225402.png" src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241224225402.png"><br>
+3-1表示 3号键第一个字母<br>$$$$$$$$$$ 
+$_________$$ 
+$_$$$$$$$_$$ 
+$_$_____$_$$ 
+$_$_____$_$$ 
+$_$_____$_$$ 
+$_$_____$_$$ 
+$_$$$$$$$_$$ 
+$_________$$ 
+$$$$$$$$$$ 
+$_________$$ 
+$_1__2__3_$$$ 
+$_4__5__6_$$$ 
+$_7__8__9_$$$ 
+$_*__0__#_$$$ 
+$_________$$$ 
+$$$$$$$$$$$ 
+$$$$$$$$$ 
+FLAG: 
+HMV{?} 
+? 
+= 
+3-1 D
+2-1 A
+8-1 T
+2-1 A
+7-4 S
+3-2 E
+2-3 C
+
+HMV{DATASEC}
+<br><br>echo -e "HMV{\033[31mw\033[31mh\033[31my\033[31m i\033[31mm \033[31mn\033[31mo\033[31mt \033[39m m\033[39ma\033[39my\033[39mb\033[39me \033[39mu\033[39ms\033[39me \033[32m g\033[32mr\033[32me\033[32me\033[32mn\033[32mt\033[32mh\033[32me\033[32mf\033[32ml\033[32ma\033[32mg\033[39m}"
+
+HMV{greentheflag}
+
+<br><br><a rel="noopener nofollow" class="external-link" href="https://morsecode.world/international/decoder/audio-decoder-adaptive.html" target="_blank">https://morsecode.world/international/decoder/audio-decoder-adaptive.html</a><br>HMV{MORSEGIVESYOUTHEFLAG}
+<br><br>HMV{gifarefun}
+<br><br>利用 aircrack-ng 爆破即可<br>┌──(root㉿kali)-[~/Desktop/hmv/MISC]
+└─# aircrack-ng 033.pcap
+Reading packets, please wait...
+Opening 033.pcap
+Read 71032 packets.
+
+   #  BSSID              ESSID                     Encryption
+
+   1  00:23:CD:1F:73:B0  WirelessLab               WEP (17314 IVs)
+
+Choosing first network as target.
+
+Reading packets, please wait...
+Opening 033.pcap
+Read 71032 packets.
+
+1 potential targets
+
+Attack will be restarted every 5000 captured ivs.
+
+                                               Aircrack-ng 1.7
+
+
+                                 [00:00:00] Tested 60016 keys (got 17273 IVs)
+
+   KB    depth   byte(vote)
+    0    0/  1   4D(28160) 24(23808) 58(23552) 44(22528) B7(22528) 94(21760) D2(21504) 00(20992)
+    1    4/ 34   59(21760) E1(21504) 5B(21504) B0(20992) 56(20736) 98(20736) A6(20736) B4(20480)
+    2   36/ 45   04(19712) 16(19456) 41(19456) 56(19456) 7B(19456) 7C(19456) 81(19456) E6(19456)
+    3   14/ 40   45(20992) D3(20992) 94(20736) 04(20736) 0F(20480) 58(20480) B2(20480) 00(20480)
+    4    0/  1   59(27648) 6F(23040) 25(22016) 20(21760) 38(21760) 30(21504) 53(21504) 67(21504)
+
+                     KEY FOUND! [ 4D:59:4B:45:59 ] (ASCII: MYKEY )
+        Decrypted correctly: 100%
+
+HMV{MYKEY}
+<br><br>ey开头一眼jwt<br>
+<img alt="assets/Pasted image 20241224233613.png" src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241224233613.png"><br>HMV{DoNotStoreSensitiveDataHere}
+<br><br><a rel="noopener nofollow" class="external-link" href="https://github.com/r3nt0n/keepass4brute" target="_blank">https://github.com/r3nt0n/keepass4brute</a><br>┌──(root㉿kali)-[~/Desktop/hmv/MISC]
+└─# bash /root/Desktop/tools/keepass4brute.sh Challenge.kdbx /usr/share/wordlists/rockyou.txt
+keepass4brute 1.3 by r3nt0n
+https://github.com/r3nt0n/keepass4brute
+
+[+] Words tested: 498/14344392 - Attempts per minute: 1358 - Estimated time remaining: 1 weeks, 0 days
+[+] Current attempt: amigos
+
+[*] Password found: amigos
+
+
+HMV{EasyPeasyMoney}
+<br><br>execel文件的本质就是一个压缩包<br>
+我们可以解压后用vscode打开<br>
+全局搜索 flag 或者 hmv  没有找到。那多半是藏在二进制文件里面了<br>strings .\vbaProject.bin
+
+HMV{b63ce4efbf0b4214a470a707d34bc3ba}
+<br><br>9950b5c66f8518f8b012359dc7390589 c03ec75734f58d87cddff35c57786429 e757e84e31ef68a74d86d6b52478654c HMV{c761d942cf5fe4ba9ece382739afef4e} 
+<br>利用rockyou爆破出前3个md5<br>
+可以发现前三个可以爆破出来，而且是有规律的<br>
+直接对第四的一个进行哈希碰撞<br>
+<img alt="assets/Pasted image 20241225001025.png" src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241225001025.png"><br>4doggy1
+3mimis2
+2wagon3
+1lordp4
+HMV{1lordp4}
+<br><br><a rel="noopener nofollow" class="external-link" href="https://ncviewer.com/" target="_blank">https://ncviewer.com/</a><br>
+<img alt="assets/QQ20241225-001850.png" src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/qq20241225-001850.png"><br>HMV{engraving_a_trophy_for_Kerszi}
+<br><br>用010查看发现是png<br>cybercheaf 解密 用hexdump下来即可<br>
+<img alt="assets/Pasted image 20241225003154.png" src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241225003154.png"><br>解密后图片上有一个Base64编码的flag<br>HMV{ancienttimes1880}
+<br><br>HMV{ilikechinese}]]></description><link>https://www.c1trus.top/24-渗透/hmv/challenges/challenges-misc.html</link><guid isPermaLink="false">24-渗透/HMV/challenges/challenges-Misc.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:47 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241224225402.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241224225402.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[43.p4l4nc4]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -417,149 +559,7 @@ rescue
 end 
 <br>开启监听等待一会 成功反弹shell提权root<br>很离谱这个root.txt可能有不可见字符<br>直接读取不了<br>cat \*root.txt\*
 pyth0N&gt;r00bi35
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/19.rubies.html</link><guid isPermaLink="false">24-渗透/HMV/19.rubies.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Mon, 30 Dec 2024 14:54:39 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Misc]]></title><description><![CDATA[ 
- <br><br>hashcat破解就行了<br>$6$xyz$ZGQOqL77wiYAgPxsNEv2Kz3INjzK4JdG29RbaHaW5lrkH8bA8W7kC3GK4CctGrFO7.E2va7kSgF3eQXNWYQee.:reddragon
-
-Session..........: hashcat
-Status...........: Cracked
-Hash.Mode........: 1800 (sha512crypt $6$, SHA512 (Unix))
-Hash.Target......: $6$xyz$ZGQOqL77wiYAgPxsNEv2Kz3INjzK4JdG29RbaHaW5lrk...WYQee.
-Time.Started.....: Tue Dec 24 22:18:28 2024 (1 sec)
-Time.Estimated...: Tue Dec 24 22:18:29 2024 (0 secs)
-Kernel.Feature...: Pure Kernel
-Guess.Base.......: File (rockyou.txt)
-Guess.Queue......: 1/1 (100.00%)
-Speed.#1.........:    53686 H/s (14.63ms) @ Accel:1024 Loops:128 Thr:32 Vec:1
-Speed.#2.........:      804 H/s (7.84ms) @ Accel:32 Loops:64 Thr:16 Vec:1
-Speed.#*.........:    54490 H/s
-Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
-Progress.........: 32768/14344387 (0.23%)
-Rejected.........: 0/32768 (0.00%)
-Restore.Point....: 0/14344387 (0.00%)
-Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:4992-5000
-Restore.Sub.#2...: Salt:0 Amplifier:0-1 Iteration:4800-4864
-Candidate.Engine.: Device Generator
-Candidates.#1....: diego -&gt; keepout1
-Candidates.#2....: 123456 -&gt; fuckyou1
-Hardware.Mon.#1..: Temp: 51c Util: 99% Core:2535MHz Mem:8000MHz Bus:8
-Hardware.Mon.#2..: N/A
-
-HMV{reddragon}
-<br><br>zip2john 008.zip
-008.zip/flag.txt:$zip2$*0*3*0*751e06905814ebe63a63c72e8755d887*d807*e*25e3c7613e997071cd21a2163883*ba4cf18e59493b2515da*$/zip2$:flag.txt:008.zip:008.zip
-
-john 008 --wordlist=/usr/share/wordlists/rockyou.txt
-survivor         (008.zip/flag.txt)
-
-HMV{cromiphi}
-
-<br><br><img alt="assets/Pasted image 20241224225402.png" src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241224225402.png"><br>
-3-1表示 3号键第一个字母<br>$$$$$$$$$$ 
-$_________$$ 
-$_$$$$$$$_$$ 
-$_$_____$_$$ 
-$_$_____$_$$ 
-$_$_____$_$$ 
-$_$_____$_$$ 
-$_$$$$$$$_$$ 
-$_________$$ 
-$$$$$$$$$$ 
-$_________$$ 
-$_1__2__3_$$$ 
-$_4__5__6_$$$ 
-$_7__8__9_$$$ 
-$_*__0__#_$$$ 
-$_________$$$ 
-$$$$$$$$$$$ 
-$$$$$$$$$ 
-FLAG: 
-HMV{?} 
-? 
-= 
-3-1 D
-2-1 A
-8-1 T
-2-1 A
-7-4 S
-3-2 E
-2-3 C
-
-HMV{DATASEC}
-<br><br>echo -e "HMV{\033[31mw\033[31mh\033[31my\033[31m i\033[31mm \033[31mn\033[31mo\033[31mt \033[39m m\033[39ma\033[39my\033[39mb\033[39me \033[39mu\033[39ms\033[39me \033[32m g\033[32mr\033[32me\033[32me\033[32mn\033[32mt\033[32mh\033[32me\033[32mf\033[32ml\033[32ma\033[32mg\033[39m}"
-
-HMV{greentheflag}
-
-<br><br><a rel="noopener nofollow" class="external-link" href="https://morsecode.world/international/decoder/audio-decoder-adaptive.html" target="_blank">https://morsecode.world/international/decoder/audio-decoder-adaptive.html</a><br>HMV{MORSEGIVESYOUTHEFLAG}
-<br><br>HMV{gifarefun}
-<br><br>利用 aircrack-ng 爆破即可<br>┌──(root㉿kali)-[~/Desktop/hmv/MISC]
-└─# aircrack-ng 033.pcap
-Reading packets, please wait...
-Opening 033.pcap
-Read 71032 packets.
-
-   #  BSSID              ESSID                     Encryption
-
-   1  00:23:CD:1F:73:B0  WirelessLab               WEP (17314 IVs)
-
-Choosing first network as target.
-
-Reading packets, please wait...
-Opening 033.pcap
-Read 71032 packets.
-
-1 potential targets
-
-Attack will be restarted every 5000 captured ivs.
-
-                                               Aircrack-ng 1.7
-
-
-                                 [00:00:00] Tested 60016 keys (got 17273 IVs)
-
-   KB    depth   byte(vote)
-    0    0/  1   4D(28160) 24(23808) 58(23552) 44(22528) B7(22528) 94(21760) D2(21504) 00(20992)
-    1    4/ 34   59(21760) E1(21504) 5B(21504) B0(20992) 56(20736) 98(20736) A6(20736) B4(20480)
-    2   36/ 45   04(19712) 16(19456) 41(19456) 56(19456) 7B(19456) 7C(19456) 81(19456) E6(19456)
-    3   14/ 40   45(20992) D3(20992) 94(20736) 04(20736) 0F(20480) 58(20480) B2(20480) 00(20480)
-    4    0/  1   59(27648) 6F(23040) 25(22016) 20(21760) 38(21760) 30(21504) 53(21504) 67(21504)
-
-                     KEY FOUND! [ 4D:59:4B:45:59 ] (ASCII: MYKEY )
-        Decrypted correctly: 100%
-
-HMV{MYKEY}
-<br><br>ey开头一眼jwt<br>
-<img alt="assets/Pasted image 20241224233613.png" src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241224233613.png"><br>HMV{DoNotStoreSensitiveDataHere}
-<br><br><a rel="noopener nofollow" class="external-link" href="https://github.com/r3nt0n/keepass4brute" target="_blank">https://github.com/r3nt0n/keepass4brute</a><br>┌──(root㉿kali)-[~/Desktop/hmv/MISC]
-└─# bash /root/Desktop/tools/keepass4brute.sh Challenge.kdbx /usr/share/wordlists/rockyou.txt
-keepass4brute 1.3 by r3nt0n
-https://github.com/r3nt0n/keepass4brute
-
-[+] Words tested: 498/14344392 - Attempts per minute: 1358 - Estimated time remaining: 1 weeks, 0 days
-[+] Current attempt: amigos
-
-[*] Password found: amigos
-
-
-HMV{EasyPeasyMoney}
-<br><br>execel文件的本质就是一个压缩包<br>
-我们可以解压后用vscode打开<br>
-全局搜索 flag 或者 hmv  没有找到。那多半是藏在二进制文件里面了<br>strings .\vbaProject.bin
-
-HMV{b63ce4efbf0b4214a470a707d34bc3ba}
-<br><br>9950b5c66f8518f8b012359dc7390589 c03ec75734f58d87cddff35c57786429 e757e84e31ef68a74d86d6b52478654c HMV{c761d942cf5fe4ba9ece382739afef4e} 
-<br>利用rockyou爆破出前3个md5<br>
-可以发现前三个可以爆破出来，而且是有规律的<br>
-直接对第四的一个进行哈希碰撞<br>
-<img alt="assets/Pasted image 20241225001025.png" src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241225001025.png"><br>4doggy1
-3mimis2
-2wagon3
-1lordp4
-HMV{1lordp4}
-<br><br><a rel="noopener nofollow" class="external-link" href="https://ncviewer.com/" target="_blank">https://ncviewer.com/</a><br>
-<img alt="assets/QQ20241225-001850.png" src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/qq20241225-001850.png"><br>HMV{engraving_a_trophy_for_Kerszi}
-<br><br>用010查看发现是png<br>cybercheaf 解密 用hexdump下来即可<br>
-<img alt="assets/Pasted image 20241225003154.png" src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241225003154.png"><br>解密后图片上有一个Base64编码的flag<br>HMV{ancienttimes1880}
-<br><br>HMV{ilikechinese}]]></description><link>https://www.c1trus.top/24-渗透/hmv/challenges/misc.html</link><guid isPermaLink="false">24-渗透/HMV/challenges/Misc.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:47 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241224225402.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241224225402.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[49.otte]]></title><description><![CDATA[ 
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/19.rubies.html</link><guid isPermaLink="false">24-渗透/HMV/19.rubies.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Mon, 30 Dec 2024 14:54:39 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/19.rubies.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[49.otte]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
