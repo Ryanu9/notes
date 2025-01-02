@@ -1,4 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[C1trus ]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://www.c1trus.top/</link><image><url>https://www.c1trus.top/lib/media/favicon.png</url><title>C1trus </title><link>https://www.c1trus.top/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Thu, 02 Jan 2025 11:35:38 GMT</lastBuildDate><atom:link href="https://www.c1trus.top/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 02 Jan 2025 11:35:37 GMT</pubDate><copyright><![CDATA[C1trus]]></copyright><ttl>60</ttl><dc:creator>C1trus</dc:creator><item><title><![CDATA[challenges-Misc]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[C1trus ]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://www.c1trus.top/</link><image><url>https://www.c1trus.top/lib/media/favicon.png</url><title>C1trus </title><link>https://www.c1trus.top/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Thu, 02 Jan 2025 11:49:58 GMT</lastBuildDate><atom:link href="https://www.c1trus.top/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 02 Jan 2025 11:49:57 GMT</pubDate><copyright><![CDATA[C1trus]]></copyright><ttl>60</ttl><dc:creator>C1trus</dc:creator><item><title><![CDATA[challenges-Misc]]></title><description><![CDATA[ 
  <br><br>hashcat破解就行了<br>$6$xyz$ZGQOqL77wiYAgPxsNEv2Kz3INjzK4JdG29RbaHaW5lrkH8bA8W7kC3GK4CctGrFO7.E2va7kSgF3eQXNWYQee.:reddragon
 
 Session..........: hashcat
@@ -34,7 +34,7 @@ survivor         (008.zip/flag.txt)
 
 HMV{cromiphi}
 
-<br><br><img alt="assets/Pasted image 20241224225402.png" src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241224225402.png"><br>
+<br><br><img alt="Pasted image 20241224225402" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241224225402.png" referrerpolicy="no-referrer"><br>
 3-1表示 3号键第一个字母<br>$$$$$$$$$$ 
 $_________$$ 
 $_$$$$$$$_$$ 
@@ -109,7 +109,7 @@ Attack will be restarted every 5000 captured ivs.
 
 HMV{MYKEY}
 <br><br>ey开头一眼jwt<br>
-<img alt="assets/Pasted image 20241224233613.png" src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241224233613.png"><br>HMV{DoNotStoreSensitiveDataHere}
+<img alt="Pasted image 20241224233613" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241224233613.png" referrerpolicy="no-referrer"><br>HMV{DoNotStoreSensitiveDataHere}
 <br><br><a rel="noopener nofollow" class="external-link" href="https://github.com/r3nt0n/keepass4brute" target="_blank">https://github.com/r3nt0n/keepass4brute</a><br>┌──(root㉿kali)-[~/Desktop/hmv/MISC]
 └─# bash /root/Desktop/tools/keepass4brute.sh Challenge.kdbx /usr/share/wordlists/rockyou.txt
 keepass4brute 1.3 by r3nt0n
@@ -131,16 +131,16 @@ HMV{b63ce4efbf0b4214a470a707d34bc3ba}
 <br>利用rockyou爆破出前3个md5<br>
 可以发现前三个可以爆破出来，而且是有规律的<br>
 直接对第四的一个进行哈希碰撞<br>
-<img alt="assets/Pasted image 20241225001025.png" src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241225001025.png"><br>4doggy1
+<img alt="Pasted image 20241225001025" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241225001025.png" referrerpolicy="no-referrer"><br>4doggy1
 3mimis2
 2wagon3
 1lordp4
 HMV{1lordp4}
 <br><br><a rel="noopener nofollow" class="external-link" href="https://ncviewer.com/" target="_blank">https://ncviewer.com/</a><br>
-<img alt="assets/QQ20241225-001850.png" src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/qq20241225-001850.png"><br>HMV{engraving_a_trophy_for_Kerszi}
+<img alt="QQ20241225-001850" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/QQ20241225-001850.png" referrerpolicy="no-referrer"><br>HMV{engraving_a_trophy_for_Kerszi}
 <br><br>用010查看发现是png<br>cybercheaf 解密 用hexdump下来即可<br>
-<img alt="assets/Pasted image 20241225003154.png" src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241225003154.png"><br>解密后图片上有一个Base64编码的flag<br>HMV{ancienttimes1880}
-<br><br>HMV{ilikechinese}]]></description><link>https://www.c1trus.top/24-渗透/hmv/challenges/challenges-misc.html</link><guid isPermaLink="false">24-渗透/HMV/challenges/challenges-Misc.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:47 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241224225402.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://www.c1trus.top/24-渗透/hmv/challenges/assets/pasted-image-20241224225402.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[43.p4l4nc4]]></title><description><![CDATA[ 
+<img alt="Pasted image 20241225003154" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241225003154.png" referrerpolicy="no-referrer"><br>解密后图片上有一个Base64编码的flag<br>HMV{ancienttimes1880}
+<br><br>HMV{ilikechinese}]]></description><link>https://www.c1trus.top/24-渗透/hmv/challenges/challenges-misc.html</link><guid isPermaLink="false">24-渗透/HMV/challenges/challenges-Misc.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 02 Jan 2025 11:49:39 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241224225402.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241224225402.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[43.p4l4nc4]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
